@@ -13,7 +13,7 @@ struct imbibeApp: App {
 
     var body: some Scene {
         WindowGroup {
-            HomeView()
+            AppView()
                 .environment(\.managedObjectContext, persistenceController.container.viewContext)
         }
     }
