@@ -19,7 +19,7 @@ let ingredients = [
     
     "Lime Juice": Ingredient(id: UUID(), name: "Lime Juice", strength: 0, origin: nil, description: ""),
     "Lemon Juice": Ingredient(id: UUID(), name: "Lemon Juice", strength: 0, origin: nil, description: ""),
-    "Sugar Sirup": Ingredient(id: UUID(), name: "Sugar Sirup", strength: 0, origin: nil, description: ""),
+    "Simple Sirup": Ingredient(id: UUID(), name: "Simple Sirup", strength: 0, origin: nil, description: ""),
     
     "Egg White": Ingredient(id: UUID(), name: "Egg White", strength: 0, origin: nil, description: ""),
     

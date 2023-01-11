@@ -54,11 +54,11 @@ private let daiquiri: Drink =
         ingredients: [
             .init(id: UUID(), ingredient: ingredients["Rum"]!, volumeInML: 60, dashes: nil),
             .init(id: UUID(), ingredient: ingredients["Lime Juice"]!, volumeInML: 30, dashes: nil),
-            .init(id: UUID(), ingredient: ingredients["Sugar Sirup"]!, volumeInML: 30, dashes: nil),
+            .init(id: UUID(), ingredient: ingredients["Simple Sirup"]!, volumeInML: 30, dashes: nil),
             .init(id: UUID(), ingredient: ingredients["Ice"]!, volumeInML: nil, dashes: nil),
         ],
         steps: [
-            .init(id: UUID(), string: "Put Ice, Rum, Lime Juice, & Sugar Sirup into the shaker"),
+            .init(id: UUID(), string: "Put Ice, Rum, Lime Juice, & Simple Sirup into the shaker"),
             .init(id: UUID(), string: "Shake for 10-15 seconds"),
             .init(id: UUID(), string: "Strain into the Cocktail Glass"),
             .init(id: UUID(), string: "Garnish with Lime Wheel"),
@@ -117,12 +117,12 @@ private let oldFashioned: Drink =
         equipments: [ equipments["Old Fashioned Glass"]!, equipments["Barspoon"]! ],
         ingredients: [
             .init(id: UUID(), ingredient: ingredients["Whisky"]!, volumeInML: 60, dashes: nil),
-            .init(id: UUID(), ingredient: ingredients["Sugar Sirup"]!, volumeInML: 10, dashes: nil),
+            .init(id: UUID(), ingredient: ingredients["Simple Sirup"]!, volumeInML: 10, dashes: nil),
             .init(id: UUID(), ingredient: ingredients["Angostura Bitters"]!, volumeInML: nil, dashes: 3),
             .init(id: UUID(), ingredient: ingredients["Ice Cubes"]!, volumeInML: nil, dashes: nil),
         ],
         steps: [
-            .init(id: UUID(), string: "Put Whisky, Sugar Sirup, & Angostura Bitters into the Old Fashioned Glass"),
+            .init(id: UUID(), string: "Put Whisky, Simple Sirup, & Angostura Bitters into the Old Fashioned Glass"),
             .init(id: UUID(), string: "Stir with a Barspoon"),
             .init(id: UUID(), string: "Add a Large Ice Cube"),
             .init(id: UUID(), string: "Garnish with a twist of Orange"),
@@ -140,12 +140,12 @@ private let whiskySour: Drink =
             .init(id: UUID(), ingredient: ingredients["Bourbon Whisky"]!, volumeInML: 60, dashes: nil),
             .init(id: UUID(), ingredient: ingredients["Lemon Juice"]!, volumeInML: 30, dashes: nil),
             .init(id: UUID(), ingredient: ingredients["Egg White"]!, volumeInML: 30, dashes: nil),
-            .init(id: UUID(), ingredient: ingredients["Sugar Sirup"]!, volumeInML: 30, dashes: nil),
+            .init(id: UUID(), ingredient: ingredients["Simple Sirup"]!, volumeInML: 30, dashes: nil),
             .init(id: UUID(), ingredient: ingredients["Angostura Bitters"]!, volumeInML: nil, dashes: 2),
             .init(id: UUID(), ingredient: ingredients["Ice Cubes"]!, volumeInML: nil, dashes: nil),
         ],
         steps: [
-            .init(id: UUID(), string: "Put Bourbon Whisky, Lemon Juice, Egg White, & Sugar Sirup into the Shaker"),
+            .init(id: UUID(), string: "Put Bourbon Whisky, Lemon Juice, Egg White, & Simple Sirup into the Shaker"),
             .init(id: UUID(), string: "Dry shake (without ice)"),
             .init(id: UUID(), string: "Add Ice Cubes"),
             .init(id: UUID(), string: "Shake again"),
