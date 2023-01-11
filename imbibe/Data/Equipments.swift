@@ -8,9 +8,9 @@
 import Foundation
 
 let equipments = [
-    "Barspoon": Equipment(id: UUID(), name: "Barspoon", description: "A long-handled spoon used in bartending."),
-    "Cocktail Glass": Equipment(id: UUID(), name: "Cocktail Glas", description: ""),
-    "Mixing Glass": Equipment(id: UUID(), name: "Mixing Glas", description: ""),
-    "Old Fashioned Glass": Equipment(id: UUID(), name: "Old Fashioned Glas", description: ""),
-    "Shaker": Equipment(id: UUID(), name: "Shaker", description: ""),
+    "Barspoon": Equipment(name: "Barspoon", description: "A long-handled spoon used in bartending."),
+    "Cocktail Glass": Equipment(name: "Cocktail Glas", description: ""),
+    "Mixing Glass": Equipment(name: "Mixing Glas", description: ""),
+    "Old Fashioned Glass": Equipment(name: "Old Fashioned Glas", description: ""),
+    "Shaker": Equipment(name: "Shaker", description: ""),
 ]

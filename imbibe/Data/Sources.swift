@@ -8,5 +8,5 @@
 import Foundation
 
 let drinkSources = [
-    "IBA cocktails": DrinkSource(id: UUID(), name: "IBA cocktails", description: "", link: URL(string: "https://iba-world.com/")!)
+    "IBA cocktails": DrinkSource(name: "IBA cocktails", description: "", link: URL(string: "https://iba-world.com/")!)
 ]
