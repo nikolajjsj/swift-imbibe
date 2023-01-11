@@ -8,11 +8,20 @@
 import SwiftUI
 
 struct DiscoverView: View {
+    @EnvironmentObject var appState: AppState
+    
     var body: some View {
         List {
-            NavigationLink(value: randomDrink()) {
-                Text("Random Drink").font(.title.bold())
+            HStack {
+                Spacer()
+                Button {
+                    appState.path.append(Route.drink(randomDrink()))
+                } label: {
+                    Label("Random Drink", systemImage: "party.popper")
+                }
+                Spacer()
             }
+            .buttonStyle(.bordered)
             .listRowSeparator(.hidden)
             
             Section {
@@ -26,8 +35,8 @@ struct DiscoverView: View {
         }.listStyle(.plain)
     }
     
-    func randomDrink() -> Drink? {
-        drinks.randomElement()
+    func randomDrink() -> Drink {
+        drinks.randomElement()!
     }
 }
 
