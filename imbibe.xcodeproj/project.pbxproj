@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D1F0087F296EBB90007E09B7 /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1F0087E296EBB90007E09B7 /* AppState.swift */; };
 		D1F7900D296D75EE00F3CB30 /* imbibeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1F7900C296D75EE00F3CB30 /* imbibeApp.swift */; };
 		D1F7900F296D75EE00F3CB30 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1F7900E296D75EE00F3CB30 /* Persistence.swift */; };
 		D1F79012296D75EE00F3CB30 /* imbibe.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D1F79010296D75EE00F3CB30 /* imbibe.xcdatamodeld */; };
@@ -31,6 +32,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		D1F0087E296EBB90007E09B7 /* AppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
 		D1F79009296D75EE00F3CB30 /* imbibe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = imbibe.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D1F7900C296D75EE00F3CB30 /* imbibeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = imbibeApp.swift; sourceTree = "<group>"; };
 		D1F7900E296D75EE00F3CB30 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
@@ -67,6 +69,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D1F0087D296EBB86007E09B7 /* Environments */ = {
+			isa = PBXGroup;
+			children = (
+				D1F0087E296EBB90007E09B7 /* AppState.swift */,
+			);
+			path = Environments;
+			sourceTree = "<group>";
+		};
 		D1F79000296D75EE00F3CB30 = {
 			isa = PBXGroup;
 			children = (
@@ -86,6 +96,7 @@
 		D1F7900B296D75EE00F3CB30 /* imbibe */ = {
 			isa = PBXGroup;
 			children = (
+				D1F0087D296EBB86007E09B7 /* Environments */,
 				D1F7903E296E81D400F3CB30 /* Shared */,
 				D1F79029296D829C00F3CB30 /* Core Data */,
 				D1F79026296D78CD00F3CB30 /* Data */,
@@ -281,6 +292,7 @@
 				D1F79014296D75EE00F3CB30 /* HomeView.swift in Sources */,
 				D1F79030296D879600F3CB30 /* ColorExtensions.swift in Sources */,
 				D1F79036296DC1EB00F3CB30 /* Equipments.swift in Sources */,
+				D1F0087F296EBB90007E09B7 /* AppState.swift in Sources */,
 				D1F79032296DC1BE00F3CB30 /* Ingredients.swift in Sources */,
 				D1F79025296D76D400F3CB30 /* DrinkModel.swift in Sources */,
 				D1F7903A296E803E00F3CB30 /* AppView.swift in Sources */,

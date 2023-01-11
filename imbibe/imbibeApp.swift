@@ -9,11 +9,14 @@ import SwiftUI
 
 @main
 struct imbibeApp: App {
+    @StateObject var appState = AppState()
+    
     let persistenceController = PersistenceController.shared
 
     var body: some Scene {
         WindowGroup {
             AppView()
+                .environmentObject(appState)
                 .environment(\.managedObjectContext, persistenceController.container.viewContext)
         }
     }

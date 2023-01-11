@@ -8,21 +8,47 @@
 import SwiftUI
 
 struct AppView: View {
+    @EnvironmentObject var appState: AppState
+    
     var body: some View {
-        NavigationView {
-            TabView {
-                DiscoverView().tabItem { TabItem(systemName: "binoculars", label: "Discover") }
-                HomeView().tabItem { TabItem(systemName: "wineglass", label: "Drinks") }
-                IngredientsView().tabItem { TabItem(systemName: "cooktop", label: "Ingredients") }
+        NavigationStack(path: $appState.path) {
+            TabView(selection: $appState.tab) {
+                DiscoverView()
+                    .tabItem {
+                        Image(systemName: "binoculars")
+                        Text("Discover")
+                    }
+                    .tag(Tab.discover)
+                
+                HomeView()
+                    .tabItem {
+                        Image(systemName: "wineglass")
+                        Text("Drinks")
+                    }
+                    .tag(Tab.drinks)
+                
+                IngredientsView()
+                    .tabItem {
+                        Image(systemName: "cooktop")
+                        Text("Ingredients")
+                    }
+                    .tag(Tab.ingredients)
             }
+            .navigationDestination(for: Route.self, destination: routeView)
         }
     }
     
     @ViewBuilder
-    func TabItem(systemName: String, label: String) -> some View {
-        VStack {
-            Image(systemName: systemName)
-            Text(label)
+    func routeView(route: Route?) -> some View {
+        switch route {
+        case let .drink(d):
+            DrinkView(drink: d)
+        case let .ingredient(i):
+            IngredientView(ingredient: i)
+        default:
+            Text("No selection")
+                .font(.largeTitle.bold())
+                .foregroundColor(.gray)
         }
     }
 }
@@ -30,5 +56,6 @@ struct AppView: View {
 struct AppView_Previews: PreviewProvider {
     static var previews: some View {
         AppView()
+            .environmentObject(AppState())
     }
 }

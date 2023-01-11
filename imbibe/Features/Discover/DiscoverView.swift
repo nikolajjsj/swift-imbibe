@@ -10,11 +10,7 @@ import SwiftUI
 struct DiscoverView: View {
     var body: some View {
         List {
-            NavigationLink {
-                if let random = drinks.randomElement() {
-                    DrinkView(drink: random)
-                }
-            } label: {
+            NavigationLink(value: randomDrink()) {
                 Text("Random Drink").font(.title.bold())
             }
             .listRowSeparator(.hidden)
@@ -28,6 +24,10 @@ struct DiscoverView: View {
             }
             .listRowSeparator(.hidden)
         }.listStyle(.plain)
+    }
+    
+    func randomDrink() -> Drink? {
+        drinks.randomElement()
     }
 }
 
