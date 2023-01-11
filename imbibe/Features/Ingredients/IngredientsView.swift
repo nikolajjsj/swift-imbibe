@@ -13,9 +13,11 @@ struct IngredientsView: View {
     
     var body: some View {
         List {
-            ForEach(filtered) { ingredient in
-                IngredientCard(ingredient: ingredient)
-                    .listRowSeparator(.hidden)
+            Section {
+                ForEach(filtered) { ingredient in
+                    IngredientCard(ingredient: ingredient)
+                        .listRowSeparator(.hidden)
+                }
             }
         }
         .searchable(text: $query)

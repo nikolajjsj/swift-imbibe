@@ -13,9 +13,11 @@ struct HomeView: View {
     
     var body: some View {
         List {
-            ForEach(filtered) { d in
-                DrinkCard(drink: d)
-                    .listRowSeparator(.hidden)
+            Section {
+                ForEach(filtered) { d in
+                    DrinkCard(drink: d)
+                        .listRowSeparator(.hidden)
+                }
             }
         }
         .searchable(text: $query)
