@@ -8,6 +8,22 @@
 import Foundation
 
 let drinks: [Drink] = [
+    americano,
+    daiquiri,
+    manhattan,
+    negroni,
+    oldFashioned,
+    whiskySour,
+]
+
+let iconicDrinks: [Drink] = [
+    daiquiri,
+    negroni,
+    oldFashioned,
+    whiskySour,
+]
+
+private let americano: Drink =
     .init(
         id: UUID(),
         name: "Americano",
@@ -27,7 +43,9 @@ let drinks: [Drink] = [
             .init(id: UUID(), string: "Garnish with Citrus Wedge"),
         ],
         source: nil
-    ),
+    )
+
+private let daiquiri: Drink =
     .init(
         id: UUID(),
         name: "Daiquiri",
@@ -46,7 +64,9 @@ let drinks: [Drink] = [
             .init(id: UUID(), string: "Garnish with Lime Wheel"),
         ],
         source: nil
-    ),
+    )
+
+private let manhattan: Drink =
     .init(
         id: UUID(),
         name: "Manhattan",
@@ -66,7 +86,9 @@ let drinks: [Drink] = [
             .init(id: UUID(), string: "Garnish with Cocktail Cherry"),
         ],
         source: nil
-    ),
+    )
+
+private let negroni: Drink =
     .init(
         id: UUID(),
         name: "Negroni",
@@ -85,7 +107,9 @@ let drinks: [Drink] = [
             .init(id: UUID(), string: "Garnish with Orange Wedge"),
         ],
         source: nil
-    ),
+    )
+
+private let oldFashioned: Drink =
     .init(
         id: UUID(),
         name: "Old Fashioned",
@@ -104,7 +128,9 @@ let drinks: [Drink] = [
             .init(id: UUID(), string: "Garnish with a twist of Orange"),
         ],
         source: nil
-    ),
+    )
+
+private let whiskySour: Drink =
     .init(
         id: UUID(),
         name: "Whisky Sour",
@@ -127,5 +153,4 @@ let drinks: [Drink] = [
             .init(id: UUID(), string: "Garnish with a few drops of Angostura Bitters on top"),
         ],
         source: nil
-    ),
-]
+    )
