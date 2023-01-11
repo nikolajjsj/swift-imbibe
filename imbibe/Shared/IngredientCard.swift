@@ -15,7 +15,9 @@ struct IngredientCard: View {
         let bgColor = Color(uiColor: image?.averageColor ?? .clear)
         let fgColor = bgColor.contastColor
         
-        NavigationLink {} label: {
+        NavigationLink {
+            IngredientView(ingredient: ingredient)
+        } label: {
             HStack {
                 if let image {
                     Image(uiImage: image)

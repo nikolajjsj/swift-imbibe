@@ -15,7 +15,9 @@ struct DrinkCard: View {
         let bgColor = Color(uiColor: image?.averageColor ?? .clear)
         let fgColor = bgColor.contastColor
         
-        NavigationLink {} label: {
+        NavigationLink {
+            DrinkView(drink: drink)
+        } label: {
             HStack {
                 if let image {
                     Image(uiImage: image)
