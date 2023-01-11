@@ -31,7 +31,7 @@ struct DrinkView: View {
                 }
             } header: {
                 Text("Steps (\(drink.steps.count))").font(.title2.bold())
-            }.listRowSeparator(.hidden)
+            }
         }
         .listStyle(.plain)
         .navigationTitle(drink.name)
@@ -78,14 +78,7 @@ struct DrinkView: View {
     
     @ViewBuilder
     func Step(text: String) -> some View {
-        HStack {
-            Text(text)
-            Spacer()
-        }
-        .padding(10)
-        .background(RoundedRectangle(cornerRadius: 10).fill(.white))
-        .foregroundColor(.black)
-        .shadow(radius: 1)
+        Text(text)
     }
 }
 
