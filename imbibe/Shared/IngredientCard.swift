@@ -15,20 +15,20 @@ struct IngredientCard: View {
         let bgColor = Color(uiColor: image?.averageColor ?? .clear)
         let fgColor = bgColor.contastColor
         
-        NavigationLink(value: ingredient) {
+        NavigationLink(value: Route.ingredient(ingredient)) {
             HStack {
                 if let image {
                     Image(uiImage: image)
                         .resizable()
                         .scaledToFit()
-                        .frame(width: 72)
-                        .frame(maxHeight: 100)
+                        .frame(width: 62)
+                        .frame(maxHeight: 80)
                 }
                 
                 VStack(alignment: .leading) {
-                    Text(ingredient.name).font(.title.bold())
+                    Text(ingredient.name).font(.title2.bold()).lineLimit(1)
                     if let description = ingredient.description, !ingredient.description.isEmpty {
-                        Text(description)
+                        Text(description).lineLimit(1)
                     }
                 }
                 Spacer()

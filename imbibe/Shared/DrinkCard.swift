@@ -15,18 +15,19 @@ struct DrinkCard: View {
         let bgColor = Color(uiColor: image?.averageColor ?? .clear)
         let fgColor = bgColor.contastColor
         
-        NavigationLink(value: drink) {
+        NavigationLink(value: Route.drink(drink)) {
             HStack {
                 if let image {
                     Image(uiImage: image)
                         .resizable()
                         .scaledToFit()
-                        .frame(width: 72)
-                        .frame(maxHeight: 100)
+                        .frame(width: 62)
+                        .frame(maxHeight: 80)
+                        .padding(.trailing, 8)
                 }
                 
                 VStack(alignment: .leading) {
-                    Text(drink.name).font(.title.bold())
+                    Text(drink.name).font(.title2.bold())
                     if let description = drink.description, !drink.description.isEmpty {
                         Text(description)
                     }
