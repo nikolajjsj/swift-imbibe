@@ -9,7 +9,6 @@ import SwiftUI
 
 class AppState: ObservableObject {
     @Published var tab: Tab = .drinks
-    
     @Published var path: [Route] = []
 }
 

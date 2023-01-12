@@ -36,6 +36,6 @@ extension Color {
         let c = self.components
         
         let luminance = 0.2126 * c.red + 0.7152 * c.green + 0.0722 * c.blue
-        return luminance > 0.5 ? Color.black : Color.white
+        return luminance >= 0.5 ? Color.black : Color.white
     }
 }

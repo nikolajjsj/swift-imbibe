@@ -12,6 +12,7 @@ class Drinks {
         .init(
             name: "Americano",
             description: "",
+            origin: Origin(name: "Italy", flag: "🇮🇹"),
             equipments: [ Equipments.oldFashionedGlass ],
             ingredients: [
                 .init(ingredient: Ingredients.sweetVermouth, volumeInML: 30),
@@ -33,6 +34,7 @@ class Drinks {
         .init(
             name: "Daiquiri",
             description: "",
+            origin: Origin(name: "Cuba", flag: "🇨🇺"),
             equipments: [ Equipments.cocktailGlass, Equipments.shaker ],
             ingredients: [
                 .init(ingredient: Ingredients.rum, volumeInML: 60),
@@ -53,6 +55,7 @@ class Drinks {
         .init(
             name: "Manhattan",
             description: "",
+            origin: Origin(name: "United States", flag: "🇺🇸"),
             equipments: [ Equipments.cocktailGlass, Equipments.mixingGlass, Equipments.barspoon ],
             ingredients: [
                 .init(ingredient: Ingredients.ryeWhisky, volumeInML: 50 ),
@@ -74,7 +77,8 @@ class Drinks {
         .init(
             name: "Mojito",
             description: "",
-            equipments: [ Equipments.highballGlass, Equipments.muddler, Equipments.shaker, Equipments.shaker ],
+            origin: Origin(name: "Cuba", flag: "🇨🇺"),
+            equipments: [ Equipments.highballGlass, Equipments.muddler, Equipments.barspoon, Equipments.shaker ],
             ingredients: [
                 .init(ingredient: Ingredients.lightRum, volumeInML: 60),
                 .init(ingredient: Ingredients.demeraraSirup, volumeInML: 15),
@@ -99,6 +103,7 @@ class Drinks {
         .init(
             name: "Negroni",
             description: "",
+            origin: Origin(name: "Count Camillo Negroni, Italy", flag: "🇮🇹"),
             equipments: [ Equipments.barspoon, Equipments.oldFashionedGlass ],
             ingredients: [
                 .init(ingredient: Ingredients.gin, volumeInML: 60),
@@ -119,6 +124,7 @@ class Drinks {
         .init(
             name: "Old Fashioned",
             description: "",
+            origin: Origin(name: "United States", flag: "🇺🇸"),
             equipments: [ Equipments.barspoon, Equipments.oldFashionedGlass ],
             ingredients: [
                 .init(ingredient: Ingredients.whisky, volumeInML: 60),
@@ -139,6 +145,7 @@ class Drinks {
         .init(
             name: "Whisky Sour",
             description: "",
+            origin: Origin(name: "United States", flag: "🇺🇸"),
             equipments: [ Equipments.oldFashionedGlass, Equipments.shaker ],
             ingredients: [
                 .init(ingredient: Ingredients.bourbonWhisky, volumeInML: 60),

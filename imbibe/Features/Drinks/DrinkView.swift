@@ -12,38 +12,93 @@ struct DrinkView: View {
     
     var body: some View {
         List {
-            DrinkImage().listRowSeparator(.hidden)
+            DrinkImage()
+            
+            facts
             
             Section {
-                ForEach(drink.ingredients) { i in
-                    Ingredient(i: i)
-                }
+                ForEach(drink.ingredients, content: Ingredient)
             } header: {
-                Text("Ingredients").font(.title2.bold())
+                Text("Ingredients (\(drink.ingredients.count))").font(.title3.bold())
             }.listRowSeparator(.hidden)
             
             Section {
                 ForEach(Array(drink.steps.enumerated()), id: \.offset) { index, step in
-                    HStack {
-                        Text("\(index + 1).").font(.title3.bold())
+                    Label {
                         Step(text: step.string)
+                    } icon: {
+                        Text("\(index + 1).").font(.title3.bold())
                     }
                 }
             } header: {
-                Text("Steps (\(drink.steps.count))").font(.title2.bold())
+                Text("Steps (\(drink.steps.count))").font(.title3.bold())
             }
         }
-        .listStyle(.plain)
         .navigationTitle(drink.name)
+    }
+    
+    var facts: some View {
+        Section {
+            Grid(alignment: .leading, verticalSpacing: 16) {
+                GridRow {
+                    Text("Equipments")
+                    LazyVStack(alignment: .trailing) {
+                        ForEach(drink.ingredients) { i in
+                            IngredientCapsule(i: i.ingredient)
+                        }
+                    }
+                }
+                Divider()
+                GridRow {
+                    Text("Equipments")
+                    LazyVStack(alignment: .trailing) {
+                        ForEach(drink.equipments) { e in
+                            EquipmentCapsule(e: e)
+                        }
+                    }
+                }
+                GridRow {
+                    Text("Origin")
+                    Text(drink.origin.name + drink.origin.flag).bold()
+                }
+            }
+        } header: {
+            Text("Facts").font(.title3.bold())
+        }
+    }
+    
+    @ViewBuilder
+    func IngredientCapsule(i: Ingredient) -> some View {
+        let image = UIImage.init(named: i.name)
+        let bgColor = Color(uiColor: image?.averageColor ?? .clear)
+        let fgColor = bgColor.contastColor
+        
+        Text(i.name)
+            .foregroundColor(fgColor)
+            .padding(.horizontal)
+            .padding(.vertical, 8)
+            .background(RoundedRectangle(cornerRadius: 4).fill(bgColor))
+            .bold()
+    }
+    
+    @ViewBuilder
+    func EquipmentCapsule(e: Equipment) -> some View {
+        let image = UIImage.init(named: e.name)
+        let bgColor = Color(uiColor: image?.averageColor ?? .clear)
+        let fgColor = bgColor.contastColor
+        
+        Text(e.name)
+            .foregroundColor(fgColor)
+            .padding(.horizontal)
+            .padding(.vertical, 8)
+            .background(RoundedRectangle(cornerRadius: 4).fill(bgColor))
+            .bold()
     }
     
     
     @ViewBuilder
     func DrinkImage() -> some View {
-        let image = UIImage.init(named: drink.name)
-        let bgColor = image?.averageColor ?? .clear
-        
-        if let image {
+        if let image = UIImage.init(named: drink.name) {
             HStack {
                 Spacer()
                 Image(uiImage: image)
@@ -53,27 +108,34 @@ struct DrinkView: View {
                     .padding(.horizontal)
                     .padding(.vertical, 8)
                 Spacer()
-            }
-            .background(RoundedRectangle(cornerRadius: 10).fill(Color(bgColor)))
+            }.listRowSeparator(.hidden)
         }
     }
     
     @ViewBuilder
     func Ingredient(i: IngredientWithVolume) -> some View {
+        let image = UIImage.init(named: i.ingredient.name)
+        let bgColor = Color(uiColor: image?.averageColor ?? .clear)
+        let fgColor = bgColor.contastColor
+        
         HStack {
-            if let dashes = i.dashes {
-                Text("\(dashes) dash(-es)")
-            }
-            if let volume = i.volumeInML {
-                Text("\(volume) ml")
-            }
+            HStack {
+                if let dashes = i.dashes {
+                    Text("\(dashes) dash(-es)")
+                } else if let volume = i.volumeInML {
+                    Text("\(volume) ml")
+                } else if let pieces = i.pieces {
+                    Text("\(pieces) pieces")
+                } else {
+                    Text("")
+                }
+            }.frame(minWidth: 90).bold()
             Text(i.ingredient.name)
             Spacer()
         }
-        .padding(10)
-        .background(RoundedRectangle(cornerRadius: 10).fill(.white))
-        .foregroundColor(.black)
-        .shadow(radius: 1)
+        .padding()
+        .background(Capsule().fill(bgColor))
+        .foregroundColor(fgColor)
     }
     
     @ViewBuilder
@@ -85,7 +147,7 @@ struct DrinkView: View {
 struct DrinkView_Previews: PreviewProvider {
     static var previews: some View {
         NavigationView {
-            DrinkView(drink: Drinks.americano)
+            DrinkView(drink: Drinks.mojito)
         }
     }
 }

@@ -22,7 +22,6 @@ struct DrinksView: View {
         }
         .searchable(text: $query)
         .listStyle(.plain)
-        .navigationTitle("Imbibe")
     }
     
     var filtered: [Drink] {
