@@ -12,7 +12,7 @@ struct DrinkView: View {
     
     var body: some View {
         List {
-            DrinkImage()
+            DrinkImage().background(.clear)
             
             facts
             
@@ -42,20 +42,16 @@ struct DrinkView: View {
             Grid(alignment: .leading, verticalSpacing: 16) {
                 GridRow {
                     Text("Equipments")
-                    LazyVStack(alignment: .trailing) {
-                        ForEach(drink.ingredients) { i in
-                            IngredientCapsule(i: i.ingredient)
-                        }
-                    }
+                    WrappingHStack(models: drink.ingredients, viewGenerator: {i in
+                        IngredientCapsule(i: i.ingredient)
+                    }, horizontalSpacing: 4, verticalSpacing: 4)
                 }
                 Divider()
                 GridRow {
                     Text("Equipments")
-                    LazyVStack(alignment: .trailing) {
-                        ForEach(drink.equipments) { e in
-                            EquipmentCapsule(e: e)
-                        }
-                    }
+                    WrappingHStack(models: drink.equipments, viewGenerator: {e in
+                        EquipmentCapsule(e: e)
+                    }, horizontalSpacing: 4, verticalSpacing: 4)
                 }
                 GridRow {
                     Text("Origin")
@@ -75,8 +71,8 @@ struct DrinkView: View {
         
         Text(i.name)
             .foregroundColor(fgColor)
-            .padding(.horizontal)
-            .padding(.vertical, 8)
+            .padding(.horizontal, 12)
+            .padding(.vertical, 6)
             .background(RoundedRectangle(cornerRadius: 4).fill(bgColor))
             .bold()
     }
@@ -89,8 +85,8 @@ struct DrinkView: View {
         
         Text(e.name)
             .foregroundColor(fgColor)
-            .padding(.horizontal)
-            .padding(.vertical, 8)
+            .padding(.horizontal, 12)
+            .padding(.vertical, 6)
             .background(RoundedRectangle(cornerRadius: 4).fill(bgColor))
             .bold()
     }

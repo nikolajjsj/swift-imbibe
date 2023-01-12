@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D1E5BBCB29705D2500BA60F9 /* WrappingHStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1E5BBCA29705D2500BA60F9 /* WrappingHStack.swift */; };
 		D1F0087F296EBB90007E09B7 /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1F0087E296EBB90007E09B7 /* AppState.swift */; };
 		D1F00881296EC065007E09B7 /* DrinkStep.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1F00880296EC065007E09B7 /* DrinkStep.swift */; };
 		D1F00883296EC078007E09B7 /* Ingredient.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1F00882296EC078007E09B7 /* Ingredient.swift */; };
@@ -37,6 +38,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		D1E5BBCA29705D2500BA60F9 /* WrappingHStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WrappingHStack.swift; sourceTree = "<group>"; };
 		D1F0087E296EBB90007E09B7 /* AppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
 		D1F00880296EC065007E09B7 /* DrinkStep.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrinkStep.swift; sourceTree = "<group>"; };
 		D1F00882296EC078007E09B7 /* Ingredient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ingredient.swift; sourceTree = "<group>"; };
@@ -206,6 +208,7 @@
 			children = (
 				D1F79046296E90C800F3CB30 /* DrinkCard.swift */,
 				D1F79048296E916C00F3CB30 /* IngredientCard.swift */,
+				D1E5BBCA29705D2500BA60F9 /* WrappingHStack.swift */,
 			);
 			path = Shared;
 			sourceTree = "<group>";
@@ -313,6 +316,7 @@
 				D1F79049296E916C00F3CB30 /* IngredientCard.swift in Sources */,
 				D1F7900F296D75EE00F3CB30 /* Persistence.swift in Sources */,
 				D1F00887296EC0B8007E09B7 /* Origin.swift in Sources */,
+				D1E5BBCB29705D2500BA60F9 /* WrappingHStack.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
