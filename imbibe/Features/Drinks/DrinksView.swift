@@ -8,7 +8,7 @@
 import SwiftUI
 import CoreData
 
-struct HomeView: View {
+struct DrinksView: View {
     @State private var query: String = ""
     
     var body: some View {
@@ -33,8 +33,8 @@ struct HomeView: View {
 }
 
 
-struct HomeView_Previews: PreviewProvider {
+struct DrinksView_Previews: PreviewProvider {
     static var previews: some View {
-        HomeView()
+        DrinksView()
     }
 }

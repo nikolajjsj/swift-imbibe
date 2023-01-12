@@ -16,7 +16,7 @@
 		D1F7900D296D75EE00F3CB30 /* imbibeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1F7900C296D75EE00F3CB30 /* imbibeApp.swift */; };
 		D1F7900F296D75EE00F3CB30 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1F7900E296D75EE00F3CB30 /* Persistence.swift */; };
 		D1F79012296D75EE00F3CB30 /* imbibe.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D1F79010296D75EE00F3CB30 /* imbibe.xcdatamodeld */; };
-		D1F79014296D75EE00F3CB30 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1F79013296D75EE00F3CB30 /* HomeView.swift */; };
+		D1F79014296D75EE00F3CB30 /* DrinksView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1F79013296D75EE00F3CB30 /* DrinksView.swift */; };
 		D1F79016296D75EF00F3CB30 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D1F79015296D75EF00F3CB30 /* Assets.xcassets */; };
 		D1F7901A296D75EF00F3CB30 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D1F79019296D75EF00F3CB30 /* Preview Assets.xcassets */; };
 		D1F79025296D76D400F3CB30 /* Drink.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1F79024296D76D400F3CB30 /* Drink.swift */; };
@@ -47,7 +47,7 @@
 		D1F7900C296D75EE00F3CB30 /* imbibeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = imbibeApp.swift; sourceTree = "<group>"; };
 		D1F7900E296D75EE00F3CB30 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
 		D1F79011296D75EE00F3CB30 /* imbibe.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = imbibe.xcdatamodel; sourceTree = "<group>"; };
-		D1F79013296D75EE00F3CB30 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		D1F79013296D75EE00F3CB30 /* DrinksView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrinksView.swift; sourceTree = "<group>"; };
 		D1F79015296D75EF00F3CB30 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D1F79017296D75EF00F3CB30 /* imbibe.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = imbibe.entitlements; sourceTree = "<group>"; };
 		D1F79019296D75EF00F3CB30 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
@@ -135,8 +135,7 @@
 			children = (
 				D1F79043296E8DA900F3CB30 /* Discover */,
 				D1F7903B296E813100F3CB30 /* Ingredients */,
-				D1F7902A296D841400F3CB30 /* Drink */,
-				D1F79022296D766000F3CB30 /* Home */,
+				D1F79022296D766000F3CB30 /* Drinks */,
 				D1F79039296E803E00F3CB30 /* AppView.swift */,
 			);
 			path = Features;
@@ -151,12 +150,13 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
-		D1F79022296D766000F3CB30 /* Home */ = {
+		D1F79022296D766000F3CB30 /* Drinks */ = {
 			isa = PBXGroup;
 			children = (
-				D1F79013296D75EE00F3CB30 /* HomeView.swift */,
+				D1F79013296D75EE00F3CB30 /* DrinksView.swift */,
+				D1F7902B296D841F00F3CB30 /* DrinkView.swift */,
 			);
-			path = Home;
+			path = Drinks;
 			sourceTree = "<group>";
 		};
 		D1F79023296D76C300F3CB30 /* Models */ = {
@@ -190,14 +190,6 @@
 				D1F7900E296D75EE00F3CB30 /* Persistence.swift */,
 			);
 			path = "Core Data";
-			sourceTree = "<group>";
-		};
-		D1F7902A296D841400F3CB30 /* Drink */ = {
-			isa = PBXGroup;
-			children = (
-				D1F7902B296D841F00F3CB30 /* DrinkView.swift */,
-			);
-			path = Drink;
 			sourceTree = "<group>";
 		};
 		D1F7903B296E813100F3CB30 /* Ingredients */ = {
@@ -306,7 +298,7 @@
 				D1F79038296DC1FD00F3CB30 /* Sources.swift in Sources */,
 				D1F7902E296D84CD00F3CB30 /* ImageExtensions.swift in Sources */,
 				D1F00889296EC0C8007E09B7 /* DrinkSource.swift in Sources */,
-				D1F79014296D75EE00F3CB30 /* HomeView.swift in Sources */,
+				D1F79014296D75EE00F3CB30 /* DrinksView.swift in Sources */,
 				D1F79030296D879600F3CB30 /* ColorExtensions.swift in Sources */,
 				D1F79036296DC1EB00F3CB30 /* Equipments.swift in Sources */,
 				D1F0087F296EBB90007E09B7 /* AppState.swift in Sources */,

@@ -20,7 +20,7 @@ struct AppView: View {
                     }
                     .tag(Tab.discover)
                 
-                HomeView()
+                DrinksView()
                     .tabItem {
                         Image(systemName: "wineglass")
                         Text("Drinks")

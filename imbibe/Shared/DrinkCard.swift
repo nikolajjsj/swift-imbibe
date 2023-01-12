@@ -21,9 +21,7 @@ struct DrinkCard: View {
                     Image(uiImage: image)
                         .resizable()
                         .scaledToFit()
-                        .frame(width: 62)
-                        .frame(maxHeight: 80)
-                        .padding(.trailing, 8)
+                        .frame(width: 80, height: 80)
                 }
                 
                 VStack(alignment: .leading) {
