@@ -9,7 +9,6 @@ import SwiftUI
 
 struct IngredientsView: View {
     @State private var query = ""
-    @State private var sortedIngredients: [Ingredient] = ingredients.values.sorted(by: { $0.name < $1.name })
     
     var body: some View {
         List {
@@ -27,8 +26,8 @@ struct IngredientsView: View {
     
     var filtered: [Ingredient] {
         query.isEmpty
-        ? sortedIngredients
-        : sortedIngredients.filter({ $0.name.lowercased().contains(query.lowercased()) })
+        ? Ingredients.all
+        : Ingredients.all.filter({ $0.name.lowercased().contains(query.lowercased()) })
     }
 }
 

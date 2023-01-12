@@ -44,6 +44,6 @@ struct DrinkCard: View {
 
 struct DrinkCard_Previews: PreviewProvider {
     static var previews: some View {
-        DrinkCard(drink: drinks.first!)
+        DrinkCard(drink: Drinks.oldFashioned)
     }
 }

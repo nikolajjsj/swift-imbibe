@@ -36,7 +36,7 @@ struct IngredientView: View {
     }
     
     var drinksWithIngredient: [Drink] {
-        drinks.filter({ d in d.ingredients.contains(where: { i in i.ingredient.name == ingredient.name }) })
+        Drinks.all.filter({ d in d.ingredients.contains(where: { i in i.ingredient.name == ingredient.name }) })
     }
     
     @ViewBuilder
@@ -63,7 +63,7 @@ struct IngredientView: View {
 struct IngredientView_Previews: PreviewProvider {
     static var previews: some View {
         NavigationView {
-            IngredientView(ingredient: ingredients["Egg White"]!)
+            IngredientView(ingredient: Ingredients.bourbonWhisky)
         }
     }
 }

@@ -27,8 +27,8 @@ struct HomeView: View {
     
     var filtered: [Drink] {
         query.isEmpty
-            ? drinks
-            : drinks.filter({ $0.name.lowercased().contains(query.lowercased()) })
+        ? Drinks.all
+        : Drinks.all.filter({ $0.name.lowercased().contains(query.lowercased()) })
     }
 }
 

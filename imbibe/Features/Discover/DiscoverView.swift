@@ -15,7 +15,7 @@ struct DiscoverView: View {
             HStack {
                 Spacer()
                 Button {
-                    appState.path.append(Route.drink(randomDrink()))
+                    appState.path.append(Route.drink(Drinks.random()))
                 } label: {
                     Label("Random Drink", systemImage: "party.popper")
                 }
@@ -25,7 +25,7 @@ struct DiscoverView: View {
             .listRowSeparator(.hidden)
             
             Section {
-                ForEach(iconicDrinks) { drink in
+                ForEach(Drinks.allIconic) { drink in
                     DrinkCard(drink: drink)
                 }
             } header: {
@@ -33,10 +33,6 @@ struct DiscoverView: View {
             }
             .listRowSeparator(.hidden)
         }.listStyle(.plain)
-    }
-    
-    func randomDrink() -> Drink {
-        drinks.randomElement()!
     }
 }
 

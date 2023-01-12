@@ -43,6 +43,6 @@ struct IngredientCard: View {
 
 struct IngredientCard_Previews: PreviewProvider {
     static var previews: some View {
-        IngredientCard(ingredient: ingredients["Rye Whisky"]!)
+        IngredientCard(ingredient: Ingredients.ryeWhisky)
     }
 }

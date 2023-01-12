@@ -42,12 +42,14 @@ class IngredientWithVolume: Identifiable, Hashable {
     
     let id: UUID
     let ingredient: Ingredient
+    let pieces: Int?
     let volumeInML: Int?
     let dashes: Int?
     
-    init(id: UUID = UUID(), ingredient: Ingredient, volumeInML: Int?, dashes: Int?) {
+    init(id: UUID = UUID(), ingredient: Ingredient, pieces: Int? = nil, volumeInML: Int? = nil, dashes: Int? = nil) {
         self.id = id
         self.ingredient = ingredient
+        self.pieces = pieces
         self.volumeInML = volumeInML
         self.dashes = dashes
     }

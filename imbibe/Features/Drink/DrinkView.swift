@@ -85,7 +85,7 @@ struct DrinkView: View {
 struct DrinkView_Previews: PreviewProvider {
     static var previews: some View {
         NavigationView {
-            DrinkView(drink: drinks[0])
+            DrinkView(drink: Drinks.americano)
         }
     }
 }
