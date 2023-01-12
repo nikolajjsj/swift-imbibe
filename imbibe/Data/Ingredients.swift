@@ -21,10 +21,14 @@ class Ingredients {
     static let cognac: Ingredient = Ingredient(name: "Cognac", strength: 40, origin: nil, description: "")
     static let cointreau: Ingredient = Ingredient(name: "Cointreau", strength: 40, origin: nil, description: "")
     static let cola: Ingredient = Ingredient(name: "Cola", strength: 0, origin: nil, description: "")
+    static let curacao: Ingredient = Ingredient(name: "Curacao", strength: 40, origin: nil, description: "")
+    static let darkRum: Ingredient = Ingredient(name: "Dark Rum", strength: 40, origin: nil, description: "")
     static let demeraraSirup: Ingredient = Ingredient(name: "Demerara Sirup", strength: 0, origin: nil, description: "")
     static let drambuie: Ingredient = Ingredient(name: "Drambuie", strength: 40, origin: nil, description: "")
+    static let dryVermouth: Ingredient = Ingredient(name: "Dry Vermouth", strength: 18, origin: nil, description: "")
     static let eggWhite: Ingredient = Ingredient(name: "Egg White", strength: 0, origin: nil, description: "")
     static let gin: Ingredient = Ingredient(name: "Gin", strength: 40, origin: origins["Worldwide"]!, description: "")
+    static let gingerBeer: Ingredient = Ingredient(name: "Ginger Beer", strength: 0, origin: nil, description: "")
     static let grandMarnier: Ingredient = Ingredient(name: "Grand Marnier", strength: 40, origin: nil, description: "")
     static let ice: Ingredient = Ingredient(name: "Ice", strength: 0, origin: nil, description: "")
     static let iceCrushed: Ingredient = Ingredient(name: "Ice Crushed", strength: 0, origin: nil, description: "")
@@ -32,7 +36,9 @@ class Ingredients {
     static let irishWhisky: Ingredient = Ingredient(name: "Irish Whisky", strength: 40, origin: nil, description: "")
     static let kahlua: Ingredient = Ingredient(name: "Kahlua", strength: 20, origin: nil, description: "")
     static let lemonJuice: Ingredient = Ingredient(name: "Lemon Juice", strength: 0, origin: nil, description: "")
+    static let lemonTwist: Ingredient = Ingredient(name: "Lemon Twist", strength: 0, origin: nil, description: "")
     static let lightRum: Ingredient = Ingredient(name: "Light Rum", strength: 40, origin: nil, description: "")
+    static let lime: Ingredient = Ingredient(name: "Lime", strength: 0, origin: nil, description: "")
     static let limeJuice: Ingredient = Ingredient(name: "Lime Juice", strength: 0, origin: nil, description: "")
     static let mintLeaves: Ingredient = Ingredient(name: "Mint Leaves", strength: 0, origin: nil, description: "")
     static let peychaudBitters: Ingredient = Ingredient(name: "Peychaud Bitters", strength: 35, origin: nil, description: "")
@@ -60,7 +66,9 @@ class Ingredients {
         cola,
         demeraraSirup,
         drambuie,
+        dryVermouth,
         gin,
+        gingerBeer,
         grandMarnier,
         ice,
         iceCrushed,
@@ -68,6 +76,7 @@ class Ingredients {
         irishWhisky,
         kahlua,
         lemonJuice,
+        lemonTwist,
         lightRum,
         limeJuice,
         mintLeaves,
