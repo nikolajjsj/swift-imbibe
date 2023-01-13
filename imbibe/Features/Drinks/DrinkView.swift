@@ -79,15 +79,10 @@ struct DrinkView: View {
     
     @ViewBuilder
     func EquipmentCapsule(e: Equipment) -> some View {
-        let image = UIImage.init(named: e.name)
-        let bgColor = Color(uiColor: image?.averageColor ?? .clear)
-        let fgColor = bgColor.contastColor
-        
         Text(e.name)
-            .foregroundColor(fgColor)
             .padding(.horizontal, 12)
             .padding(.vertical, 6)
-            .background(RoundedRectangle(cornerRadius: 4).fill(bgColor))
+            .background(RoundedRectangle(cornerRadius: 4).stroke(.gray, lineWidth: 1))
             .bold()
     }
     
