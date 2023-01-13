@@ -11,79 +11,81 @@ struct DrinkView: View {
     let drink: Drink
     
     var body: some View {
-        List {
-            DrinkImage().background(.clear)
-            
-            facts
-            
-            Section {
-                ForEach(drink.ingredients, content: Ingredient)
-            } header: {
-                Text("Ingredients (\(drink.ingredients.count))").font(.title3.bold())
-            }.listRowSeparator(.hidden)
-            
-            Section {
-                ForEach(Array(drink.steps.enumerated()), id: \.offset) { index, step in
-                    Label {
-                        Step(text: step.string)
-                    } icon: {
-                        Text("\(index + 1).").font(.title3.bold())
+        ScrollView {
+            LazyVStack {
+                DrinkImage().background(.clear)
+                
+                facts.padding(.vertical, 24)
+                
+                VStack {
+                    Text("Ingredients (\(drink.ingredients.count))").font(.title3.bold())
+                    VStack {
+                        ForEach(drink.ingredients, content: Ingredient)
                     }
+                    .padding()
+                    .background(RoundedRectangle(cornerRadius: 4).stroke(.gray, lineWidth: 1))
                 }
-            } header: {
-                Text("Steps (\(drink.steps.count))").font(.title3.bold())
+                .padding(.vertical, 24)
+                
+                VStack {
+                    Text("Steps (\(drink.steps.count))").font(.title3.bold())
+                    
+                    VStack {
+                        ForEach(Array(drink.steps.enumerated()), id: \.offset) { index, step in
+                            Label {
+                                Step(text: step.string)
+                                Spacer()
+                            } icon: {
+                                Text("\(index + 1).").font(.title3.bold())
+                            }
+                            Divider()
+                        }
+                    }
+                    .padding()
+                    .background(RoundedRectangle(cornerRadius: 4).stroke(.gray, lineWidth: 1))
+                }
+                .padding(.vertical, 24)
             }
+            .padding(.horizontal)
         }
         .navigationTitle(drink.name)
+        .navigationBarTitleDisplayMode(.inline)
     }
     
     var facts: some View {
-        Section {
+        VStack {
+            Text("Facts").font(.title3.bold())
+            
             Grid(alignment: .leading, verticalSpacing: 16) {
                 GridRow {
-                    Text("Equipments")
+                    Text("Equipments").font(.headline)
                     WrappingHStack(models: drink.ingredients, viewGenerator: {i in
-                        IngredientCapsule(i: i.ingredient)
+                        ItemBox(label: i.ingredient.name)
                     }, horizontalSpacing: 4, verticalSpacing: 4)
                 }
                 Divider()
                 GridRow {
-                    Text("Equipments")
+                    Text("Equipments").font(.headline)
                     WrappingHStack(models: drink.equipments, viewGenerator: {e in
-                        EquipmentCapsule(e: e)
+                        ItemBox(label: e.name)
                     }, horizontalSpacing: 4, verticalSpacing: 4)
                 }
                 GridRow {
-                    Text("Origin")
-                    Text(drink.origin.name + drink.origin.flag).bold()
+                    Text("Origin").font(.headline)
+                    Text(drink.origin.name + drink.origin.flag)
                 }
             }
-        } header: {
-            Text("Facts").font(.title3.bold())
+            .padding()
+            .background(RoundedRectangle(cornerRadius: 4).stroke(.gray, lineWidth: 1))
         }
     }
     
     @ViewBuilder
-    func IngredientCapsule(i: Ingredient) -> some View {
-        let image = UIImage.init(named: i.name)
-        let bgColor = Color(uiColor: image?.averageColor ?? .clear)
-        let fgColor = bgColor.contastColor
-        
-        Text(i.name)
-            .foregroundColor(fgColor)
-            .padding(.horizontal, 12)
-            .padding(.vertical, 6)
-            .background(RoundedRectangle(cornerRadius: 4).fill(bgColor))
-            .bold()
-    }
-    
-    @ViewBuilder
-    func EquipmentCapsule(e: Equipment) -> some View {
-        Text(e.name)
+    func ItemBox(label: String) -> some View {
+        Text(label)
             .padding(.horizontal, 12)
             .padding(.vertical, 6)
             .background(RoundedRectangle(cornerRadius: 4).stroke(.gray, lineWidth: 1))
-            .bold()
     }
     
     
@@ -99,7 +101,7 @@ struct DrinkView: View {
                     .padding(.horizontal)
                     .padding(.vertical, 8)
                 Spacer()
-            }.listRowSeparator(.hidden)
+            }
         }
     }
     

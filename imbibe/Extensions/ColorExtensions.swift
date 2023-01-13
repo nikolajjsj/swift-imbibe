@@ -33,9 +33,22 @@ extension Color {
     }
     
     var contastColor: Self {
-        let c = self.components
-        
-        let luminance = 0.2126 * c.red + 0.7152 * c.green + 0.0722 * c.blue
-        return luminance >= 0.5 ? Color.black : Color.white
+        var r, g, b, a: CGFloat
+        (r, g, b, a) = (0, 0, 0, 0)
+        UIColor(self).getRed(&r, green: &g, blue: &b, alpha: &a)
+        let lum = 0.2126 * r + 0.7152 * g + 0.0722 * b
+        return lum >= 0.5 ? Color.black : Color.white
     }
+    
+#if os(macOS)
+    static let label = Color.gray
+    static let background = Color(NSColor.windowBackgroundColor)
+    static let secondaryBackground = Color(NSColor.underPageBackgroundColor)
+    static let tertiaryBackground = Color(NSColor.controlBackgroundColor)
+#else
+    static let label = Color(UIColor.label)
+    static let background = Color(UIColor.systemBackground)
+    static let secondaryBackground = Color(UIColor.secondarySystemBackground)
+    static let tertiaryBackground = Color(UIColor.tertiarySystemBackground)
+#endif
 }

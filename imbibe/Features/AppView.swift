@@ -11,30 +11,40 @@ struct AppView: View {
     @EnvironmentObject var appState: AppState
     
     var body: some View {
-        NavigationStack(path: $appState.path) {
-            TabView(selection: $appState.tab) {
-                DiscoverView()
-                    .tabItem {
-                        Image(systemName: "binoculars")
-                        Text("Discover")
-                    }
-                    .tag(Tab.discover)
-                
-                DrinksView()
-                    .tabItem {
-                        Image(systemName: "wineglass")
-                        Text("Drinks")
-                    }
-                    .tag(Tab.drinks)
-                
-                IngredientsView()
-                    .tabItem {
-                        Image(systemName: "cooktop")
-                        Text("Ingredients")
-                    }
-                    .tag(Tab.ingredients)
+        TabView(selection: $appState.tab) {
+            NavigationStack(path: $appState.discoverPath) {
+                DiscoverView().navigationDestination(for: Route.self, destination: routeView)
             }
-            .navigationDestination(for: Route.self, destination: routeView)
+            .tabItem {
+                Image(systemName: "binoculars")
+                Text("Discover")
+            }
+            .tag(Tab.discover)
+            
+            NavigationStack(path: $appState.drinksPath) {
+                DrinksView().navigationDestination(for: Route.self, destination: routeView)
+            }
+            .tabItem {
+                Image(systemName: "wineglass")
+                Text("Drinks")
+            }
+            .tag(Tab.drinks)
+            
+            NavigationStack(path: $appState.ingredientsPath) {
+                IngredientsView()
+                    .navigationDestination(for: Route.self, destination: routeView)
+            }
+            .tabItem {
+                Image(systemName: "cooktop")
+                Text("Ingredients")
+            }
+            .tag(Tab.ingredients)
+            
+            SettingsView().tabItem {
+                Image(systemName: "gear")
+                Text("Settings")
+            }
+            .tag(Tab.settings)
         }
     }
     

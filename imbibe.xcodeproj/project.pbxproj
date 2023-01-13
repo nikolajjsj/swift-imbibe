@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D1194A672971A4A900E4C1E7 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1194A662971A4A900E4C1E7 /* SettingsView.swift */; };
 		D1E5BBCB29705D2500BA60F9 /* WrappingHStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1E5BBCA29705D2500BA60F9 /* WrappingHStack.swift */; };
 		D1F0087F296EBB90007E09B7 /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1F0087E296EBB90007E09B7 /* AppState.swift */; };
 		D1F00881296EC065007E09B7 /* DrinkStep.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1F00880296EC065007E09B7 /* DrinkStep.swift */; };
@@ -38,6 +39,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		D1194A662971A4A900E4C1E7 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		D1E5BBCA29705D2500BA60F9 /* WrappingHStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WrappingHStack.swift; sourceTree = "<group>"; };
 		D1F0087E296EBB90007E09B7 /* AppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
 		D1F00880296EC065007E09B7 /* DrinkStep.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrinkStep.swift; sourceTree = "<group>"; };
@@ -81,6 +83,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D1194A652971A4A100E4C1E7 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				D1194A662971A4A900E4C1E7 /* SettingsView.swift */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
 		D1F0087D296EBB86007E09B7 /* Environments */ = {
 			isa = PBXGroup;
 			children = (
@@ -135,6 +145,7 @@
 		D1F79020296D762900F3CB30 /* Features */ = {
 			isa = PBXGroup;
 			children = (
+				D1194A652971A4A100E4C1E7 /* Settings */,
 				D1F79043296E8DA900F3CB30 /* Discover */,
 				D1F7903B296E813100F3CB30 /* Ingredients */,
 				D1F79022296D766000F3CB30 /* Drinks */,
@@ -312,6 +323,7 @@
 				D1F79047296E90C800F3CB30 /* DrinkCard.swift in Sources */,
 				D1F7902C296D841F00F3CB30 /* DrinkView.swift in Sources */,
 				D1F00885296EC0A8007E09B7 /* Equipment.swift in Sources */,
+				D1194A672971A4A900E4C1E7 /* SettingsView.swift in Sources */,
 				D1F79034296DC1DA00F3CB30 /* Origins.swift in Sources */,
 				D1F79049296E916C00F3CB30 /* IngredientCard.swift in Sources */,
 				D1F7900F296D75EE00F3CB30 /* Persistence.swift in Sources */,

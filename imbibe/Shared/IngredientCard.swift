@@ -10,25 +10,23 @@ import SwiftUI
 struct IngredientCard: View {
     let ingredient: Ingredient
     
+    @State private var image: UIImage?
+    @State private var bgColor: Color = .clear
+    @State private var fgColor: Color = .label
+    
     var body: some View {
-        let image = UIImage.init(named: ingredient.name)
-        let bgColor = Color(uiColor: image?.averageColor ?? .clear)
-        let fgColor = bgColor.contastColor
-        
         NavigationLink(value: Route.ingredient(ingredient)) {
             HStack {
                 if let image {
                     Image(uiImage: image)
                         .resizable()
                         .scaledToFit()
-                        .frame(width: 80, height: 80)
+                        .frame(width: 30, height: 60)
                 }
                 
                 VStack(alignment: .leading) {
-                    Text(ingredient.name).font(.title2.bold()).lineLimit(1)
-                    if let description = ingredient.description, !ingredient.description.isEmpty {
-                        Text(description).lineLimit(1)
-                    }
+                    Text(ingredient.name).font(.headline.bold()).lineLimit(1)
+                    Text("\(ingredient.strength)%").opacity(0.75)
                 }
                 Spacer()
             }
@@ -37,6 +35,17 @@ struct IngredientCard: View {
         .padding(.horizontal)
         .padding(.vertical, 8)
         .background(RoundedRectangle(cornerRadius: 10).fill(bgColor))
+        .task {
+            image = UIImage.init(named: ingredient.name)
+            DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
+                let background = Color(uiColor: image?.averageColor ?? .clear)
+                let foreground = bgColor.contastColor
+                withAnimation {
+                    bgColor = background
+                    fgColor = foreground
+                }
+            }
+        }
     }
 }
 

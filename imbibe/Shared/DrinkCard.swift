@@ -10,25 +10,23 @@ import SwiftUI
 struct DrinkCard: View {
     let drink: Drink
     
+    @State private var image: UIImage?
+    @State private var bgColor: Color = .clear
+    @State private var fgColor: Color = .label
+    
     var body: some View {
-        let image = UIImage.init(named: drink.name)
-        let bgColor = Color(uiColor: image?.averageColor ?? .clear)
-        let fgColor = bgColor.contastColor
-        
         NavigationLink(value: Route.drink(drink)) {
             HStack {
                 if let image {
                     Image(uiImage: image)
                         .resizable()
                         .scaledToFit()
-                        .frame(width: 80, height: 80)
+                        .frame(width: 30, height: 60)
                 }
                 
                 VStack(alignment: .leading) {
-                    Text(drink.name).font(.title2.bold())
-                    if let description = drink.description, !drink.description.isEmpty {
-                        Text(description)
-                    }
+                    Text(drink.name).font(.headline).multilineTextAlignment(.leading)
+                    Text("\(drink.ingredients.count) ingredients").opacity(0.75)
                 }
                 Spacer()
             }
@@ -37,6 +35,17 @@ struct DrinkCard: View {
         .padding(.horizontal)
         .padding(.vertical, 8)
         .background(RoundedRectangle(cornerRadius: 10).fill(bgColor))
+        .task {
+            image = UIImage.init(named: drink.name)
+            DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
+                let background = Color(uiColor: image?.averageColor ?? .clear)
+                let foreground = bgColor.contastColor
+                withAnimation {
+                    bgColor = background
+                    fgColor = foreground
+                }
+            }
+        }
     }
 }
 

@@ -312,10 +312,17 @@ class Drinks {
     ]
     
     static let allIconic: [Drink] = [
+        americano,
         daiquiri,
+        darkAndStormy,
+        manhattan,
+        martini,
+        mojito,
+        moscowMule,
         negroni,
         oldFashioned,
-        mojito,
+        sazerac,
+        sidecar,
         whiskySour,
     ]
     

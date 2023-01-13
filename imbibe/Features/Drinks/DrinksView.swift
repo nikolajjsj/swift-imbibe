@@ -12,16 +12,18 @@ struct DrinksView: View {
     @State private var query: String = ""
     
     var body: some View {
-        List {
-            Section {
+        let columns = [ GridItem(.flexible()), GridItem(.flexible()) ]
+        
+        ScrollView {
+            LazyVGrid(columns: columns) {
                 ForEach(filtered) { d in
                     DrinkCard(drink: d)
-                        .listRowSeparator(.hidden)
                 }
             }
+            .padding(.horizontal)
         }
         .searchable(text: $query)
-        .listStyle(.plain)
+        .navigationTitle("Drinks")
     }
     
     var filtered: [Drink] {

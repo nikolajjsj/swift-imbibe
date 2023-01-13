@@ -11,16 +11,23 @@ struct DiscoverView: View {
     @EnvironmentObject var appState: AppState
     
     var body: some View {
-        List {
-            Section {
-                ForEach(Drinks.allIconic) { drink in
-                    DrinkCard(drink: drink)
+        let columns = [ GridItem(.flexible()), GridItem(.flexible()) ]
+        
+        ScrollView {
+            VStack(alignment: .leading) {
+                Text("Iconic Drinks")
+                    .font(.headline)
+                    .foregroundColor(.gray)
+                
+                LazyVGrid(columns: columns) {
+                    ForEach(Drinks.allIconic) { d in
+                        DrinkCard(drink: d)
+                    }
                 }
-            } header: {
-                 Text("Iconic Drinks")
             }
-            .listRowSeparator(.hidden)
-        }.listStyle(.plain)
+            .padding(.horizontal)
+        }
+        .navigationTitle("Discover")
     }
 }
 

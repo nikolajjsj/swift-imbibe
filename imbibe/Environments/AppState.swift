@@ -8,12 +8,15 @@
 import SwiftUI
 
 class AppState: ObservableObject {
-    @Published var tab: Tab = .drinks
-    @Published var path: [Route] = []
+    @Published var tab: Tab = .discover
+    
+    @Published var discoverPath: [Route] = []
+    @Published var drinksPath: [Route] = []
+    @Published var ingredientsPath: [Route] = []
 }
 
 enum Tab: Hashable {
-    case discover, drinks, ingredients
+    case discover, drinks, ingredients, settings
 }
 
 enum Route: Hashable {
