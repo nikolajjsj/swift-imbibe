@@ -56,7 +56,7 @@ struct IngredientsInspector: View {
         let fg = bg.contastColor
         
         HStack {
-            if ingredient.unit?.symbol == "dash" || ingredient.unit?.symbol == "drop" {
+            if ingredient.unit?.symbol == "dash" || ingredient.unit?.symbol == "drop" || ingredient.unit?.symbol == "piece" {
                 if let amount = ingredient.amount {
                     Text((amount * Double(servings)).formatted(.number))
                     Text(ingredient.unit?.symbol ?? "")
@@ -79,6 +79,6 @@ struct IngredientsInspector: View {
 
 struct IngredientsInspector_Previews: PreviewProvider {
     static var previews: some View {
-        IngredientsInspector(Drinks.oldFashioned)
+        IngredientsInspector(Drinks.mojito)
     }
 }

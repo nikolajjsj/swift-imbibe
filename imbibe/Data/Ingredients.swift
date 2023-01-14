@@ -280,6 +280,22 @@ class Ingredients {
         origin: nil,
         description: ""
     )
+    static let oliveBrine: Ingredient = Ingredient(
+        name: "Olive Brine",
+        image: "Olives",
+        color: "5A915CCC",
+        strength: 0,
+        origin: nil,
+        description: ""
+    )
+    static let olives: Ingredient = Ingredient(
+        name: "Olives",
+        image: "Olives",
+        color: "5A915CCC",
+        strength: 0,
+        origin: nil,
+        description: ""
+    )
     static let peychaudBitters: Ingredient = Ingredient(
         name: "Peychaud Bitters",
         image: "Peychaud Bitters",

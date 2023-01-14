@@ -8,6 +8,28 @@
 import Foundation
 
 class Drinks {
+    static let fityFiftyMartini: Drink =
+        .init(
+            name: "50/50 Martini",
+            description: "",
+            image: "Martini",
+            color: "49484459",
+            origin: Origin(name: "United States", flag: "🇺🇸"),
+            equipments: [ Equipments.cocktailGlass, Equipments.barspoon, Equipments.mixingGlass ],
+            ingredients: [
+                .init(ingredient: Ingredients.gin, amount: 45, unit: .milliliters),
+                .init(ingredient: Ingredients.dryVermouth, amount: 45, unit: .milliliters),
+                .init(ingredient: Ingredients.iceCubes),
+            ],
+            steps: [
+                .init(string: "Add Ice Cubes, Gin & Dry Vermouth to the Mixing Glass"),
+                .init(string: "Stir with Barspoon (30-40 seconds)"),
+                .init(string: "Strain into the Cocktail Glass"),
+                .init(string: "Garnish with Olives"),
+            ],
+            source: nil
+        )
+    
     static let americano: Drink =
         .init(
             name: "Americano",
@@ -28,6 +50,29 @@ class Drinks {
                 .init(string: "Stir"),
                 .init(string: "Top up with Soda Water"),
                 .init(string: "Garnish with Citrus Wedge"),
+            ],
+            source: nil
+        )
+    
+    static let classicMartini: Drink =
+        .init(
+            name: "Classic Martini",
+            description: "",
+            image: "Martini",
+            color: "49484459",
+            origin: Origin(name: "United States", flag: "🇺🇸"),
+            equipments: [ Equipments.cocktailGlass, Equipments.barspoon, Equipments.mixingGlass ],
+            ingredients: [
+                .init(ingredient: Ingredients.gin, amount: 75, unit: .milliliters),
+                .init(ingredient: Ingredients.dryVermouth, amount: 15, unit: .milliliters),
+                .init(ingredient: Ingredients.angosturaOrangeBitters, amount: 1, unit: .dash),
+                .init(ingredient: Ingredients.iceCubes),
+            ],
+            steps: [
+                .init(string: "Add Ice Cubes, Gin, Dry Vermouth, & Angostura Orange Bitters to the Mixing Glass"),
+                .init(string: "Stir with Barspoon (30-40 seconds)"),
+                .init(string: "Strain into the Cocktail Glass"),
+                .init(string: "Garnish with Olives"),
             ],
             source: nil
         )
@@ -73,6 +118,32 @@ class Drinks {
                 .init(string: "Fill up the Highball Glass with Ice Cubes"),
                 .init(string: "Add Dark Rum & Ginger Beer"),
                 .init(string: "Garnish with a Lime Wedge"),
+            ],
+            source: nil
+        )
+    
+    static let dirtyMartini: Drink =
+        .init(
+            name: "Dirty Martini",
+            description: "",
+            image: "Martini",
+            color: "49484459",
+            origin: Origin(name: "United States", flag: "🇺🇸"),
+            equipments: [ Equipments.cocktailGlass, Equipments.barspoon, Equipments.mixingGlass ],
+            ingredients: [
+                .init(ingredient: Ingredients.gin, amount: 75, unit: .milliliters),
+                .init(ingredient: Ingredients.dryVermouth, amount: 15, unit: .milliliters),
+                .init(ingredient: Ingredients.olives, amount: 3, unit: .piece),
+                .init(ingredient: Ingredients.oliveBrine, amount: 15, unit: .milliliters),
+                .init(ingredient: Ingredients.iceCubes),
+            ],
+            steps: [
+                .init(string: "Add Olives to Mixing Glass & muddle"),
+                .init(string: "Add the Olive Brine"),
+                .init(string: "Add Ice Cubes, Gin & Dry Vermouth to the Mixing Glass"),
+                .init(string: "Stir with Barspoon (30-40 seconds)"),
+                .init(string: "Strain into the Cocktail Glass"),
+                .init(string: "Garnish with Olives"),
             ],
             source: nil
         )
@@ -127,29 +198,6 @@ class Drinks {
             source: nil
         )
     
-    static let martini: Drink =
-        .init(
-            name: "Martini",
-            description: "",
-            image: "Martini",
-            color: "49484459",
-            origin: Origin(name: "United States", flag: "🇺🇸"),
-            equipments: [ Equipments.cocktailGlass, Equipments.barspoon, Equipments.mixingGlass ],
-            ingredients: [
-                .init(ingredient: Ingredients.gin, amount: 60, unit: .milliliters),
-                .init(ingredient: Ingredients.dryVermouth, amount: 10, unit: .milliliters),
-                .init(ingredient: Ingredients.iceCubes),
-            ],
-            steps: [
-                .init(string: "Add Ice Cubes to the Mixing Glass"),
-                .init(string: "Add Gin & Dry Vermouth"),
-                .init(string: "Stir together with Barspoon"),
-                .init(string: "Strain into the Cocktail Glass"),
-                .init(string: "Garnish with Olives and a Lemon Twist"),
-            ],
-            source: nil
-        )
-    
     static let mojito: Drink =
         .init(
             name: "Mojito",
@@ -162,7 +210,7 @@ class Drinks {
                 .init(ingredient: Ingredients.lightRum, amount: 60, unit: .milliliters),
                 .init(ingredient: Ingredients.demeraraSirup, amount: 15, unit: .milliliters),
                 .init(ingredient: Ingredients.limeJuice, amount: 25, unit: .milliliters),
-                .init(ingredient: Ingredients.mintLeaves, amount: 10),
+                .init(ingredient: Ingredients.mintLeaves, amount: 10, unit: .piece),
                 .init(ingredient: Ingredients.iceCubes),
                 .init(ingredient: Ingredients.sodaWater),
             ],
@@ -246,6 +294,29 @@ class Drinks {
             source: nil
         )
     
+    static let perfectMartini: Drink =
+        .init(
+            name: "Perfect Martini",
+            description: "",
+            image: "Martini",
+            color: "49484459",
+            origin: Origin(name: "United States", flag: "🇺🇸"),
+            equipments: [ Equipments.cocktailGlass, Equipments.barspoon, Equipments.mixingGlass ],
+            ingredients: [
+                .init(ingredient: Ingredients.gin, amount: 45, unit: .milliliters),
+                .init(ingredient: Ingredients.dryVermouth, amount: 25, unit: .milliliters),
+                .init(ingredient: Ingredients.sweetVermouth, amount: 25, unit: .milliliters),
+                .init(ingredient: Ingredients.iceCubes),
+            ],
+            steps: [
+                .init(string: "Add Ice Cubes, Gin, Dry Vermouth, & Sweet Vermouth to the Mixing Glass"),
+                .init(string: "Stir with Barspoon (30-40 seconds)"),
+                .init(string: "Strain into the Cocktail Glass"),
+                .init(string: "Garnish with a Lemon Twist"),
+            ],
+            source: nil
+        )
+    
     static let sazerac: Drink =
         .init(
             name: "Sazerac",
@@ -323,15 +394,18 @@ class Drinks {
     
     static let all: [Drink] = [
         americano,
+        classicMartini,
         daiquiri,
         darkAndStormy,
+        fityFiftyMartini,
+        dirtyMartini,
         ginFizz,
         manhattan,
-        martini,
         mojito,
         moscowMule,
         negroni,
         oldFashioned,
+        perfectMartini,
         sazerac,
         sidecar,
         whiskySour,
@@ -339,10 +413,10 @@ class Drinks {
     
     static let allIconic: [Drink] = [
         americano,
+        classicMartini,
         daiquiri,
         darkAndStormy,
         manhattan,
-        martini,
         mojito,
         moscowMule,
         negroni,
