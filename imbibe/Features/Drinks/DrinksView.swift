@@ -21,9 +21,9 @@ struct DrinksView: View {
                 }
             }
             .padding(.horizontal)
+            .navigationTitle("Drinks")
         }
         .searchable(text: $query)
-        .navigationTitle("Drinks")
     }
     
     var filtered: [Drink] {
@@ -36,6 +36,8 @@ struct DrinksView: View {
 
 struct DrinksView_Previews: PreviewProvider {
     static var previews: some View {
-        DrinksView()
+        NavigationView {
+            DrinksView()
+        }
     }
 }

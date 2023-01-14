@@ -11,52 +11,70 @@ struct IngredientView: View {
     let ingredient: Ingredient
     
     var body: some View {
-        List {
-            IngredientImage().listRowSeparator(.hidden)
-            
-            Section {
-                Text("Strength: \(ingredient.strength)%")
-                if !ingredient.description.isEmpty {
-                    Text(ingredient.description)
+        ScrollView {
+            ZStack {
+                if let image = UIImage.init(named: ingredient.name) {
+                    Image(uiImage: image)
+                        .resizable()
+                        .scaledToFit()
+                        .frame(maxHeight: UIScreen.main.bounds.size.height)
+                        .padding(.horizontal)
+                        .padding(.vertical, 8)
+                        .position(x: UIScreen.main.bounds.size.width / 2, y: UIScreen.main.bounds.size.height / 5)
+                        .blur(radius: 60)
                 }
-            } header: {
-                Text("Details")
-            }
-            
-            Section {
-                ForEach(drinksWithIngredient) { drink in
-                    DrinkCard(drink: drink)
+                
+                VStack {
+                    if let image = UIImage.init(named: ingredient.name) {
+                        Image(uiImage: image)
+                            .resizable()
+                            .scaledToFit()
+                            .frame(height: UIScreen.main.bounds.size.height / 2.5)
+                            .frame(maxHeight: 600)
+                            .padding(.horizontal)
+                            .padding(.vertical, 8)
+                    }
+                    
+                    GroupBox {
+                        Grid(alignment: .leading) {
+                            Divider()
+                            GridRow {
+                                Text("Strength")
+                                Text("\(ingredient.strength)%").bold()
+                            }
+                            Divider()
+                            if let origin = ingredient.origin {
+                                GridRow {
+                                    Text("Origin")
+                                    Text(origin.name + origin.flag).bold()
+                                }
+                                Divider()
+                            }
+                            if !ingredient.description.isEmpty {
+                                GridRow {
+                                    Text("Description")
+                                    Text(ingredient.description)
+                                }
+                                Divider()
+                            }
+                        }
+                    } label: {
+                        Text(ingredient.name)
+                    }.padding(.bottom, 42)
+                    
+                    Text("Drinks with \(ingredient.name)").font(.title3.bold())
+                    LazyVStack {
+                        ForEach(drinksWithIngredient) { drink in
+                            DrinkCard(drink: drink)
+                        }
+                    }
                 }
-            } header: {
-                Text("Drinks with \(ingredient.name)")
-            }
+            }.padding(.horizontal)
         }
-        .listStyle(.plain)
-        .navigationTitle(ingredient.name)
     }
     
     var drinksWithIngredient: [Drink] {
         Drinks.all.filter({ d in d.ingredients.contains(where: { i in i.ingredient.name == ingredient.name }) })
-    }
-    
-    @ViewBuilder
-    func IngredientImage() -> some View {
-        let image = UIImage.init(named: ingredient.name)
-        let bgColor = image?.averageColor ?? .clear
-        
-        if let image {
-            HStack {
-                Spacer()
-                Image(uiImage: image)
-                    .resizable()
-                    .scaledToFit()
-                    .frame(maxHeight: 300)
-                    .padding(.horizontal)
-                    .padding(.vertical, 8)
-                Spacer()
-            }
-            .background(RoundedRectangle(cornerRadius: 10).fill(Color(bgColor)))
-        }
     }
 }
 
