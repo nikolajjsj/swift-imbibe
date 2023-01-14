@@ -10,14 +10,13 @@ import SwiftUI
 struct IngredientCard: View {
     let ingredient: Ingredient
     
-    @State private var image: UIImage?
-    @State private var bgColor: Color = .clear
-    @State private var fgColor: Color = .label
-    
     var body: some View {
+        let background = Color(hex: ingredient.color) ?? .clear
+        let foreground = background.contastColor
+        
         NavigationLink(value: Route.ingredient(ingredient)) {
             HStack {
-                if let image {
+                if let image = UIImage.init(named: ingredient.name) {
                     Image(uiImage: image)
                         .resizable()
                         .scaledToFit()
@@ -31,21 +30,10 @@ struct IngredientCard: View {
                 Spacer()
             }
         }
-        .foregroundColor(fgColor)
+        .foregroundColor(foreground)
         .padding(.horizontal)
         .padding(.vertical, 8)
-        .background(RoundedRectangle(cornerRadius: 10).fill(bgColor))
-        .task {
-            image = UIImage.init(named: ingredient.name)
-            DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
-                let background = Color(uiColor: image?.averageColor ?? .clear)
-                let foreground = bgColor.contastColor
-                withAnimation {
-                    bgColor = background
-                    fgColor = foreground
-                }
-            }
-        }
+        .background(RoundedRectangle(cornerRadius: 10).fill(background.gradient))
     }
 }
 
