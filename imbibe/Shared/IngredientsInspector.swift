@@ -9,6 +9,7 @@ import SwiftUI
 
 enum MeasurementUnit: String, CaseIterable {
     case ml = "ml"
+    case cl = "cl"
     case oz = "oz"
     case part = "part"
 }
@@ -25,9 +26,9 @@ struct IngredientsInspector: View {
     
     var body: some View {
         GroupBox {
-            HStack {
-                VStack {
-                    Text("Servings").foregroundColor(.gray)
+            VStack {
+                HStack {
+                    Text("Servings").foregroundColor(.gray).frame(minWidth: 80)
                     Picker("", selection: $servings) {
                         ForEach(1 ..< 5, id: \.self) { serving in
                             Text("\(serving)").tag(serving)
@@ -35,8 +36,8 @@ struct IngredientsInspector: View {
                     }.pickerStyle(.segmented)
                 }
                 
-                VStack {
-                    Text("Unit").foregroundColor(.gray)
+                HStack {
+                    Text("Unit").foregroundColor(.gray).frame(minWidth: 80)
                     Picker("", selection: $unit) {
                         ForEach(MeasurementUnit.allCases, id: \.self) { unit in
                             Text(unit.rawValue).tag(unit)
@@ -78,15 +79,19 @@ struct IngredientsInspector: View {
     }
     
     func computeVolume(_ volume: Int) -> String {
-        "\((volumeByMeasurementUnit(volume) * Double(servings)).rounded(toPlaces: 1)) \(unit.rawValue)"
+        let value = volumeByUnitAndServings(volume).rounded(toPlaces: 1).formatted(.number)
+        let unitString = unit.rawValue
+        return "\(value) \(unitString)"
     }
     
-    func volumeByMeasurementUnit(_ volume: Int) -> Double {
+    func volumeByUnitAndServings(_ volume: Int) -> Double {
         switch unit {
         case .ml:
-            return Double(volume)
+            return Double(volume) * Double(servings)
+        case .cl:
+            return (Double(volume) / 10) * Double(servings)
         case .oz:
-            return Double(volume) * 0.0338140227
+            return (Double(volume) * 0.0338140227) * Double(servings)
         case .part:
             let min = drink.ingredients.min(by: { ($0.volumeInML ?? .max) < ($1.volumeInML ?? .max) })
             let result: Double = Double(volume) / Double(min?.volumeInML ?? 1)
