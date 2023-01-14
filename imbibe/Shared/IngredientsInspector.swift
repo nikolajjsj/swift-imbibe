@@ -47,9 +47,7 @@ struct IngredientsInspector: View {
                     IngredientDetailPill(i, servings: servings, unit: unit)
                 }
             }
-        }
-        .padding()
-        .background(RoundedRectangle(cornerRadius: 10).fill(.primary.opacity(0.1)))
+        }.detailCard()
     }
     
     @ViewBuilder

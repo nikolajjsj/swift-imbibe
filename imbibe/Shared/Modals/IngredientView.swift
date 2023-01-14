@@ -34,7 +34,8 @@ struct IngredientView: View {
                             .padding(.vertical, 8)
                     }
                     
-                    GroupBox {
+                    VStack {
+                        Text(ingredient.name)
                         Grid(alignment: .leading) {
                             Divider()
                             GridRow {
@@ -57,16 +58,16 @@ struct IngredientView: View {
                                 Divider()
                             }
                         }
-                    } label: {
-                        Text(ingredient.name)
-                    }.padding(.bottom, 42)
+                    }.detailCard().padding(.bottom, 42)
                     
-                    Text("Drinks with \(ingredient.name)")
-                    LazyVGrid(columns: [ GridItem(.flexible()), GridItem(.flexible()) ]) {
-                        ForEach(drinksWithIngredient) { drink in
-                            DrinkCard(drink: drink)
+                    VStack {
+                        Text("Drinks with \(ingredient.name)")
+                        LazyVGrid(columns: [ GridItem(.flexible()), GridItem(.flexible()) ]) {
+                            ForEach(drinksWithIngredient) { drink in
+                                DrinkCard(drink: drink)
+                            }
                         }
-                    }
+                    }.detailCard()
                 }
             }.padding(.horizontal)
         }

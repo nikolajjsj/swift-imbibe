@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		D1194A672971A4A900E4C1E7 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1194A662971A4A900E4C1E7 /* SettingsView.swift */; };
+		D17BB61D29732160004F08F7 /* ViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D17BB61C29732160004F08F7 /* ViewExtensions.swift */; };
 		D1E5B3AB2972C998001DF274 /* IngredientBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1E5B3AA2972C998001DF274 /* IngredientBox.swift */; };
 		D1E5B3AD2972C9D3001DF274 /* EquipmentBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1E5B3AC2972C9D3001DF274 /* EquipmentBox.swift */; };
 		D1E5B3B32972D052001DF274 /* NumberExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1E5B3B22972D052001DF274 /* NumberExtensions.swift */; };
@@ -44,6 +45,7 @@
 
 /* Begin PBXFileReference section */
 		D1194A662971A4A900E4C1E7 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		D17BB61C29732160004F08F7 /* ViewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewExtensions.swift; sourceTree = "<group>"; };
 		D1E5B3AA2972C998001DF274 /* IngredientBox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IngredientBox.swift; sourceTree = "<group>"; };
 		D1E5B3AC2972C9D3001DF274 /* EquipmentBox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EquipmentBox.swift; sourceTree = "<group>"; };
 		D1E5B3B22972D052001DF274 /* NumberExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberExtensions.swift; sourceTree = "<group>"; };
@@ -203,6 +205,7 @@
 				D1F7902D296D84CD00F3CB30 /* ImageExtensions.swift */,
 				D1F7902F296D879600F3CB30 /* ColorExtensions.swift */,
 				D1E5B3B22972D052001DF274 /* NumberExtensions.swift */,
+				D17BB61C29732160004F08F7 /* ViewExtensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -372,6 +375,7 @@
 				D1F7902C296D841F00F3CB30 /* DrinkView.swift in Sources */,
 				D1F00885296EC0A8007E09B7 /* Equipment.swift in Sources */,
 				D1194A672971A4A900E4C1E7 /* SettingsView.swift in Sources */,
+				D17BB61D29732160004F08F7 /* ViewExtensions.swift in Sources */,
 				D1F79034296DC1DA00F3CB30 /* Origins.swift in Sources */,
 				D1F79049296E916C00F3CB30 /* IngredientCard.swift in Sources */,
 				D1F7900F296D75EE00F3CB30 /* Persistence.swift in Sources */,

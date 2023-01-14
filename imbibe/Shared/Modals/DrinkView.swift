@@ -57,9 +57,7 @@ struct DrinkView: View {
                                 Text(drink.origin.name + drink.origin.flag)
                             }
                         }
-                    }
-                    .padding()
-                    .background(RoundedRectangle(cornerRadius: 10).fill(.primary.opacity(0.1)))
+                    }.detailCard()
                     
                     IngredientsInspector(drink)
                     
@@ -78,9 +76,7 @@ struct DrinkView: View {
                                 Divider()
                             }
                         }
-                    }
-                    .padding()
-                    .background(RoundedRectangle(cornerRadius: 10).fill(.primary.opacity(0.1)))
+                    }.detailCard()
                 }
             }
             .padding(.horizontal)
