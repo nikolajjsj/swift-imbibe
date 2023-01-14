@@ -108,6 +108,14 @@
 			path = Modals;
 			sourceTree = "<group>";
 		};
+		D1E5B3A92972C97A001DF274 /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+				D1E5BBCA29705D2500BA60F9 /* WrappingHStack.swift */,
+			);
+			path = Utility;
+			sourceTree = "<group>";
+		};
 		D1E5B3B02972CBA4001DF274 /* Cards */ = {
 			isa = PBXGroup;
 			children = (
@@ -251,9 +259,9 @@
 		D1F7903E296E81D400F3CB30 /* Shared */ = {
 			isa = PBXGroup;
 			children = (
-				D1E5BBCA29705D2500BA60F9 /* WrappingHStack.swift */,
 				D1E5B3B12972CBB3001DF274 /* Details */,
 				D1E5B3B02972CBA4001DF274 /* Cards */,
+				D1E5B3A92972C97A001DF274 /* Utility */,
 				D1E5B3A82972C7EE001DF274 /* Modals */,
 				D1E5B3B42972D1C8001DF274 /* IngredientsInspector.swift */,
 			);
