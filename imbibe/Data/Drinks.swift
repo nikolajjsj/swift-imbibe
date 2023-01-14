@@ -16,8 +16,8 @@ class Drinks {
             origin: Origin(name: "Italy", flag: "🇮🇹"),
             equipments: [ Equipments.oldFashionedGlass ],
             ingredients: [
-                .init(ingredient: Ingredients.sweetVermouth, volumeInML: 30),
-                .init(ingredient: Ingredients.campari, volumeInML: 30),
+                .init(ingredient: Ingredients.sweetVermouth, amount: 30, unit: .milliliters),
+                .init(ingredient: Ingredients.campari, amount: 30, unit: .milliliters),
                 .init(ingredient: Ingredients.sodaWater),
                 .init(ingredient: Ingredients.iceCubes),
             ],
@@ -39,9 +39,9 @@ class Drinks {
             origin: Origin(name: "Cuba", flag: "🇨🇺"),
             equipments: [ Equipments.cocktailGlass, Equipments.shaker ],
             ingredients: [
-                .init(ingredient: Ingredients.rum, volumeInML: 60),
-                .init(ingredient: Ingredients.limeJuice, volumeInML: 30),
-                .init(ingredient: Ingredients.simpleSirup, volumeInML: 30),
+                .init(ingredient: Ingredients.rum, amount: 60, unit: .milliliters),
+                .init(ingredient: Ingredients.limeJuice, amount: 30, unit: .milliliters),
+                .init(ingredient: Ingredients.simpleSirup, amount: 30, unit: .milliliters),
                 .init(ingredient: Ingredients.ice),
             ],
             steps: [
@@ -61,8 +61,8 @@ class Drinks {
             origin: Origin(name: "Bermuda", flag: "🇧🇲"),
             equipments: [ Equipments.highballGlass ],
             ingredients: [
-                .init(ingredient: Ingredients.darkRum, volumeInML: 60),
-                .init(ingredient: Ingredients.gingerBeer, volumeInML: 90),
+                .init(ingredient: Ingredients.darkRum, amount: 60, unit: .milliliters),
+                .init(ingredient: Ingredients.gingerBeer, amount: 90, unit: .milliliters),
                 .init(ingredient: Ingredients.ice),
                 .init(ingredient: Ingredients.lime),
             ],
@@ -82,10 +82,10 @@ class Drinks {
             origin: Origin(name: "United Kingdom", flag: "🇬🇧"),
             equipments: [ Equipments.highballGlass, Equipments.shaker ],
             ingredients: [
-                .init(ingredient: Ingredients.gin, volumeInML: 60),
-                .init(ingredient: Ingredients.lemonJuice, volumeInML: 30),
-                .init(ingredient: Ingredients.sodaWater, volumeInML: 80),
-                .init(ingredient: Ingredients.simpleSirup, volumeInML: 10),
+                .init(ingredient: Ingredients.gin, amount: 60, unit: .milliliters),
+                .init(ingredient: Ingredients.lemonJuice, amount: 30, unit: .milliliters),
+                .init(ingredient: Ingredients.sodaWater, amount: 80, unit: .milliliters),
+                .init(ingredient: Ingredients.simpleSirup, amount: 10, unit: .milliliters),
                 .init(ingredient: Ingredients.iceCubes),
             ],
             steps: [
@@ -107,9 +107,9 @@ class Drinks {
             origin: Origin(name: "United States", flag: "🇺🇸"),
             equipments: [ Equipments.cocktailGlass, Equipments.mixingGlass, Equipments.barspoon ],
             ingredients: [
-                .init(ingredient: Ingredients.ryeWhisky, volumeInML: 50 ),
-                .init(ingredient: Ingredients.sweetVermouth, volumeInML: 20),
-                .init(ingredient: Ingredients.angosturaBitters, dashes: 2),
+                .init(ingredient: Ingredients.ryeWhisky, amount: 50, unit: .milliliters),
+                .init(ingredient: Ingredients.sweetVermouth, amount: 20, unit: .milliliters),
+                .init(ingredient: Ingredients.angosturaBitters, amount: 2, unit: .dash),
                 .init(ingredient: Ingredients.iceCubes),
             ],
             steps: [
@@ -130,8 +130,8 @@ class Drinks {
             origin: Origin(name: "United States", flag: "🇺🇸"),
             equipments: [ Equipments.cocktailGlass, Equipments.barspoon, Equipments.mixingGlass ],
             ingredients: [
-                .init(ingredient: Ingredients.gin, volumeInML: 60),
-                .init(ingredient: Ingredients.dryVermouth, volumeInML: 10),
+                .init(ingredient: Ingredients.gin, amount: 60, unit: .milliliters),
+                .init(ingredient: Ingredients.dryVermouth, amount: 10, unit: .milliliters),
                 .init(ingredient: Ingredients.iceCubes),
             ],
             steps: [
@@ -152,10 +152,10 @@ class Drinks {
             origin: Origin(name: "Cuba", flag: "🇨🇺"),
             equipments: [ Equipments.highballGlass, Equipments.muddler, Equipments.barspoon, Equipments.shaker ],
             ingredients: [
-                .init(ingredient: Ingredients.lightRum, volumeInML: 60),
-                .init(ingredient: Ingredients.demeraraSirup, volumeInML: 15),
-                .init(ingredient: Ingredients.limeJuice, volumeInML: 25),
-                .init(ingredient: Ingredients.mintLeaves, pieces: 10),
+                .init(ingredient: Ingredients.lightRum, amount: 60, unit: .milliliters),
+                .init(ingredient: Ingredients.demeraraSirup, amount: 15, unit: .milliliters),
+                .init(ingredient: Ingredients.limeJuice, amount: 25, unit: .milliliters),
+                .init(ingredient: Ingredients.mintLeaves, amount: 10),
                 .init(ingredient: Ingredients.iceCubes),
                 .init(ingredient: Ingredients.sodaWater),
             ],
@@ -179,9 +179,9 @@ class Drinks {
             origin: Origin(name: "United States", flag: "🇺🇸"),
             equipments: [ Equipments.highballGlass, Equipments.barspoon ],
             ingredients: [
-                .init(ingredient: Ingredients.vodka, volumeInML: 60),
-                .init(ingredient: Ingredients.limeJuice, volumeInML: 10),
-                .init(ingredient: Ingredients.gingerBeer, volumeInML: 120),
+                .init(ingredient: Ingredients.vodka, amount: 60, unit: .milliliters),
+                .init(ingredient: Ingredients.limeJuice, amount: 10, unit: .milliliters),
+                .init(ingredient: Ingredients.gingerBeer, amount: 120, unit: .milliliters),
                 .init(ingredient: Ingredients.iceCubes),
             ],
             steps: [
@@ -200,9 +200,9 @@ class Drinks {
             origin: Origin(name: "Count Camillo Negroni, Italy", flag: "🇮🇹"),
             equipments: [ Equipments.barspoon, Equipments.oldFashionedGlass ],
             ingredients: [
-                .init(ingredient: Ingredients.gin, volumeInML: 60),
-                .init(ingredient: Ingredients.sweetVermouth, volumeInML: 30),
-                .init(ingredient: Ingredients.campari, volumeInML: 30),
+                .init(ingredient: Ingredients.gin, amount: 60, unit: .milliliters),
+                .init(ingredient: Ingredients.sweetVermouth, amount: 30, unit: .milliliters),
+                .init(ingredient: Ingredients.campari, amount: 30, unit: .milliliters),
                 .init(ingredient: Ingredients.iceCubes),
             ],
             steps: [
@@ -222,9 +222,9 @@ class Drinks {
             origin: Origin(name: "United States", flag: "🇺🇸"),
             equipments: [ Equipments.barspoon, Equipments.oldFashionedGlass ],
             ingredients: [
-                .init(ingredient: Ingredients.whisky, volumeInML: 60),
-                .init(ingredient: Ingredients.simpleSirup, volumeInML: 10),
-                .init(ingredient: Ingredients.angosturaBitters, dashes: 3),
+                .init(ingredient: Ingredients.whisky, amount: 60, unit: .milliliters),
+                .init(ingredient: Ingredients.simpleSirup, amount: 10, unit: .milliliters),
+                .init(ingredient: Ingredients.angosturaBitters, amount: 3, unit: .dash),
                 .init(ingredient: Ingredients.iceCubes),
             ],
             steps: [
@@ -244,10 +244,10 @@ class Drinks {
             origin: Origin(name: "United States", flag: "🇺🇸"),
             equipments: [ Equipments.mixingGlass, Equipments.barspoon, Equipments.oldFashionedGlass ],
             ingredients: [
-                .init(ingredient: Ingredients.ryeWhisky, volumeInML: 60),
-                .init(ingredient: Ingredients.absinthe, dashes: 2),
-                .init(ingredient: Ingredients.simpleSirup, volumeInML: 15),
-                .init(ingredient: Ingredients.peychaudBitters, dashes: 2),
+                .init(ingredient: Ingredients.ryeWhisky, amount: 60, unit: .milliliters),
+                .init(ingredient: Ingredients.absinthe, amount: 2, unit: .dash),
+                .init(ingredient: Ingredients.simpleSirup, amount: 15, unit: .milliliters),
+                .init(ingredient: Ingredients.peychaudBitters, amount: 2, unit: .dash),
                 .init(ingredient: Ingredients.iceCubes),
             ],
             steps: [
@@ -268,9 +268,9 @@ class Drinks {
             origin: Origin(name: "France", flag: "🇫🇷"),
             equipments: [ Equipments.shaker, Equipments.cocktailGlass ],
             ingredients: [
-                .init(ingredient: Ingredients.cognac, volumeInML: 60),
-                .init(ingredient: Ingredients.curacao, volumeInML: 20),
-                .init(ingredient: Ingredients.lemonJuice, volumeInML: 20),
+                .init(ingredient: Ingredients.cognac, amount: 60, unit: .milliliters),
+                .init(ingredient: Ingredients.curacao, amount: 20, unit: .milliliters),
+                .init(ingredient: Ingredients.lemonJuice, amount: 20, unit: .milliliters),
                 .init(ingredient: Ingredients.iceCubes),
             ],
             steps: [
@@ -290,11 +290,11 @@ class Drinks {
             origin: Origin(name: "United States", flag: "🇺🇸"),
             equipments: [ Equipments.oldFashionedGlass, Equipments.shaker ],
             ingredients: [
-                .init(ingredient: Ingredients.bourbonWhisky, volumeInML: 60),
-                .init(ingredient: Ingredients.lemonJuice, volumeInML: 30),
-                .init(ingredient: Ingredients.eggWhite, volumeInML: 30),
-                .init(ingredient: Ingredients.simpleSirup, volumeInML: 30),
-                .init(ingredient: Ingredients.angosturaBitters, dashes: 2),
+                .init(ingredient: Ingredients.bourbonWhisky, amount: 60, unit: .milliliters),
+                .init(ingredient: Ingredients.lemonJuice, amount: 30, unit: .milliliters),
+                .init(ingredient: Ingredients.eggWhite, amount: 30, unit: .milliliters),
+                .init(ingredient: Ingredients.simpleSirup, amount: 30, unit: .milliliters),
+                .init(ingredient: Ingredients.angosturaBitters, amount: 2, unit: .dash),
                 .init(ingredient: Ingredients.iceCubes),
             ],
             steps: [

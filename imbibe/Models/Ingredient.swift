@@ -44,15 +44,20 @@ class IngredientWithVolume: Identifiable, Hashable {
     
     let id: UUID
     let ingredient: Ingredient
-    let pieces: Int?
-    let volumeInML: Int?
-    let dashes: Int?
+    let amount: Double?
+    let unit: UnitVolume?
     
-    init(id: UUID = UUID(), ingredient: Ingredient, pieces: Int? = nil, volumeInML: Int? = nil, dashes: Int? = nil) {
+    init(id: UUID = UUID(), ingredient: Ingredient, amount: Double? = nil, unit: UnitVolume? = nil) {
         self.id = id
         self.ingredient = ingredient
-        self.pieces = pieces
-        self.volumeInML = volumeInML
-        self.dashes = dashes
+        self.amount = amount
+        self.unit = unit
+    }
+    
+    func toUnit(_ to: UnitVolume) -> Double? {
+        guard let amount = amount, let unit = unit else { return nil }
+        
+        let m = Measurement(value: amount, unit: unit)
+        return m.converted(to: to).value
     }
 }

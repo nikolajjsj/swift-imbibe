@@ -7,18 +7,11 @@
 
 import SwiftUI
 
-enum MeasurementUnit: String, CaseIterable {
-    case ml = "ml"
-    case cl = "cl"
-    case oz = "oz"
-    case part = "part"
-}
-
 struct IngredientsInspector: View {
     let drink: Drink
     
     @State private var servings = 1
-    @State private var unit: MeasurementUnit = .ml
+    @State private var unit: UnitVolume = .milliliters
     
     init(_ drink: Drink) {
         self.drink = drink
@@ -39,9 +32,10 @@ struct IngredientsInspector: View {
                 HStack {
                     Text("Unit").foregroundColor(.gray).frame(minWidth: 80)
                     Picker("", selection: $unit) {
-                        ForEach(MeasurementUnit.allCases, id: \.self) { unit in
-                            Text(unit.rawValue).tag(unit)
-                        }
+                        Text(UnitVolume.milliliters.symbol).tag(UnitVolume.milliliters)
+                        Text(UnitVolume.centiliters.symbol).tag(UnitVolume.centiliters)
+                        Text(UnitVolume.fluidOunces.symbol).tag(UnitVolume.fluidOunces)
+                        Text(UnitVolume.teaspoons.symbol).tag(UnitVolume.teaspoons)
                     }.pickerStyle(.segmented)
                 }
             }.padding(.vertical, 6)
@@ -57,17 +51,21 @@ struct IngredientsInspector: View {
     }
     
     @ViewBuilder
-    func IngredientDetailPill(_ ingredient: IngredientWithVolume, servings: Int, unit: MeasurementUnit) -> some View {
+    func IngredientDetailPill(_ ingredient: IngredientWithVolume, servings: Int, unit: UnitVolume) -> some View {
         let bg = Color(hex: ingredient.ingredient.color) ?? .clear
         let fg = bg.contastColor
         
         HStack {
-            if let dashes = ingredient.dashes {
-                Text("\(dashes * servings) dash(-es)")
-            } else if let volume = ingredient.volumeInML {
-                Text(computeVolume(volume))
-            } else if let pieces = ingredient.pieces {
-                Text("\(pieces * servings) pieces")
+            if ingredient.unit?.symbol == "dash" || ingredient.unit?.symbol == "drop" {
+                if let amount = ingredient.amount {
+                    Text((amount * Double(servings)).formatted(.number))
+                    Text(ingredient.unit?.symbol ?? "")
+                }
+            } else {
+                if let amount = ingredient.toUnit(unit) {
+                    Text((amount * Double(servings)).rounded(toPlaces: 1).formatted(.number))
+                    Text(unit.symbol)
+                }
             }
             Spacer()
             Text(ingredient.ingredient.name)
@@ -77,31 +75,10 @@ struct IngredientsInspector: View {
         .background(Capsule().fill(bg))
         .foregroundColor(fg)
     }
-    
-    func computeVolume(_ volume: Int) -> String {
-        let value = volumeByUnitAndServings(volume).rounded(toPlaces: 1).formatted(.number)
-        let unitString = unit.rawValue
-        return "\(value) \(unitString)"
-    }
-    
-    func volumeByUnitAndServings(_ volume: Int) -> Double {
-        switch unit {
-        case .ml:
-            return Double(volume) * Double(servings)
-        case .cl:
-            return (Double(volume) / 10) * Double(servings)
-        case .oz:
-            return (Double(volume) * 0.0338140227) * Double(servings)
-        case .part:
-            let min = drink.ingredients.min(by: { ($0.volumeInML ?? .max) < ($1.volumeInML ?? .max) })
-            let result: Double = Double(volume) / Double(min?.volumeInML ?? 1)
-            return result
-        }
-    }
 }
 
 struct IngredientsInspector_Previews: PreviewProvider {
     static var previews: some View {
-        IngredientsInspector(Drinks.martini)
+        IngredientsInspector(Drinks.oldFashioned)
     }
 }
