@@ -18,8 +18,7 @@ struct IngredientView: View {
                         .resizable()
                         .scaledToFit()
                         .frame(maxHeight: UIScreen.main.bounds.size.height)
-                        .padding(.horizontal)
-                        .padding(.vertical, 8)
+                        .padding()
                         .position(x: UIScreen.main.bounds.size.width / 2, y: UIScreen.main.bounds.size.height / 5)
                         .blur(radius: 60)
                 }
@@ -29,9 +28,8 @@ struct IngredientView: View {
                         Image(uiImage: image)
                             .resizable()
                             .scaledToFit()
-                            .frame(maxHeight: min(image.size.height, UIScreen.main.bounds.size.height / 2.5))
-                            .padding(.horizontal)
-                            .padding(.vertical, 8)
+                            .frame(maxHeight: min(image.size.height, UIScreen.main.bounds.size.height / 3))
+                            .padding()
                     }
                     
                     VStack {

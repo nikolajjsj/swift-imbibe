@@ -35,18 +35,7 @@ struct IngredientCard: View {
         .padding(.vertical, 8)
         .background(RoundedRectangle(cornerRadius: 10).fill(background))
         .onTapGesture { presented.toggle() }
-        .fullScreenCover(isPresented: $presented) {
-            ZStack(alignment: .topLeading) {
-                IngredientView(ingredient: ingredient)
-                
-                Button { presented.toggle() } label: {
-                    Image(systemName: "xmark")
-                        .foregroundColor(.white)
-                        .padding(12)
-                        .background(Circle().fill(.gray))
-                }.padding(.leading)
-            }
-        }
+        .sheet(isPresented: $presented) { IngredientView(ingredient: ingredient) }
     }
 }
 
