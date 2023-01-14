@@ -12,6 +12,7 @@ class Drinks {
         .init(
             name: "Americano",
             description: "",
+            image: "Americano",
             color: "A06049DA",
             origin: Origin(name: "Italy", flag: "🇮🇹"),
             equipments: [ Equipments.oldFashionedGlass ],
@@ -35,6 +36,7 @@ class Drinks {
         .init(
             name: "Daiquiri",
             description: "",
+            image: "Daiquiri",
             color: "484A3E5E",
             origin: Origin(name: "Cuba", flag: "🇨🇺"),
             equipments: [ Equipments.cocktailGlass, Equipments.shaker ],
@@ -57,6 +59,7 @@ class Drinks {
         .init(
             name: "Dark and Stormy",
             description: "",
+            image: "Dark and Stormy",
             color: "6F5810A6",
             origin: Origin(name: "Bermuda", flag: "🇧🇲"),
             equipments: [ Equipments.highballGlass ],
@@ -78,6 +81,7 @@ class Drinks {
         .init(
             name: "Gin Fizz",
             description: "",
+            image: "Gin Fizz",
             color: "777A68A8",
             origin: Origin(name: "United Kingdom", flag: "🇬🇧"),
             equipments: [ Equipments.highballGlass, Equipments.shaker ],
@@ -103,6 +107,7 @@ class Drinks {
         .init(
             name: "Manhattan",
             description: "",
+            image: "Manhattan",
             color: "402E2757",
             origin: Origin(name: "United States", flag: "🇺🇸"),
             equipments: [ Equipments.cocktailGlass, Equipments.mixingGlass, Equipments.barspoon ],
@@ -126,6 +131,7 @@ class Drinks {
         .init(
             name: "Martini",
             description: "",
+            image: "Martini",
             color: "49484459",
             origin: Origin(name: "United States", flag: "🇺🇸"),
             equipments: [ Equipments.cocktailGlass, Equipments.barspoon, Equipments.mixingGlass ],
@@ -148,6 +154,7 @@ class Drinks {
         .init(
             name: "Mojito",
             description: "",
+            image: "Mojito",
             color: "50573D97",
             origin: Origin(name: "Cuba", flag: "🇨🇺"),
             equipments: [ Equipments.highballGlass, Equipments.muddler, Equipments.barspoon, Equipments.shaker ],
@@ -175,6 +182,7 @@ class Drinks {
         .init(
             name: "Moscow Mule",
             description: "",
+            image: "Moscow Mule",
             color: "55472F9C",
             origin: Origin(name: "United States", flag: "🇺🇸"),
             equipments: [ Equipments.highballGlass, Equipments.barspoon ],
@@ -196,6 +204,7 @@ class Drinks {
         .init(
             name: "Negroni",
             description: "",
+            image: "Negroni",
             color: "B85432D9",
             origin: Origin(name: "Count Camillo Negroni, Italy", flag: "🇮🇹"),
             equipments: [ Equipments.barspoon, Equipments.oldFashionedGlass ],
@@ -218,6 +227,7 @@ class Drinks {
         .init(
             name: "Old Fashioned",
             description: "",
+            image: "Old Fashioned",
             color: "5B3A18D0",
             origin: Origin(name: "United States", flag: "🇺🇸"),
             equipments: [ Equipments.barspoon, Equipments.oldFashionedGlass ],
@@ -240,6 +250,7 @@ class Drinks {
         .init(
             name: "Sazerac",
             description: "",
+            image: "Sazerac",
             color: "563E2CC3",
             origin: Origin(name: "United States", flag: "🇺🇸"),
             equipments: [ Equipments.mixingGlass, Equipments.barspoon, Equipments.oldFashionedGlass ],
@@ -264,6 +275,7 @@ class Drinks {
         .init(
             name: "Sidecar",
             description: "",
+            image: "Sidecar",
             color: "3C341C4F",
             origin: Origin(name: "France", flag: "🇫🇷"),
             equipments: [ Equipments.shaker, Equipments.cocktailGlass ],
@@ -286,6 +298,7 @@ class Drinks {
         .init(
             name: "Whisky Sour",
             description: "",
+            image: "Whisky Sour",
             color: "A5834BC3",
             origin: Origin(name: "United States", flag: "🇺🇸"),
             equipments: [ Equipments.oldFashionedGlass, Equipments.shaker ],

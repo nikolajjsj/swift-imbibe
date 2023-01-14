@@ -13,7 +13,7 @@ struct IngredientView: View {
     var body: some View {
         ScrollView {
             ZStack {
-                if let image = UIImage.init(named: ingredient.name) {
+                if let image = UIImage.init(named: ingredient.image) {
                     Image(uiImage: image)
                         .resizable()
                         .scaledToFit()
@@ -25,7 +25,7 @@ struct IngredientView: View {
                 }
                 
                 VStack {
-                    if let image = UIImage.init(named: ingredient.name) {
+                    if let image = UIImage.init(named: ingredient.image) {
                         Image(uiImage: image)
                             .resizable()
                             .scaledToFit()

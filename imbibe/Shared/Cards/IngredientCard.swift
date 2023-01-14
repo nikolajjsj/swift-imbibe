@@ -17,7 +17,7 @@ struct IngredientCard: View {
         let foreground = background.contastColor
         
         HStack {
-            if let image = UIImage.init(named: ingredient.name) {
+            if let image = UIImage.init(named: ingredient.image) {
                 Image(uiImage: image)
                     .resizable()
                     .scaledToFit()
@@ -33,7 +33,7 @@ struct IngredientCard: View {
         .foregroundColor(foreground)
         .padding(.horizontal)
         .padding(.vertical, 8)
-        .background(RoundedRectangle(cornerRadius: 10).fill(background.gradient))
+        .background(RoundedRectangle(cornerRadius: 10).fill(background))
         .onTapGesture { presented.toggle() }
         .fullScreenCover(isPresented: $presented) {
             ZStack(alignment: .topLeading) {

@@ -13,7 +13,7 @@ struct DrinkView: View {
     var body: some View {
         ScrollView {
             ZStack {
-                if let image = UIImage.init(named: drink.name) {
+                if let image = UIImage.init(named: drink.image) {
                     Image(uiImage: image)
                         .resizable()
                         .scaledToFill()
@@ -25,7 +25,7 @@ struct DrinkView: View {
                 }
                 
                 LazyVStack {
-                    if let image = UIImage.init(named: drink.name) {
+                    if let image = UIImage.init(named: drink.image) {
                         Image(uiImage: image)
                             .resizable()
                             .scaledToFit()

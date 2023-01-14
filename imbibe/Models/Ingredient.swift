@@ -18,14 +18,16 @@ class Ingredient: Identifiable, Equatable, Hashable {
     
     let id: UUID
     let name: String
+    let image: String
     let color: String
     let strength: Int
     let origin: Origin?
     let description: String
     
-    init(id: UUID = UUID(), name: String, color: String, strength: Int, origin: Origin?, description: String) {
+    init(id: UUID = UUID(), name: String, image: String, color: String, strength: Int, origin: Origin?, description: String) {
         self.id = id
         self.name = name
+        self.image = image
         self.color = color
         self.strength = strength
         self.origin = origin
