@@ -18,7 +18,9 @@ struct IngredientsInspector: View {
     }
     
     var body: some View {
-        GroupBox {
+        VStack {
+            Text("Ingredients (\(drink.ingredients.count))")
+            
             VStack {
                 HStack {
                     Text("Servings").foregroundColor(.gray).frame(minWidth: 80)
@@ -45,9 +47,9 @@ struct IngredientsInspector: View {
                     IngredientDetailPill(i, servings: servings, unit: unit)
                 }
             }
-        } label: {
-            Text("Ingredients (\(drink.ingredients.count))")
         }
+        .padding()
+        .background(RoundedRectangle(cornerRadius: 10).fill(.primary.opacity(0.1)))
     }
     
     @ViewBuilder

@@ -16,7 +16,7 @@ struct DrinkView: View {
                 if let image = UIImage.init(named: drink.name) {
                     Image(uiImage: image)
                         .resizable()
-                        .scaledToFit()
+                        .scaledToFill()
                         .frame(maxHeight: UIScreen.main.bounds.size.height)
                         .padding(.horizontal)
                         .padding(.vertical, 8)
@@ -34,8 +34,10 @@ struct DrinkView: View {
                             .padding(.vertical, 8)
                     }
                     
-                    GroupBox {
-                        Grid(alignment: .leading, verticalSpacing: 16) {
+                    VStack {
+                        Text(drink.name)
+                        
+                        Grid(alignment: .leading) {
                             GridRow {
                                 Text("Ingredients").font(.headline)
                                 WrappingHStack(models: drink.ingredients, viewGenerator: {i in
@@ -55,13 +57,14 @@ struct DrinkView: View {
                                 Text(drink.origin.name + drink.origin.flag)
                             }
                         }
-                    } label: {
-                        Text(drink.name)
                     }
+                    .padding()
+                    .background(RoundedRectangle(cornerRadius: 10).fill(.primary.opacity(0.1)))
                     
                     IngredientsInspector(drink)
                     
-                    GroupBox {
+                    VStack {
+                        Text("Steps (\(drink.steps.count))")
                         Grid {
                             ForEach(Array(drink.steps.enumerated()), id: \.offset) { index, step in
                                 HStack {
@@ -75,9 +78,9 @@ struct DrinkView: View {
                                 Divider()
                             }
                         }
-                    } label: {
-                        Text("Steps (\(drink.steps.count))")
                     }
+                    .padding()
+                    .background(RoundedRectangle(cornerRadius: 10).fill(.primary.opacity(0.1)))
                 }
             }
             .padding(.horizontal)
