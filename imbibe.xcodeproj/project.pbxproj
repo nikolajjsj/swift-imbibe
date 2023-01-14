@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		D1194A672971A4A900E4C1E7 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1194A662971A4A900E4C1E7 /* SettingsView.swift */; };
-		D17BB61B2973127A004F08F7 /* UnitVolumeExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D17BB61A2973127A004F08F7 /* UnitVolumeExtension.swift */; };
 		D1E5B3AB2972C998001DF274 /* IngredientBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1E5B3AA2972C998001DF274 /* IngredientBox.swift */; };
 		D1E5B3AD2972C9D3001DF274 /* EquipmentBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1E5B3AC2972C9D3001DF274 /* EquipmentBox.swift */; };
 		D1E5B3B32972D052001DF274 /* NumberExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1E5B3B22972D052001DF274 /* NumberExtensions.swift */; };
@@ -45,7 +44,6 @@
 
 /* Begin PBXFileReference section */
 		D1194A662971A4A900E4C1E7 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
-		D17BB61A2973127A004F08F7 /* UnitVolumeExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnitVolumeExtension.swift; sourceTree = "<group>"; };
 		D1E5B3AA2972C998001DF274 /* IngredientBox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IngredientBox.swift; sourceTree = "<group>"; };
 		D1E5B3AC2972C9D3001DF274 /* EquipmentBox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EquipmentBox.swift; sourceTree = "<group>"; };
 		D1E5B3B22972D052001DF274 /* NumberExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberExtensions.swift; sourceTree = "<group>"; };
@@ -205,7 +203,6 @@
 				D1F7902D296D84CD00F3CB30 /* ImageExtensions.swift */,
 				D1F7902F296D879600F3CB30 /* ColorExtensions.swift */,
 				D1E5B3B22972D052001DF274 /* NumberExtensions.swift */,
-				D17BB61A2973127A004F08F7 /* UnitVolumeExtension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -358,7 +355,6 @@
 				D1F79012296D75EE00F3CB30 /* imbibe.xcdatamodeld in Sources */,
 				D1F79045296E8DB200F3CB30 /* DiscoverView.swift in Sources */,
 				D1E5B3B52972D1C8001DF274 /* IngredientsInspector.swift in Sources */,
-				D17BB61B2973127A004F08F7 /* UnitVolumeExtension.swift in Sources */,
 				D1F79038296DC1FD00F3CB30 /* Sources.swift in Sources */,
 				D1F7902E296D84CD00F3CB30 /* ImageExtensions.swift in Sources */,
 				D1F00889296EC0C8007E09B7 /* DrinkSource.swift in Sources */,

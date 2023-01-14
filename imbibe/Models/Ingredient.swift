@@ -61,3 +61,9 @@ class IngredientWithVolume: Identifiable, Hashable {
         return m.converted(to: to).value
     }
 }
+
+extension UnitVolume {
+    static let dash = UnitVolume(symbol: "dash")
+    static let drop = UnitVolume(symbol: "drop")
+}
+
