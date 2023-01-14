@@ -26,7 +26,17 @@ class Drink: Identifiable, Equatable, Hashable {
     let steps: [DrinkStep]
     let source: DrinkSource?
     
-    init(id: UUID = UUID(), name: String, description: String, color: String, origin: Origin, equipments: [Equipment], ingredients: [IngredientWithVolume], steps: [DrinkStep], source: DrinkSource?) {
+    init(
+        id: UUID = UUID(),
+        name: String,
+        description: String,
+        color: String,
+        origin: Origin,
+        equipments: [Equipment],
+        ingredients: [IngredientWithVolume],
+        steps: [DrinkStep],
+        source: DrinkSource?
+    ) {
         self.id = id
         self.name = name
         self.description = description
