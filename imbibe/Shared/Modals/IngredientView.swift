@@ -29,8 +29,7 @@ struct IngredientView: View {
                         Image(uiImage: image)
                             .resizable()
                             .scaledToFit()
-                            .frame(height: UIScreen.main.bounds.size.height / 2.5)
-                            .frame(maxHeight: 600)
+                            .frame(maxHeight: min(image.size.height, UIScreen.main.bounds.size.height / 2.5))
                             .padding(.horizontal)
                             .padding(.vertical, 8)
                     }
@@ -62,8 +61,8 @@ struct IngredientView: View {
                         Text(ingredient.name)
                     }.padding(.bottom, 42)
                     
-                    Text("Drinks with \(ingredient.name)").font(.title3.bold())
-                    LazyVStack {
+                    Text("Drinks with \(ingredient.name)")
+                    LazyVGrid(columns: [ GridItem(.flexible()), GridItem(.flexible()) ]) {
                         ForEach(drinksWithIngredient) { drink in
                             DrinkCard(drink: drink)
                         }

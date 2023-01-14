@@ -19,7 +19,4 @@ enum Tab: Hashable {
     case discover, drinks, ingredients, settings
 }
 
-enum Route: Hashable {
-    case drink(Drink)
-    case ingredient(Ingredient)
-}
+enum Route: Hashable {}

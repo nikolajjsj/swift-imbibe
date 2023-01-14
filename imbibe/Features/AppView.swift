@@ -51,10 +51,6 @@ struct AppView: View {
     @ViewBuilder
     func routeView(route: Route?) -> some View {
         switch route {
-        case let .drink(d):
-            DrinkView(drink: d)
-        case let .ingredient(i):
-            IngredientView(ingredient: i)
         default:
             Text("No selection")
                 .font(.largeTitle.bold())

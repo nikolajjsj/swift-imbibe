@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		D1194A672971A4A900E4C1E7 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1194A662971A4A900E4C1E7 /* SettingsView.swift */; };
+		D1E5B3AB2972C998001DF274 /* IngredientBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1E5B3AA2972C998001DF274 /* IngredientBox.swift */; };
+		D1E5B3AD2972C9D3001DF274 /* EquipmentBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1E5B3AC2972C9D3001DF274 /* EquipmentBox.swift */; };
+		D1E5B3B32972D052001DF274 /* NumberExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1E5B3B22972D052001DF274 /* NumberExtensions.swift */; };
+		D1E5B3B52972D1C8001DF274 /* IngredientsInspector.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1E5B3B42972D1C8001DF274 /* IngredientsInspector.swift */; };
 		D1E5BBCB29705D2500BA60F9 /* WrappingHStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1E5BBCA29705D2500BA60F9 /* WrappingHStack.swift */; };
 		D1F0087F296EBB90007E09B7 /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1F0087E296EBB90007E09B7 /* AppState.swift */; };
 		D1F00881296EC065007E09B7 /* DrinkStep.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1F00880296EC065007E09B7 /* DrinkStep.swift */; };
@@ -40,6 +44,10 @@
 
 /* Begin PBXFileReference section */
 		D1194A662971A4A900E4C1E7 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		D1E5B3AA2972C998001DF274 /* IngredientBox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IngredientBox.swift; sourceTree = "<group>"; };
+		D1E5B3AC2972C9D3001DF274 /* EquipmentBox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EquipmentBox.swift; sourceTree = "<group>"; };
+		D1E5B3B22972D052001DF274 /* NumberExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberExtensions.swift; sourceTree = "<group>"; };
+		D1E5B3B42972D1C8001DF274 /* IngredientsInspector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IngredientsInspector.swift; sourceTree = "<group>"; };
 		D1E5BBCA29705D2500BA60F9 /* WrappingHStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WrappingHStack.swift; sourceTree = "<group>"; };
 		D1F0087E296EBB90007E09B7 /* AppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
 		D1F00880296EC065007E09B7 /* DrinkStep.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrinkStep.swift; sourceTree = "<group>"; };
@@ -89,6 +97,33 @@
 				D1194A662971A4A900E4C1E7 /* SettingsView.swift */,
 			);
 			path = Settings;
+			sourceTree = "<group>";
+		};
+		D1E5B3A82972C7EE001DF274 /* Modals */ = {
+			isa = PBXGroup;
+			children = (
+				D1F79041296E834400F3CB30 /* IngredientView.swift */,
+				D1F7902B296D841F00F3CB30 /* DrinkView.swift */,
+			);
+			path = Modals;
+			sourceTree = "<group>";
+		};
+		D1E5B3B02972CBA4001DF274 /* Cards */ = {
+			isa = PBXGroup;
+			children = (
+				D1F79046296E90C800F3CB30 /* DrinkCard.swift */,
+				D1F79048296E916C00F3CB30 /* IngredientCard.swift */,
+			);
+			path = Cards;
+			sourceTree = "<group>";
+		};
+		D1E5B3B12972CBB3001DF274 /* Details */ = {
+			isa = PBXGroup;
+			children = (
+				D1E5B3AA2972C998001DF274 /* IngredientBox.swift */,
+				D1E5B3AC2972C9D3001DF274 /* EquipmentBox.swift */,
+			);
+			path = Details;
 			sourceTree = "<group>";
 		};
 		D1F0087D296EBB86007E09B7 /* Environments */ = {
@@ -159,6 +194,7 @@
 			children = (
 				D1F7902D296D84CD00F3CB30 /* ImageExtensions.swift */,
 				D1F7902F296D879600F3CB30 /* ColorExtensions.swift */,
+				D1E5B3B22972D052001DF274 /* NumberExtensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -167,7 +203,6 @@
 			isa = PBXGroup;
 			children = (
 				D1F79013296D75EE00F3CB30 /* DrinksView.swift */,
-				D1F7902B296D841F00F3CB30 /* DrinkView.swift */,
 			);
 			path = Drinks;
 			sourceTree = "<group>";
@@ -209,7 +244,6 @@
 			isa = PBXGroup;
 			children = (
 				D1F7903C296E813F00F3CB30 /* IngredientsView.swift */,
-				D1F79041296E834400F3CB30 /* IngredientView.swift */,
 			);
 			path = Ingredients;
 			sourceTree = "<group>";
@@ -217,9 +251,11 @@
 		D1F7903E296E81D400F3CB30 /* Shared */ = {
 			isa = PBXGroup;
 			children = (
-				D1F79046296E90C800F3CB30 /* DrinkCard.swift */,
-				D1F79048296E916C00F3CB30 /* IngredientCard.swift */,
 				D1E5BBCA29705D2500BA60F9 /* WrappingHStack.swift */,
+				D1E5B3B12972CBB3001DF274 /* Details */,
+				D1E5B3B02972CBA4001DF274 /* Cards */,
+				D1E5B3A82972C7EE001DF274 /* Modals */,
+				D1E5B3B42972D1C8001DF274 /* IngredientsInspector.swift */,
 			);
 			path = Shared;
 			sourceTree = "<group>";
@@ -306,15 +342,19 @@
 				D1F7903D296E813F00F3CB30 /* IngredientsView.swift in Sources */,
 				D1F79042296E834400F3CB30 /* IngredientView.swift in Sources */,
 				D1F7900D296D75EE00F3CB30 /* imbibeApp.swift in Sources */,
+				D1E5B3AB2972C998001DF274 /* IngredientBox.swift in Sources */,
 				D1F00881296EC065007E09B7 /* DrinkStep.swift in Sources */,
 				D1F79012296D75EE00F3CB30 /* imbibe.xcdatamodeld in Sources */,
 				D1F79045296E8DB200F3CB30 /* DiscoverView.swift in Sources */,
+				D1E5B3B52972D1C8001DF274 /* IngredientsInspector.swift in Sources */,
 				D1F79038296DC1FD00F3CB30 /* Sources.swift in Sources */,
 				D1F7902E296D84CD00F3CB30 /* ImageExtensions.swift in Sources */,
 				D1F00889296EC0C8007E09B7 /* DrinkSource.swift in Sources */,
 				D1F79014296D75EE00F3CB30 /* DrinksView.swift in Sources */,
+				D1E5B3B32972D052001DF274 /* NumberExtensions.swift in Sources */,
 				D1F79030296D879600F3CB30 /* ColorExtensions.swift in Sources */,
 				D1F79036296DC1EB00F3CB30 /* Equipments.swift in Sources */,
+				D1E5B3AD2972C9D3001DF274 /* EquipmentBox.swift in Sources */,
 				D1F0087F296EBB90007E09B7 /* AppState.swift in Sources */,
 				D1F79032296DC1BE00F3CB30 /* Ingredients.swift in Sources */,
 				D1F00883296EC078007E09B7 /* Ingredient.swift in Sources */,
