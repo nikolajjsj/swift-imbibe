@@ -43,9 +43,9 @@ struct IngredientsInspector: View {
                         }
                     }.pickerStyle(.segmented)
                 }
-            }.padding(.top)
+            }.padding(.vertical, 6)
             
-            Grid {
+            LazyVGrid(columns: [GridItem(.flexible())]) {
                 ForEach(drink.ingredients) { i in
                     IngredientDetailPill(i, servings: servings, unit: unit)
                 }
@@ -61,20 +61,17 @@ struct IngredientsInspector: View {
         let fg = bg.contastColor
         
         HStack {
-            HStack {
-                if let dashes = ingredient.dashes {
-                    Text("\(dashes * servings) dash(-es)")
-                } else if let volume = ingredient.volumeInML {
-                    Text(computeVolume(volume))
-                } else if let pieces = ingredient.pieces {
-                    Text("\(pieces * servings) pieces")
-                } else {
-                    Text("")
-                }
-            }.frame(width: 90)
-            Text(ingredient.ingredient.name)
+            if let dashes = ingredient.dashes {
+                Text("\(dashes * servings) dash(-es)")
+            } else if let volume = ingredient.volumeInML {
+                Text(computeVolume(volume))
+            } else if let pieces = ingredient.pieces {
+                Text("\(pieces * servings) pieces")
+            }
             Spacer()
+            Text(ingredient.ingredient.name)
         }
+        .lineLimit(1)
         .padding()
         .background(Capsule().fill(bg))
         .foregroundColor(fg)
