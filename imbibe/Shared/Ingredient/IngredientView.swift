@@ -33,48 +33,13 @@ struct IngredientView: View {
                             .padding()
                     }
                     
-                    VStack {
-                        Text(ingredient.name)
-                        Grid(alignment: .leading) {
-                            Divider()
-                            GridRow {
-                                Text("Strength")
-                                Text("\(ingredient.strength)%").bold()
-                            }
-                            Divider()
-                            if let origin = ingredient.origin {
-                                GridRow {
-                                    Text("Origin")
-                                    Text(origin.name + origin.flag).bold()
-                                }
-                                Divider()
-                            }
-                            if !ingredient.description.isEmpty {
-                                GridRow {
-                                    Text("Description")
-                                    Text(ingredient.description)
-                                }
-                                Divider()
-                            }
-                        }
-                    }.detailCard()
+                    IngredientDetails(ingredient)
                     
-                    VStack {
-                        Text("Drinks with \(ingredient.name)")
-                        LazyVStack {
-                            ForEach(drinksWithIngredient) { drink in
-                                DrinkCard(drink: drink)
-                            }
-                        }
-                    }.detailCard()
+                    IngredientDrinksList(ingredient)
                 }
             }.padding(.horizontal)
         }
         .presentationDetents([.medium, .large])
-    }
-    
-    var drinksWithIngredient: [Drink] {
-        Drinks.all.filter({ d in d.ingredients.contains(where: { i in i.ingredient.name == ingredient.name }) })
     }
 }
 
