@@ -57,11 +57,11 @@ struct IngredientView: View {
                                 Divider()
                             }
                         }
-                    }.detailCard().padding(.bottom, 42)
+                    }.detailCard()
                     
                     VStack {
                         Text("Drinks with \(ingredient.name)")
-                        LazyVGrid(columns: [ GridItem(.flexible()), GridItem(.flexible()) ]) {
+                        LazyVStack {
                             ForEach(drinksWithIngredient) { drink in
                                 DrinkCard(drink: drink)
                             }
