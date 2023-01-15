@@ -45,6 +45,7 @@ struct DrinkView: View {
             }
             .padding(.horizontal)
         }
+        .presentationDetents([.medium, .large])
     }
 }
 

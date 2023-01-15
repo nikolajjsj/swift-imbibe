@@ -12,6 +12,7 @@
 		D17BB61F297345BA004F08F7 /* UserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = D17BB61E297345BA004F08F7 /* UserDefaults.swift */; };
 		D1DD34B729740335006EE244 /* DrinkStepInstructions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1DD34B629740335006EE244 /* DrinkStepInstructions.swift */; };
 		D1DD34B929740377006EE244 /* DrinkDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1DD34B829740377006EE244 /* DrinkDetails.swift */; };
+		D1DD34BE297412AF006EE244 /* EquipmentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1DD34BD297412AF006EE244 /* EquipmentView.swift */; };
 		D1E5B3AB2972C998001DF274 /* IngredientBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1E5B3AA2972C998001DF274 /* IngredientBox.swift */; };
 		D1E5B3AD2972C9D3001DF274 /* EquipmentBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1E5B3AC2972C9D3001DF274 /* EquipmentBox.swift */; };
 		D1E5B3B32972D052001DF274 /* NumberExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1E5B3B22972D052001DF274 /* NumberExtensions.swift */; };
@@ -52,6 +53,7 @@
 		D17BB61E297345BA004F08F7 /* UserDefaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaults.swift; sourceTree = "<group>"; };
 		D1DD34B629740335006EE244 /* DrinkStepInstructions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrinkStepInstructions.swift; sourceTree = "<group>"; };
 		D1DD34B829740377006EE244 /* DrinkDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrinkDetails.swift; sourceTree = "<group>"; };
+		D1DD34BD297412AF006EE244 /* EquipmentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EquipmentView.swift; sourceTree = "<group>"; };
 		D1E5B3AA2972C998001DF274 /* IngredientBox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IngredientBox.swift; sourceTree = "<group>"; };
 		D1E5B3AC2972C9D3001DF274 /* EquipmentBox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EquipmentBox.swift; sourceTree = "<group>"; };
 		D1E5B3B22972D052001DF274 /* NumberExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberExtensions.swift; sourceTree = "<group>"; };
@@ -133,6 +135,7 @@
 			isa = PBXGroup;
 			children = (
 				D1E5B3AC2972C9D3001DF274 /* EquipmentBox.swift */,
+				D1DD34BD297412AF006EE244 /* EquipmentView.swift */,
 			);
 			path = Equipment;
 			sourceTree = "<group>";
@@ -367,6 +370,7 @@
 				D1F00881296EC065007E09B7 /* DrinkStep.swift in Sources */,
 				D1F79012296D75EE00F3CB30 /* imbibe.xcdatamodeld in Sources */,
 				D1F79045296E8DB200F3CB30 /* DiscoverView.swift in Sources */,
+				D1DD34BE297412AF006EE244 /* EquipmentView.swift in Sources */,
 				D1E5B3B52972D1C8001DF274 /* IngredientsInspector.swift in Sources */,
 				D1F79038296DC1FD00F3CB30 /* Sources.swift in Sources */,
 				D1F7902E296D84CD00F3CB30 /* ImageExtensions.swift in Sources */,
@@ -515,7 +519,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = imbibe/imbibe.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 18;
+				CURRENT_PROJECT_VERSION = 19;
 				DEVELOPMENT_ASSET_PATHS = "\"imbibe/Preview Content\"";
 				DEVELOPMENT_TEAM = YRQMPX5YW2;
 				ENABLE_HARDENED_RUNTIME = YES;
@@ -553,7 +557,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = imbibe/imbibe.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 18;
+				CURRENT_PROJECT_VERSION = 19;
 				DEVELOPMENT_ASSET_PATHS = "\"imbibe/Preview Content\"";
 				DEVELOPMENT_TEAM = YRQMPX5YW2;
 				ENABLE_HARDENED_RUNTIME = YES;

@@ -16,9 +16,14 @@ struct DrinkDetails: View {
     
     var body: some View {
         VStack {
-            Text(drink.name)
+            Text(drink.name).font(.headline)
             
             Grid(alignment: .leading) {
+                GridRow {
+                    Text("Strength").font(.headline)
+                    Text("\(drink.strength)%")
+                }
+                Divider()
                 GridRow {
                     Text("Ingredients").font(.headline)
                     WrappingHStack(models: drink.ingredients, viewGenerator: {i in

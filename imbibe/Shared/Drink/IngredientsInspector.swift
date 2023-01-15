@@ -19,7 +19,7 @@ struct IngredientsInspector: View {
     
     var body: some View {
         VStack {
-            Text("Ingredients (\(drink.ingredients.count))")
+            Text("Ingredients (\(drink.ingredients.count))").font(.headline)
             
             VStack {
                 HStack {

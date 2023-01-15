@@ -29,7 +29,7 @@ class Ingredients {
         image: "Angostura Bitters",
         color: "959590C4",
         strength: 44,
-        origin: origins["Trinidad and Tobago"]!,
+        origin: Origins.trinidadAndTobago,
         description: ""
     )
     static let angosturaOrangeBitters: Ingredient = Ingredient(
@@ -53,7 +53,7 @@ class Ingredients {
         image: "Bourbon Whisky",
         color: "78432AB2",
         strength: 40,
-        origin: origins["United States"]!,
+        origin: Origins.unitedStates,
         description: ""
     )
     static let campari: Ingredient = Ingredient(
@@ -61,7 +61,7 @@ class Ingredients {
         image: "Campari",
         color: "7F413CC0",
         strength: 25,
-        origin: origins["Italy"]!,
+        origin: Origins.italy,
         description: ""
     )
     static let calvados: Ingredient = Ingredient(
@@ -120,6 +120,14 @@ class Ingredients {
         origin: nil,
         description: ""
     )
+    static let cream: Ingredient = Ingredient(
+        name: "Cream",
+        image: "Cream",
+        color: "5402E2757",
+        strength: 0,
+        origin: nil,
+        description: ""
+    )
     static let darkRum: Ingredient = Ingredient(
         name: "Dark Rum",
         image: "Dark Rum",
@@ -165,7 +173,7 @@ class Ingredients {
         image: "Gin",
         color: "3C3D3CD5",
         strength: 40,
-        origin: origins["Worldwide"]!,
+        origin: Origins.worldwide,
         description: ""
     )
     static let gingerBeer: Ingredient = Ingredient(
@@ -317,7 +325,7 @@ class Ingredients {
         image: "Rye Whisky",
         color: "774B21CC",
         strength: 40,
-        origin: origins["United States"]!,
+        origin: Origins.unitedStates,
         description: ""
     )
     static let simpleSirup: Ingredient = Ingredient(
@@ -341,7 +349,7 @@ class Ingredients {
         image: "Sweet Vermouth",
         color: "5F4F4AC5",
         strength: 18,
-        origin: origins["Italy"]!,
+        origin: Origins.italy,
         description: ""
     )
     static let tequila: Ingredient = Ingredient(
@@ -357,7 +365,7 @@ class Ingredients {
         image: "Vodka",
         color: "A0A4AAD4",
         strength: 40,
-        origin: origins["Poland"]!,
+        origin: Origins.poland,
         description: ""
     )
     static let whisky: Ingredient = Ingredient(
@@ -365,7 +373,7 @@ class Ingredients {
         image: "Whisky",
         color: "894118BD",
         strength: 40,
-        origin: origins["Worldwide"]!,
+        origin: Origins.worldwide,
         description: ""
     )
     
@@ -384,6 +392,7 @@ class Ingredients {
         cointreau,
         cola,
         curacao,
+        cream,
         darkRum,
         demeraraSirup,
         drambuie,

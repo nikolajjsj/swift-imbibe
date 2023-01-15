@@ -14,7 +14,7 @@ class Drinks {
             description: "",
             image: "Martini",
             color: "49484459",
-            origin: Origin(name: "United States", flag: "🇺🇸"),
+            origin: Origins.unitedStates,
             equipments: [ Equipments.cocktailGlass, Equipments.barspoon, Equipments.mixingGlass ],
             ingredients: [
                 .init(ingredient: Ingredients.gin, amount: 45, unit: .milliliters),
@@ -36,7 +36,7 @@ class Drinks {
             description: "",
             image: "Americano",
             color: "A06049DA",
-            origin: Origin(name: "Italy", flag: "🇮🇹"),
+            origin: Origins.italy,
             equipments: [ Equipments.oldFashionedGlass ],
             ingredients: [
                 .init(ingredient: Ingredients.sweetVermouth, amount: 30, unit: .milliliters),
@@ -60,7 +60,7 @@ class Drinks {
             description: "",
             image: "Martini",
             color: "49484459",
-            origin: Origin(name: "United States", flag: "🇺🇸"),
+            origin: Origins.unitedStates,
             equipments: [ Equipments.cocktailGlass, Equipments.barspoon, Equipments.mixingGlass ],
             ingredients: [
                 .init(ingredient: Ingredients.gin, amount: 75, unit: .milliliters),
@@ -83,7 +83,7 @@ class Drinks {
             description: "",
             image: "Daiquiri",
             color: "484A3E5E",
-            origin: Origin(name: "Cuba", flag: "🇨🇺"),
+            origin: Origins.cuba,
             equipments: [ Equipments.cocktailGlass, Equipments.shaker ],
             ingredients: [
                 .init(ingredient: Ingredients.rum, amount: 60, unit: .milliliters),
@@ -106,7 +106,7 @@ class Drinks {
             description: "",
             image: "Dark and Stormy",
             color: "6F5810A6",
-            origin: Origin(name: "Bermuda", flag: "🇧🇲"),
+            origin: Origins.bermuda,
             equipments: [ Equipments.highballGlass ],
             ingredients: [
                 .init(ingredient: Ingredients.darkRum, amount: 60, unit: .milliliters),
@@ -128,7 +128,7 @@ class Drinks {
             description: "",
             image: "Martini",
             color: "49484459",
-            origin: Origin(name: "United States", flag: "🇺🇸"),
+            origin: Origins.unitedStates,
             equipments: [ Equipments.cocktailGlass, Equipments.barspoon, Equipments.mixingGlass ],
             ingredients: [
                 .init(ingredient: Ingredients.gin, amount: 75, unit: .milliliters),
@@ -154,7 +154,7 @@ class Drinks {
             description: "",
             image: "Gin Fizz",
             color: "777A68A8",
-            origin: Origin(name: "United Kingdom", flag: "🇬🇧"),
+            origin: Origins.unitedKingdom,
             equipments: [ Equipments.highballGlass, Equipments.shaker ],
             ingredients: [
                 .init(ingredient: Ingredients.gin, amount: 60, unit: .milliliters),
@@ -180,7 +180,7 @@ class Drinks {
             description: "",
             image: "Manhattan",
             color: "402E2757",
-            origin: Origin(name: "United States", flag: "🇺🇸"),
+            origin: Origins.unitedStates,
             equipments: [ Equipments.cocktailGlass, Equipments.mixingGlass, Equipments.barspoon ],
             ingredients: [
                 .init(ingredient: Ingredients.ryeWhisky, amount: 50, unit: .milliliters),
@@ -204,7 +204,7 @@ class Drinks {
             description: "",
             image: "Mojito",
             color: "50573D97",
-            origin: Origin(name: "Cuba", flag: "🇨🇺"),
+            origin: Origins.cuba,
             equipments: [ Equipments.highballGlass, Equipments.muddler, Equipments.barspoon, Equipments.shaker ],
             ingredients: [
                 .init(ingredient: Ingredients.lightRum, amount: 60, unit: .milliliters),
@@ -232,7 +232,7 @@ class Drinks {
             description: "",
             image: "Moscow Mule",
             color: "55472F9C",
-            origin: Origin(name: "United States", flag: "🇺🇸"),
+            origin: Origins.unitedStates,
             equipments: [ Equipments.highballGlass, Equipments.barspoon ],
             ingredients: [
                 .init(ingredient: Ingredients.vodka, amount: 60, unit: .milliliters),
@@ -254,7 +254,7 @@ class Drinks {
             description: "",
             image: "Negroni",
             color: "B85432D9",
-            origin: Origin(name: "Count Camillo Negroni, Italy", flag: "🇮🇹"),
+            origin: Origins.italy,
             equipments: [ Equipments.barspoon, Equipments.oldFashionedGlass ],
             ingredients: [
                 .init(ingredient: Ingredients.gin, amount: 60, unit: .milliliters),
@@ -277,7 +277,7 @@ class Drinks {
             description: "",
             image: "Old Fashioned",
             color: "5B3A18D0",
-            origin: Origin(name: "United States", flag: "🇺🇸"),
+            origin: Origins.unitedStates,
             equipments: [ Equipments.barspoon, Equipments.oldFashionedGlass ],
             ingredients: [
                 .init(ingredient: Ingredients.whisky, amount: 60, unit: .milliliters),
@@ -300,7 +300,7 @@ class Drinks {
             description: "",
             image: "Martini",
             color: "49484459",
-            origin: Origin(name: "United States", flag: "🇺🇸"),
+            origin: Origins.unitedStates,
             equipments: [ Equipments.cocktailGlass, Equipments.barspoon, Equipments.mixingGlass ],
             ingredients: [
                 .init(ingredient: Ingredients.gin, amount: 45, unit: .milliliters),
@@ -323,7 +323,7 @@ class Drinks {
             description: "",
             image: "Sazerac",
             color: "563E2CC3",
-            origin: Origin(name: "United States", flag: "🇺🇸"),
+            origin: Origins.unitedStates,
             equipments: [ Equipments.mixingGlass, Equipments.barspoon, Equipments.oldFashionedGlass ],
             ingredients: [
                 .init(ingredient: Ingredients.ryeWhisky, amount: 60, unit: .milliliters),
@@ -348,7 +348,7 @@ class Drinks {
             description: "",
             image: "Sidecar",
             color: "3C341C4F",
-            origin: Origin(name: "France", flag: "🇫🇷"),
+            origin: Origins.france,
             equipments: [ Equipments.shaker, Equipments.cocktailGlass ],
             ingredients: [
                 .init(ingredient: Ingredients.cognac, amount: 60, unit: .milliliters),
@@ -371,7 +371,7 @@ class Drinks {
             description: "",
             image: "Whisky Sour",
             color: "A5834BC3",
-            origin: Origin(name: "United States", flag: "🇺🇸"),
+            origin: Origins.unitedStates,
             equipments: [ Equipments.oldFashionedGlass, Equipments.shaker ],
             ingredients: [
                 .init(ingredient: Ingredients.bourbonWhisky, amount: 60, unit: .milliliters),
@@ -388,6 +388,29 @@ class Drinks {
                 .init(string: "Shake again"),
                 .init(string: "Strain into the Old Fashioned Glas"),
                 .init(string: "Garnish with a few drops of Angostura Bitters on top"),
+            ],
+            source: nil
+        )
+    
+    static let whiteRussian: Drink =
+        .init(
+            name: "White Russian",
+            description: "",
+            image: "White Russian",
+            color: "55472F9C",
+            origin: Origins.belgium,
+            equipments: [ Equipments.oldFashionedGlass, Equipments.shaker ],
+            ingredients: [
+                .init(ingredient: Ingredients.vodka, amount: 45, unit: .milliliters),
+                .init(ingredient: Ingredients.kahlua, amount: 25, unit: .milliliters),
+                .init(ingredient: Ingredients.cream, amount: 25, unit: .milliliters),
+                .init(ingredient: Ingredients.iceCubes),
+            ],
+            steps: [
+                .init(string: "Fill the Old Fashioned Glass with Ice Cubes"),
+                .init(string: "Add Vodka & Kahlua"),
+                .init(string: "Stir together"),
+                .init(string: "Then add the Cream"),
             ],
             source: nil
         )
@@ -409,6 +432,7 @@ class Drinks {
         sazerac,
         sidecar,
         whiskySour,
+        whiteRussian,
     ]
     
     static let allIconic: [Drink] = [
@@ -424,6 +448,7 @@ class Drinks {
         sazerac,
         sidecar,
         whiskySour,
+        whiteRussian,
     ]
     
     static func random() -> Drink {

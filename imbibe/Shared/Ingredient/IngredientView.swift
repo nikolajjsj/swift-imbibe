@@ -70,6 +70,7 @@ struct IngredientView: View {
                 }
             }.padding(.horizontal)
         }
+        .presentationDetents([.medium, .large])
     }
     
     var drinksWithIngredient: [Drink] {

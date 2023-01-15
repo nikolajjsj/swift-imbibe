@@ -14,12 +14,16 @@ struct EquipmentBox: View {
         self.equipment = equipment
     }
     
+    @State private var presented = false
+    
     var body: some View {
         Text(equipment.name)
             .padding(.horizontal, 12)
             .padding(.vertical, 6)
-            .background(RoundedRectangle(cornerRadius: 4).fill(.clear)
-                .background(RoundedRectangle(cornerRadius: 4).stroke(.gray, lineWidth: 1)))
+            .background(RoundedRectangle(cornerRadius: 4).fill(.clear))
+            .background(RoundedRectangle(cornerRadius: 4).stroke(.gray, lineWidth: 1))
+            .onTapGesture { presented.toggle() }
+            .sheet(isPresented: $presented) { EquipmentView(equipment) }
     }
 }
 
