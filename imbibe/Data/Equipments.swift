@@ -33,6 +33,11 @@ class Equipments {
         description: "",
         image: "Shaker"
     )
+    static let strainer: Equipment = Equipment(
+        name: "Strainer",
+        description: "",
+        image: "Strainer"
+    )
     static let muddler: Equipment = Equipment(
         name: "Muddler",
         description: "",
@@ -50,6 +55,7 @@ class Equipments {
         mixingGlass,
         oldFashionedGlass,
         shaker,
+        strainer,
         muddler,
         highballGlass,
     ]

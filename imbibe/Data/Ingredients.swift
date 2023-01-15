@@ -88,6 +88,14 @@ class Ingredients {
         origin: nil,
         description: ""
     )
+    static let coffeeLiqueur: Ingredient = Ingredient(
+        name: "Coffee Liqueur",
+        image: "Coffee Liqueur",
+        color: "6C492CA7",
+        strength: 20,
+        origin: nil,
+        description: ""
+    )
     static let cognac: Ingredient = Ingredient(
         name: "Cognac",
         image: "Cognac",
@@ -228,6 +236,14 @@ class Ingredients {
         name: "Kahlua",
         image: "Kahlua",
         color: "6C5632C8",
+        strength: 20,
+        origin: nil,
+        description: ""
+    )
+    static let kinaLaeroDor: Ingredient = Ingredient(
+        name: "Kina l'aero d'or",
+        image: "Kina l'aero d'or",
+        color: "675210B7",
         strength: 20,
         origin: nil,
         description: ""

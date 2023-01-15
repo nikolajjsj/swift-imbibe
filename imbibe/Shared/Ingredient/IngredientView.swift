@@ -33,7 +33,7 @@ struct IngredientView: View {
                                 image.size.height,
                                 UIScreen.main.bounds.size.height / 3
                             ))
-                            .padding(.bottom)
+                            .padding(.vertical)
                     }
                     
                     IngredientDetails(ingredient)

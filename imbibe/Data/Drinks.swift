@@ -77,6 +77,32 @@ class Drinks {
             source: nil
         )
     
+    static let corpseReviver: Drink =
+        .init(
+            name: "Corpse Reviver",
+            description: "",
+            image: "Corpse Reviver",
+            color: "A5834BC3",
+            origin: Origins.unitedStates,
+            equipments: [ Equipments.cocktailGlass, Equipments.mixingGlass, Equipments.barspoon ],
+            ingredients: [
+                .init(ingredient: Ingredients.gin, amount: 22, unit: .milliliters),
+                .init(ingredient: Ingredients.kinaLaeroDor, amount: 22, unit: .milliliters),
+                .init(ingredient: Ingredients.curacao, amount: 22, unit: .milliliters),
+                .init(ingredient: Ingredients.lemonJuice, amount: 22, unit: .milliliters),
+                .init(ingredient: Ingredients.absinthe, amount: 1, unit: .dash),
+                .init(ingredient: Ingredients.iceCubes),
+            ],
+            steps: [
+                .init(string: "Add Ice Cubes to the Shaker"),
+                .init(string: "Add Gin, Kina l'aero d'or, Curacao, Lemon Juice, & Absinthe"),
+                .init(string: "Shake (10-15 seconds)"),
+                .init(string: "Strain into the Cocktail Glass"),
+                .init(string: "Garnish with a Cherry"),
+            ],
+            source: nil
+        )
+    
     static let daiquiri: Drink =
         .init(
             name: "Daiquiri",
@@ -148,6 +174,31 @@ class Drinks {
             source: nil
         )
     
+    static let espressoMartini: Drink =
+        .init(
+            name: "Espresso Martini",
+            description: "",
+            image: "Espresso Martini",
+            color: "49484459",
+            origin: Origins.unitedKingdom,
+            equipments: [ Equipments.cocktailGlass, Equipments.shaker, Equipments.strainer ],
+            ingredients: [
+                .init(ingredient: Ingredients.vodka, amount: 40, unit: .milliliters),
+                .init(ingredient: Ingredients.coffeeLiqueur, amount: 10, unit: .milliliters),
+                .init(ingredient: Ingredients.simpleSirup, amount: 20, unit: .piece),
+                .init(ingredient: Ingredients.coffee, amount: 45, unit: .milliliters),
+                .init(ingredient: Ingredients.iceCubes),
+            ],
+            steps: [
+                .init(string: "Fill the shaker with Ice Cubes"),
+                .init(string: "Add Vodka, Simple Sirup, Coffee Liqueur, & Coffee"),
+                .init(string: "Shake (10-15 seconds)"),
+                .init(string: "Strain into the Cocktail Glass"),
+                .init(string: "Garnish with Coffee Bean"),
+            ],
+            source: nil
+        )
+    
     static let ginFizz: Drink =
         .init(
             name: "Gin Fizz",
@@ -179,7 +230,7 @@ class Drinks {
             name: "Manhattan",
             description: "",
             image: "Manhattan",
-            color: "402E2757",
+            color: "A06049DA",
             origin: Origins.unitedStates,
             equipments: [ Equipments.cocktailGlass, Equipments.mixingGlass, Equipments.barspoon ],
             ingredients: [
@@ -194,6 +245,31 @@ class Drinks {
                 .init(string: "Stir"),
                 .init(string: "Strain into the Cocktail Class"),
                 .init(string: "Garnish with Cocktail Cherry"),
+            ],
+            source: nil
+        )
+    
+    static let margarita: Drink =
+        .init(
+            name: "Margarita",
+            description: "",
+            image: "Margarita",
+            color: "484A3E5E",
+            origin: Origins.mexico,
+            equipments: [ Equipments.cocktailGlass, Equipments.shaker, Equipments.strainer ],
+            ingredients: [
+                .init(ingredient: Ingredients.tequila, amount: 35, unit: .milliliters),
+                .init(ingredient: Ingredients.cointreau, amount: 20, unit: .milliliters),
+                .init(ingredient: Ingredients.limeJuice, amount: 15, unit: .milliliters),
+                .init(ingredient: Ingredients.iceCubes),
+            ],
+            steps: [
+                .init(string: "Add Ice Cubes to the Shaker"),
+                .init(string: "Add Tequila, Cointreau, & Lime Juice"),
+                .init(string: "Shake (10-15 seconds)"),
+                .init(string: "Add a salt rim to the Cocktail Glass"),
+                .init(string: "Strain into the Cocktail Class"),
+                .init(string: "Garnish with a Lime Wedge"),
             ],
             source: nil
         )
@@ -347,7 +423,7 @@ class Drinks {
             name: "Sidecar",
             description: "",
             image: "Sidecar",
-            color: "3C341C4F",
+            color: "A5834BC3",
             origin: Origins.france,
             equipments: [ Equipments.shaker, Equipments.cocktailGlass ],
             ingredients: [
@@ -418,12 +494,15 @@ class Drinks {
     static let all: [Drink] = [
         americano,
         classicMartini,
+        corpseReviver,
         daiquiri,
         darkAndStormy,
         fityFiftyMartini,
         dirtyMartini,
+        espressoMartini,
         ginFizz,
         manhattan,
+        margarita,
         mojito,
         moscowMule,
         negroni,
