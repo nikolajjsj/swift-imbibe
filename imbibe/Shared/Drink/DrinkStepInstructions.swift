@@ -17,18 +17,21 @@ struct DrinkStepInstructions: View {
     var body: some View {
         VStack {
             Text("Steps (\(drink.steps.count))")
-            Grid {
-                ForEach(Array(drink.steps.enumerated()), id: \.offset) { index, step in
-                    HStack {
-                        Text("\(index + 1)")
-                            .font(.title3.bold())
-                            .frame(width: 30)
-                        Text(step.string)
-                        Spacer()
-                    }
-                    .padding(.vertical, 8)
-                    Divider()
+                .font(.headline)
+                .padding(.bottom)
+            
+            ForEach(Array(drink.steps.enumerated()), id: \.offset) { index, step in
+                HStack {
+                    Text("\(index + 1)")
+                        .font(.title3.bold())
+                        .frame(width: 30)
+                    
+                    Text(step.string)
+                    
+                    Spacer()
                 }
+                
+                Divider()
             }
         }.detailCard()
     }
