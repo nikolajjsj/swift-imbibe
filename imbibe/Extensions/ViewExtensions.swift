@@ -11,6 +11,8 @@ extension View {
     func detailCard() -> some View {
         self
             .padding()
-            .background(RoundedRectangle(cornerRadius: 10).fill(.primary.opacity(0.1)))
+            .background(RoundedRectangle(cornerRadius: 10).fill(.background.opacity(0.4)))
+            .background(RoundedRectangle(cornerRadius: 10).stroke(.gray, lineWidth: 0.4))
+            
     }
 }
