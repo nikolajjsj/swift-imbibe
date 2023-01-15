@@ -15,15 +15,21 @@ struct IngredientDrinksList: View {
     }
     
     var body: some View {
-        VStack {
-            Text("Drinks with \(ingredient.name)").font(.headline)
-            
-            LazyVStack {
-                ForEach(drinksWithIngredient) { drink in
-                    DrinkCard(drink: drink)
+        let drinks = drinksWithIngredient
+        
+        if drinks.isEmpty {
+            EmptyView()
+        } else {
+            VStack {
+                Text("Drinks with \(ingredient.name)").font(.headline)
+                
+                LazyVStack {
+                    ForEach(drinks) { drink in
+                        DrinkCard(drink: drink)
+                    }
                 }
-            }
-        }.detailCard()
+            }.detailCard()
+        }
     }
     
     var drinksWithIngredient: [Drink] {

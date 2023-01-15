@@ -17,10 +17,12 @@ struct IngredientView: View {
                     Image(uiImage: image)
                         .interpolation(.none)
                         .resizable()
-                        .scaledToFit()
+                        .scaledToFill()
                         .frame(maxHeight: UIScreen.main.bounds.size.height)
-                        .padding()
-                        .position(x: UIScreen.main.bounds.size.width / 2, y: UIScreen.main.bounds.size.height / 5)
+                        .position(
+                            x: UIScreen.main.bounds.size.width / 2,
+                            y: UIScreen.main.bounds.size.height / 5
+                        )
                         .blur(radius: 60)
                 }
                 
@@ -29,8 +31,11 @@ struct IngredientView: View {
                         Image(uiImage: image)
                             .resizable()
                             .scaledToFit()
-                            .frame(maxHeight: min(image.size.height, UIScreen.main.bounds.size.height / 3))
-                            .padding()
+                            .frame(maxHeight: min(
+                                image.size.height,
+                                UIScreen.main.bounds.size.height / 3
+                            ))
+                            .padding(.bottom)
                     }
                     
                     IngredientDetails(ingredient)
