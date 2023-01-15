@@ -12,10 +12,8 @@ struct DrinksView: View {
     @State private var query: String = ""
     
     var body: some View {
-        let columns = [ GridItem(.flexible()), GridItem(.flexible()) ]
-        
         ScrollView {
-            LazyVGrid(columns: columns) {
+            LazyVGrid(columns: [ GridItem(.flexible()), GridItem(.flexible()) ]) {
                 ForEach(filtered) { d in
                     DrinkCard(drink: d)
                 }
@@ -23,13 +21,13 @@ struct DrinksView: View {
             .padding(.horizontal)
             .navigationTitle("Drinks")
         }
-        .searchable(text: $query)
+        .searchable(text: $query, placement: .toolbar)
     }
     
     var filtered: [Drink] {
         query.isEmpty
         ? Drinks.all
-        : Drinks.all.filter({ $0.name.lowercased().contains(query.lowercased()) })
+        : Drinks.all.filter({ $0.name.localizedCaseInsensitiveContains(query) })
     }
 }
 

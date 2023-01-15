@@ -28,7 +28,7 @@ struct IngredientsView: View {
     var filtered: [Ingredient] {
         query.isEmpty
         ? Ingredients.all
-        : Ingredients.all.filter({ $0.name.lowercased().contains(query.lowercased()) })
+        : Ingredients.all.filter({ $0.name.localizedCaseInsensitiveContains(query) })
     }
 }
 
