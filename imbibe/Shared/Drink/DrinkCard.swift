@@ -16,24 +16,40 @@ struct DrinkCard: View {
         let background = Color(hex: drink.color) ?? .clear
         let foreground = background.contastColor
         
-        HStack {
+        ZStack {
             if let image = UIImage.init(named: drink.image) {
                 Image(uiImage: image)
+                    .interpolation(.none)
                     .resizable()
-                    .scaledToFit()
-                    .frame(width: 30, height: 60)
+                    .scaledToFill()
+                    .frame(width: 40, height: 80)
+                    .blur(radius: 20)
             }
             
-            VStack(alignment: .leading) {
-                Text(drink.name).font(.headline).multilineTextAlignment(.leading)
-                Text("\(drink.ingredients.count) ingredients").opacity(0.75)
+            HStack {
+                if let image = UIImage.init(named: drink.image) {
+                    Image(uiImage: image)
+                        .interpolation(.none)
+                        .resizable()
+                        .scaledToFit()
+                        .frame(width: 40, height: 80)
+                }
+                
+                VStack(alignment: .leading) {
+                    Text(drink.name).font(.headline).multilineTextAlignment(.leading)
+                    VStack {
+                        Text("\(drink.ingredients.count) ingredients")
+                        Text("\(drink.strength)% strength")
+                    }.font(.footnote).opacity(0.8)
+                }
+                Spacer()
             }
-            Spacer()
         }
         .foregroundColor(foreground)
         .padding(.horizontal)
         .padding(.vertical, 8)
-        .background(RoundedRectangle(cornerRadius: 10).fill(background))
+        .background(background)
+        .clipShape(RoundedRectangle(cornerRadius: 10))
         .onTapGesture { presented.toggle() }
         .sheet(isPresented: $presented) { DrinkView(drink: drink) }
     }

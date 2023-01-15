@@ -50,4 +50,8 @@ class Drink: Identifiable, Equatable, Hashable {
         self.steps = steps
         self.source = source
     }
+    
+    var strength: Int {
+        Int(ingredients.reduce(0.0, { $0 + Double($1.ingredient.strength) }) / Double(ingredients.count))
+    }
 }

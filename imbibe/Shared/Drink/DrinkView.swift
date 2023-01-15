@@ -15,6 +15,7 @@ struct DrinkView: View {
             ZStack {
                 if let image = UIImage.init(named: drink.image) {
                     Image(uiImage: image)
+                        .interpolation(.none)
                         .resizable()
                         .scaledToFill()
                         .frame(maxHeight: UIScreen.main.bounds.size.height)
@@ -27,6 +28,7 @@ struct DrinkView: View {
                 LazyVStack {
                     if let image = UIImage.init(named: drink.image) {
                         Image(uiImage: image)
+                            .interpolation(.none)
                             .resizable()
                             .scaledToFit()
                             .frame(maxHeight: min(image.size.height, UIScreen.main.bounds.size.height / 3))

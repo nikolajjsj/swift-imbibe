@@ -15,6 +15,7 @@ struct IngredientView: View {
             ZStack {
                 if let image = UIImage.init(named: ingredient.image) {
                     Image(uiImage: image)
+                        .interpolation(.none)
                         .resizable()
                         .scaledToFit()
                         .frame(maxHeight: UIScreen.main.bounds.size.height)
