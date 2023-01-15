@@ -12,18 +12,16 @@ struct IngredientView: View {
     
     var body: some View {
         ScrollView {
-            ZStack {
+            ZStack(alignment: .top) {
                 if let image = UIImage.init(named: ingredient.image) {
                     Image(uiImage: image)
-                        .interpolation(.none)
                         .resizable()
                         .scaledToFill()
-                        .frame(maxHeight: UIScreen.main.bounds.size.height)
                         .position(
                             x: UIScreen.main.bounds.size.width / 2,
                             y: UIScreen.main.bounds.size.height / 5
                         )
-                        .blur(radius: 60)
+                        .blur(radius: 80)
                 }
                 
                 VStack {

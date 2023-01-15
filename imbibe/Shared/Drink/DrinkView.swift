@@ -12,28 +12,28 @@ struct DrinkView: View {
     
     var body: some View {
         ScrollView {
-            ZStack {
+            ZStack(alignment: .top) {
                 if let image = UIImage.init(named: drink.image) {
                     Image(uiImage: image)
-                        .interpolation(.none)
                         .resizable()
                         .scaledToFill()
-                        .frame(maxHeight: UIScreen.main.bounds.size.height)
-                        .padding(.horizontal)
-                        .padding(.vertical, 8)
-                        .position(x: UIScreen.main.bounds.size.width / 2, y: UIScreen.main.bounds.size.height / 5)
+                        .position(
+                            x: UIScreen.main.bounds.size.width / 2,
+                            y: UIScreen.main.bounds.size.height / 5
+                        )
                         .blur(radius: 60)
                 }
                 
                 LazyVStack {
                     if let image = UIImage.init(named: drink.image) {
                         Image(uiImage: image)
-                            .interpolation(.none)
                             .resizable()
                             .scaledToFit()
-                            .frame(maxHeight: min(image.size.height, UIScreen.main.bounds.size.height / 3))
-                            .padding(.horizontal)
-                            .padding(.vertical, 8)
+                            .frame(maxHeight: min(
+                                image.size.height,
+                                UIScreen.main.bounds.size.height / 3
+                            ))
+                            .padding(.bottom)
                     }
                     
                     DrinkDetails(drink)

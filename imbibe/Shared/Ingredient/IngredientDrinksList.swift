@@ -17,11 +17,12 @@ struct IngredientDrinksList: View {
     var body: some View {
         let drinks = drinksWithIngredient
         
+        
         if drinks.isEmpty {
             EmptyView()
         } else {
             VStack {
-                Text("Drinks with \(ingredient.name)").font(.headline)
+                Text("Drinks with \(ingredient.name) (\(drinks.count))").font(.headline)
                 
                 LazyVStack {
                     ForEach(drinks) { drink in
