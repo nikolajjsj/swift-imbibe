@@ -23,7 +23,7 @@ struct IngredientsInspector: View {
             
             VStack {
                 HStack {
-                    Text("Servings").foregroundColor(.gray).frame(minWidth: 80)
+                    Text("Servings").frame(minWidth: 80)
                     Picker("", selection: $servings) {
                         ForEach(1 ..< 5, id: \.self) { serving in
                             Text("\(serving)").tag(serving)
@@ -32,7 +32,7 @@ struct IngredientsInspector: View {
                 }
                 
                 HStack {
-                    Text("Unit").foregroundColor(.gray).frame(minWidth: 80)
+                    Text("Unit").frame(minWidth: 80)
                     Picker("", selection: $unit) {
                         Text(UnitVolume.milliliters.symbol).tag(UnitVolume.milliliters)
                         Text(UnitVolume.centiliters.symbol).tag(UnitVolume.centiliters)
