@@ -133,16 +133,17 @@ class Drinks {
             image: "Dark and Stormy",
             color: "6F5810A6",
             origin: Origins.bermuda,
-            equipments: [ Equipments.highballGlass ],
+            equipments: [ Equipments.highballGlass, Equipments.barspoon ],
             ingredients: [
                 .init(ingredient: Ingredients.darkRum, amount: 60, unit: .milliliters),
                 .init(ingredient: Ingredients.gingerBeer, amount: 90, unit: .milliliters),
+                .init(ingredient: Ingredients.limeJuice, amount: 15, unit: .milliliters),
                 .init(ingredient: Ingredients.ice),
-                .init(ingredient: Ingredients.lime),
             ],
             steps: [
                 .init(string: "Fill up the Highball Glass with Ice Cubes"),
-                .init(string: "Add Dark Rum & Ginger Beer"),
+                .init(string: "Add Dark Rum & Lime Juice and stir with Barspoon"),
+                .init(string: "Top up with Ginger Beer"),
                 .init(string: "Garnish with a Lime Wedge"),
             ],
             source: nil
