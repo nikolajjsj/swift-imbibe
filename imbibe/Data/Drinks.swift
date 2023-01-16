@@ -453,6 +453,30 @@ class Drinks {
             source: nil
         )
     
+    static let painkiller: Drink =
+        .init(
+            name: "Painkiller",
+            description: "",
+            image: "Painkiller",
+            color: "49484459",
+            origin: Origins.britishVirginIslands,
+            equipments: [ Equipments.oldFashionedGlass, Equipments.shaker, Equipments.barspoon ],
+            ingredients: [
+                .init(ingredient: Ingredients.darkRum, amount: 60, unit: .milliliters),
+                .init(ingredient: Ingredients.orangeJuice, amount: 30, unit: .milliliters),
+                .init(ingredient: Ingredients.pineappleJuice, amount: 120, unit: .milliliters),
+                .init(ingredient: Ingredients.coconutCream, amount: 30, unit: .milliliters),
+                .init(ingredient: Ingredients.iceCubes),
+            ],
+            steps: [
+                .init(string: "Add Ice Cubes to the Shaker"),
+                .init(string: "Add Dark Rum, Pineapple Juice, Coconut Cream, Orange Juice"),
+                .init(string: "Shake (10-15 seconds)"),
+                .init(string: "Pour everything into the Old Fashioned Glass"),
+            ],
+            source: nil
+        )
+    
     static let perfectMartini: Drink =
         .init(
             name: "Perfect Martini",
@@ -619,6 +643,7 @@ class Drinks {
         newYourSour,
         oldFashioned,
         perfectMartini,
+        painkiller,
         pinaColada,
         sazerac,
         sidecar,

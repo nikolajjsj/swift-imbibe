@@ -328,6 +328,22 @@ class Ingredients {
         origin: nil,
         description: ""
     )
+    static let orangeJuice: Ingredient = Ingredient(
+        name: "Orange Juice",
+        image: "Orange",
+        color: "AC7046D4",
+        strength: 0,
+        origin: nil,
+        description: ""
+    )
+    static let orange: Ingredient = Ingredient(
+        name: "Orange",
+        image: "Orange",
+        color: "AC7046D4",
+        strength: 0,
+        origin: nil,
+        description: ""
+    )
     static let peychaudBitters: Ingredient = Ingredient(
         name: "Peychaud Bitters",
         image: "Peychaud Bitters",
