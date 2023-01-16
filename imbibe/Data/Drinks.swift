@@ -103,6 +103,30 @@ class Drinks {
             source: nil
         )
     
+    static let cubaLibre: Drink =
+        .init(
+            name: "Cuba Libre",
+            description: "",
+            image: "Cuba Libre",
+            color: "5B3A18D0",
+            origin: Origins.cuba,
+            equipments: [ Equipments.highballGlass, Equipments.barspoon ],
+            ingredients: [
+                .init(ingredient: Ingredients.lightRum, amount: 60, unit: .milliliters),
+                .init(ingredient: Ingredients.limeJuice, amount: 20, unit: .milliliters),
+                .init(ingredient: Ingredients.cola, amount: 120, unit: .milliliters),
+                .init(ingredient: Ingredients.iceCubes),
+            ],
+            steps: [
+                .init(string: "Add Ice Cubes to the Highball Glass"),
+                .init(string: "Add Light Rum & Lime Juice"),
+                .init(string: "Stir with Barspoon"),
+                .init(string: "Top up with Cola"),
+                .init(string: "Garnish with a Lime Wedge"),
+            ],
+            source: nil
+        )
+    
     static let daiquiri: Drink =
         .init(
             name: "Daiquiri",
@@ -522,6 +546,7 @@ class Drinks {
         americano,
         classicMartini,
         corpseReviver,
+        cubaLibre,
         daiquiri,
         darkAndStormy,
         fityFiftyMartini,
