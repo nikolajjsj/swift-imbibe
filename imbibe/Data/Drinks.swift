@@ -250,6 +250,35 @@ class Drinks {
             source: nil
         )
     
+    static let longIslandIceTea: Drink =
+        .init(
+            name: "Long Island Ice Tea",
+            description: "",
+            image: "Long Island Ice Tea",
+            color: "6F5810A6",
+            origin: Origins.unitedStates,
+            equipments: [ Equipments.highballGlass, Equipments.barspoon ],
+            ingredients: [
+                .init(ingredient: Ingredients.tequila, amount: 15, unit: .milliliters),
+                .init(ingredient: Ingredients.vodka, amount: 15, unit: .milliliters),
+                .init(ingredient: Ingredients.rum, amount: 15, unit: .milliliters),
+                .init(ingredient: Ingredients.curacao, amount: 15, unit: .milliliters),
+                .init(ingredient: Ingredients.gin, amount: 15, unit: .milliliters),
+                .init(ingredient: Ingredients.lemonJuice, amount: 30, unit: .milliliters),
+                .init(ingredient: Ingredients.simpleSirup, amount: 30, unit: .milliliters),
+                .init(ingredient: Ingredients.cola, amount: 20, unit: .milliliters),
+                .init(ingredient: Ingredients.iceCubes),
+            ],
+            steps: [
+                .init(string: "Fill the Shaker with Ice Cubes"),
+                .init(string: "Add Tequila, Vodka, Rum, Curacao, Gin, Lemon Juice, & Simple Sirup"),
+                .init(string: "Stir"),
+                .init(string: "Top up with Cola"),
+                .init(string: "Garnish with a Lemon Slice"),
+            ],
+            source: nil
+        )
+    
     static let manhattan: Drink =
         .init(
             name: "Manhattan",
@@ -532,7 +561,7 @@ class Drinks {
                 .init(ingredient: Ingredients.bourbonWhisky, amount: 60, unit: .milliliters),
                 .init(ingredient: Ingredients.lemonJuice, amount: 30, unit: .milliliters),
                 .init(ingredient: Ingredients.eggWhite, amount: 30, unit: .milliliters),
-                .init(ingredient: Ingredients.simpleSirup, amount: 30, unit: .milliliters),
+                .init(ingredient: Ingredients.simpleSirup, amount: 15, unit: .milliliters),
                 .init(ingredient: Ingredients.angosturaBitters, amount: 2, unit: .dash),
                 .init(ingredient: Ingredients.iceCubes),
             ],
@@ -581,6 +610,7 @@ class Drinks {
         espressoMartini,
         fityFiftyMartini,
         ginFizz,
+        longIslandIceTea,
         manhattan,
         margarita,
         mojito,
