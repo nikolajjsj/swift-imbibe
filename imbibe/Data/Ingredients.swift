@@ -352,6 +352,14 @@ class Ingredients {
         origin: nil,
         description: ""
     )
+    static let redWine: Ingredient = Ingredient(
+        name: "Red Wine",
+        image: "Red Wine",
+        color: "755D5ACE",
+        strength: 14,
+        origin: nil,
+        description: ""
+    )
     static let rum: Ingredient = Ingredient(
         name: "Rum",
         image: "Rum",
@@ -461,6 +469,7 @@ class Ingredients {
         peychaudBitters,
         pineappleJuice,
         pineapple,
+        redWine,
         rum,
         ryeWhisky,
         simpleSirup,

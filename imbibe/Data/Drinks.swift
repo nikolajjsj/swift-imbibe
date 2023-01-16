@@ -373,6 +373,34 @@ class Drinks {
             source: nil
         )
     
+    static let newYourSour: Drink =
+        .init(
+            name: "New York Sour",
+            description: "",
+            image: "New York Sour",
+            color: "A5834BC3",
+            origin: Origins.unitedStates,
+            equipments: [ Equipments.oldFashionedGlass, Equipments.shaker ],
+            ingredients: [
+                .init(ingredient: Ingredients.ryeWhisky, amount: 60, unit: .milliliters),
+                .init(ingredient: Ingredients.lemonJuice, amount: 30, unit: .milliliters),
+                .init(ingredient: Ingredients.simpleSirup, amount: 15, unit: .milliliters),
+                .init(ingredient: Ingredients.curacao, amount: 8, unit: .milliliters),
+                .init(ingredient: Ingredients.eggWhite, amount: 30, unit: .milliliters),
+                .init(ingredient: Ingredients.redWine, amount: 15, unit: .milliliters),
+                .init(ingredient: Ingredients.iceCubes),
+            ],
+            steps: [
+                .init(string: "Put Rye Whisky, Lemon Juice, Simple Sirup, Curacao, & Egg White into the Shaker"),
+                .init(string: "Dry shake (without ice for about 10 seconds)"),
+                .init(string: "Add Ice Cubes"),
+                .init(string: "Shake again (10-15 seconds)"),
+                .init(string: "Strain into the Old Fashioned Glas"),
+                .init(string: "Add a float of Red Wine"),
+            ],
+            source: nil
+        )
+    
     static let oldFashioned: Drink =
         .init(
             name: "Old Fashioned",
@@ -549,15 +577,16 @@ class Drinks {
         cubaLibre,
         daiquiri,
         darkAndStormy,
-        fityFiftyMartini,
         dirtyMartini,
         espressoMartini,
+        fityFiftyMartini,
         ginFizz,
         manhattan,
         margarita,
         mojito,
         moscowMule,
         negroni,
+        newYourSour,
         oldFashioned,
         perfectMartini,
         pinaColada,
