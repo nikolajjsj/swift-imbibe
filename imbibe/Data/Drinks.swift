@@ -309,17 +309,18 @@ class Drinks {
             image: "Moscow Mule",
             color: "55472F9C",
             origin: Origins.unitedStates,
-            equipments: [ Equipments.highballGlass, Equipments.barspoon ],
+            equipments: [ Equipments.oldFashionedGlass, Equipments.barspoon ],
             ingredients: [
                 .init(ingredient: Ingredients.vodka, amount: 60, unit: .milliliters),
-                .init(ingredient: Ingredients.limeJuice, amount: 10, unit: .milliliters),
+                .init(ingredient: Ingredients.limeJuice, amount: 20, unit: .milliliters),
                 .init(ingredient: Ingredients.gingerBeer, amount: 120, unit: .milliliters),
                 .init(ingredient: Ingredients.iceCubes),
             ],
             steps: [
-                .init(string: "Fill Highball Glass with Ice Cubes"),
-                .init(string: "Add Vodka, Ginger Beer, & Lime Juice into the Highball Glass"),
-                .init(string: "Garnish with Lime Wedge"),
+                .init(string: "Fill Old Fashioned Glass with Ice Cubes"),
+                .init(string: "Add Vodka & Lime Juice and stir with the Barspoon"),
+                .init(string: "Then top up with Ginger Beer"),
+                .init(string: "Garnish with a Lime Wedge"),
             ],
             source: nil
         )
