@@ -17,6 +17,7 @@ class Origins {
     static let italy: Origin = Origin( name: "Italy", flag: "🇮🇹" )
     static let mexico: Origin = Origin( name: "Mexico", flag: "🇲🇽" )
     static let poland: Origin = Origin( name: "Poland", flag: "🇵🇱" )
+    static let puertoRico: Origin = Origin( name: "Puerto Rico", flag: "🇵🇷" )
     static let trinidadAndTobago: Origin = Origin( name: "Trinidad and Tobago", flag: "🇹🇹" )
     static let unitedKingdom: Origin = Origin( name: "United Kingdom", flag: "🇬🇧" )
     static let unitedStates: Origin = Origin( name: "United States", flag: "🇺🇸" )

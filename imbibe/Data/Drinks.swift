@@ -153,7 +153,7 @@ class Drinks {
         .init(
             name: "Dirty Martini",
             description: "",
-            image: "Martini",
+            image: "Dirty Martini",
             color: "49484459",
             origin: Origins.unitedStates,
             equipments: [ Equipments.cocktailGlass, Equipments.barspoon, Equipments.mixingGlass ],
@@ -376,7 +376,7 @@ class Drinks {
         .init(
             name: "Perfect Martini",
             description: "",
-            image: "Martini",
+            image: "Perfect Martini",
             color: "49484459",
             origin: Origins.unitedStates,
             equipments: [ Equipments.cocktailGlass, Equipments.barspoon, Equipments.mixingGlass ],
@@ -391,6 +391,31 @@ class Drinks {
                 .init(string: "Stir with Barspoon (30-40 seconds)"),
                 .init(string: "Strain into the Cocktail Glass"),
                 .init(string: "Garnish with a Lemon Twist"),
+            ],
+            source: nil
+        )
+    
+    static let pinaColada: Drink =
+        .init(
+            name: "Piña Colada",
+            description: "",
+            image: "Pina Colada",
+            color: "5B3A18D0",
+            origin: Origins.puertoRico,
+            equipments: [ Equipments.cocktailGlass, Equipments.barspoon, Equipments.blender ],
+            ingredients: [
+                .init(ingredient: Ingredients.darkRum, amount: 45, unit: .milliliters),
+                .init(ingredient: Ingredients.coconutCream, amount: 45, unit: .milliliters),
+                .init(ingredient: Ingredients.pineappleJuice, amount: 45, unit: .milliliters),
+                .init(ingredient: Ingredients.pineapple, amount: 3, unit: .piece),
+                .init(ingredient: Ingredients.iceCubes),
+            ],
+            steps: [
+                .init(string: "Fill the Blender with Ice Cubes"),
+                .init(string: "Add Coconut Cream, Pineapple Juice, Dark Rum, & the Pineapple slices"),
+                .init(string: "Start the blender"),
+                .init(string: "Fill the mix into the Cocktail Glass"),
+                .init(string: "Garnish with Cherry, Pineapple, and a Cocktail Umbrella"),
             ],
             source: nil
         )
@@ -510,6 +535,7 @@ class Drinks {
         negroni,
         oldFashioned,
         perfectMartini,
+        pinaColada,
         sazerac,
         sidecar,
         whiskySour,
@@ -526,6 +552,7 @@ class Drinks {
         moscowMule,
         negroni,
         oldFashioned,
+        pinaColada,
         sazerac,
         sidecar,
         whiskySour,

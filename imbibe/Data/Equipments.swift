@@ -13,6 +13,11 @@ class Equipments {
         description: "A long-handled spoon used in bartending.",
         image: "Barspoon"
     )
+    static let blender: Equipment = Equipment(
+        name: "Blender",
+        description: "A kitchen appliance used to blend stuff together.",
+        image: "Blender"
+    )
     static let cocktailGlass: Equipment = Equipment(
         name: "Cocktail Glas",
         description: "",
@@ -51,6 +56,7 @@ class Equipments {
     
     static let all: [Equipment] = [
         barspoon,
+        blender,
         cocktailGlass,
         mixingGlass,
         oldFashionedGlass,

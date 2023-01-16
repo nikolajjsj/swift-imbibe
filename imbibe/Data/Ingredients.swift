@@ -80,6 +80,14 @@ class Ingredients {
         origin: nil,
         description: ""
     )
+    static let coconutCream: Ingredient = Ingredient(
+        name: "Coconut Cream",
+        image: "Coconut Cream",
+        color: "6C492CA7",
+        strength: 0,
+        origin: nil,
+        description: ""
+    )
     static let coffee: Ingredient = Ingredient(
         name: "Coffee",
         image: "Coffee",
@@ -328,6 +336,22 @@ class Ingredients {
         origin: nil,
         description: ""
     )
+    static let pineapple: Ingredient = Ingredient(
+        name: "Pineapple",
+        image: "Pineapple",
+        color: "755D5ACE",
+        strength: 0,
+        origin: nil,
+        description: ""
+    )
+    static let pineappleJuice: Ingredient = Ingredient(
+        name: "Pineapple Juice",
+        image: "Pineapple",
+        color: "755D5ACE",
+        strength: 0,
+        origin: nil,
+        description: ""
+    )
     static let rum: Ingredient = Ingredient(
         name: "Rum",
         image: "Rum",
@@ -403,6 +427,7 @@ class Ingredients {
         campari,
         calvados,
         champagne,
+        coconutCream,
         coffee,
         coffeeLiqueur,
         cognac,
@@ -434,6 +459,8 @@ class Ingredients {
         oliveBrine,
         olives,
         peychaudBitters,
+        pineappleJuice,
+        pineapple,
         rum,
         ryeWhisky,
         simpleSirup,
