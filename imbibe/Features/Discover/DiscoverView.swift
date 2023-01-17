@@ -18,16 +18,54 @@ struct DiscoverView: View {
                 Text("Iconic Drinks")
                     .font(.headline)
                     .foregroundColor(.gray)
-                
                 LazyVGrid(columns: columns) {
-                    ForEach(Drinks.allIconic) { d in
+                    ForEach(Drinks.allIconic.prefix(5)) { d in
                         DrinkCard(drink: d)
                     }
-                }
+                    NavigationLink {
+                        DrinksList(label: "Iconic Drinks", drinks: Drinks.allIconic)
+                    } label: {
+                        FillLabel("\(Drinks.allIconic.count - 5) more")
+                    }.buttonStyle(.bordered)
+                }.padding(.bottom, 42)
+                
+                Text("Base Spirit")
+                    .font(.headline)
+                    .foregroundColor(.gray)
+                LazyVGrid(columns: columns) {
+                    ForEach(Drink.Base.all, id: \.rawValue) { base in
+                        NavigationLink {
+                            DrinksList(label: "\(base.rawValue) Based", drinks: base.drinks)
+                        } label: {
+                            if let image = base.image {
+                                Spacer()
+                                Image(image)
+                                    .resizable()
+                                    .scaledToFit()
+                                    .frame(maxHeight: 50)
+                                    .padding(.vertical, 8)
+                            }
+                            FillLabel(base.rawValue)
+                        }.buttonStyle(.bordered)
+                    }
+                }.padding(.bottom, 42)
             }
             .padding(.horizontal)
         }
         .navigationTitle("Discover")
+    }
+    
+    @ViewBuilder
+    func FillLabel(_ label: String) -> some View {
+        VStack {
+            Spacer()
+            HStack {
+                Spacer()
+                Text(label).font(.headline)
+                Spacer()
+            }
+            Spacer()
+        }
     }
 }
 

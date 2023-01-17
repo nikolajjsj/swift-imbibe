@@ -22,6 +22,7 @@ class Drink: Identifiable, Equatable, Hashable {
     let image: String
     let color: String
     let year: Int?
+    let base: Base
     let origin: Origin
     let equipments: [Equipment]
     let ingredients: [IngredientWithVolume]
@@ -35,6 +36,7 @@ class Drink: Identifiable, Equatable, Hashable {
         image: String,
         color: String,
         year: Int? = nil,
+        base: Base,
         origin: Origin,
         equipments: [Equipment],
         ingredients: [IngredientWithVolume],
@@ -47,6 +49,7 @@ class Drink: Identifiable, Equatable, Hashable {
         self.image = image
         self.color = color
         self.year = year
+        self.base = base
         self.origin = origin
         self.equipments = equipments
         self.ingredients = ingredients
@@ -56,5 +59,58 @@ class Drink: Identifiable, Equatable, Hashable {
     
     var strength: Int {
         Int(ingredients.reduce(0.0, { $0 + Double($1.ingredient.strength) }) / Double(ingredients.count))
+    }
+    
+    enum Base: String {
+        case whisky = "Whisky"
+        case gin = "Gin"
+        case rum = "Rum"
+        case vodka = "Vodka"
+        case tequila = "Tequila"
+        case cognac = "Cognac"
+        
+        case other = "Other"
+        
+        static var all: [Base] {
+            [.whisky, .gin, .rum, .vodka, .tequila, .cognac]
+        }
+        
+        var image: String? {
+            switch self {
+            case .whisky:
+                return Ingredients.whisky.image
+            case .gin:
+                return Ingredients.gin.image
+            case .rum:
+                return Ingredients.rum.image
+            case .vodka:
+                return Ingredients.vodka.image
+            case .tequila:
+                return Ingredients.tequila.image
+            case .cognac:
+                return Ingredients.cognac.image
+            default:
+                return nil
+            }
+        }
+        
+        var drinks: [Drink] {
+            switch self {
+            case .whisky:
+                return Drinks.whiskyBased
+            case .gin:
+                return Drinks.ginBased
+            case .rum:
+                return Drinks.rumBased
+            case .vodka:
+                return Drinks.vodkaBased
+            case .tequila:
+                return Drinks.tequilaBased
+            case .cognac:
+                return Drinks.cognacBased
+            default:
+                return []
+            }
+        }
     }
 }

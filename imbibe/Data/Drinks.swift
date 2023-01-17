@@ -15,6 +15,7 @@ class Drinks {
             image: "Martini",
             color: "49484459",
             year: 1930,
+            base: .gin,
             origin: Origins.unitedStates,
             equipments: [ Equipments.cocktailGlass, Equipments.barspoon, Equipments.mixingGlass ],
             ingredients: [
@@ -38,6 +39,7 @@ class Drinks {
             image: "Americano",
             color: "A06049DA",
             year: 1860,
+            base: .other,
             origin: Origins.italy,
             equipments: [ Equipments.oldFashionedGlass ],
             ingredients: [
@@ -63,6 +65,7 @@ class Drinks {
             image: "Martini",
             color: "49484459",
             year: 1922,
+            base: .gin,
             origin: Origins.unitedStates,
             equipments: [ Equipments.cocktailGlass, Equipments.barspoon, Equipments.mixingGlass ],
             ingredients: [
@@ -87,6 +90,7 @@ class Drinks {
             image: "Corpse Reviver",
             color: "A5834BC3",
             year: 1861,
+            base: .gin,
             origin: Origins.unitedStates,
             equipments: [ Equipments.cocktailGlass, Equipments.mixingGlass, Equipments.barspoon ],
             ingredients: [
@@ -114,6 +118,7 @@ class Drinks {
             image: "Cuba Libre",
             color: "5B3A18D0",
             year: 1900,
+            base: .rum,
             origin: Origins.cuba,
             equipments: [ Equipments.highballGlass, Equipments.barspoon ],
             ingredients: [
@@ -139,6 +144,7 @@ class Drinks {
             image: "Daiquiri",
             color: "484A3E5E",
             year: 1900,
+            base: .rum,
             origin: Origins.cuba,
             equipments: [ Equipments.cocktailGlass, Equipments.shaker ],
             ingredients: [
@@ -163,6 +169,7 @@ class Drinks {
             image: "Dark and Stormy",
             color: "6F5810A6",
             year: 1920,
+            base: .rum,
             origin: Origins.bermuda,
             equipments: [ Equipments.highballGlass, Equipments.barspoon ],
             ingredients: [
@@ -187,6 +194,7 @@ class Drinks {
             image: "Dirty Martini",
             color: "49484459",
             year: 1901,
+            base: .gin,
             origin: Origins.unitedStates,
             equipments: [ Equipments.cocktailGlass, Equipments.barspoon, Equipments.mixingGlass ],
             ingredients: [
@@ -214,6 +222,7 @@ class Drinks {
             image: "Espresso Martini",
             color: "49484459",
             year: 1980,
+            base: .vodka,
             origin: Origins.unitedKingdom,
             equipments: [ Equipments.cocktailGlass, Equipments.shaker, Equipments.strainer ],
             ingredients: [
@@ -240,6 +249,7 @@ class Drinks {
             image: "Gin Fizz",
             color: "777A68A8",
             year: 1888,
+            base: .gin,
             origin: Origins.unitedKingdom,
             equipments: [ Equipments.highballGlass, Equipments.shaker ],
             ingredients: [
@@ -267,6 +277,7 @@ class Drinks {
             image: "Long Island Ice Tea",
             color: "6F5810A6",
             year: 1972,
+            base: .other,
             origin: Origins.unitedStates,
             equipments: [ Equipments.highballGlass, Equipments.barspoon ],
             ingredients: [
@@ -297,6 +308,7 @@ class Drinks {
             image: "Manhattan",
             color: "A06049DA",
             year: 1880,
+            base: .whisky,
             origin: Origins.unitedStates,
             equipments: [ Equipments.cocktailGlass, Equipments.mixingGlass, Equipments.barspoon ],
             ingredients: [
@@ -322,6 +334,7 @@ class Drinks {
             image: "Margarita",
             color: "484A3E5E",
             year: 1937,
+            base: .tequila,
             origin: Origins.mexico,
             equipments: [ Equipments.cocktailGlass, Equipments.shaker, Equipments.strainer ],
             ingredients: [
@@ -348,6 +361,7 @@ class Drinks {
             image: "Mojito",
             color: "50573D97",
             year: 1927,
+            base: .rum,
             origin: Origins.cuba,
             equipments: [ Equipments.highballGlass, Equipments.muddler, Equipments.barspoon, Equipments.shaker ],
             ingredients: [
@@ -377,6 +391,7 @@ class Drinks {
             image: "Moscow Mule",
             color: "55472F9C",
             year: 1941,
+            base: .vodka,
             origin: Origins.unitedStates,
             equipments: [ Equipments.oldFashionedGlass, Equipments.barspoon ],
             ingredients: [
@@ -401,6 +416,7 @@ class Drinks {
             image: "Negroni",
             color: "B85432D9",
             year: 1860,
+            base: .gin,
             origin: Origins.italy,
             equipments: [ Equipments.barspoon, Equipments.oldFashionedGlass ],
             ingredients: [
@@ -425,6 +441,7 @@ class Drinks {
             image: "New York Sour",
             color: "A5834BC3",
             year: 1880,
+            base: .whisky,
             origin: Origins.unitedStates,
             equipments: [ Equipments.oldFashionedGlass, Equipments.shaker ],
             ingredients: [
@@ -454,6 +471,7 @@ class Drinks {
             image: "Old Fashioned",
             color: "5B3A18D0",
             year: 1880,
+            base: .whisky,
             origin: Origins.unitedStates,
             equipments: [ Equipments.barspoon, Equipments.oldFashionedGlass ],
             ingredients: [
@@ -478,6 +496,7 @@ class Drinks {
             image: "Painkiller",
             color: "49484459",
             year: 1970,
+            base: .rum,
             origin: Origins.britishVirginIslands,
             equipments: [ Equipments.oldFashionedGlass, Equipments.shaker, Equipments.barspoon ],
             ingredients: [
@@ -503,6 +522,7 @@ class Drinks {
             image: "Perfect Martini",
             color: "49484459",
             year: 1948,
+            base: .gin,
             origin: Origins.unitedStates,
             equipments: [ Equipments.cocktailGlass, Equipments.barspoon, Equipments.mixingGlass ],
             ingredients: [
@@ -527,6 +547,7 @@ class Drinks {
             image: "Pina Colada",
             color: "5B3A18D0",
             year: 1920,
+            base: .rum,
             origin: Origins.puertoRico,
             equipments: [ Equipments.cocktailGlass, Equipments.barspoon, Equipments.blender ],
             ingredients: [
@@ -553,6 +574,7 @@ class Drinks {
             image: "Sazerac",
             color: "563E2CC3",
             year: 1950,
+            base: .whisky,
             origin: Origins.unitedStates,
             equipments: [ Equipments.mixingGlass, Equipments.barspoon, Equipments.oldFashionedGlass ],
             ingredients: [
@@ -579,6 +601,7 @@ class Drinks {
             image: "Sidecar",
             color: "A5834BC3",
             year: 1922,
+            base: .cognac,
             origin: Origins.france,
             equipments: [ Equipments.shaker, Equipments.cocktailGlass ],
             ingredients: [
@@ -603,6 +626,7 @@ class Drinks {
             image: "Whisky Sour",
             color: "A5834BC3",
             year: 1870,
+            base: .whisky,
             origin: Origins.unitedStates,
             equipments: [ Equipments.oldFashionedGlass, Equipments.shaker ],
             ingredients: [
@@ -631,6 +655,7 @@ class Drinks {
             image: "White Russian",
             color: "55472F9C",
             year: 1949,
+            base: .gin,
             origin: Origins.belgium,
             equipments: [ Equipments.oldFashionedGlass, Equipments.shaker ],
             ingredients: [
@@ -692,6 +717,13 @@ class Drinks {
         whiskySour,
         whiteRussian,
     ]
+    
+    static var ginBased: [Drink] { all.filter({ $0.base == .gin }) }
+    static var whiskyBased: [Drink] { all.filter({ $0.base == .whisky }) }
+    static var rumBased: [Drink] { all.filter({ $0.base == .rum }) }
+    static var cognacBased: [Drink] { all.filter({ $0.base == .cognac }) }
+    static var tequilaBased: [Drink] { all.filter({ $0.base == .tequila }) }
+    static var vodkaBased: [Drink] { all.filter({ $0.base == .vodka }) }
     
     static func random() -> Drink {
         let random = self.all.randomElement()
