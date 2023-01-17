@@ -21,6 +21,7 @@ class Drink: Identifiable, Equatable, Hashable {
     let description: String
     let image: String
     let color: String
+    let year: Int?
     let origin: Origin
     let equipments: [Equipment]
     let ingredients: [IngredientWithVolume]
@@ -33,6 +34,7 @@ class Drink: Identifiable, Equatable, Hashable {
         description: String,
         image: String,
         color: String,
+        year: Int? = nil,
         origin: Origin,
         equipments: [Equipment],
         ingredients: [IngredientWithVolume],
@@ -44,6 +46,7 @@ class Drink: Identifiable, Equatable, Hashable {
         self.description = description
         self.image = image
         self.color = color
+        self.year = year
         self.origin = origin
         self.equipments = equipments
         self.ingredients = ingredients

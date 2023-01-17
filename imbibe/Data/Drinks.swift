@@ -14,6 +14,7 @@ class Drinks {
             description: "",
             image: "Martini",
             color: "49484459",
+            year: 1930,
             origin: Origins.unitedStates,
             equipments: [ Equipments.cocktailGlass, Equipments.barspoon, Equipments.mixingGlass ],
             ingredients: [
@@ -36,6 +37,7 @@ class Drinks {
             description: "",
             image: "Americano",
             color: "A06049DA",
+            year: 1860,
             origin: Origins.italy,
             equipments: [ Equipments.oldFashionedGlass ],
             ingredients: [
@@ -60,6 +62,7 @@ class Drinks {
             description: "",
             image: "Martini",
             color: "49484459",
+            year: 1922,
             origin: Origins.unitedStates,
             equipments: [ Equipments.cocktailGlass, Equipments.barspoon, Equipments.mixingGlass ],
             ingredients: [
@@ -83,6 +86,7 @@ class Drinks {
             description: "",
             image: "Corpse Reviver",
             color: "A5834BC3",
+            year: 1861,
             origin: Origins.unitedStates,
             equipments: [ Equipments.cocktailGlass, Equipments.mixingGlass, Equipments.barspoon ],
             ingredients: [
@@ -109,6 +113,7 @@ class Drinks {
             description: "",
             image: "Cuba Libre",
             color: "5B3A18D0",
+            year: 1900,
             origin: Origins.cuba,
             equipments: [ Equipments.highballGlass, Equipments.barspoon ],
             ingredients: [
@@ -133,6 +138,7 @@ class Drinks {
             description: "",
             image: "Daiquiri",
             color: "484A3E5E",
+            year: 1900,
             origin: Origins.cuba,
             equipments: [ Equipments.cocktailGlass, Equipments.shaker ],
             ingredients: [
@@ -156,6 +162,7 @@ class Drinks {
             description: "",
             image: "Dark and Stormy",
             color: "6F5810A6",
+            year: 1920,
             origin: Origins.bermuda,
             equipments: [ Equipments.highballGlass, Equipments.barspoon ],
             ingredients: [
@@ -179,6 +186,7 @@ class Drinks {
             description: "",
             image: "Dirty Martini",
             color: "49484459",
+            year: 1901,
             origin: Origins.unitedStates,
             equipments: [ Equipments.cocktailGlass, Equipments.barspoon, Equipments.mixingGlass ],
             ingredients: [
@@ -205,6 +213,7 @@ class Drinks {
             description: "",
             image: "Espresso Martini",
             color: "49484459",
+            year: 1980,
             origin: Origins.unitedKingdom,
             equipments: [ Equipments.cocktailGlass, Equipments.shaker, Equipments.strainer ],
             ingredients: [
@@ -230,6 +239,7 @@ class Drinks {
             description: "",
             image: "Gin Fizz",
             color: "777A68A8",
+            year: 1888,
             origin: Origins.unitedKingdom,
             equipments: [ Equipments.highballGlass, Equipments.shaker ],
             ingredients: [
@@ -256,6 +266,7 @@ class Drinks {
             description: "",
             image: "Long Island Ice Tea",
             color: "6F5810A6",
+            year: 1972,
             origin: Origins.unitedStates,
             equipments: [ Equipments.highballGlass, Equipments.barspoon ],
             ingredients: [
@@ -285,6 +296,7 @@ class Drinks {
             description: "",
             image: "Manhattan",
             color: "A06049DA",
+            year: 1880,
             origin: Origins.unitedStates,
             equipments: [ Equipments.cocktailGlass, Equipments.mixingGlass, Equipments.barspoon ],
             ingredients: [
@@ -309,6 +321,7 @@ class Drinks {
             description: "",
             image: "Margarita",
             color: "484A3E5E",
+            year: 1937,
             origin: Origins.mexico,
             equipments: [ Equipments.cocktailGlass, Equipments.shaker, Equipments.strainer ],
             ingredients: [
@@ -334,6 +347,7 @@ class Drinks {
             description: "",
             image: "Mojito",
             color: "50573D97",
+            year: 1927,
             origin: Origins.cuba,
             equipments: [ Equipments.highballGlass, Equipments.muddler, Equipments.barspoon, Equipments.shaker ],
             ingredients: [
@@ -362,6 +376,7 @@ class Drinks {
             description: "",
             image: "Moscow Mule",
             color: "55472F9C",
+            year: 1941,
             origin: Origins.unitedStates,
             equipments: [ Equipments.oldFashionedGlass, Equipments.barspoon ],
             ingredients: [
@@ -385,6 +400,7 @@ class Drinks {
             description: "",
             image: "Negroni",
             color: "B85432D9",
+            year: 1860,
             origin: Origins.italy,
             equipments: [ Equipments.barspoon, Equipments.oldFashionedGlass ],
             ingredients: [
@@ -408,6 +424,7 @@ class Drinks {
             description: "",
             image: "New York Sour",
             color: "A5834BC3",
+            year: 1880,
             origin: Origins.unitedStates,
             equipments: [ Equipments.oldFashionedGlass, Equipments.shaker ],
             ingredients: [
@@ -436,6 +453,7 @@ class Drinks {
             description: "",
             image: "Old Fashioned",
             color: "5B3A18D0",
+            year: 1880,
             origin: Origins.unitedStates,
             equipments: [ Equipments.barspoon, Equipments.oldFashionedGlass ],
             ingredients: [
@@ -459,6 +477,7 @@ class Drinks {
             description: "",
             image: "Painkiller",
             color: "49484459",
+            year: 1970,
             origin: Origins.britishVirginIslands,
             equipments: [ Equipments.oldFashionedGlass, Equipments.shaker, Equipments.barspoon ],
             ingredients: [
@@ -483,6 +502,7 @@ class Drinks {
             description: "",
             image: "Perfect Martini",
             color: "49484459",
+            year: 1948,
             origin: Origins.unitedStates,
             equipments: [ Equipments.cocktailGlass, Equipments.barspoon, Equipments.mixingGlass ],
             ingredients: [
@@ -506,6 +526,7 @@ class Drinks {
             description: "",
             image: "Pina Colada",
             color: "5B3A18D0",
+            year: 1920,
             origin: Origins.puertoRico,
             equipments: [ Equipments.cocktailGlass, Equipments.barspoon, Equipments.blender ],
             ingredients: [
@@ -531,6 +552,7 @@ class Drinks {
             description: "",
             image: "Sazerac",
             color: "563E2CC3",
+            year: 1950,
             origin: Origins.unitedStates,
             equipments: [ Equipments.mixingGlass, Equipments.barspoon, Equipments.oldFashionedGlass ],
             ingredients: [
@@ -556,6 +578,7 @@ class Drinks {
             description: "",
             image: "Sidecar",
             color: "A5834BC3",
+            year: 1922,
             origin: Origins.france,
             equipments: [ Equipments.shaker, Equipments.cocktailGlass ],
             ingredients: [
@@ -579,6 +602,7 @@ class Drinks {
             description: "",
             image: "Whisky Sour",
             color: "A5834BC3",
+            year: 1870,
             origin: Origins.unitedStates,
             equipments: [ Equipments.oldFashionedGlass, Equipments.shaker ],
             ingredients: [
@@ -606,6 +630,7 @@ class Drinks {
             description: "",
             image: "White Russian",
             color: "55472F9C",
+            year: 1949,
             origin: Origins.belgium,
             equipments: [ Equipments.oldFashionedGlass, Equipments.shaker ],
             ingredients: [
