@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		D1194A672971A4A900E4C1E7 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1194A662971A4A900E4C1E7 /* SettingsView.swift */; };
+		D1308BAC2976D090002BF99C /* BundleExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1308BAB2976D090002BF99C /* BundleExtensions.swift */; };
 		D16D80942976985600D163B3 /* DrinkFilters.swift in Sources */ = {isa = PBXBuildFile; fileRef = D16D80932976985600D163B3 /* DrinkFilters.swift */; };
 		D17BB61D29732160004F08F7 /* ViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D17BB61C29732160004F08F7 /* ViewExtensions.swift */; };
 		D17BB61F297345BA004F08F7 /* UserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = D17BB61E297345BA004F08F7 /* UserDefaults.swift */; };
@@ -53,6 +54,7 @@
 
 /* Begin PBXFileReference section */
 		D1194A662971A4A900E4C1E7 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		D1308BAB2976D090002BF99C /* BundleExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BundleExtensions.swift; sourceTree = "<group>"; };
 		D16D80932976985600D163B3 /* DrinkFilters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrinkFilters.swift; sourceTree = "<group>"; };
 		D17BB61C29732160004F08F7 /* ViewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewExtensions.swift; sourceTree = "<group>"; };
 		D17BB61E297345BA004F08F7 /* UserDefaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaults.swift; sourceTree = "<group>"; };
@@ -229,6 +231,7 @@
 				D1F7902F296D879600F3CB30 /* ColorExtensions.swift */,
 				D1E5B3B22972D052001DF274 /* NumberExtensions.swift */,
 				D17BB61C29732160004F08F7 /* ViewExtensions.swift */,
+				D1308BAB2976D090002BF99C /* BundleExtensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -375,6 +378,7 @@
 			files = (
 				D1F79028296D78DA00F3CB30 /* Drinks.swift in Sources */,
 				D1BB5B2B29741FE600CF52EE /* IngredientDrinksList.swift in Sources */,
+				D1308BAC2976D090002BF99C /* BundleExtensions.swift in Sources */,
 				D1DD34B729740335006EE244 /* DrinkStepInstructions.swift in Sources */,
 				D1F7903D296E813F00F3CB30 /* IngredientsView.swift in Sources */,
 				D1F79042296E834400F3CB30 /* IngredientView.swift in Sources */,
