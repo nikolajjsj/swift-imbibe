@@ -9,7 +9,7 @@ import SwiftUI
 import CoreData
 
 struct DrinksView: View {
-    @State private var drinks: [Drink] = Drinks.all
+    @ObservedObject var vm = DrinksViewModel()
     
     @State private var query: String = ""
     @State private var showFilters: Bool = false
@@ -34,14 +34,14 @@ struct DrinksView: View {
                 }
             }
         }
-        .sheet(isPresented: $showFilters) { DrinkFilters { items in drinks = items } }
+        .sheet(isPresented: $showFilters) { DrinkFilters(vm: vm) }
     }
     
     var filtered: [Drink] {
         if query.isEmpty {
-            return drinks
+            return vm.drinks
         } else {
-            return drinks.filter({ $0.name.localizedCaseInsensitiveContains(query) })
+            return vm.drinks.filter({ $0.name.localizedCaseInsensitiveContains(query) })
         }
     }
 }
