@@ -354,9 +354,9 @@ class Drinks {
                 .init(ingredient: Ingredients.lightRum, amount: 60, unit: .milliliters),
                 .init(ingredient: Ingredients.demeraraSirup, amount: 15, unit: .milliliters),
                 .init(ingredient: Ingredients.limeJuice, amount: 25, unit: .milliliters),
+                .init(ingredient: Ingredients.sodaWater, amount: 80, unit: .milliliters),
                 .init(ingredient: Ingredients.mintLeaves, amount: 10, unit: .piece),
                 .init(ingredient: Ingredients.iceCubes),
-                .init(ingredient: Ingredients.sodaWater),
             ],
             steps: [
                 .init(string: "Take Mint Leaves, give it a clap to release oils, and put into Highball Glass"),
