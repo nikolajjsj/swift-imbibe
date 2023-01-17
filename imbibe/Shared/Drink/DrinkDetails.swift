@@ -23,13 +23,6 @@ struct DrinkDetails: View {
                     Text("Strength").font(.headline)
                     Text("\(drink.strength)%")
                 }
-                if let year = drink.year {
-                    Divider()
-                    GridRow {
-                        Text("Year").font(.headline)
-                        Text("\(year.description)")
-                    }
-                }
                 Divider()
                 GridRow {
                     Text("Ingredients").font(.headline)
@@ -48,6 +41,13 @@ struct DrinkDetails: View {
                 GridRow {
                     Text("Origin").font(.headline)
                     Text(drink.origin.name + drink.origin.flag)
+                }
+                if let year = drink.year {
+                    Divider()
+                    GridRow {
+                        Text("Year").font(.headline)
+                        Text("\(year.description)")
+                    }
                 }
             }
         }.detailCard()
