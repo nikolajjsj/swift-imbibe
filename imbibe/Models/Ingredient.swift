@@ -23,8 +23,18 @@ class Ingredient: Identifiable, Equatable, Hashable {
     let strength: Int
     let origin: Origin?
     let description: String
+    let alternatives: [Ingredient]
     
-    init(id: UUID = UUID(), name: String, image: String, color: String, strength: Int, origin: Origin?, description: String) {
+    init(
+        id: UUID = UUID(),
+        name: String,
+        image: String,
+        color: String,
+        strength: Int,
+        origin: Origin?,
+        description: String,
+        alternatives: [Ingredient] = []
+    ) {
         self.id = id
         self.name = name
         self.image = image
@@ -32,6 +42,7 @@ class Ingredient: Identifiable, Equatable, Hashable {
         self.strength = strength
         self.origin = origin
         self.description = description
+        self.alternatives = alternatives
     }
 }
 
@@ -49,7 +60,12 @@ class IngredientWithVolume: Identifiable, Hashable {
     let amount: Double?
     let unit: UnitVolume?
     
-    init(id: UUID = UUID(), ingredient: Ingredient, amount: Double? = nil, unit: UnitVolume? = nil) {
+    init(
+        id: UUID = UUID(),
+        ingredient: Ingredient,
+        amount: Double? = nil,
+        unit: UnitVolume? = nil
+    ) {
         self.id = id
         self.ingredient = ingredient
         self.amount = amount
