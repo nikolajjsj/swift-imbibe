@@ -64,7 +64,8 @@ Angostura makes the most famous and widely used type of herbal Bitters. Angostur
         origin: Origins.unitedStates,
         description: """
 A type of Whisky that typically has a rich & sweet taste, made of at least 51% corn aged in new-oak barrels. Bourbon has to be made in the United States to be able to call itself a Bourbon Whisky.
-"""
+""",
+        alternatives: [whisky, irishWhisky, ryeWhisky, scotchWhisky, bourbonWhisky]
     )
     static let campari: Ingredient = Ingredient(
         name: "Campari",
@@ -118,7 +119,8 @@ Champagne has been used for a variety of different sparkling wines, though many 
         color: "6C492CA7",
         strength: 20,
         origin: nil,
-        description: "A Liqueur based on coffee with varying degrees of sweetness"
+        description: "A Liqueur based on coffee with varying degrees of sweetness",
+        alternatives: [kahlua]
     )
     static let cognac: Ingredient = Ingredient(
         name: "Cognac",
@@ -138,7 +140,8 @@ Cognac is a double distilled wine, based on Ugni Blanc, Folle Blanche, & Colomba
         origin: nil,
         description: """
 A type/brand of tripple sec (Orange liqueur) produced in Saint-Barthèlemy-d'Anjou, France. Both enjoyed as a apèritif and digestif.
-"""
+""",
+        alternatives: [curacao, grandMarnier]
     )
     static let cola: Ingredient = Ingredient(
         name: "Cola",
@@ -154,7 +157,8 @@ A type/brand of tripple sec (Orange liqueur) produced in Saint-Barthèlemy-d'Anj
         color: "60312997",
         strength: 40,
         origin: nil,
-        description: ""
+        description: "",
+        alternatives: [grandMarnier, cointreau]
     )
     static let cream: Ingredient = Ingredient(
         name: "Cream",
@@ -243,7 +247,8 @@ A soft drink, where the major ingredient is ginger.
         origin: nil,
         description: """
 A orange liqueur with a base of Cognac.
-"""
+""",
+        alternatives: [curacao, cointreau]
     )
     static let ice: Ingredient = Ingredient(
         name: "Ice",
@@ -277,7 +282,8 @@ A orange liqueur with a base of Cognac.
         origin: Origins.ireland,
         description: """
 Once the most popular spirit in the world, going from over 30 distilleries to only 3 by the later 1900s. Though Irish Whisky has seen a boost in popularity in later years, and are on pace to become a highly popular spirit again.
-"""
+""",
+        alternatives: [whisky, ryeWhisky, scotchWhisky, bourbonWhisky]
     )
     static let kahlua: Ingredient = Ingredient(
         name: "Kahlua",
@@ -441,7 +447,20 @@ A spirit made from distilled sugarcane molasses or sugarcane juice, and then age
         origin: Origins.unitedStates,
         description: """
 A type of whisky made from at least 51% rye, and should be aged in charred new-oak-barrels for at least 2 years.
-"""
+""",
+        alternatives: [whisky, irishWhisky, scotchWhisky, bourbonWhisky]
+    )
+    static let scotchWhisky: Ingredient = Ingredient(
+        name: "Scotch Whisky",
+        image: "Scotch Whisky",
+        color: "774B21CC",
+        strength: 40,
+        origin: Origins.scotland,
+        description: """
+Scotch Whisky is divided up into 5 distinct categories: single malt, single grain, blended malt, blended grain, and blended Scotch Whisky.
+All Scotch Whisky must be made in oak barrels for at least 3 years.
+""",
+        alternatives: [whisky, irishWhisky, ryeWhisky, bourbonWhisky]
     )
     static let simpleSirup: Ingredient = Ingredient(
         name: "Simple Sirup",
@@ -497,7 +516,8 @@ Vodka is primarly made from grains and/or potatos, but also other items such as:
         origin: Origins.worldwide,
         description: """
 Whisky is made from fermented mash containing various grains, including: barley, rye, corn, and wheat.
-"""
+""",
+        alternatives: [scotchWhisky, irishWhisky, ryeWhisky, bourbonWhisky]
     )
     
     static let all: [Ingredient] = [
