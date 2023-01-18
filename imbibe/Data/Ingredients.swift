@@ -12,9 +12,12 @@ class Ingredients {
         name: "Absinthe",
         image: "Absinthe",
         color: "5A915CCC",
-        strength: 70,
+        strength: 60,
         origin: nil,
-        description: ""
+        description: """
+An anise-flavored spirit, that contains a high level of alcohol. Absinthe is derived from botanicals, including the leaves & flowers of wormwood, and is usually mixed together with anise, fennel, and other culinary herbs.
+Many misconceptions about absinthe, has arised through the years. One especially is that absinthe is a hallucinogen, causing the drinker to see all sorts of stuff that isn't real. This misconception is caused by absinthe containing the compound: "thujone", even though absinthe only contains a minute amount of it. This caused absinthe to be banned from most of Europe and the United States by 1915, though it later was legal again, though first in 2007 in the case of the United States.
+"""
     )
     static let amaretto: Ingredient = Ingredient(
         name: "Amaretto",
@@ -22,7 +25,9 @@ class Ingredients {
         color: "8C573ACD",
         strength: 28,
         origin: nil,
-        description: ""
+        description: """
+Originating from Italy, with flavors of almonds, apricot-pits, peach-pits, which all gives out an almond-like flavor which Amaretto is known for.
+"""
     )
     static let angosturaBitters: Ingredient = Ingredient(
         name: "Angostura Bitters",
@@ -30,7 +35,9 @@ class Ingredients {
         color: "959590C4",
         strength: 44,
         origin: Origins.trinidadAndTobago,
-        description: ""
+        description: """
+Angostura makes the most famous and widely used type of herbal Bitters. Angostura Bitters was created by a German surgeon from Simòn Bolìvars army (Venezuela) to treat stomach disorders and indegestion. But in its later years it has been proved a great addition to a lot of drinks.
+"""
     )
     static let angosturaOrangeBitters: Ingredient = Ingredient(
         name: "Angostura Orange Bitters",
@@ -38,7 +45,7 @@ class Ingredients {
         color: "AC7046D4",
         strength: 28,
         origin: nil,
-        description: ""
+        description: "The Orange version of the famous Angostura Bitters."
     )
     static let aperol: Ingredient = Ingredient(
         name: "Aperol",
@@ -46,7 +53,8 @@ class Ingredients {
         color: "894E46B5",
         strength: 11,
         origin: nil,
-        description: ""
+        description: """
+"""
     )
     static let bourbonWhisky: Ingredient = Ingredient(
         name: "Bourbon Whisky",
@@ -54,7 +62,9 @@ class Ingredients {
         color: "78432AB2",
         strength: 40,
         origin: Origins.unitedStates,
-        description: ""
+        description: """
+A type of Whisky that typically has a rich & sweet taste, made of at least 51% corn aged in new-oak barrels. Bourbon has to be made in the United States to be able to call itself a Bourbon Whisky.
+"""
     )
     static let campari: Ingredient = Ingredient(
         name: "Campari",
@@ -62,7 +72,9 @@ class Ingredients {
         color: "7F413CC0",
         strength: 25,
         origin: Origins.italy,
-        description: ""
+        description: """
+Created by Gaspare Campari and with a very bittersweet taste, usually used as a aperitif (before dinner). Campari is flavored with 68 different herbs & spices, and was made in the years between 1860 to 1867 in Milan.
+"""
     )
     static let calvados: Ingredient = Ingredient(
         name: "Calvados",
@@ -70,7 +82,9 @@ class Ingredients {
         color: "6C492CA7",
         strength: 40,
         origin: nil,
-        description: ""
+        description: """
+Calvados is a type of apple brandy, made from a variety of different types of apples, in the northern region of France (Normandy). Calvados is distilled from the fermented product of a dry apple cider, with a minimum aging time of 2 years in oak barrels, but can be aged for longer.
+"""
     )
     static let champagne: Ingredient = Ingredient(
         name: "Champagne",
@@ -78,7 +92,9 @@ class Ingredients {
         color: "49422DB0",
         strength: 12,
         origin: nil,
-        description: ""
+        description: """
+Champagne has been used for a variety of different sparkling wines, though many are actually not a "true" Champagne. To be called a Champagne to wine has to be made from grapes grown in the Champagne region of France.
+"""
     )
     static let coconutCream: Ingredient = Ingredient(
         name: "Coconut Cream",
@@ -102,7 +118,7 @@ class Ingredients {
         color: "6C492CA7",
         strength: 20,
         origin: nil,
-        description: ""
+        description: "A Liqueur based on coffee with varying degrees of sweetness"
     )
     static let cognac: Ingredient = Ingredient(
         name: "Cognac",
@@ -110,7 +126,9 @@ class Ingredients {
         color: "8C573ACD",
         strength: 40,
         origin: nil,
-        description: ""
+        description: """
+Cognac is a double distilled wine, based on Ugni Blanc, Folle Blanche, & Colombard grapes that are aged in oak barrels. Like Champagne, Cognac is exclusively produced in France in the Cognac region.
+"""
     )
     static let cointreau: Ingredient = Ingredient(
         name: "Cointreau",
@@ -118,7 +136,9 @@ class Ingredients {
         color: "935B34C1",
         strength: 40,
         origin: nil,
-        description: ""
+        description: """
+A type/brand of tripple sec (Orange liqueur) produced in Saint-Barthèlemy-d'Anjou, France. Both enjoyed as a apèritif and digestif.
+"""
     )
     static let cola: Ingredient = Ingredient(
         name: "Cola",
@@ -126,7 +146,7 @@ class Ingredients {
         color: "633B38C5",
         strength: 0,
         origin: nil,
-        description: ""
+        description: "The most popular carbonated soft drinks in the world."
     )
     static let curacao: Ingredient = Ingredient(
         name: "Curacao",
@@ -142,7 +162,7 @@ class Ingredients {
         color: "5402E2757",
         strength: 0,
         origin: nil,
-        description: ""
+        description: "A dairy product containing anywhere from 18-30% fat, but varies from country to country."
     )
     static let darkRum: Ingredient = Ingredient(
         name: "Dark Rum",
@@ -150,7 +170,9 @@ class Ingredients {
         color: "54392BBF",
         strength: 40,
         origin: nil,
-        description: ""
+        description: """
+Dark Rum are the distilled product of sugar canes (though not exclusively sugar canes), aged for 2- or more years in oak barrels.
+"""
     )
     static let demeraraSirup: Ingredient = Ingredient(
         name: "Demerara Sirup",
@@ -158,7 +180,9 @@ class Ingredients {
         color: "4A3735D0",
         strength: 0,
         origin: nil,
-        description: ""
+        description: """
+Made up of 2 parts demerara sugar to 1 part water. Warmed up in a saucepan, on medium heat, constantly stirring until all the sugar has been dissolved. In contrast to a Simple Sirup, demerara Sirup has a deeper, darker, caramel-like flavor.
+"""
     )
     static let drambuie: Ingredient = Ingredient(
         name: "Drambuie",
@@ -166,7 +190,9 @@ class Ingredients {
         color: "54392BBF",
         strength: 40,
         origin: nil,
-        description: ""
+        description: """
+A Scotch based liqueur, made with honey, spices, & a variety of herbs.
+"""
     )
     static let dryVermouth: Ingredient = Ingredient(
         name: "Dry Vermouth",
@@ -174,7 +200,9 @@ class Ingredients {
         color: "83935DCD",
         strength: 18,
         origin: nil,
-        description: ""
+        description: """
+Vermouth is a fortified wine flavored with spices, herbs, and bark.
+"""
     )
     static let eggWhite: Ingredient = Ingredient(
         name: "Egg White",
@@ -182,7 +210,9 @@ class Ingredients {
         color: "6C5632C8",
         strength: 0,
         origin: nil,
-        description: ""
+        description: """
+The non-yolk part of the egg.
+"""
     )
     static let gin: Ingredient = Ingredient(
         name: "Gin",
@@ -190,7 +220,10 @@ class Ingredients {
         color: "3C3D3CD5",
         strength: 40,
         origin: Origins.worldwide,
-        description: ""
+        description: """
+A high proof distilled product of neutral spirits with botanicals, which always includes juniper, but can contain other botanicals, like: orange- & lemon peel, coriander, anise, & more.
+There are generally considered to be five variations for gin: London Dry, Old Tom, Plymouth, New Style, & Genever.
+"""
     )
     static let gingerBeer: Ingredient = Ingredient(
         name: "Ginger Beer",
@@ -198,7 +231,9 @@ class Ingredients {
         color: "97988EC5",
         strength: 0,
         origin: nil,
-        description: ""
+        description: """
+A soft drink, where the major ingredient is ginger.
+"""
     )
     static let grandMarnier: Ingredient = Ingredient(
         name: "Grand Marnier",
@@ -206,7 +241,9 @@ class Ingredients {
         color: "60312997",
         strength: 40,
         origin: nil,
-        description: ""
+        description: """
+A orange liqueur with a base of Cognac.
+"""
     )
     static let ice: Ingredient = Ingredient(
         name: "Ice",
@@ -237,16 +274,20 @@ class Ingredients {
         image: "Irish Whisky",
         color: "62654BC6",
         strength: 40,
-        origin: nil,
-        description: ""
+        origin: Origins.ireland,
+        description: """
+Once the most popular spirit in the world, going from over 30 distilleries to only 3 by the later 1900s. Though Irish Whisky has seen a boost in popularity in later years, and are on pace to become a highly popular spirit again.
+"""
     )
     static let kahlua: Ingredient = Ingredient(
         name: "Kahlua",
         image: "Kahlua",
         color: "6C5632C8",
         strength: 20,
-        origin: nil,
-        description: ""
+        origin: Origins.mexico,
+        description: """
+A coffee liqueur from Mexico.
+"""
     )
     static let kinaLaeroDor: Ingredient = Ingredient(
         name: "Kina l'aero d'or",
@@ -334,7 +375,9 @@ class Ingredients {
         color: "AC7046D4",
         strength: 0,
         origin: nil,
-        description: ""
+        description: """
+A freshly squeezed juice, usually sweet, used in a variety of different drinks.
+"""
     )
     static let orange: Ingredient = Ingredient(
         name: "Orange",
@@ -350,7 +393,9 @@ class Ingredients {
         color: "755D5ACE",
         strength: 35,
         origin: nil,
-        description: ""
+        description: """
+Originally created between 1849 and 1857 by Antoine Amèdèe Peychaud, often compared to Angostura Bitters, though Peychaud Bitters are of the sweeter variant in the Bitters category. Its most popularly used in the drink: Sazerac.
+"""
     )
     static let pineapple: Ingredient = Ingredient(
         name: "Pineapple",
