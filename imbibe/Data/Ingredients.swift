@@ -419,7 +419,9 @@ Originally created between 1849 and 1857 by Antoine Amèdèe Peychaud, often com
         color: "755D5ACE",
         strength: 14,
         origin: nil,
-        description: ""
+        description: """
+A wine made from a dark-colored grape. The color can range from intense violet, to a dark red (near brown for older wines) color.
+"""
     )
     static let rum: Ingredient = Ingredient(
         name: "Rum",
@@ -427,7 +429,9 @@ Originally created between 1849 and 1857 by Antoine Amèdèe Peychaud, often com
         color: "615752BF",
         strength: 40,
         origin: nil,
-        description: ""
+        description: """
+A spirit made from distilled sugarcane molasses or sugarcane juice, and then aged in oak barrels.
+"""
     )
     static let ryeWhisky: Ingredient = Ingredient(
         name: "Rye Whisky",
@@ -435,7 +439,9 @@ Originally created between 1849 and 1857 by Antoine Amèdèe Peychaud, often com
         color: "774B21CC",
         strength: 40,
         origin: Origins.unitedStates,
-        description: ""
+        description: """
+A type of whisky made from at least 51% rye, and should be aged in charred new-oak-barrels for at least 2 years.
+"""
     )
     static let simpleSirup: Ingredient = Ingredient(
         name: "Simple Sirup",
@@ -443,7 +449,7 @@ Originally created between 1849 and 1857 by Antoine Amèdèe Peychaud, often com
         color: "8F8D8AAD",
         strength: 0,
         origin: nil,
-        description: ""
+        description: "Made from 2 parts fine sugar and 1 part water (preferably by weight), heat the mixture on a saucepan on medium heat, until sugar is dissolved."
     )
     static let sodaWater: Ingredient = Ingredient(
         name: "Soda Water",
@@ -459,7 +465,9 @@ Originally created between 1849 and 1857 by Antoine Amèdèe Peychaud, often com
         color: "5F4F4AC5",
         strength: 18,
         origin: Origins.italy,
-        description: ""
+        description: """
+Vermouth is a fortified wine flavored with various herbs, barks, & spices.
+"""
     )
     static let tequila: Ingredient = Ingredient(
         name: "Tequila",
@@ -467,7 +475,9 @@ Originally created between 1849 and 1857 by Antoine Amèdèe Peychaud, often com
         color: "84827AA6",
         strength: 45,
         origin: nil,
-        description: ""
+        description: """
+Tequila is produced from agave. When shopping for Tequila go for Tequila made with 100% agave.
+"""
     )
     static let vodka: Ingredient = Ingredient(
         name: "Vodka",
@@ -475,7 +485,9 @@ Originally created between 1849 and 1857 by Antoine Amèdèe Peychaud, often com
         color: "A0A4AAD4",
         strength: 40,
         origin: Origins.poland,
-        description: ""
+        description: """
+Vodka is primarly made from grains and/or potatos, but also other items such as: barley, grapes, or corn.
+"""
     )
     static let whisky: Ingredient = Ingredient(
         name: "Whisky",
@@ -483,7 +495,9 @@ Originally created between 1849 and 1857 by Antoine Amèdèe Peychaud, often com
         color: "894118BD",
         strength: 40,
         origin: Origins.worldwide,
-        description: ""
+        description: """
+Whisky is made from fermented mash containing various grains, including: barley, rye, corn, and wheat.
+"""
     )
     
     static let all: [Ingredient] = [
