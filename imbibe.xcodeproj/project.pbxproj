@@ -56,6 +56,7 @@
 /* Begin PBXFileReference section */
 		D1194A662971A4A900E4C1E7 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		D1308BAB2976D090002BF99C /* BundleExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BundleExtensions.swift; sourceTree = "<group>"; };
+		D1520ED02978326A006C1519 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		D16D80932976985600D163B3 /* DrinkFilters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrinkFilters.swift; sourceTree = "<group>"; };
 		D174C2D62976E86A00E93262 /* DrinksList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrinksList.swift; sourceTree = "<group>"; };
 		D17BB61C29732160004F08F7 /* ViewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewExtensions.swift; sourceTree = "<group>"; };
@@ -191,6 +192,7 @@
 		D1F7900B296D75EE00F3CB30 /* imbibe */ = {
 			isa = PBXGroup;
 			children = (
+				D1520ED02978326A006C1519 /* Info.plist */,
 				D1F0087D296EBB86007E09B7 /* Environments */,
 				D1F7903E296E81D400F3CB30 /* Shared */,
 				D1F79029296D829C00F3CB30 /* Core Data */,
@@ -543,12 +545,13 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = imbibe/imbibe.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 33;
+				CURRENT_PROJECT_VERSION = 34;
 				DEVELOPMENT_ASSET_PATHS = "\"imbibe/Preview Content\"";
 				DEVELOPMENT_TEAM = YRQMPX5YW2;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = imbibe/Info.plist;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
@@ -581,12 +584,13 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = imbibe/imbibe.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 33;
+				CURRENT_PROJECT_VERSION = 34;
 				DEVELOPMENT_ASSET_PATHS = "\"imbibe/Preview Content\"";
 				DEVELOPMENT_TEAM = YRQMPX5YW2;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = imbibe/Info.plist;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
