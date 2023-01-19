@@ -192,7 +192,6 @@
 		D1F7900B296D75EE00F3CB30 /* imbibe */ = {
 			isa = PBXGroup;
 			children = (
-				D1520ED02978326A006C1519 /* Info.plist */,
 				D1F0087D296EBB86007E09B7 /* Environments */,
 				D1F7903E296E81D400F3CB30 /* Shared */,
 				D1F79029296D829C00F3CB30 /* Core Data */,
@@ -204,6 +203,7 @@
 				D1F79015296D75EF00F3CB30 /* Assets.xcassets */,
 				D1F79017296D75EF00F3CB30 /* imbibe.entitlements */,
 				D1F79010296D75EE00F3CB30 /* imbibe.xcdatamodeld */,
+				D1520ED02978326A006C1519 /* Info.plist */,
 				D1F79018296D75EF00F3CB30 /* Preview Content */,
 			);
 			path = imbibe;

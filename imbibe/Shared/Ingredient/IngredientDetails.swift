@@ -20,25 +20,34 @@ struct IngredientDetails: View {
             
             Grid(alignment: .leading) {
                 GridRow {
-                    Text("Strength")
-                    Text("\(ingredient.strength)%").bold()
+                    Text("Strength").font(.headline)
+                    Text("\(ingredient.strength)%")
                 }
-                Divider()
                 
                 if let origin = ingredient.origin {
-                    GridRow {
-                        Text("Origin")
-                        Text(origin.name + origin.flag).bold()
-                    }
                     Divider()
+                    GridRow {
+                        Text("Origin").font(.headline)
+                        Text(origin.name + origin.flag)
+                    }
                 }
                 
                 if !ingredient.description.isEmpty {
+                    Divider()
                     GridRow {
-                        Text("Description")
+                        Text("Description").font(.headline)
                         Text(ingredient.description)
                     }
+                }
+                
+                if !ingredient.alternatives.isEmpty {
                     Divider()
+                    GridRow {
+                        Text("Alternatives").font(.headline)
+                        WrappingHStack(models: ingredient.alternatives, viewGenerator: {i in
+                            IngredientBox(i)
+                        }, horizontalSpacing: 4, verticalSpacing: 4)
+                    }
                 }
             }
         }.detailCard()
@@ -47,6 +56,6 @@ struct IngredientDetails: View {
 
 struct IngredientDetails_Previews: PreviewProvider {
     static var previews: some View {
-        IngredientDetails(Ingredients.kahlua)
+        IngredientDetails(Ingredients.scotchWhisky)
     }
 }

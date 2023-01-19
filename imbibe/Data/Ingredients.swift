@@ -63,7 +63,8 @@ Angostura makes the most famous and widely used type of herbal Bitters. Angostur
         origin: Origins.unitedStates,
         description: """
 A type of Whisky that typically has a rich & sweet taste, made of at least 51% corn aged in new-oak barrels. Bourbon has to be made in the United States to be able to call itself a Bourbon Whisky.
-"""
+""",
+        alternatives: [Ingredients.whisky]
     )
     static let campari: Ingredient = Ingredient(
         name: "Campari",
@@ -266,7 +267,8 @@ There are generally considered to be five variations for gin: London Dry, Old To
         origin: Origins.ireland,
         description: """
 Once the most popular spirit in the world, going from over 30 distilleries to only 3 by the later 1900s. Though Irish Whisky has seen a boost in popularity in later years, and are on pace to become a highly popular spirit again.
-"""
+""",
+        alternatives: [Ingredients.whisky]
     )
     static let kahlua: Ingredient = Ingredient(
         name: "Kahlua",
@@ -430,7 +432,8 @@ A spirit made from distilled sugarcane molasses or sugarcane juice, and then age
         origin: Origins.unitedStates,
         description: """
 A type of whisky made from at least 51% rye, and should be aged in charred new-oak-barrels for at least 2 years.
-"""
+""",
+        alternatives: [Ingredients.whisky]
     )
     static let scotchWhisky: Ingredient = Ingredient(
         name: "Scotch Whisky",
@@ -441,7 +444,8 @@ A type of whisky made from at least 51% rye, and should be aged in charred new-o
         description: """
 Scotch Whisky is divided up into 5 distinct categories: single malt, single grain, blended malt, blended grain, and blended Scotch Whisky.
 All Scotch Whisky must be made in oak barrels for at least 3 years.
-"""
+""",
+        alternatives: [Ingredients.whisky]
     )
     static let simpleSirup: Ingredient = Ingredient(
         name: "Simple Sirup",
