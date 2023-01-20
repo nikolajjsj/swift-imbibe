@@ -598,6 +598,31 @@ class Drinks {
             source: nil
         )
     
+    static let rustyNail: Drink =
+        .init(
+            name: "Rusty Nail",
+            description: "",
+            image: "Rusty Nail",
+            color: "A5834BC3",
+            year: 1960,
+            base: .whisky,
+            origin: Origins.unitedStates,
+            equipments: [ Equipments.oldFashionedGlass, Equipments.mixingGlass, Equipments.strainer ],
+            ingredients: [
+                .init(ingredient: Ingredients.scotchWhisky, amount: 60, unit: .milliliters),
+                .init(ingredient: Ingredients.drambuie, amount: 30, unit: .milliliters),
+                .init(ingredient: Ingredients.angosturaBitters, amount: 2, unit: .dash),
+                .init(ingredient: Ingredients.iceCubes),
+            ],
+            steps: [
+                .init(string: "Add Scotch Whisky, Drambuie, & Ice Cubes in the Mixing Glass"),
+                .init(string: "Stir for 30-45 seconds"),
+                .init(string: "Add Ice Cubes in the Old Fashioned Glass"),
+                .init(string: "Strain into the Old Fashioned Glass"),
+            ],
+            source: nil
+        )
+    
     static let sazerac: Drink =
         .init(
             name: "Sazerac",
@@ -727,6 +752,7 @@ class Drinks {
         perfectMartini,
         painkiller,
         pinaColada,
+        rustyNail,
         sazerac,
         sidecar,
         whiskySour,
