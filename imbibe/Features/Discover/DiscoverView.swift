@@ -49,6 +49,21 @@ struct DiscoverView: View {
                         }.buttonStyle(.bordered)
                     }
                 }.padding(.bottom, 42)
+                
+                Text("Countries")
+                    .font(.headline)
+                    .foregroundColor(.gray)
+                LazyVGrid(columns: columns) {
+                    ForEach(Array(Drinks.countries.keys).sorted(by: { $0.name < $1.name }), id: \.name) { origin in
+                        NavigationLink {
+                            DrinksList(label: "\(origin.flag)\(origin.name)", drinks: Drinks.countries[origin] ?? [])
+                        } label: {
+                            Spacer()
+                            Text(origin.flag)
+                            FillLabel(origin.name)
+                        }.buttonStyle(.bordered)
+                    }
+                }.padding(.bottom, 42)
             }
             .padding(.horizontal)
         }
@@ -61,7 +76,7 @@ struct DiscoverView: View {
             Spacer()
             HStack {
                 Spacer()
-                Text(label).font(.headline)
+                Text(label).font(.headline).lineLimit(1)
                 Spacer()
             }
             Spacer()

@@ -718,13 +718,32 @@ class Drinks {
         whiteRussian,
     ]
     
-    static var ginBased: [Drink] { all.filter({ $0.base == .gin }) }
-    static var whiskyBased: [Drink] { all.filter({ $0.base == .whisky }) }
-    static var rumBased: [Drink] { all.filter({ $0.base == .rum }) }
-    static var cognacBased: [Drink] { all.filter({ $0.base == .cognac }) }
-    static var tequilaBased: [Drink] { all.filter({ $0.base == .tequila }) }
-    static var vodkaBased: [Drink] { all.filter({ $0.base == .vodka }) }
+    // Base spirit
+    static var ginBased: [Drink] {
+        all.filter({ $0.base == .gin })
+    }
+    static var whiskyBased: [Drink] {
+        all.filter({ $0.base == .whisky })
+    }
+    static var rumBased: [Drink] {
+        all.filter({ $0.base == .rum })
+    }
+    static var cognacBased: [Drink] {
+        all.filter({ $0.base == .cognac })
+    }
+    static var tequilaBased: [Drink] {
+        all.filter({ $0.base == .tequila })
+    }
+    static var vodkaBased: [Drink] {
+        all.filter({ $0.base == .vodka })
+    }
     
+    // Country
+    static var countries: Dictionary<Origin, [Drink]> {
+        Dictionary(grouping: all, by: { $0.origin})
+    }
+    
+    // Random drink
     static func random() -> Drink {
         let random = self.all.randomElement()
         return random ?? Drinks.oldFashioned
