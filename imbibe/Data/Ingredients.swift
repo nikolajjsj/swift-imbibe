@@ -235,6 +235,14 @@ There are generally considered to be five variations for gin: London Dry, Old To
         origin: nil,
         description: "A soft drink, where the major ingredient is ginger."
     )
+    static let ginger: Ingredient = Ingredient(
+        name: "Ginger",
+        image: "Ginger",
+        color: "3C3D3CD5",
+        strength: 0,
+        origin: nil,
+        description: ""
+    )
     static let grandMarnier: Ingredient = Ingredient(
         name: "Grand Marnier",
         image: "Grand Marnier",
@@ -242,6 +250,14 @@ There are generally considered to be five variations for gin: London Dry, Old To
         strength: 40,
         origin: nil,
         description: "A orange liqueur with a base of Cognac."
+    )
+    static let honeySirup: Ingredient = Ingredient(
+        name: "Honey Sirup",
+        image: "Honey Sirup",
+        color: "675210B7",
+        strength: 0,
+        origin: nil,
+        description: "A honey based sirup, made up of 3 parts honey to 1 part water."
     )
     static let ice: Ingredient = Ingredient(
         name: "Ice",
@@ -277,6 +293,17 @@ There are generally considered to be five variations for gin: London Dry, Old To
 Once the most popular spirit in the world, going from over 30 distilleries to only 3 by the later 1900s. Though Irish Whisky has seen a boost in popularity in later years, and are on pace to become a highly popular spirit again.
 """,
         alternatives: [Ingredients.whisky]
+    )
+    static let islayWhisky: Ingredient = Ingredient(
+        name: "Islay Whisky",
+        image: "Islay Whisky",
+        color: "62654BC6",
+        strength: 40,
+        origin: Origins.scotland,
+        description: """
+A often times more peaty version of a Scotch Whisky, originating from the Island of Islay.
+""",
+        alternatives: [Ingredients.scotchWhisky, Ingredients.whisky]
     )
     static let kahlua: Ingredient = Ingredient(
         name: "Kahlua",

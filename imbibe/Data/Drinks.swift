@@ -554,7 +554,7 @@ class Drinks {
             year: 1970,
             base: .rum,
             origin: Origins.britishVirginIslands,
-            equipments: [ Equipments.oldFashionedGlass, Equipments.shaker, Equipments.barspoon ],
+            equipments: [ Equipments.oldFashionedGlass, Equipments.shaker ],
             ingredients: [
                 .init(ingredient: Ingredients.darkRum, amount: 60, unit: .milliliters),
                 .init(ingredient: Ingredients.orangeJuice, amount: 30, unit: .milliliters),
@@ -567,6 +567,36 @@ class Drinks {
                 .init(string: "Add Dark Rum, Pineapple Juice, Coconut Cream, Orange Juice"),
                 .init(string: "Shake (10-15 seconds)"),
                 .init(string: "Pour everything into the Old Fashioned Glass"),
+            ],
+            source: nil
+        )
+    
+    static let penicillin: Drink =
+        .init(
+            name: "Penicillin",
+            description: "",
+            image: "Penicillin",
+            color: "49484459",
+            year: 2000,
+            base: .whisky,
+            origin: Origins.unitedStates,
+            equipments: [ Equipments.oldFashionedGlass, Equipments.shaker, Equipments.strainer, Equipments.muddler ],
+            ingredients: [
+                .init(ingredient: Ingredients.islayWhisky, amount: 10, unit: .milliliters),
+                .init(ingredient: Ingredients.scotchWhisky, amount: 60, unit: .milliliters),
+                .init(ingredient: Ingredients.lemonJuice, amount: 25, unit: .milliliters),
+                .init(ingredient: Ingredients.honeySirup, amount: 25, unit: .milliliters),
+                .init(ingredient: Ingredients.ginger, amount: 1, unit: .piece),
+                .init(ingredient: Ingredients.iceCubes),
+            ],
+            steps: [
+                .init(string: "Do 3-4 slices of Ginger and drop those into the Shaker"),
+                .init(string: "Muddle the Ginger"),
+                .init(string: "Add Islay Whisky, Scotch Whisky, Lemon Juice, & Honey Sirup"),
+                .init(string: "Add Ice Cubes & shake for 10-15 seconds"),
+                .init(string: "Add Ice Cubes to the Old Fashioned Glass"),
+                .init(string: "Strain into the Old Fashioned Glass"),
+                .init(string: "Garnish with Candied Ginger or a Twist of Lemon"),
             ],
             source: nil
         )
@@ -777,6 +807,7 @@ class Drinks {
         perfectMartini,
         painkiller,
         pinaColada,
+        penicillin,
         rustyNail,
         sazerac,
         sidecar,
