@@ -378,6 +378,14 @@ A freshly squeezed juice, usually sweet, used in a variety of different drinks.
         origin: nil,
         description: ""
     )
+    static let orgeatSirup: Ingredient = Ingredient(
+        name: "Orgeat Sirup",
+        image: "Orgeat Sirup",
+        color: "AC7046D4",
+        strength: 0,
+        origin: nil,
+        description: ""
+    )
     static let peychaudBitters: Ingredient = Ingredient(
         name: "Peychaud Bitters",
         image: "Peychaud Bitters",

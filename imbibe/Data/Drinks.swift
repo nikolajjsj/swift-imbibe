@@ -301,6 +301,37 @@ class Drinks {
             source: nil
         )
     
+    static let maitai: Drink =
+        .init(
+            name: "Mai Tai",
+            description: "",
+            image: "Mai Tai",
+            color: "484A3E5E",
+            year: 1944,
+            base: .rum,
+            origin: Origins.unitedStates,
+            equipments: [ Equipments.oldFashionedGlass, Equipments.shaker, Equipments.strainer ],
+            ingredients: [
+                .init(ingredient: Ingredients.darkRum, amount: 30, unit: .milliliters),
+                .init(ingredient: Ingredients.lightRum, amount: 30, unit: .milliliters),
+                .init(ingredient: Ingredients.curacao, amount: 15, unit: .milliliters),
+                .init(ingredient: Ingredients.limeJuice, amount: 30, unit: .milliliters),
+                .init(ingredient: Ingredients.orgeatSirup, amount: 15, unit: .milliliters),
+                .init(ingredient: Ingredients.simpleSirup, amount: 10, unit: .milliliters),
+                .init(ingredient: Ingredients.iceCrushed),
+                .init(ingredient: Ingredients.iceCubes),
+            ],
+            steps: [
+                .init(string: "Fill the Old Fashioned Glass with Ice Crushed"),
+                .init(string: "In the Shaker add Dark Rum, Light Rum, Curacao, Lime Juice, Orgeat Sirup, & Simple Sirup"),
+                .init(string: "Add Ice Cubes"),
+                .init(string: "Shake for 5-10 seconds"),
+                .init(string: "Strain the contents into the Old Fashioned Glass"),
+                .init(string: "Garnish with a Lime Wedge or some Mint Leaves"),
+            ],
+            source: nil
+        )
+    
     static let manhattan: Drink =
         .init(
             name: "Manhattan",
@@ -685,6 +716,7 @@ class Drinks {
         fityFiftyMartini,
         ginFizz,
         longIslandIceTea,
+        maitai,
         manhattan,
         margarita,
         mojito,
