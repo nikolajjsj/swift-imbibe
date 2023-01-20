@@ -59,7 +59,7 @@ struct DiscoverView: View {
                             DrinksList(label: "\(origin.flag)\(origin.name)", drinks: Drinks.countries[origin] ?? [])
                         } label: {
                             Spacer()
-                            Text(origin.flag)
+                            Text(origin.flag).font(.title)
                             FillLabel(origin.name)
                         }.buttonStyle(.bordered)
                     }
