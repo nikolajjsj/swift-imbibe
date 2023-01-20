@@ -11,7 +11,7 @@ class Ingredients {
     static let absinthe: Ingredient = Ingredient(
         name: "Absinthe",
         image: "Absinthe",
-        color: "5A915CCC",
+        color: Colors.green,
         strength: 60,
         origin: nil,
         description: """
@@ -22,7 +22,7 @@ Many misconceptions about absinthe, has arised through the years. One especially
     static let amaretto: Ingredient = Ingredient(
         name: "Amaretto",
         image: "Amaretto",
-        color: "8C573ACD",
+        color: Colors.red,
         strength: 28,
         origin: Origins.italy,
         description: """
@@ -32,7 +32,7 @@ Originating from Italy, with flavors of almonds, apricot-pits, peach-pits, which
     static let amaro: Ingredient = Ingredient(
         name: "Amaro",
         image: "Amaro",
-        color: "8C573ACD",
+        color: Colors.red,
         strength: 25,
         origin: Origins.italy,
         description: ""
@@ -40,7 +40,7 @@ Originating from Italy, with flavors of almonds, apricot-pits, peach-pits, which
     static let angosturaBitters: Ingredient = Ingredient(
         name: "Angostura Bitters",
         image: "Angostura Bitters",
-        color: "959590C4",
+        color: Colors.black,
         strength: 44,
         origin: Origins.trinidadAndTobago,
         description: """
@@ -50,7 +50,7 @@ Angostura makes the most famous and widely used type of herbal Bitters. Angostur
     static let angosturaOrangeBitters: Ingredient = Ingredient(
         name: "Angostura Orange Bitters",
         image: "Angostura Orange Bitters",
-        color: "AC7046D4",
+        color: Colors.white,
         strength: 28,
         origin: Origins.trinidadAndTobago,
         description: "The Orange version of the famous Angostura Bitters."
@@ -58,7 +58,7 @@ Angostura makes the most famous and widely used type of herbal Bitters. Angostur
     static let aperol: Ingredient = Ingredient(
         name: "Aperol",
         image: "Aperol",
-        color: "894E46B5",
+        color: Colors.red,
         strength: 11,
         origin: nil,
         description: ""
@@ -66,7 +66,7 @@ Angostura makes the most famous and widely used type of herbal Bitters. Angostur
     static let bourbonWhisky: Ingredient = Ingredient(
         name: "Bourbon Whisky",
         image: "Bourbon Whisky",
-        color: "78432AB2",
+        color: Colors.brown,
         strength: 40,
         origin: Origins.unitedStates,
         description: """
@@ -77,7 +77,7 @@ A type of Whisky that typically has a rich & sweet taste, made of at least 51% c
     static let campari: Ingredient = Ingredient(
         name: "Campari",
         image: "Campari",
-        color: "7F413CC0",
+        color: Colors.red,
         strength: 25,
         origin: Origins.italy,
         description: """
@@ -87,7 +87,7 @@ Created by Gaspare Campari and with a very bittersweet taste, usually used as a 
     static let calvados: Ingredient = Ingredient(
         name: "Calvados",
         image: "Calvados",
-        color: "6C492CA7",
+        color: Colors.brown,
         strength: 40,
         origin: nil,
         description: """
@@ -97,17 +97,25 @@ Calvados is a type of apple brandy, made from a variety of different types of ap
     static let champagne: Ingredient = Ingredient(
         name: "Champagne",
         image: "Champagne",
-        color: "49422DB0",
+        color: Colors.green,
         strength: 12,
         origin: nil,
         description: """
 Champagne has been used for a variety of different sparkling wines, though many are actually not a "true" Champagne. To be called a Champagne to wine has to be made from grapes grown in the Champagne region of France.
 """
     )
+    static let cremeDeCasis: Ingredient = Ingredient(
+        name: "Creme de Casis",
+        image: "Creme de Casis",
+        color: Colors.gray,
+        strength: 25,
+        origin: nil,
+        description: ""
+    )
     static let coconutCream: Ingredient = Ingredient(
         name: "Coconut Cream",
         image: "Coconut Cream",
-        color: "6C492CA7",
+        color: Colors.white,
         strength: 0,
         origin: nil,
         description: ""
@@ -115,7 +123,7 @@ Champagne has been used for a variety of different sparkling wines, though many 
     static let coffee: Ingredient = Ingredient(
         name: "Coffee",
         image: "Coffee",
-        color: "6C492CA7",
+        color: Colors.brown,
         strength: 0,
         origin: nil,
         description: ""
@@ -123,7 +131,7 @@ Champagne has been used for a variety of different sparkling wines, though many 
     static let coffeeLiqueur: Ingredient = Ingredient(
         name: "Coffee Liqueur",
         image: "Coffee Liqueur",
-        color: "6C492CA7",
+        color: Colors.brown,
         strength: 20,
         origin: nil,
         description: "A Liqueur based on coffee with varying degrees of sweetness"
@@ -131,7 +139,7 @@ Champagne has been used for a variety of different sparkling wines, though many 
     static let cognac: Ingredient = Ingredient(
         name: "Cognac",
         image: "Cognac",
-        color: "8C573ACD",
+        color: Colors.brown,
         strength: 40,
         origin: nil,
         description: """
@@ -141,7 +149,7 @@ Cognac is a double distilled wine, based on Ugni Blanc, Folle Blanche, & Colomba
     static let cointreau: Ingredient = Ingredient(
         name: "Cointreau",
         image: "Cointreau",
-        color: "935B34C1",
+        color: Colors.orange,
         strength: 40,
         origin: nil,
         description: """
@@ -151,7 +159,7 @@ A type/brand of tripple sec (Orange liqueur) produced in Saint-Barthèlemy-d'Anj
     static let cola: Ingredient = Ingredient(
         name: "Cola",
         image: "Cola",
-        color: "633B38C5",
+        color: Colors.black,
         strength: 0,
         origin: nil,
         description: "The most popular carbonated soft drinks in the world."
@@ -159,7 +167,7 @@ A type/brand of tripple sec (Orange liqueur) produced in Saint-Barthèlemy-d'Anj
     static let curacao: Ingredient = Ingredient(
         name: "Curacao",
         image: "Curacao",
-        color: "60312997",
+        color: Colors.orange,
         strength: 40,
         origin: nil,
         description: ""
@@ -167,7 +175,7 @@ A type/brand of tripple sec (Orange liqueur) produced in Saint-Barthèlemy-d'Anj
     static let cream: Ingredient = Ingredient(
         name: "Cream",
         image: "Cream",
-        color: "5402E2757",
+        color: Colors.white,
         strength: 0,
         origin: nil,
         description: "A dairy product containing anywhere from 18-30% fat, but varies from country to country."
@@ -175,7 +183,7 @@ A type/brand of tripple sec (Orange liqueur) produced in Saint-Barthèlemy-d'Anj
     static let darkRum: Ingredient = Ingredient(
         name: "Dark Rum",
         image: "Dark Rum",
-        color: "54392BBF",
+        color: Colors.brown,
         strength: 40,
         origin: nil,
         description: """
@@ -185,7 +193,7 @@ Dark Rum are the distilled product of sugar canes (though not exclusively sugar 
     static let demeraraSirup: Ingredient = Ingredient(
         name: "Demerara Sirup",
         image: "Demerara Sirup",
-        color: "4A3735D0",
+        color: Colors.brown,
         strength: 0,
         origin: nil,
         description: """
@@ -195,7 +203,7 @@ Made up of 2 parts demerara sugar to 1 part water. Warmed up in a saucepan, on m
     static let drambuie: Ingredient = Ingredient(
         name: "Drambuie",
         image: "Drambuie",
-        color: "54392BBF",
+        color: Colors.red,
         strength: 40,
         origin: nil,
         description: "A Scotch based liqueur, made with honey, spices, & a variety of herbs."
@@ -203,7 +211,7 @@ Made up of 2 parts demerara sugar to 1 part water. Warmed up in a saucepan, on m
     static let dryVermouth: Ingredient = Ingredient(
         name: "Dry Vermouth",
         image: "Dry Vermouth",
-        color: "83935DCD",
+        color: Colors.green,
         strength: 18,
         origin: nil,
         description: "Vermouth is a fortified wine flavored with spices, herbs, and bark."
@@ -211,7 +219,7 @@ Made up of 2 parts demerara sugar to 1 part water. Warmed up in a saucepan, on m
     static let eggWhite: Ingredient = Ingredient(
         name: "Egg White",
         image: "Egg White",
-        color: "6C5632C8",
+        color: Colors.white,
         strength: 0,
         origin: nil,
         description: "The non-yolk part of the egg."
@@ -219,7 +227,7 @@ Made up of 2 parts demerara sugar to 1 part water. Warmed up in a saucepan, on m
     static let gin: Ingredient = Ingredient(
         name: "Gin",
         image: "Gin",
-        color: "3C3D3CD5",
+        color: Colors.white,
         strength: 40,
         origin: Origins.worldwide,
         description: """
@@ -230,7 +238,7 @@ There are generally considered to be five variations for gin: London Dry, Old To
     static let gingerBeer: Ingredient = Ingredient(
         name: "Ginger Beer",
         image: "Ginger Beer",
-        color: "97988EC5",
+        color: Colors.white,
         strength: 0,
         origin: nil,
         description: "A soft drink, where the major ingredient is ginger."
@@ -238,7 +246,7 @@ There are generally considered to be five variations for gin: London Dry, Old To
     static let ginger: Ingredient = Ingredient(
         name: "Ginger",
         image: "Ginger",
-        color: "3C3D3CD5",
+        color: Colors.brown,
         strength: 0,
         origin: nil,
         description: ""
@@ -246,7 +254,7 @@ There are generally considered to be five variations for gin: London Dry, Old To
     static let grandMarnier: Ingredient = Ingredient(
         name: "Grand Marnier",
         image: "Grand Marnier",
-        color: "60312997",
+        color: Colors.orange,
         strength: 40,
         origin: nil,
         description: "A orange liqueur with a base of Cognac."
@@ -254,7 +262,7 @@ There are generally considered to be five variations for gin: London Dry, Old To
     static let honeySirup: Ingredient = Ingredient(
         name: "Honey Sirup",
         image: "Honey Sirup",
-        color: "675210B7",
+        color: Colors.yellow,
         strength: 0,
         origin: nil,
         description: "A honey based sirup, made up of 3 parts honey to 1 part water."
@@ -262,7 +270,7 @@ There are generally considered to be five variations for gin: London Dry, Old To
     static let ice: Ingredient = Ingredient(
         name: "Ice",
         image: "Ice",
-        color: "3F404392",
+        color: Colors.white,
         strength: 0,
         origin: nil,
         description: ""
@@ -270,7 +278,7 @@ There are generally considered to be five variations for gin: London Dry, Old To
     static let iceCrushed: Ingredient = Ingredient(
         name: "Ice Crushed",
         image: "Ice Crushed",
-        color: "3F4E53B7",
+        color: Colors.white,
         strength: 0,
         origin: nil,
         description: ""
@@ -278,7 +286,7 @@ There are generally considered to be five variations for gin: London Dry, Old To
     static let iceCubes: Ingredient = Ingredient(
         name: "Ice Cubes",
         image: "Ice Cubes",
-        color: "3F4E53B7",
+        color: Colors.white,
         strength: 0,
         origin: nil,
         description: ""
@@ -286,7 +294,7 @@ There are generally considered to be five variations for gin: London Dry, Old To
     static let irishWhisky: Ingredient = Ingredient(
         name: "Irish Whisky",
         image: "Irish Whisky",
-        color: "62654BC6",
+        color: Colors.green,
         strength: 40,
         origin: Origins.ireland,
         description: """
@@ -297,7 +305,7 @@ Once the most popular spirit in the world, going from over 30 distilleries to on
     static let islayWhisky: Ingredient = Ingredient(
         name: "Islay Whisky",
         image: "Islay Whisky",
-        color: "62654BC6",
+        color: Colors.green,
         strength: 40,
         origin: Origins.scotland,
         description: """
@@ -308,7 +316,7 @@ A often times more peaty version of a Scotch Whisky, originating from the Island
     static let kahlua: Ingredient = Ingredient(
         name: "Kahlua",
         image: "Kahlua",
-        color: "6C5632C8",
+        color: Colors.yellow,
         strength: 20,
         origin: Origins.mexico,
         description: """
@@ -318,7 +326,7 @@ A coffee liqueur from Mexico.
     static let kinaLaeroDor: Ingredient = Ingredient(
         name: "Kina l'aero d'or",
         image: "Kina l'aero d'or",
-        color: "675210B7",
+        color: Colors.yellow,
         strength: 20,
         origin: nil,
         description: ""
@@ -326,7 +334,7 @@ A coffee liqueur from Mexico.
     static let lemon: Ingredient = Ingredient(
         name: "Lemon",
         image: "Lemon",
-        color: "675210B7",
+        color: Colors.yellow,
         strength: 0,
         origin: nil,
         description: ""
@@ -334,7 +342,7 @@ A coffee liqueur from Mexico.
     static let lemonJuice: Ingredient = Ingredient(
         name: "Lemon Juice",
         image: "Lemon Juice",
-        color: "675210B7",
+        color: Colors.yellow,
         strength: 0,
         origin: nil,
         description: ""
@@ -342,7 +350,7 @@ A coffee liqueur from Mexico.
     static let lemonTwist: Ingredient = Ingredient(
         name: "Lemon Twist",
         image: "Lemon Twist",
-        color: "675210B7",
+        color: Colors.yellow,
         strength: 0,
         origin: nil,
         description: ""
@@ -350,7 +358,7 @@ A coffee liqueur from Mexico.
     static let lightRum: Ingredient = Ingredient(
         name: "Light Rum",
         image: "Light Rum",
-        color: "A0A39BC7",
+        color: Colors.white,
         strength: 40,
         origin: nil,
         description: ""
@@ -358,7 +366,7 @@ A coffee liqueur from Mexico.
     static let lime: Ingredient = Ingredient(
         name: "Lime",
         image: "Lime",
-        color: "496311BD",
+        color: Colors.green,
         strength: 0,
         origin: nil,
         description: ""
@@ -366,7 +374,7 @@ A coffee liqueur from Mexico.
     static let limeJuice: Ingredient = Ingredient(
         name: "Lime Juice",
         image: "Lime Juice",
-        color: "496311BD",
+        color: Colors.green,
         strength: 0,
         origin: nil,
         description: ""
@@ -374,7 +382,7 @@ A coffee liqueur from Mexico.
     static let mintLeaves: Ingredient = Ingredient(
         name: "Mint Leaves",
         image: "Mint Leaves",
-        color: "3F68229D",
+        color: Colors.green,
         strength: 0,
         origin: nil,
         description: ""
@@ -382,7 +390,7 @@ A coffee liqueur from Mexico.
     static let oliveBrine: Ingredient = Ingredient(
         name: "Olive Brine",
         image: "Olives",
-        color: "5A915CCC",
+        color: Colors.green,
         strength: 0,
         origin: nil,
         description: ""
@@ -390,7 +398,7 @@ A coffee liqueur from Mexico.
     static let olives: Ingredient = Ingredient(
         name: "Olives",
         image: "Olives",
-        color: "5A915CCC",
+        color: Colors.green,
         strength: 0,
         origin: nil,
         description: ""
@@ -398,7 +406,7 @@ A coffee liqueur from Mexico.
     static let orangeJuice: Ingredient = Ingredient(
         name: "Orange Juice",
         image: "Orange",
-        color: "AC7046D4",
+        color: Colors.orange,
         strength: 0,
         origin: nil,
         description: """
@@ -408,7 +416,7 @@ A freshly squeezed juice, usually sweet, used in a variety of different drinks.
     static let orange: Ingredient = Ingredient(
         name: "Orange",
         image: "Orange",
-        color: "AC7046D4",
+        color: Colors.orange,
         strength: 0,
         origin: nil,
         description: ""
@@ -416,7 +424,7 @@ A freshly squeezed juice, usually sweet, used in a variety of different drinks.
     static let orgeatSirup: Ingredient = Ingredient(
         name: "Orgeat Sirup",
         image: "Orgeat Sirup",
-        color: "AC7046D4",
+        color: Colors.gray,
         strength: 0,
         origin: nil,
         description: ""
@@ -424,7 +432,7 @@ A freshly squeezed juice, usually sweet, used in a variety of different drinks.
     static let peychaudBitters: Ingredient = Ingredient(
         name: "Peychaud Bitters",
         image: "Peychaud Bitters",
-        color: "755D5ACE",
+        color: Colors.red,
         strength: 35,
         origin: nil,
         description: """
@@ -434,7 +442,7 @@ Originally created between 1849 and 1857 by Antoine Amèdèe Peychaud, often com
     static let pineapple: Ingredient = Ingredient(
         name: "Pineapple",
         image: "Pineapple",
-        color: "755D5ACE",
+        color: Colors.yellow,
         strength: 0,
         origin: nil,
         description: ""
@@ -442,7 +450,7 @@ Originally created between 1849 and 1857 by Antoine Amèdèe Peychaud, often com
     static let pineappleJuice: Ingredient = Ingredient(
         name: "Pineapple Juice",
         image: "Pineapple",
-        color: "755D5ACE",
+        color: Colors.yellow,
         strength: 0,
         origin: nil,
         description: ""
@@ -450,7 +458,7 @@ Originally created between 1849 and 1857 by Antoine Amèdèe Peychaud, often com
     static let redWine: Ingredient = Ingredient(
         name: "Red Wine",
         image: "Red Wine",
-        color: "755D5ACE",
+        color: Colors.red,
         strength: 14,
         origin: nil,
         description: """
@@ -460,7 +468,7 @@ A wine made from a dark-colored grape. The color can range from intense violet, 
     static let rum: Ingredient = Ingredient(
         name: "Rum",
         image: "Rum",
-        color: "615752BF",
+        color: Colors.brown,
         strength: 40,
         origin: nil,
         description: """
@@ -470,7 +478,7 @@ A spirit made from distilled sugarcane molasses or sugarcane juice, and then age
     static let ryeWhisky: Ingredient = Ingredient(
         name: "Rye Whisky",
         image: "Rye Whisky",
-        color: "774B21CC",
+        color: Colors.brown,
         strength: 40,
         origin: Origins.unitedStates,
         description: """
@@ -481,7 +489,7 @@ A type of whisky made from at least 51% rye, and should be aged in charred new-o
     static let scotchWhisky: Ingredient = Ingredient(
         name: "Scotch Whisky",
         image: "Scotch Whisky",
-        color: "774B21CC",
+        color: Colors.brown,
         strength: 40,
         origin: Origins.scotland,
         description: """
@@ -493,7 +501,7 @@ All Scotch Whisky must be made in oak barrels for at least 3 years.
     static let simpleSirup: Ingredient = Ingredient(
         name: "Simple Sirup",
         image: "Simple Sirup",
-        color: "8F8D8AAD",
+        color: Colors.white,
         strength: 0,
         origin: nil,
         description: "Made from 2 parts fine sugar and 1 part water (preferably by weight), heat the mixture on a saucepan on medium heat, until sugar is dissolved."
@@ -501,7 +509,7 @@ All Scotch Whisky must be made in oak barrels for at least 3 years.
     static let sodaWater: Ingredient = Ingredient(
         name: "Soda Water",
         image: "Soda Water",
-        color: "A3A49ECA",
+        color: Colors.white,
         strength: 0,
         origin: nil,
         description: ""
@@ -509,7 +517,7 @@ All Scotch Whisky must be made in oak barrels for at least 3 years.
     static let sweetVermouth: Ingredient = Ingredient(
         name: "Sweet Vermouth",
         image: "Sweet Vermouth",
-        color: "5F4F4AC5",
+        color: Colors.red,
         strength: 18,
         origin: Origins.italy,
         description: """
@@ -519,7 +527,7 @@ Vermouth is a fortified wine flavored with various herbs, barks, & spices.
     static let tequila: Ingredient = Ingredient(
         name: "Tequila",
         image: "Tequila",
-        color: "84827AA6",
+        color: Colors.white,
         strength: 45,
         origin: nil,
         description: """
@@ -529,7 +537,7 @@ Tequila is produced from agave. When shopping for Tequila go for Tequila made wi
     static let vodka: Ingredient = Ingredient(
         name: "Vodka",
         image: "Vodka",
-        color: "A0A4AAD4",
+        color: Colors.white,
         strength: 40,
         origin: Origins.poland,
         description: """
@@ -539,7 +547,7 @@ Vodka is primarly made from grains and/or potatos, but also other items such as:
     static let whisky: Ingredient = Ingredient(
         name: "Whisky",
         image: "Whisky",
-        color: "894118BD",
+        color: Colors.brown,
         strength: 40,
         origin: Origins.worldwide,
         description: """

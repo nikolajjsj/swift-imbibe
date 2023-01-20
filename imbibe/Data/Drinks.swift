@@ -8,29 +8,32 @@
 import Foundation
 
 class Drinks {
-    static let paperPlane: Drink =
+    static let bourbonRenewal: Drink =
         .init(
-            name: "Paper Plane",
+            name: "Bourbon Renewal",
             description: "",
-            image: "Paper Plane",
-            color: "5B3A18D0",
-            year: 2008,
+            image: "Bourbon Renewal",
+            color: Colors.brown,
+            year: 2004,
             base: .whisky,
             origin: Origins.unitedStates,
-            equipments: [ Equipments.cocktailGlass, Equipments.shaker, Equipments.strainer ],
+            equipments: [ Equipments.oldFashionedGlass, Equipments.shaker, Equipments.strainer ],
             ingredients: [
-                .init(ingredient: Ingredients.bourbonWhisky, amount: 25, unit: .milliliters),
-                .init(ingredient: Ingredients.amaro, amount: 25, unit: .milliliters),
-                .init(ingredient: Ingredients.aperol, amount: 25, unit: .milliliters),
-                .init(ingredient: Ingredients.lemonJuice, amount: 25, unit: .milliliters),
+                .init(ingredient: Ingredients.bourbonWhisky, amount: 60, unit: .milliliters),
+                .init(ingredient: Ingredients.lemonJuice, amount: 30, unit: .milliliters),
+                .init(ingredient: Ingredients.cremeDeCasis, amount: 15, unit: .milliliters),
+                .init(ingredient: Ingredients.simpleSirup, amount: 10, unit: .milliliters),
+                .init(ingredient: Ingredients.angosturaBitters, amount: 2, unit: .dash),
                 .init(ingredient: Ingredients.iceCubes),
             ],
             steps: [
-                .init(string: "Add Ice Cubes, Bourbon Whisky, Amaro, Aperol, & Lemon Juice into the Shaker"),
-                .init(string: "Shake for 10-15 seconds"),
-                .init(string: "Strain into the Cocktail Glass"),
-            ],
-            source: nil
+                .init(string: "Fill Shaker with Ice Cubes"),
+                .init(string: "Add Bourbon Whisky, Lemon Juice, Creme de Casis, Simple Sirup, & Angostura Bitters"),
+                .init(string: "Shake for ~10 seconds"),
+                .init(string: "Add Ice Cubes to the Old Fashioned Glass"),
+                .init(string: "Strain shaker contents into the Old Fashioned Glass"),
+                .init(string: "Garnish with a Lemon Wheel"),
+            ]
         )
     
     static let americano: Drink =
@@ -38,7 +41,7 @@ class Drinks {
             name: "Americano",
             description: "",
             image: "Americano",
-            color: "A06049DA",
+            color: Colors.red,
             year: 1860,
             base: .other,
             origin: Origins.italy,
@@ -55,8 +58,7 @@ class Drinks {
                 .init(string: "Stir"),
                 .init(string: "Top up with Soda Water"),
                 .init(string: "Garnish with Citrus Wedge"),
-            ],
-            source: nil
+            ]
         )
     
     static let classicMartini: Drink =
@@ -64,7 +66,7 @@ class Drinks {
             name: "Classic Martini",
             description: "",
             image: "Martini",
-            color: "49484459",
+            color: Colors.gray,
             year: 1922,
             base: .gin,
             origin: Origins.unitedStates,
@@ -80,8 +82,7 @@ class Drinks {
                 .init(string: "Stir with Barspoon (30-40 seconds)"),
                 .init(string: "Strain into the Cocktail Glass"),
                 .init(string: "Garnish with Olives"),
-            ],
-            source: nil
+            ]
         )
     
     static let corpseReviver: Drink =
@@ -89,7 +90,7 @@ class Drinks {
             name: "Corpse Reviver",
             description: "",
             image: "Corpse Reviver",
-            color: "A5834BC3",
+            color: Colors.orange,
             year: 1861,
             base: .gin,
             origin: Origins.unitedStates,
@@ -108,8 +109,7 @@ class Drinks {
                 .init(string: "Shake (10-15 seconds)"),
                 .init(string: "Strain into the Cocktail Glass"),
                 .init(string: "Garnish with a Cherry"),
-            ],
-            source: nil
+            ]
         )
     
     static let cubaLibre: Drink =
@@ -117,7 +117,7 @@ class Drinks {
             name: "Cuba Libre",
             description: "",
             image: "Cuba Libre",
-            color: "5B3A18D0",
+            color: Colors.brown,
             year: 1900,
             base: .rum,
             origin: Origins.cuba,
@@ -134,8 +134,7 @@ class Drinks {
                 .init(string: "Stir with Barspoon"),
                 .init(string: "Top up with Cola"),
                 .init(string: "Garnish with a Lime Wedge"),
-            ],
-            source: nil
+            ]
         )
     
     static let daiquiri: Drink =
@@ -143,7 +142,7 @@ class Drinks {
             name: "Daiquiri",
             description: "",
             image: "Daiquiri",
-            color: "484A3E5E",
+            color: Colors.red,
             year: 1900,
             base: .rum,
             origin: Origins.cuba,
@@ -159,8 +158,7 @@ class Drinks {
                 .init(string: "Shake for 10-15 seconds"),
                 .init(string: "Strain into the Cocktail Glass"),
                 .init(string: "Garnish with Lime Wheel"),
-            ],
-            source: nil
+            ]
         )
     
     static let darkAndStormy: Drink =
@@ -168,7 +166,7 @@ class Drinks {
             name: "Dark and Stormy",
             description: "",
             image: "Dark and Stormy",
-            color: "6F5810A6",
+            color: Colors.brown,
             year: 1920,
             base: .rum,
             origin: Origins.bermuda,
@@ -184,8 +182,7 @@ class Drinks {
                 .init(string: "Add Dark Rum & Lime Juice and stir with Barspoon"),
                 .init(string: "Top up with Ginger Beer"),
                 .init(string: "Garnish with a Lime Wedge"),
-            ],
-            source: nil
+            ]
         )
     
     static let dirtyMartini: Drink =
@@ -193,7 +190,7 @@ class Drinks {
             name: "Dirty Martini",
             description: "",
             image: "Dirty Martini",
-            color: "49484459",
+            color: Colors.green,
             year: 1901,
             base: .gin,
             origin: Origins.unitedStates,
@@ -212,8 +209,7 @@ class Drinks {
                 .init(string: "Stir with Barspoon (30-40 seconds)"),
                 .init(string: "Strain into the Cocktail Glass"),
                 .init(string: "Garnish with Olives"),
-            ],
-            source: nil
+            ]
         )
     
     static let espressoMartini: Drink =
@@ -221,7 +217,7 @@ class Drinks {
             name: "Espresso Martini",
             description: "",
             image: "Espresso Martini",
-            color: "49484459",
+            color: Colors.brown,
             year: 1980,
             base: .vodka,
             origin: Origins.unitedKingdom,
@@ -239,8 +235,7 @@ class Drinks {
                 .init(string: "Shake (10-15 seconds)"),
                 .init(string: "Strain into the Cocktail Glass"),
                 .init(string: "Garnish with Coffee Bean"),
-            ],
-            source: nil
+            ]
         )
     
     static let fityFiftyMartini: Drink =
@@ -248,7 +243,7 @@ class Drinks {
             name: "50/50 Martini",
             description: "",
             image: "Martini",
-            color: "49484459",
+            color: Colors.gray,
             year: 1930,
             base: .gin,
             origin: Origins.unitedStates,
@@ -263,8 +258,7 @@ class Drinks {
                 .init(string: "Stir with Barspoon (30-40 seconds)"),
                 .init(string: "Strain into the Cocktail Glass"),
                 .init(string: "Garnish with Olives"),
-            ],
-            source: nil
+            ]
         )
     
     static let ginFizz: Drink =
@@ -272,7 +266,7 @@ class Drinks {
             name: "Gin Fizz",
             description: "",
             image: "Gin Fizz",
-            color: "777A68A8",
+            color: Colors.gray,
             year: 1888,
             base: .gin,
             origin: Origins.unitedKingdom,
@@ -291,8 +285,51 @@ class Drinks {
                 .init(string: "Strain into the Cocktail Glass"),
                 .init(string: "Top up with Soda Water"),
                 .init(string: "Garnish with a Lemon Slice"),
+            ]
+        )
+    
+    static let hotToddy: Drink =
+        .init(
+            name: "Hot Toddy",
+            description: "",
+            image: "Hot Toddy",
+            color: Colors.orange,
+            year: 1800,
+            base: .whisky,
+            origin: Origins.scotland,
+            equipments: [ Equipments.toddyGlass ],
+            ingredients: [
+                .init(ingredient: Ingredients.whisky, amount: 60, unit: .milliliters),
+                .init(ingredient: Ingredients.demeraraSirup, amount: 15, unit: .milliliters),
+                .init(ingredient: Ingredients.coffee),
             ],
-            source: nil
+            steps: [
+                .init(string: "Add Whisky & Demerara Sirup into the Toddy Glass"),
+                .init(string: "Top up with hot water & stir"),
+                .init(string: "Garnish with Lemon Twist"),
+            ]
+        )
+    
+    static let irishCoffee: Drink =
+        .init(
+            name: "Irish Coffee",
+            description: "",
+            image: "Irish Coffee",
+            color: Colors.brown,
+            year: 1943,
+            base: .whisky,
+            origin: Origins.ireland,
+            equipments: [ Equipments.toddyGlass ],
+            ingredients: [
+                .init(ingredient: Ingredients.irishWhisky, amount: 30, unit: .milliliters),
+                .init(ingredient: Ingredients.simpleSirup, amount: 15, unit: .milliliters),
+                .init(ingredient: Ingredients.coffee),
+            ],
+            steps: [
+                .init(string: "Add Irish Whisky & Simple Sirup into the Toddy Glass"),
+                .init(string: "Top up with hot Coffee"),
+                .init(string: "Garnish with Whipped Cream"),
+            ]
         )
     
     static let longIslandIceTea: Drink =
@@ -300,7 +337,7 @@ class Drinks {
             name: "Long Island Ice Tea",
             description: "",
             image: "Long Island Ice Tea",
-            color: "6F5810A6",
+            color: Colors.orange,
             year: 1972,
             base: .other,
             origin: Origins.unitedStates,
@@ -322,8 +359,7 @@ class Drinks {
                 .init(string: "Stir"),
                 .init(string: "Top up with Cola"),
                 .init(string: "Garnish with a Lemon Slice"),
-            ],
-            source: nil
+            ]
         )
     
     static let maitai: Drink =
@@ -331,7 +367,7 @@ class Drinks {
             name: "Mai Tai",
             description: "",
             image: "Mai Tai",
-            color: "484A3E5E",
+            color: Colors.orange,
             year: 1944,
             base: .rum,
             origin: Origins.unitedStates,
@@ -353,8 +389,7 @@ class Drinks {
                 .init(string: "Shake for 5-10 seconds"),
                 .init(string: "Strain the contents into the Old Fashioned Glass"),
                 .init(string: "Garnish with a Lime Wedge or some Mint Leaves"),
-            ],
-            source: nil
+            ]
         )
     
     static let manhattan: Drink =
@@ -362,7 +397,7 @@ class Drinks {
             name: "Manhattan",
             description: "",
             image: "Manhattan",
-            color: "A06049DA",
+            color: Colors.red,
             year: 1880,
             base: .whisky,
             origin: Origins.unitedStates,
@@ -379,8 +414,7 @@ class Drinks {
                 .init(string: "Stir"),
                 .init(string: "Strain into the Cocktail Class"),
                 .init(string: "Garnish with Cocktail Cherry"),
-            ],
-            source: nil
+            ]
         )
     
     static let margarita: Drink =
@@ -388,7 +422,7 @@ class Drinks {
             name: "Margarita",
             description: "",
             image: "Margarita",
-            color: "484A3E5E",
+            color: Colors.yellow,
             year: 1937,
             base: .tequila,
             origin: Origins.mexico,
@@ -406,8 +440,7 @@ class Drinks {
                 .init(string: "Add a salt rim to the Cocktail Glass"),
                 .init(string: "Strain into the Cocktail Class"),
                 .init(string: "Garnish with a Lime Wedge"),
-            ],
-            source: nil
+            ]
         )
     
     static let mojito: Drink =
@@ -415,7 +448,7 @@ class Drinks {
             name: "Mojito",
             description: "",
             image: "Mojito",
-            color: "50573D97",
+            color: Colors.green,
             year: 1927,
             base: .rum,
             origin: Origins.cuba,
@@ -436,8 +469,7 @@ class Drinks {
                 .init(string: "Fill the Highball Glass with Ice Cubes, and strain contents of the shaker into the glass"),
                 .init(string: "With Barspoon stir to shuffle the Mint Leaves around"),
                 .init(string: "Top op with Soda Water"),
-            ],
-            source: nil
+            ]
         )
     
     static let moscowMule: Drink =
@@ -445,7 +477,7 @@ class Drinks {
             name: "Moscow Mule",
             description: "",
             image: "Moscow Mule",
-            color: "55472F9C",
+            color: Colors.orange,
             year: 1941,
             base: .vodka,
             origin: Origins.unitedStates,
@@ -461,8 +493,7 @@ class Drinks {
                 .init(string: "Add Vodka & Lime Juice and stir with the Barspoon"),
                 .init(string: "Then top up with Ginger Beer"),
                 .init(string: "Garnish with a Lime Wedge"),
-            ],
-            source: nil
+            ]
         )
     
     static let negroni: Drink =
@@ -470,7 +501,7 @@ class Drinks {
             name: "Negroni",
             description: "",
             image: "Negroni",
-            color: "B85432D9",
+            color: Colors.red,
             year: 1860,
             base: .gin,
             origin: Origins.italy,
@@ -486,8 +517,7 @@ class Drinks {
                 .init(string: "Pour Campari, Sweet Vermouth, & Gin into the Old Fashioned Glass"),
                 .init(string: "Stir"),
                 .init(string: "Garnish with Orange Wedge"),
-            ],
-            source: nil
+            ]
         )
     
     static let newYourSour: Drink =
@@ -495,7 +525,7 @@ class Drinks {
             name: "New York Sour",
             description: "",
             image: "New York Sour",
-            color: "A5834BC3",
+            color: Colors.orange,
             year: 1880,
             base: .whisky,
             origin: Origins.unitedStates,
@@ -516,8 +546,7 @@ class Drinks {
                 .init(string: "Shake again (10-15 seconds)"),
                 .init(string: "Strain into the Old Fashioned Glas"),
                 .init(string: "Add a float of Red Wine"),
-            ],
-            source: nil
+            ]
         )
     
     static let oldFashioned: Drink =
@@ -525,7 +554,7 @@ class Drinks {
             name: "Old Fashioned",
             description: "",
             image: "Old Fashioned",
-            color: "5B3A18D0",
+            color: Colors.orange,
             year: 1880,
             base: .whisky,
             origin: Origins.unitedStates,
@@ -541,8 +570,7 @@ class Drinks {
                 .init(string: "Stir with a Barspoon"),
                 .init(string: "Add a Large Ice Cube"),
                 .init(string: "Garnish with a twist of Orange"),
-            ],
-            source: nil
+            ]
         )
     
     static let painkiller: Drink =
@@ -550,7 +578,7 @@ class Drinks {
             name: "Painkiller",
             description: "",
             image: "Painkiller",
-            color: "49484459",
+            color: Colors.orange,
             year: 1970,
             base: .rum,
             origin: Origins.britishVirginIslands,
@@ -567,8 +595,31 @@ class Drinks {
                 .init(string: "Add Dark Rum, Pineapple Juice, Coconut Cream, Orange Juice"),
                 .init(string: "Shake (10-15 seconds)"),
                 .init(string: "Pour everything into the Old Fashioned Glass"),
+            ]
+        )
+    
+    static let paperPlane: Drink =
+        .init(
+            name: "Paper Plane",
+            description: "",
+            image: "Paper Plane",
+            color: Colors.orange,
+            year: 2008,
+            base: .whisky,
+            origin: Origins.unitedStates,
+            equipments: [ Equipments.cocktailGlass, Equipments.shaker, Equipments.strainer ],
+            ingredients: [
+                .init(ingredient: Ingredients.bourbonWhisky, amount: 25, unit: .milliliters),
+                .init(ingredient: Ingredients.amaro, amount: 25, unit: .milliliters),
+                .init(ingredient: Ingredients.aperol, amount: 25, unit: .milliliters),
+                .init(ingredient: Ingredients.lemonJuice, amount: 25, unit: .milliliters),
+                .init(ingredient: Ingredients.iceCubes),
             ],
-            source: nil
+            steps: [
+                .init(string: "Add Ice Cubes, Bourbon Whisky, Amaro, Aperol, & Lemon Juice into the Shaker"),
+                .init(string: "Shake for 10-15 seconds"),
+                .init(string: "Strain into the Cocktail Glass"),
+            ]
         )
     
     static let penicillin: Drink =
@@ -576,7 +627,7 @@ class Drinks {
             name: "Penicillin",
             description: "",
             image: "Penicillin",
-            color: "49484459",
+            color: Colors.yellow,
             year: 2000,
             base: .whisky,
             origin: Origins.unitedStates,
@@ -597,8 +648,7 @@ class Drinks {
                 .init(string: "Add Ice Cubes to the Old Fashioned Glass"),
                 .init(string: "Strain into the Old Fashioned Glass"),
                 .init(string: "Garnish with Candied Ginger or a Twist of Lemon"),
-            ],
-            source: nil
+            ]
         )
     
     static let perfectMartini: Drink =
@@ -606,7 +656,7 @@ class Drinks {
             name: "Perfect Martini",
             description: "",
             image: "Perfect Martini",
-            color: "49484459",
+            color: Colors.gray,
             year: 1948,
             base: .gin,
             origin: Origins.unitedStates,
@@ -622,8 +672,7 @@ class Drinks {
                 .init(string: "Stir with Barspoon (30-40 seconds)"),
                 .init(string: "Strain into the Cocktail Glass"),
                 .init(string: "Garnish with a Lemon Twist"),
-            ],
-            source: nil
+            ]
         )
     
     static let pinaColada: Drink =
@@ -631,7 +680,7 @@ class Drinks {
             name: "Piña Colada",
             description: "",
             image: "Pina Colada",
-            color: "5B3A18D0",
+            color: Colors.brown,
             year: 1920,
             base: .rum,
             origin: Origins.puertoRico,
@@ -649,8 +698,7 @@ class Drinks {
                 .init(string: "Start the blender"),
                 .init(string: "Fill the mix into the Cocktail Glass"),
                 .init(string: "Garnish with Cherry, Pineapple, and a Cocktail Umbrella"),
-            ],
-            source: nil
+            ]
         )
     
     static let rustyNail: Drink =
@@ -658,7 +706,7 @@ class Drinks {
             name: "Rusty Nail",
             description: "",
             image: "Rusty Nail",
-            color: "A5834BC3",
+            color: Colors.brown,
             year: 1960,
             base: .whisky,
             origin: Origins.unitedStates,
@@ -674,8 +722,7 @@ class Drinks {
                 .init(string: "Stir for 30-45 seconds"),
                 .init(string: "Add Ice Cubes in the Old Fashioned Glass"),
                 .init(string: "Strain into the Old Fashioned Glass"),
-            ],
-            source: nil
+            ]
         )
     
     static let sazerac: Drink =
@@ -683,7 +730,7 @@ class Drinks {
             name: "Sazerac",
             description: "",
             image: "Sazerac",
-            color: "563E2CC3",
+            color: Colors.brown,
             year: 1950,
             base: .whisky,
             origin: Origins.unitedStates,
@@ -701,8 +748,7 @@ class Drinks {
                 .init(string: "Stir with Barspoon"),
                 .init(string: "Strain into the Old Fashioned Glass"),
                 .init(string: "Garnish with a Lemon Twist"),
-            ],
-            source: nil
+            ]
         )
     
     static let sidecar: Drink =
@@ -710,7 +756,7 @@ class Drinks {
             name: "Sidecar",
             description: "",
             image: "Sidecar",
-            color: "A5834BC3",
+            color: Colors.orange,
             year: 1922,
             base: .cognac,
             origin: Origins.france,
@@ -726,8 +772,7 @@ class Drinks {
                 .init(string: "Add Cognac, Curacao,  & Lemon Juice"),
                 .init(string: "Shake for 10-15 seconds"),
                 .init(string: "Strain into the Cocktail Glass"),
-            ],
-            source: nil
+            ]
         )
     
     static let whiskySour: Drink =
@@ -735,7 +780,7 @@ class Drinks {
             name: "Whisky Sour",
             description: "",
             image: "Whisky Sour",
-            color: "A5834BC3",
+            color: Colors.orange,
             year: 1870,
             base: .whisky,
             origin: Origins.unitedStates,
@@ -755,8 +800,7 @@ class Drinks {
                 .init(string: "Shake again"),
                 .init(string: "Strain into the Old Fashioned Glas"),
                 .init(string: "Garnish with a few drops of Angostura Bitters on top"),
-            ],
-            source: nil
+            ]
         )
     
     static let whiteRussian: Drink =
@@ -764,7 +808,7 @@ class Drinks {
             name: "White Russian",
             description: "",
             image: "White Russian",
-            color: "55472F9C",
+            color: Colors.white,
             year: 1949,
             base: .gin,
             origin: Origins.belgium,
@@ -780,12 +824,12 @@ class Drinks {
                 .init(string: "Add Vodka & Kahlua"),
                 .init(string: "Stir together"),
                 .init(string: "Then add the Cream"),
-            ],
-            source: nil
+            ]
         )
     
     static let all: [Drink] = [
         americano,
+        bourbonRenewal,
         classicMartini,
         corpseReviver,
         cubaLibre,
@@ -795,6 +839,8 @@ class Drinks {
         espressoMartini,
         fityFiftyMartini,
         ginFizz,
+        hotToddy,
+        irishCoffee,
         longIslandIceTea,
         maitai,
         manhattan,

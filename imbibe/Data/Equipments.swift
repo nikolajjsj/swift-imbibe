@@ -46,6 +46,11 @@ Sometimes a cocktail glass is also referred to as a martini glass.
         description: "Used to strain the content from either a Shaker or a Mixing Glass, into a glass for serving.",
         image: "Strainer"
     )
+    static let toddyGlass: Equipment = Equipment(
+        name: "Toddy Glass",
+        description: "Used to serve hot drinks, eg. Hot Toddy and Irish Coffee",
+        image: "Toddy Glass"
+    )
     static let muddler: Equipment = Equipment(
         name: "Muddler",
         description: "Used to mash up contents, usually fruits or other items that has to be muddled to release flavours or aromas.",

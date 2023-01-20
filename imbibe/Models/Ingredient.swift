@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import SwiftUI
 
 class Ingredient: Identifiable, Equatable, Hashable {
     static func == (lhs: Ingredient, rhs: Ingredient) -> Bool {
@@ -19,7 +20,7 @@ class Ingredient: Identifiable, Equatable, Hashable {
     let id: UUID
     let name: String
     let image: String
-    let color: String
+    let color: Color
     let strength: Int
     let origin: Origin?
     let description: String
@@ -29,7 +30,7 @@ class Ingredient: Identifiable, Equatable, Hashable {
         id: UUID = UUID(),
         name: String,
         image: String,
-        color: String,
+        color: Color,
         strength: Int,
         origin: Origin?,
         description: String,

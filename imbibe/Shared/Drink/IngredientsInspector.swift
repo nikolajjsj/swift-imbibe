@@ -52,7 +52,7 @@ struct IngredientsInspector: View {
     
     @ViewBuilder
     func IngredientDetailPill(_ ingredient: IngredientWithVolume, servings: Int, unit: UnitVolume) -> some View {
-        let bg = Color(hex: ingredient.ingredient.color) ?? .clear
+        let bg = ingredient.ingredient.color
         let fg = bg.contastColor
         
         HStack {

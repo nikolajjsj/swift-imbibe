@@ -13,7 +13,7 @@ struct DrinkCard: View {
     @State private var presented = false
     
     var body: some View {
-        let background = Color(hex: drink.color) ?? .clear
+        let background = drink.color
         let foreground = background.contastColor
         
         ZStack {

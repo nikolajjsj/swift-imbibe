@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import SwiftUI
 
 class Drink: Identifiable, Equatable, Hashable {
     static func == (lhs: Drink, rhs: Drink) -> Bool {
@@ -20,28 +21,26 @@ class Drink: Identifiable, Equatable, Hashable {
     let name: String
     let description: String
     let image: String
-    let color: String
+    let color: Color
     let year: Int?
     let base: Base
     let origin: Origin
     let equipments: [Equipment]
     let ingredients: [IngredientWithVolume]
     let steps: [DrinkStep]
-    let source: DrinkSource?
     
     init(
         id: UUID = UUID(),
         name: String,
         description: String,
         image: String,
-        color: String,
+        color: Color,
         year: Int? = nil,
         base: Base,
         origin: Origin,
         equipments: [Equipment],
         ingredients: [IngredientWithVolume],
-        steps: [DrinkStep],
-        source: DrinkSource?
+        steps: [DrinkStep]
     ) {
         self.id = id
         self.name = name
@@ -54,7 +53,6 @@ class Drink: Identifiable, Equatable, Hashable {
         self.equipments = equipments
         self.ingredients = ingredients
         self.steps = steps
-        self.source = source
     }
     
     var strength: Int {

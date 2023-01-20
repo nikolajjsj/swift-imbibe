@@ -17,13 +17,13 @@ struct IngredientBox: View {
     @State private var presented = false
     
     var body: some View {
-        let bg = Color(hex: ingredient.color)
-        let fg = bg?.contastColor
+        let bg = ingredient.color
+        let fg =  bg.contastColor
         
         Text(ingredient.name)
             .padding(.horizontal, 12)
             .padding(.vertical, 6)
-            .background(RoundedRectangle(cornerRadius: 4).fill(bg ?? .white))
+            .background(RoundedRectangle(cornerRadius: 4).fill(bg))
             .background(RoundedRectangle(cornerRadius: 4).stroke(.gray, lineWidth: 1))
             .foregroundColor(fg)
             .onTapGesture { presented.toggle() }
