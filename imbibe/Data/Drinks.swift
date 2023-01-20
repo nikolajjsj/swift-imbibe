@@ -8,26 +8,27 @@
 import Foundation
 
 class Drinks {
-    static let fityFiftyMartini: Drink =
+    static let paperPlane: Drink =
         .init(
-            name: "50/50 Martini",
+            name: "Paper Plane",
             description: "",
-            image: "Martini",
-            color: "49484459",
-            year: 1930,
-            base: .gin,
+            image: "Paper Plane",
+            color: "5B3A18D0",
+            year: 2008,
+            base: .whisky,
             origin: Origins.unitedStates,
-            equipments: [ Equipments.cocktailGlass, Equipments.barspoon, Equipments.mixingGlass ],
+            equipments: [ Equipments.cocktailGlass, Equipments.shaker, Equipments.strainer ],
             ingredients: [
-                .init(ingredient: Ingredients.gin, amount: 45, unit: .milliliters),
-                .init(ingredient: Ingredients.dryVermouth, amount: 45, unit: .milliliters),
+                .init(ingredient: Ingredients.bourbonWhisky, amount: 25, unit: .milliliters),
+                .init(ingredient: Ingredients.amaro, amount: 25, unit: .milliliters),
+                .init(ingredient: Ingredients.aperol, amount: 25, unit: .milliliters),
+                .init(ingredient: Ingredients.lemonJuice, amount: 25, unit: .milliliters),
                 .init(ingredient: Ingredients.iceCubes),
             ],
             steps: [
-                .init(string: "Add Ice Cubes, Gin & Dry Vermouth to the Mixing Glass"),
-                .init(string: "Stir with Barspoon (30-40 seconds)"),
+                .init(string: "Add Ice Cubes, Bourbon Whisky, Amaro, Aperol, & Lemon Juice into the Shaker"),
+                .init(string: "Shake for 10-15 seconds"),
                 .init(string: "Strain into the Cocktail Glass"),
-                .init(string: "Garnish with Olives"),
             ],
             source: nil
         )
@@ -238,6 +239,30 @@ class Drinks {
                 .init(string: "Shake (10-15 seconds)"),
                 .init(string: "Strain into the Cocktail Glass"),
                 .init(string: "Garnish with Coffee Bean"),
+            ],
+            source: nil
+        )
+    
+    static let fityFiftyMartini: Drink =
+        .init(
+            name: "50/50 Martini",
+            description: "",
+            image: "Martini",
+            color: "49484459",
+            year: 1930,
+            base: .gin,
+            origin: Origins.unitedStates,
+            equipments: [ Equipments.cocktailGlass, Equipments.barspoon, Equipments.mixingGlass ],
+            ingredients: [
+                .init(ingredient: Ingredients.gin, amount: 45, unit: .milliliters),
+                .init(ingredient: Ingredients.dryVermouth, amount: 45, unit: .milliliters),
+                .init(ingredient: Ingredients.iceCubes),
+            ],
+            steps: [
+                .init(string: "Add Ice Cubes, Gin & Dry Vermouth to the Mixing Glass"),
+                .init(string: "Stir with Barspoon (30-40 seconds)"),
+                .init(string: "Strain into the Cocktail Glass"),
+                .init(string: "Garnish with Olives"),
             ],
             source: nil
         )

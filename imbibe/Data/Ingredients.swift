@@ -24,10 +24,18 @@ Many misconceptions about absinthe, has arised through the years. One especially
         image: "Amaretto",
         color: "8C573ACD",
         strength: 28,
-        origin: nil,
+        origin: Origins.italy,
         description: """
 Originating from Italy, with flavors of almonds, apricot-pits, peach-pits, which all gives out an almond-like flavor which Amaretto is known for.
 """
+    )
+    static let amaro: Ingredient = Ingredient(
+        name: "Amaro",
+        image: "Amaro",
+        color: "8C573ACD",
+        strength: 25,
+        origin: Origins.italy,
+        description: ""
     )
     static let angosturaBitters: Ingredient = Ingredient(
         name: "Angostura Bitters",
@@ -44,7 +52,7 @@ Angostura makes the most famous and widely used type of herbal Bitters. Angostur
         image: "Angostura Orange Bitters",
         color: "AC7046D4",
         strength: 28,
-        origin: nil,
+        origin: Origins.trinidadAndTobago,
         description: "The Orange version of the famous Angostura Bitters."
     )
     static let aperol: Ingredient = Ingredient(
