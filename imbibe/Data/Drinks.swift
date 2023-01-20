@@ -806,6 +806,7 @@ class Drinks {
         oldFashioned,
         perfectMartini,
         painkiller,
+        paperPlane,
         pinaColada,
         penicillin,
         rustyNail,
