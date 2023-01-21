@@ -212,6 +212,33 @@ final class Drinks {
             ]
         )
     
+    static let elDiablo: Drink =
+        .init(
+            name: "El Diablo",
+            description: "",
+            image: "El Diablo",
+            color: Colors.red,
+            year: 1946,
+            base: .tequila,
+            origin: Origins.germany,
+            equipments: [ Equipments.highballGlass, Equipments.shaker, Equipments.strainer ],
+            ingredients: [
+                .init(ingredient: Ingredients.tequila, amount: 30, unit: .milliliters),
+                .init(ingredient: Ingredients.cremeDeCasis, amount: 15, unit: .milliliters),
+                .init(ingredient: Ingredients.limeJuice, amount: 15, unit: .milliliters),
+                .init(ingredient: Ingredients.gingerBeer, amount: 100, unit: .milliliters),
+                .init(ingredient: Ingredients.iceCubes),
+            ],
+            steps: [
+                .init(string: "Add Tequila, Creme de Casis, Lime Juice, & Ice Cubes to the Shaker"),
+                .init(string: "Add Ice Cubes in the Highball Glass"),
+                .init(string: "Strain contents into the Highball Glass"),
+                .init(string: "Top up with Ginger Beer"),
+                .init(string: "Garnish with Olives"),
+            ]
+        )
+
+    
     static let espressoMartini: Drink =
         .init(
             name: "Espresso Martini",
@@ -775,6 +802,32 @@ final class Drinks {
             ]
         )
     
+    static let theTradewinds: Drink =
+        .init(
+            name: "The Tradewinds",
+            description: "",
+            image: "The Tradewinds",
+            color: Colors.yellow,
+            year: 1970,
+            base: .rum,
+            origin: Origins.caribbean,
+            equipments: [ Equipments.highballGlass, Equipments.barspoon ],
+            ingredients: [
+                .init(ingredient: Ingredients.goldRum, amount: 30, unit: .milliliters),
+                .init(ingredient: Ingredients.darkRum, amount: 30, unit: .milliliters),
+                .init(ingredient: Ingredients.apricotLiqueur, amount: 30, unit: .milliliters),
+                .init(ingredient: Ingredients.coconutCream, amount: 30, unit: .milliliters),
+                .init(ingredient: Ingredients.lemonJuice, amount: 30, unit: .milliliters),
+                .init(ingredient: Ingredients.iceCrushed),
+            ],
+            steps: [
+                .init(string: "In the Highball Glass add Gold Rum, Dark Rum, Apricot Liqueur, Coconut Cream, & Lemon Juice"),
+                .init(string: "Top up with Crushed Ice"),
+                .init(string: "Stir contents together"),
+                .init(string: "Garnish with Nutmeg & Cocktail Umbrella"),
+            ]
+        )
+    
     static let whiskySour: Drink =
         .init(
             name: "Whisky Sour",
@@ -803,12 +856,39 @@ final class Drinks {
             ]
         )
     
+    static let whiteNegroni: Drink =
+        .init(
+            name: "White Negroni",
+            description: "",
+            image: "White Negroni",
+            color: Colors.gray,
+            year: 2002,
+            base: .gin,
+            origin: Origins.france,
+            equipments: [ Equipments.oldFashionedGlass, Equipments.mixingGlass, Equipments.strainer ],
+            ingredients: [
+                .init(ingredient: Ingredients.gin, amount: 45, unit: .milliliters),
+                .init(ingredient: Ingredients.lilletBlanc, amount: 25, unit: .milliliters),
+                .init(ingredient: Ingredients.suze, amount: 25, unit: .milliliters),
+                .init(ingredient: Ingredients.iceCubes),
+            ],
+            steps: [
+                .init(string: "Add Gin, Suze, Lillet Blanc into the Mixing Glass"),
+                .init(string: "Add Ice Cubes"),
+                .init(string: "Stir for ~20 seconds"),
+                .init(string: "Add Ice Cubes to the Old Fashioned Glass"),
+                .init(string: "Strain contents into the Old Fashioned Glass"),
+                .init(string: "Garnish with Twist of Grapefruit"),
+            ]
+        )
+
+    
     static let whiteRussian: Drink =
         .init(
             name: "White Russian",
             description: "",
             image: "White Russian",
-            color: Colors.white,
+            color: Colors.brown,
             year: 1949,
             base: .gin,
             origin: Origins.belgium,
@@ -836,6 +916,7 @@ final class Drinks {
         daiquiri,
         darkAndStormy,
         dirtyMartini,
+        elDiablo,
         espressoMartini,
         fityFiftyMartini,
         ginFizz,
@@ -858,7 +939,9 @@ final class Drinks {
         rustyNail,
         sazerac,
         sidecar,
+        theTradewinds,
         whiskySour,
+        whiteNegroni,
         whiteRussian,
     ]
     

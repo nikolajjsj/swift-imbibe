@@ -63,6 +63,14 @@ Angostura makes the most famous and widely used type of herbal Bitters. Angostur
         origin: nil,
         description: ""
     )
+    static let apricotLiqueur: Ingredient = Ingredient(
+        name: "Apricot Liqueur",
+        image: "Apricot Liqueur",
+        color: Colors.yellow,
+        strength: 25,
+        origin: nil,
+        description: ""
+    )
     static let bourbonWhisky: Ingredient = Ingredient(
         name: "Bourbon Whisky",
         image: "Bourbon Whisky",
@@ -243,6 +251,14 @@ There are generally considered to be five variations for gin: London Dry, Old To
         origin: nil,
         description: "A soft drink, where the major ingredient is ginger."
     )
+    static let goldRum: Ingredient = Ingredient(
+        name: "Gold Rum",
+        image: "Gold Rum",
+        color: Colors.yellow,
+        strength: 40,
+        origin: nil,
+        description: ""
+    )
     static let ginger: Ingredient = Ingredient(
         name: "Ginger",
         image: "Ginger",
@@ -352,6 +368,14 @@ A coffee liqueur from Mexico.
         image: "Lemon Twist",
         color: Colors.yellow,
         strength: 0,
+        origin: nil,
+        description: ""
+    )
+    static let lilletBlanc: Ingredient = Ingredient(
+        name: "Lillet Blanc",
+        image: "Lillet Blanc",
+        color: Colors.yellow,
+        strength: 17,
         origin: nil,
         description: ""
     )
@@ -514,6 +538,14 @@ All Scotch Whisky must be made in oak barrels for at least 3 years.
         origin: nil,
         description: ""
     )
+    static let suze: Ingredient = Ingredient(
+        name: "Suze",
+        image: "Suze",
+        color: Colors.yellow,
+        strength: 20,
+        origin: nil,
+        description: ""
+    )
     static let sweetVermouth: Ingredient = Ingredient(
         name: "Sweet Vermouth",
         image: "Sweet Vermouth",
@@ -561,6 +593,7 @@ Whisky is made from fermented mash containing various grains, including: barley,
         angosturaBitters,
         angosturaOrangeBitters,
         aperol,
+        apricotLiqueur,
         bourbonWhisky,
         campari,
         calvados,
@@ -580,6 +613,7 @@ Whisky is made from fermented mash containing various grains, including: barley,
         eggWhite,
         gin,
         gingerBeer,
+        goldRum,
         grandMarnier,
         ice,
         iceCrushed,
@@ -590,6 +624,7 @@ Whisky is made from fermented mash containing various grains, including: barley,
         lemon,
         lemonJuice,
         lemonTwist,
+        lilletBlanc,
         lightRum,
         lime,
         limeJuice,
@@ -605,6 +640,7 @@ Whisky is made from fermented mash containing various grains, including: barley,
         scotchWhisky,
         simpleSirup,
         sodaWater,
+        suze,
         sweetVermouth,
         tequila,
         vodka,
