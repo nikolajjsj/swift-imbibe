@@ -7,7 +7,7 @@
 
 import Foundation
 
-class Drinks {
+final class Drinks {
     static let bourbonRenewal: Drink =
         .init(
             name: "Bourbon Renewal",

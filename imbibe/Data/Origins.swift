@@ -7,7 +7,7 @@
 
 import Foundation
 
-class Origins {
+final class Origins {
     static let worldwide: Origin = Origin( name: "Worldwide", flag: "🌎" )
     
     static let belgium: Origin = Origin( name: "Belgium", flag: "🇧🇪" )

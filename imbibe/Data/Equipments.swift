@@ -7,7 +7,7 @@
 
 import Foundation
 
-class Equipments {
+final class Equipments {
     static let barspoon: Equipment = Equipment(
         name: "Barspoon",
         description: "A long-handled spoon used in bartending.",

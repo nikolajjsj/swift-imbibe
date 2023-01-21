@@ -7,7 +7,7 @@
 
 import Foundation
 
-class Ingredients {
+final class Ingredients {
     static let absinthe: Ingredient = Ingredient(
         name: "Absinthe",
         image: "Absinthe",
