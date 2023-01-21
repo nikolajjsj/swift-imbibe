@@ -13,16 +13,7 @@ struct PersistenceController {
     static var preview: PersistenceController = {
         let result = PersistenceController(inMemory: true)
         let viewContext = result.container.viewContext
-        for _ in 0..<10 {
-            let newItem = Item(context: viewContext)
-            newItem.timestamp = Date()
-        }
-        do {
-            try viewContext.save()
-        } catch {
-            let nsError = error as NSError
-            print("Unresolved error \(nsError), \(nsError.userInfo)")
-        }
+        seed(viewContext)
         return result
     }()
 
@@ -41,7 +32,37 @@ struct PersistenceController {
         container.viewContext.automaticallyMergesChangesFromParent = true
     }
     
-    func seed() {
-        /// Seed Core Data with all relevant Drinks data
+    /// Seed Core Data with all relevant Drinks data
+    private static func seed(_ viewContext: NSManagedObjectContext) {
+        // Seed Equipments into core data
+        for e in Equipments.all {
+            let eDB = EquipmentDB(context: viewContext)
+            eDB.name = e.name
+            eDB.note = e.description
+            eDB.image = e.image
+        }
+        
+        // Seed Ingredients into Core Data
+//        for i in Ingredients.all {
+//            let iDB = IngredientDB(context: viewContext)
+//            iDB.name = i.name
+//            iDB.note = i.description
+//            iDB.image = i.image
+//        }
+        
+        // Seed Origin into Core Data
+        for o in Origins.all {
+            let oDB = OriginDB(context: viewContext)
+            oDB.name = o.name
+            oDB.flag = o.flag
+        }
+        
+        do {
+            try viewContext.save()
+        } catch {
+            let nsError = error as NSError
+            print("Unresolved error \(nsError), \(nsError.userInfo)")
+        }
+        
     }
 }
