@@ -6,9 +6,9 @@
         <attribute name="image" optional="YES" attributeType="String"/>
         <attribute name="name" optional="YES" attributeType="String"/>
         <attribute name="note" optional="YES" attributeType="String"/>
-        <attribute name="year" optional="YES"/>
+        <attribute name="year" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
         <relationship name="equipments" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="EquipmentDB" inverseName="drinks" inverseEntity="EquipmentDB"/>
-        <relationship name="ingredients" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="IngredientDB" inverseName="drinks" inverseEntity="IngredientDB"/>
+        <relationship name="ingredients" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="IngredientWithExtraDB" inverseName="drink" inverseEntity="IngredientWithExtraDB"/>
         <relationship name="origin" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="OriginDB" inverseName="drinks" inverseEntity="OriginDB"/>
     </entity>
     <entity name="EquipmentDB" representedClassName="EquipmentDB" syncable="YES" codeGenerationType="class">
@@ -24,8 +24,14 @@
         <attribute name="note" optional="YES" attributeType="String"/>
         <attribute name="strength" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
         <relationship name="alternatives" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="IngredientDB" inverseName="alternatives" inverseEntity="IngredientDB"/>
-        <relationship name="drinks" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="DrinkDB" inverseName="ingredients" inverseEntity="DrinkDB"/>
+        <relationship name="ingredientWithExtra" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="IngredientWithExtraDB" inverseName="ingredient" inverseEntity="IngredientWithExtraDB"/>
         <relationship name="origin" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="OriginDB" inverseName="ingredients" inverseEntity="OriginDB"/>
+    </entity>
+    <entity name="IngredientWithExtraDB" representedClassName="IngredientWithExtraDB" syncable="YES" codeGenerationType="class">
+        <attribute name="amount" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <attribute name="unit" optional="YES" attributeType="String"/>
+        <relationship name="drink" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="DrinkDB" inverseName="ingredients" inverseEntity="DrinkDB"/>
+        <relationship name="ingredient" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="IngredientDB" inverseName="ingredientWithExtra" inverseEntity="IngredientDB"/>
     </entity>
     <entity name="OriginDB" representedClassName="OriginDB" syncable="YES" codeGenerationType="class">
         <attribute name="flag" optional="YES" attributeType="String"/>

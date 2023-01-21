@@ -32,15 +32,48 @@ struct PersistenceController {
         container.viewContext.automaticallyMergesChangesFromParent = true
     }
     
+    private static func findItems<T>(_ viewContext: NSManagedObjectContext, entityName: String, type: T) -> [T] {
+        let fetch = NSFetchRequest<OriginDB>(entityName: entityName)
+        let all = (try! viewContext.execute(fetch)) as! [T]
+        return all
+    }
+    
     /// Seed Core Data with all relevant Drinks data
     private static func seed(_ viewContext: NSManagedObjectContext) {
-        // Seed Ingredients into Core Data
-        for i in Ingredients.all {
-            let iDB = IngredientDB(context: viewContext)
-            iDB.name = i.name
-            iDB.note = i.description
-            iDB.image = i.image
+        let allOrigins = findItems(viewContext, entityName: "OriginDB", type: OriginDB())
+        let allEquipments = findItems(viewContext, entityName: "EquipmentDB", type: EquipmentDB())
+        let allIngredients = findItems(viewContext, entityName: "IngredientDB", type: IngredientDB())
+        
+        for i in Drinks.all {
+            let drink = DrinkDB(context: viewContext)
+            drink.name = i.name
+            drink.note = i.description
+            drink.image = i.image
+            drink.color = i.color.description
+            if let year = i.year { drink.year = Int32(year) }
+            drink.base = i.base
+            drink.origin = allOrigins.filter({(o: OriginDB) -> Bool in
+                return o.name == i.origin.name
+            }).first
+            
+            for item in allEquipments.filter({ e in i.equipments.contains(where: { $0.name == e.name }) }) {
+                item.addToDrinks(drink)
+            }
+//            for item in allIngredients.filter({ e in i.ingredients.contains(where: { $0.ingredient.name == e.name }) }) {
+//            }
+            drink.
+            
+            
+        ingredients: [IngredientWithVolume],
+        steps: [DrinkStep]
         }
+        
+//            if let originName = i.origin?.name {
+//                iDB.origin = allOrigins.filter({(o: OriginDB) -> Bool in
+//                    return o.name == originName
+//                }).first
+//            }
+//            iDB.alternatives = i.alternatives
         
         do {
             try viewContext.save()
@@ -64,6 +97,16 @@ struct PersistenceController {
             let oDB = OriginDB(context: viewContext)
             oDB.name = o.name
             oDB.flag = o.flag
+        }
+        
+        // Seed Ingredients into Core Data
+        for i in Ingredients.all {
+            let iDB = IngredientDB(context: viewContext)
+            iDB.name = i.name
+            iDB.note = i.description
+            iDB.image = i.image
+            iDB.color = i.color.description
+            iDB.strength = Int16(i.strength)
         }
         
         do {
