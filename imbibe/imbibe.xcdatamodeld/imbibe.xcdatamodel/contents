@@ -1,13 +1,36 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="21513" systemVersion="22C65" minimumToolsVersion="Automatic" sourceLanguage="Swift" usedWithCloudKit="YES" userDefinedModelVersionIdentifier="">
+    <entity name="DrinkDB" representedClassName="DrinkDB" syncable="YES" codeGenerationType="class">
+        <attribute name="base" optional="YES" attributeType="Transformable" customClassName="Base"/>
+        <attribute name="color" optional="YES" attributeType="String"/>
+        <attribute name="image" optional="YES" attributeType="String"/>
+        <attribute name="name" optional="YES" attributeType="String"/>
+        <attribute name="note" optional="YES" attributeType="String"/>
+        <attribute name="year" optional="YES"/>
+        <relationship name="equipments" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="EquipmentDB" inverseName="drinks" inverseEntity="EquipmentDB"/>
+        <relationship name="ingredients" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="IngredientDB" inverseName="drinks" inverseEntity="IngredientDB"/>
+        <relationship name="origin" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="OriginDB" inverseName="drinks" inverseEntity="OriginDB"/>
+    </entity>
     <entity name="EquipmentDB" representedClassName="EquipmentDB" syncable="YES" codeGenerationType="class">
         <attribute name="image" optional="YES" attributeType="String"/>
         <attribute name="name" optional="YES" attributeType="String"/>
         <attribute name="note" optional="YES" attributeType="String"/>
+        <relationship name="drinks" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="DrinkDB" inverseName="equipments" inverseEntity="DrinkDB"/>
     </entity>
-    <entity name="IngredientDB" representedClassName="IngredientDB" syncable="YES" codeGenerationType="class"/>
+    <entity name="IngredientDB" representedClassName="IngredientDB" syncable="YES" codeGenerationType="class">
+        <attribute name="color" optional="YES" attributeType="String"/>
+        <attribute name="image" optional="YES" attributeType="String"/>
+        <attribute name="name" optional="YES" attributeType="String"/>
+        <attribute name="note" optional="YES" attributeType="String"/>
+        <attribute name="strength" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <relationship name="alternatives" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="IngredientDB" inverseName="alternatives" inverseEntity="IngredientDB"/>
+        <relationship name="drinks" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="DrinkDB" inverseName="ingredients" inverseEntity="DrinkDB"/>
+        <relationship name="origin" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="OriginDB" inverseName="ingredients" inverseEntity="OriginDB"/>
+    </entity>
     <entity name="OriginDB" representedClassName="OriginDB" syncable="YES" codeGenerationType="class">
         <attribute name="flag" optional="YES" attributeType="String"/>
         <attribute name="name" optional="YES" attributeType="String"/>
+        <relationship name="drinks" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="DrinkDB" inverseName="origin" inverseEntity="DrinkDB"/>
+        <relationship name="ingredients" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="IngredientDB" inverseName="origin" inverseEntity="IngredientDB"/>
     </entity>
 </model>

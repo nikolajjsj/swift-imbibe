@@ -34,6 +34,23 @@ struct PersistenceController {
     
     /// Seed Core Data with all relevant Drinks data
     private static func seed(_ viewContext: NSManagedObjectContext) {
+        // Seed Ingredients into Core Data
+        for i in Ingredients.all {
+            let iDB = IngredientDB(context: viewContext)
+            iDB.name = i.name
+            iDB.note = i.description
+            iDB.image = i.image
+        }
+        
+        do {
+            try viewContext.save()
+        } catch {
+            let nsError = error as NSError
+            print("Unresolved error \(nsError), \(nsError.userInfo)")
+        }
+    }
+    
+    private static func nonRelationalData(_ viewContext: NSManagedObjectContext) {
         // Seed Equipments into core data
         for e in Equipments.all {
             let eDB = EquipmentDB(context: viewContext)
@@ -41,14 +58,6 @@ struct PersistenceController {
             eDB.note = e.description
             eDB.image = e.image
         }
-        
-        // Seed Ingredients into Core Data
-//        for i in Ingredients.all {
-//            let iDB = IngredientDB(context: viewContext)
-//            iDB.name = i.name
-//            iDB.note = i.description
-//            iDB.image = i.image
-//        }
         
         // Seed Origin into Core Data
         for o in Origins.all {
@@ -63,6 +72,5 @@ struct PersistenceController {
             let nsError = error as NSError
             print("Unresolved error \(nsError), \(nsError.userInfo)")
         }
-        
     }
 }
