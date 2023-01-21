@@ -16,30 +16,20 @@ struct IngredientCard: View {
         let background = ingredient.color
         let foreground = background.contastColor
         
-        ZStack {
+        HStack {
             if let image = UIImage.init(named: ingredient.image) {
                 Image(uiImage: image)
                     .interpolation(.none)
                     .resizable()
-                    .scaledToFill()
+                    .scaledToFit()
                     .frame(width: 40, height: 80)
-                    .blur(radius: 20)
             }
-            HStack {
-                if let image = UIImage.init(named: ingredient.image) {
-                    Image(uiImage: image)
-                        .interpolation(.none)
-                        .resizable()
-                        .scaledToFit()
-                        .frame(width: 40, height: 80)
-                }
-                
-                VStack(alignment: .leading) {
-                    Text(ingredient.name).font(.headline).lineLimit(2).multilineTextAlignment(.leading)
-                    Text("\(ingredient.strength)%").opacity(0.75)
-                }
-                Spacer()
+            
+            VStack(alignment: .leading) {
+                Text(ingredient.name).font(.headline).lineLimit(2).multilineTextAlignment(.leading)
+                Text("\(ingredient.strength)%").opacity(0.75)
             }
+            Spacer()
         }
         .foregroundColor(foreground)
         .padding(.horizontal)

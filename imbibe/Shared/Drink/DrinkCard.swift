@@ -16,34 +16,23 @@ struct DrinkCard: View {
         let background = drink.color
         let foreground = background.contastColor
         
-        ZStack {
+        HStack {
             if let image = UIImage.init(named: drink.image) {
                 Image(uiImage: image)
                     .interpolation(.none)
                     .resizable()
-                    .scaledToFill()
+                    .scaledToFit()
                     .frame(width: 40, height: 80)
-                    .blur(radius: 20)
             }
             
-            HStack {
-                if let image = UIImage.init(named: drink.image) {
-                    Image(uiImage: image)
-                        .interpolation(.none)
-                        .resizable()
-                        .scaledToFit()
-                        .frame(width: 40, height: 80)
-                }
-                
-                VStack(alignment: .leading) {
-                    Text(drink.name).font(.headline).multilineTextAlignment(.leading)
-                    VStack {
-                        Text("\(drink.ingredients.count) ingredients")
-                        Text("\(drink.strength)% strength")
-                    }.font(.footnote).opacity(0.8)
-                }
-                Spacer()
+            VStack(alignment: .leading) {
+                Text(drink.name).font(.headline).multilineTextAlignment(.leading)
+                VStack {
+                    Text("\(drink.ingredients.count) ingredients")
+                    Text("\(drink.strength)% strength")
+                }.font(.footnote).opacity(0.8)
             }
+            Spacer()
         }
         .foregroundColor(foreground)
         .padding(.horizontal)
