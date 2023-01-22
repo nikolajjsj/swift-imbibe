@@ -7,23 +7,24 @@
 
 import Foundation
 
-enum UserDefaultKeys: String, CaseIterable {
-    case unit = "default_unit"
-    case drinkStrength = "default_drink_strength"
-    case drinkEra = "default_drink_era"
+enum LocalStorageKeys: String, CaseIterable {
+    case unit = "default_volumetric_unit"
+    
+    case favorites = "user_favorites"
+    case barIngredients = "user_bar_ingredients"
 }
 
-final class UserDefaultsHelper {
-    static func set<T>(value: T, key: UserDefaultKeys) {
+final class LocalStorage {
+    static func set<T>(value: T, key: LocalStorageKeys) {
         UserDefaults.standard.set(value, forKey: key.rawValue)
     }
     
-    static func get<T>(type: T.Type, forKey: UserDefaultKeys) -> T? {
+    static func get<T>(type: T.Type, forKey: LocalStorageKeys) -> T? {
         let value = UserDefaults.standard.object(forKey: forKey.rawValue) as? T
         return value
     }
     
-    static func remove(key: UserDefaultKeys) {
+    static func remove(key: LocalStorageKeys) {
         UserDefaults.standard.removeObject(forKey: key.rawValue)
     }
 }

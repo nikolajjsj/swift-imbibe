@@ -13,10 +13,11 @@ class AppState: ObservableObject {
     @Published var discoverPath: [Route] = []
     @Published var drinksPath: [Route] = []
     @Published var ingredientsPath: [Route] = []
+    @Published var barPath: [Route] = []
 }
 
 enum Tab: Hashable {
-    case discover, drinks, ingredients, settings
+    case discover, drinks, ingredients, bar, settings
 }
 
 enum Route: Hashable {}

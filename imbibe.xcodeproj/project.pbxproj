@@ -7,14 +7,20 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D1174452297C2D80009CAFC7 /* Icons.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1174451297C2D80009CAFC7 /* Icons.swift */; };
 		D1174455297C2F67009CAFC7 /* BarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1174454297C2F67009CAFC7 /* BarView.swift */; };
+		D1174458297D2030009CAFC7 /* MyBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1174457297D2030009CAFC7 /* MyBarView.swift */; };
+		D117445A297D203B009CAFC7 /* FavoritesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1174459297D203B009CAFC7 /* FavoritesView.swift */; };
+		D117445C297D23CF009CAFC7 /* ErrorMessageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D117445B297D23CF009CAFC7 /* ErrorMessageView.swift */; };
 		D117445E297D2A21009CAFC7 /* BooksView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D117445D297D2A21009CAFC7 /* BooksView.swift */; };
+		D1174462297D2E07009CAFC7 /* Favorites-ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1174461297D2E07009CAFC7 /* Favorites-ViewModel.swift */; };
+		D1174465297D440C009CAFC7 /* ArrayExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1174464297D440C009CAFC7 /* ArrayExtensions.swift */; };
 		D1194A672971A4A900E4C1E7 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1194A662971A4A900E4C1E7 /* SettingsView.swift */; };
 		D1308BAC2976D090002BF99C /* BundleExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1308BAB2976D090002BF99C /* BundleExtensions.swift */; };
 		D16D80942976985600D163B3 /* DrinkFilters.swift in Sources */ = {isa = PBXBuildFile; fileRef = D16D80932976985600D163B3 /* DrinkFilters.swift */; };
 		D174C2D72976E86A00E93262 /* DrinksList.swift in Sources */ = {isa = PBXBuildFile; fileRef = D174C2D62976E86A00E93262 /* DrinksList.swift */; };
 		D17BB61D29732160004F08F7 /* ViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D17BB61C29732160004F08F7 /* ViewExtensions.swift */; };
-		D17BB61F297345BA004F08F7 /* UserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = D17BB61E297345BA004F08F7 /* UserDefaults.swift */; };
+		D17BB61F297345BA004F08F7 /* LocalStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = D17BB61E297345BA004F08F7 /* LocalStorage.swift */; };
 		D18CE3812976BDE700B997CD /* DrinksView-ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D18CE3802976BDE700B997CD /* DrinksView-ViewModel.swift */; };
 		D1BB5B2929741F8000CF52EE /* IngredientDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1BB5B2829741F8000CF52EE /* IngredientDetails.swift */; };
 		D1BB5B2B29741FE600CF52EE /* IngredientDrinksList.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1BB5B2A29741FE600CF52EE /* IngredientDrinksList.swift */; };
@@ -26,7 +32,7 @@
 		D1E5B3B32972D052001DF274 /* NumberExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1E5B3B22972D052001DF274 /* NumberExtensions.swift */; };
 		D1E5B3B52972D1C8001DF274 /* IngredientsInspector.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1E5B3B42972D1C8001DF274 /* IngredientsInspector.swift */; };
 		D1E5BBCB29705D2500BA60F9 /* WrappingHStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1E5BBCA29705D2500BA60F9 /* WrappingHStack.swift */; };
-		D1F0087F296EBB90007E09B7 /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1F0087E296EBB90007E09B7 /* AppState.swift */; };
+		D1F0087F296EBB90007E09B7 /* AppState-ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1F0087E296EBB90007E09B7 /* AppState-ViewModel.swift */; };
 		D1F00881296EC065007E09B7 /* DrinkStep.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1F00880296EC065007E09B7 /* DrinkStep.swift */; };
 		D1F00883296EC078007E09B7 /* Ingredient.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1F00882296EC078007E09B7 /* Ingredient.swift */; };
 		D1F00885296EC0A8007E09B7 /* Equipment.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1F00884296EC0A8007E09B7 /* Equipment.swift */; };
@@ -57,14 +63,19 @@
 /* Begin PBXFileReference section */
 		D1174451297C2D80009CAFC7 /* Icons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Icons.swift; sourceTree = "<group>"; };
 		D1174454297C2F67009CAFC7 /* BarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarView.swift; sourceTree = "<group>"; };
+		D1174457297D2030009CAFC7 /* MyBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyBarView.swift; sourceTree = "<group>"; };
+		D1174459297D203B009CAFC7 /* FavoritesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesView.swift; sourceTree = "<group>"; };
+		D117445B297D23CF009CAFC7 /* ErrorMessageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorMessageView.swift; sourceTree = "<group>"; };
 		D117445D297D2A21009CAFC7 /* BooksView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BooksView.swift; sourceTree = "<group>"; };
+		D1174461297D2E07009CAFC7 /* Favorites-ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Favorites-ViewModel.swift"; sourceTree = "<group>"; };
+		D1174464297D440C009CAFC7 /* ArrayExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArrayExtensions.swift; sourceTree = "<group>"; };
 		D1194A662971A4A900E4C1E7 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		D1308BAB2976D090002BF99C /* BundleExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BundleExtensions.swift; sourceTree = "<group>"; };
 		D1520ED02978326A006C1519 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		D16D80932976985600D163B3 /* DrinkFilters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrinkFilters.swift; sourceTree = "<group>"; };
 		D174C2D62976E86A00E93262 /* DrinksList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrinksList.swift; sourceTree = "<group>"; };
 		D17BB61C29732160004F08F7 /* ViewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewExtensions.swift; sourceTree = "<group>"; };
-		D17BB61E297345BA004F08F7 /* UserDefaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaults.swift; sourceTree = "<group>"; };
+		D17BB61E297345BA004F08F7 /* LocalStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalStorage.swift; sourceTree = "<group>"; };
 		D18CE3802976BDE700B997CD /* DrinksView-ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DrinksView-ViewModel.swift"; sourceTree = "<group>"; };
 		D1BB5B2829741F8000CF52EE /* IngredientDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IngredientDetails.swift; sourceTree = "<group>"; };
 		D1BB5B2A29741FE600CF52EE /* IngredientDrinksList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IngredientDrinksList.swift; sourceTree = "<group>"; };
@@ -76,7 +87,7 @@
 		D1E5B3B22972D052001DF274 /* NumberExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberExtensions.swift; sourceTree = "<group>"; };
 		D1E5B3B42972D1C8001DF274 /* IngredientsInspector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IngredientsInspector.swift; sourceTree = "<group>"; };
 		D1E5BBCA29705D2500BA60F9 /* WrappingHStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WrappingHStack.swift; sourceTree = "<group>"; };
-		D1F0087E296EBB90007E09B7 /* AppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
+		D1F0087E296EBB90007E09B7 /* AppState-ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AppState-ViewModel.swift"; sourceTree = "<group>"; };
 		D1F00880296EC065007E09B7 /* DrinkStep.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrinkStep.swift; sourceTree = "<group>"; };
 		D1F00882296EC078007E09B7 /* Ingredient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ingredient.swift; sourceTree = "<group>"; };
 		D1F00884296EC0A8007E09B7 /* Equipment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Equipment.swift; sourceTree = "<group>"; };
@@ -121,6 +132,8 @@
 			isa = PBXGroup;
 			children = (
 				D1174454297C2F67009CAFC7 /* BarView.swift */,
+				D1174457297D2030009CAFC7 /* MyBarView.swift */,
+				D1174459297D203B009CAFC7 /* FavoritesView.swift */,
 				D117445D297D2A21009CAFC7 /* BooksView.swift */,
 			);
 			path = Bar;
@@ -133,6 +146,14 @@
 				D1FDAE41297AA18700D69804 /* Colors.swift */,
 			);
 			path = Constants;
+			sourceTree = "<group>";
+		};
+		D1174463297D2F58009CAFC7 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				D17BB61E297345BA004F08F7 /* LocalStorage.swift */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 		D1194A652971A4A100E4C1E7 /* Settings */ = {
@@ -188,8 +209,8 @@
 		D1F0087D296EBB86007E09B7 /* Environments */ = {
 			isa = PBXGroup;
 			children = (
-				D1F0087E296EBB90007E09B7 /* AppState.swift */,
-				D17BB61E297345BA004F08F7 /* UserDefaults.swift */,
+				D1F0087E296EBB90007E09B7 /* AppState-ViewModel.swift */,
+				D1174461297D2E07009CAFC7 /* Favorites-ViewModel.swift */,
 			);
 			path = Environments;
 			sourceTree = "<group>";
@@ -261,6 +282,7 @@
 				D1E5B3B22972D052001DF274 /* NumberExtensions.swift */,
 				D17BB61C29732160004F08F7 /* ViewExtensions.swift */,
 				D1308BAB2976D090002BF99C /* BundleExtensions.swift */,
+				D1174464297D440C009CAFC7 /* ArrayExtensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -419,18 +441,22 @@
 				D1F79045296E8DB200F3CB30 /* DiscoverView.swift in Sources */,
 				D1DD34BE297412AF006EE244 /* EquipmentView.swift in Sources */,
 				D16D80942976985600D163B3 /* DrinkFilters.swift in Sources */,
+				D1174452297C2D80009CAFC7 /* Icons.swift in Sources */,
 				D1E5B3B52972D1C8001DF274 /* IngredientsInspector.swift in Sources */,
 				D1F7902E296D84CD00F3CB30 /* ImageExtensions.swift in Sources */,
 				D1F79014296D75EE00F3CB30 /* DrinksView.swift in Sources */,
 				D1BB5B2929741F8000CF52EE /* IngredientDetails.swift in Sources */,
 				D1174455297C2F67009CAFC7 /* BarView.swift in Sources */,
 				D1E5B3B32972D052001DF274 /* NumberExtensions.swift in Sources */,
-				D17BB61F297345BA004F08F7 /* UserDefaults.swift in Sources */,
+				D17BB61F297345BA004F08F7 /* LocalStorage.swift in Sources */,
 				D1F79030296D879600F3CB30 /* ColorExtensions.swift in Sources */,
 				D1F79036296DC1EB00F3CB30 /* Equipments.swift in Sources */,
+				D1174458297D2030009CAFC7 /* MyBarView.swift in Sources */,
 				D1E5B3AD2972C9D3001DF274 /* EquipmentBox.swift in Sources */,
-				D1F0087F296EBB90007E09B7 /* AppState.swift in Sources */,
+				D1F0087F296EBB90007E09B7 /* AppState-ViewModel.swift in Sources */,
+				D117445C297D23CF009CAFC7 /* ErrorMessageView.swift in Sources */,
 				D1DD34B929740377006EE244 /* DrinkDetails.swift in Sources */,
+				D1174465297D440C009CAFC7 /* ArrayExtensions.swift in Sources */,
 				D1F79032296DC1BE00F3CB30 /* Ingredients.swift in Sources */,
 				D1F00883296EC078007E09B7 /* Ingredient.swift in Sources */,
 				D174C2D72976E86A00E93262 /* DrinksList.swift in Sources */,
@@ -438,10 +464,12 @@
 				D1F7903A296E803E00F3CB30 /* AppView.swift in Sources */,
 				D1F79047296E90C800F3CB30 /* DrinkCard.swift in Sources */,
 				D1F7902C296D841F00F3CB30 /* DrinkView.swift in Sources */,
+				D117445A297D203B009CAFC7 /* FavoritesView.swift in Sources */,
 				D1F00885296EC0A8007E09B7 /* Equipment.swift in Sources */,
 				D1194A672971A4A900E4C1E7 /* SettingsView.swift in Sources */,
 				D17BB61D29732160004F08F7 /* ViewExtensions.swift in Sources */,
 				D1F79034296DC1DA00F3CB30 /* Origins.swift in Sources */,
+				D1174462297D2E07009CAFC7 /* Favorites-ViewModel.swift in Sources */,
 				D1F79049296E916C00F3CB30 /* IngredientCard.swift in Sources */,
 				D18CE3812976BDE700B997CD /* DrinksView-ViewModel.swift in Sources */,
 				D1F7900F296D75EE00F3CB30 /* Persistence.swift in Sources */,

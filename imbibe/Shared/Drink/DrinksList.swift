@@ -8,7 +8,6 @@
 import SwiftUI
 
 struct DrinksList: View {
-    let label: String
     let drinks: [Drink]
     
     @State private var query = ""
@@ -21,7 +20,6 @@ struct DrinksList: View {
                 }
             }
             .padding(.horizontal)
-            .navigationTitle(label)
         }
         .searchable(text: $query, placement: .navigationBarDrawer(displayMode: .always))
     }
@@ -37,6 +35,8 @@ struct DrinksList: View {
 
 struct DrinksList_Previews: PreviewProvider {
     static var previews: some View {
-        DrinksList(label: "Title", drinks: [])
+        NavigationView {
+            DrinksList(drinks: [])
+        }
     }
 }

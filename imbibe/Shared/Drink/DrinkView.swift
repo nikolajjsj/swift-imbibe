@@ -8,11 +8,15 @@
 import SwiftUI
 
 struct DrinkView: View {
+    @EnvironmentObject private var favorites: FavoritesViewModel
+    
     let drink: Drink
     
     var body: some View {
+        let isFavorited = favorites.favorites.contains(where: { $0.name == drink.name })
+        
         ScrollView {
-            ZStack(alignment: .top) {
+            ZStack(alignment: .topTrailing) {
                 if let image = UIImage.init(named: drink.image) {
                     Image(uiImage: image)
                         .resizable()
@@ -42,6 +46,18 @@ struct DrinkView: View {
                     
                     DrinkStepInstructions(drink)
                 }
+                
+                Button {
+                    
+                } label: {
+                    Image(systemName: isFavorited ? "star.fill" : "star")
+                        .resizable()
+                        .frame(width: 25, height: 25)
+                        .foregroundColor(.black)
+                        .padding(4)
+                        .background(Circle().fill(.white.opacity(0.2)))
+                        .onTapGesture { favorites.toggleDrink(drink) }
+                }
             }
             .padding()
         }
@@ -54,5 +70,6 @@ struct DrinkView_Previews: PreviewProvider {
         NavigationView {
             DrinkView(drink: Drinks.mojito)
         }
+        .environmentObject(FavoritesViewModel())
     }
 }

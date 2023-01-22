@@ -16,7 +16,7 @@ struct AppView: View {
                 DiscoverView().navigationDestination(for: Route.self, destination: routeView)
             }
             .tabItem {
-                Image(systemName: "binoculars")
+                Image(systemName: Icons.discover)
                 Text("Discover")
             }
             .tag(Tab.discover)
@@ -25,7 +25,7 @@ struct AppView: View {
                 DrinksView().navigationDestination(for: Route.self, destination: routeView)
             }
             .tabItem {
-                Image(systemName: "wineglass")
+                Image(systemName: Icons.drinks)
                 Text("Drinks")
             }
             .tag(Tab.drinks)
@@ -35,13 +35,23 @@ struct AppView: View {
                     .navigationDestination(for: Route.self, destination: routeView)
             }
             .tabItem {
-                Image(systemName: "cooktop")
+                Image(systemName: Icons.ingredients)
                 Text("Ingredients")
             }
             .tag(Tab.ingredients)
             
+            NavigationStack(path: $appState.barPath) {
+                BarView()
+                    .navigationDestination(for: Route.self, destination: routeView)
+            }
+            .tabItem {
+                Image(systemName: Icons.bar)
+                Text("Bar")
+            }
+            .tag(Tab.bar)
+            
             SettingsView().tabItem {
-                Image(systemName: "gear")
+                Image(systemName: Icons.settings)
                 Text("Settings")
             }
             .tag(Tab.settings)

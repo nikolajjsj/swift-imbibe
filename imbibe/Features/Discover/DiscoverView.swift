@@ -8,8 +8,6 @@
 import SwiftUI
 
 struct DiscoverView: View {
-    @EnvironmentObject var appState: AppState
-    
     var body: some View {
         let columns = [ GridItem(.flexible()), GridItem(.flexible()) ]
         
@@ -23,7 +21,8 @@ struct DiscoverView: View {
                         DrinkCard(drink: d)
                     }
                     NavigationLink {
-                        DrinksList(label: "Iconic Drinks", drinks: Drinks.allIconic)
+                        DrinksList(drinks: Drinks.allIconic)
+                            .navigationTitle("Iconic Drinks")
                     } label: {
                         FillLabel("\(Drinks.allIconic.count - 5) more")
                     }.buttonStyle(.bordered)
@@ -35,7 +34,8 @@ struct DiscoverView: View {
                 LazyVGrid(columns: columns) {
                     ForEach(Drink.Base.all, id: \.rawValue) { base in
                         NavigationLink {
-                            DrinksList(label: "\(base.rawValue) Based", drinks: base.drinks)
+                            DrinksList(drinks: base.drinks)
+                                .navigationTitle("\(base.rawValue) Based")
                         } label: {
                             if let image = base.image {
                                 Spacer()
@@ -56,7 +56,8 @@ struct DiscoverView: View {
                 LazyVGrid(columns: columns) {
                     ForEach(Array(Drinks.countries.keys).sorted(by: { $0.name < $1.name }), id: \.name) { origin in
                         NavigationLink {
-                            DrinksList(label: "\(origin.flag)\(origin.name)", drinks: Drinks.countries[origin] ?? [])
+                            DrinksList(drinks: Drinks.countries[origin] ?? [])
+                                .navigationTitle("\(origin.flag)\(origin.name)")
                         } label: {
                             Spacer()
                             Text(origin.flag).font(.title)
