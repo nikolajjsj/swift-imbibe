@@ -6,38 +6,49 @@
 //
 
 import SwiftUI
-#if canImport(UIKit)
-import UIKit
-#elseif canImport(AppKit)
-import AppKit
-#endif
 
 extension Color {
-    var components: (red: CGFloat, green: CGFloat, blue: CGFloat, opacity: CGFloat) {
-#if canImport(UIKit)
-        typealias NativeColor = UIColor
-#elseif canImport(AppKit)
-        typealias NativeColor = NSColor
-#endif
+    enum Brightness {
+        case light, medium, dark, transparent
         
-        var r: CGFloat = 0
-        var g: CGFloat = 0
-        var b: CGFloat = 0
-        var o: CGFloat = 0
-        
-        guard NativeColor(self).getRed(&r, green: &g, blue: &b, alpha: &o) else {
-            return (0, 0, 0, 0)
+        private enum Threshold {
+            static let transparent: CGFloat = 0.1
+            static let light: CGFloat = 0.75
+            static let dark: CGFloat = 0.3
         }
         
-        return (r, g, b, o)
+        init(brightness: CGFloat, alpha: CGFloat) {
+            if alpha < Threshold.transparent {
+                self = .transparent
+            } else if brightness > Threshold.light {
+                self = .light
+            } else if brightness < Threshold.dark {
+                self = .dark
+            } else {
+                self = .medium
+            }
+        }
     }
     
-    var contastColor: Self {
-        var r, g, b, a: CGFloat
-        (r, g, b, a) = (0, 0, 0, 0)
-        UIColor(self).getRed(&r, green: &g, blue: &b, alpha: &a)
-        let lum = 0.2126 * r + 0.7152 * g + 0.0722 * b
-        return lum >= 0.5 ? Color.black : Color.white
+    var brightness: Brightness {
+        var b: CGFloat = 0
+        var a: CGFloat = 0
+        let uiColor = UIColor(self)
+        uiColor.getHue(nil, saturation: nil, brightness: &b, alpha: &a)
+        return .init(brightness: b, alpha: a)
+    }
+    
+    var contrastColor: Self {
+        switch brightness {
+        case .light:
+            return .black
+        case .medium:
+            return .black
+        case .dark:
+            return .white
+        case .transparent:
+            return Color.label
+        }
     }
     
 #if os(macOS)

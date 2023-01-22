@@ -14,7 +14,6 @@ struct IngredientCard: View {
     
     var body: some View {
         let background = ingredient.color
-        let foreground = background.contastColor
         
         HStack {
             if let image = UIImage.init(named: ingredient.image) {
@@ -26,12 +25,18 @@ struct IngredientCard: View {
             }
             
             VStack(alignment: .leading) {
-                Text(ingredient.name).font(.headline).lineLimit(2).multilineTextAlignment(.leading)
-                Text("\(ingredient.strength)%").opacity(0.75)
+                Text(ingredient.name)
+                    .font(.headline)
+                    .lineLimit(2)
+                    .multilineTextAlignment(.leading)
+                
+                Text("\(ingredient.strength)%")
+                    .opacity(0.9)
             }
+            .foregroundColor(background.contrastColor)
+            
             Spacer()
         }
-        .foregroundColor(foreground)
         .padding(.horizontal)
         .padding(.vertical, 8)
         .background(background)

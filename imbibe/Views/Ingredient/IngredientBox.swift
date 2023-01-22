@@ -18,7 +18,7 @@ struct IngredientBox: View {
     
     var body: some View {
         let bg = ingredient.color
-        let fg =  bg.contastColor
+        let fg =  bg.contrastColor
         
         Text(ingredient.name)
             .padding(.horizontal, 12)

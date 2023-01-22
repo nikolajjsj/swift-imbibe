@@ -53,7 +53,7 @@ struct IngredientsInspector: View {
     @ViewBuilder
     func IngredientDetailPill(_ ingredient: IngredientWithVolume, servings: Int, unit: UnitVolume) -> some View {
         let bg = ingredient.ingredient.color
-        let fg = bg.contastColor
+        let fg = bg.contrastColor
         
         HStack {
             if ingredient.unit?.symbol == "dash" || ingredient.unit?.symbol == "drop" || ingredient.unit?.symbol == "piece" {
