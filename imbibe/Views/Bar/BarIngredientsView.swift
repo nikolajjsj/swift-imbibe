@@ -7,34 +7,9 @@
 
 import SwiftUI
 
-struct MyBarView: View {
-    @AppStorage(LocalStorageKeys.barIngredients.rawValue) var selected: [String] = []
-    
-    var body: some View {
-        TabView {
-            SelectableIngredients()
-                .tabItem {
-                    Text("Ingredients (\(selected.count))")
-                    Image(systemName: Icons.ingredients)
-                }
-            
-            DrinksList(drinks: drinks)
-                .tabItem {
-                    Text("Drinks (\(drinks.count))")
-                    Image(systemName: Icons.drinks)
-                }
-        }
-        .navigationTitle("My Bar")
-        .navigationBarTitleDisplayMode(.inline)
-    }
-    
-    var drinks: [Drink] { Drinks.available(selections: selected) }
-}
-
-struct SelectableIngredients: View {
+struct BarIngredientsView: View {
     @AppStorage(LocalStorageKeys.barIngredients.rawValue) var selected: [String] = []
     @State private var query = ""
-    
     @State private var all: [Ingredient] = Ingredients.all
     
     var body: some View {
@@ -74,8 +49,9 @@ struct SelectableIngredients: View {
             .padding(.horizontal)
         }
         .searchable(text: $query, placement: .navigationBarDrawer(displayMode: .always))
+        .navigationBarTitle("My Ingredients")
     }
-   
+    
     @MainActor
     var filtered: [Ingredient] {
         if query.isEmpty {
@@ -88,10 +64,10 @@ struct SelectableIngredients: View {
     var drinks: [Drink] { Drinks.available(selections: selected) }
 }
 
-struct MyBarView_Previews: PreviewProvider {
+struct BarIngredientsView_Previews: PreviewProvider {
     static var previews: some View {
         NavigationView {
-            MyBarView()
+            BarIngredientsView()
         }
     }
 }

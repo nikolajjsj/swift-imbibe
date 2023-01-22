@@ -50,7 +50,7 @@ Angostura makes the most famous and widely used type of herbal Bitters. Angostur
     static let angosturaOrangeBitters: Ingredient = Ingredient(
         name: "Angostura Orange Bitters",
         image: "Angostura Orange Bitters",
-        color: Colors.white,
+        color: Colors.orange,
         strength: 28,
         origin: Origins.trinidadAndTobago,
         description: "The Orange version of the famous Angostura Bitters."
@@ -398,7 +398,7 @@ A coffee liqueur from Mexico.
     static let oliveBrine: Ingredient = Ingredient(
         name: "Olive Brine",
         image: "Olives",
-        color: Colors.green,
+        color: Colors.brown,
         strength: 0,
         origin: nil,
         description: ""
@@ -406,7 +406,7 @@ A coffee liqueur from Mexico.
     static let olives: Ingredient = Ingredient(
         name: "Olives",
         image: "Olives",
-        color: Colors.green,
+        color: Colors.brown,
         strength: 0,
         origin: nil,
         description: ""

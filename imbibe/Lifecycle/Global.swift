@@ -1,19 +1,26 @@
 //
-//  AppState.swift
+//  Global.swift
 //  imbibe
 //
-//  Created by Nikolaj Johannes Skole Jensen on 11/01/2023.
+//  Created by Nikolaj Johannes Skole Jensen on 22/01/2023.
 //
 
-import SwiftUI
+import Foundation
 
-class AppState: ObservableObject {
+class Global: ObservableObject {
+    // MARK: - Wrapped Properties
     @Published var tab: Tab = .discover
     
     @Published var discoverPath: [Route] = []
     @Published var drinksPath: [Route] = []
     @Published var ingredientsPath: [Route] = []
     @Published var barPath: [Route] = []
+    
+    // MARK: - Properties
+    
+    var currentTab: Tab {
+        return tab
+    }
 }
 
 enum Tab: Hashable {

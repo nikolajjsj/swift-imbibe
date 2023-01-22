@@ -8,11 +8,11 @@
 import SwiftUI
 
 struct AppView: View {
-    @EnvironmentObject var appState: AppState
+    @EnvironmentObject var global: Global
     
     var body: some View {
-        TabView(selection: $appState.tab) {
-            NavigationStack(path: $appState.discoverPath) {
+        TabView(selection: $global.tab) {
+            NavigationStack(path: $global.discoverPath) {
                 DiscoverView().navigationDestination(for: Route.self, destination: routeView)
             }
             .tabItem {
@@ -21,7 +21,7 @@ struct AppView: View {
             }
             .tag(Tab.discover)
             
-            NavigationStack(path: $appState.drinksPath) {
+            NavigationStack(path: $global.drinksPath) {
                 DrinksView().navigationDestination(for: Route.self, destination: routeView)
             }
             .tabItem {
@@ -30,7 +30,7 @@ struct AppView: View {
             }
             .tag(Tab.drinks)
             
-            NavigationStack(path: $appState.ingredientsPath) {
+            NavigationStack(path: $global.ingredientsPath) {
                 IngredientsView()
                     .navigationDestination(for: Route.self, destination: routeView)
             }
@@ -40,7 +40,7 @@ struct AppView: View {
             }
             .tag(Tab.ingredients)
             
-            NavigationStack(path: $appState.barPath) {
+            NavigationStack(path: $global.barPath) {
                 BarView()
                     .navigationDestination(for: Route.self, destination: routeView)
             }
@@ -72,6 +72,6 @@ struct AppView: View {
 struct AppView_Previews: PreviewProvider {
     static var previews: some View {
         AppView()
-            .environmentObject(AppState())
+            .environmentObject(Global())
     }
 }

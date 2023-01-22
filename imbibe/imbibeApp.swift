@@ -9,7 +9,7 @@ import SwiftUI
 
 @main
 struct imbibeApp: App {
-    @StateObject var appState = AppState()
+    let global = Global()
     @StateObject var favoritesVM = FavoritesViewModel()
     
     let persistenceController = PersistenceController.shared
@@ -17,9 +17,12 @@ struct imbibeApp: App {
     var body: some Scene {
         WindowGroup {
             AppView()
-                .environmentObject(appState)
+                .environmentObject(global)
                 .environmentObject(favoritesVM)
                 .environment(\.managedObjectContext, persistenceController.container.viewContext)
+                .onAppear {
+                    favoritesVM.prepare(with: global)
+                }
         }
     }
 }

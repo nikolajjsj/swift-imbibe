@@ -14,11 +14,21 @@ struct BarView: View {
     var body: some View {
         List {
             NavigationLink {
-                MyBarView()
+                BarDrinksView()
             } label: {
                 ListItem(
-                    image: "Bar",
-                    title: "My Bar (\(drinks.count))",
+                    image: "Drinks",
+                    title: "Drinks (\(drinks.count))",
+                    subtitle: "Select ingredients to visualize the power of your personal bar"
+                )
+            }
+            
+            NavigationLink {
+                BarIngredientsView()
+            } label: {
+                ListItem(
+                    image: "Ingredients",
+                    title: "Ingredients (\(selected.count))",
                     subtitle: "Select ingredients to visualize the power of your personal bar"
                 )
             }
@@ -70,7 +80,7 @@ struct BarView: View {
             Image(image)
                 .resizable()
                 .scaledToFit()
-                .frame(width: 80, height: 80)
+                .frame(width: 90, height: 90)
                 .padding(.trailing)
             
             VStack(alignment: .leading) {

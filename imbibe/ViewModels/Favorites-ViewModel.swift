@@ -7,13 +7,13 @@
 
 import Foundation
 
-final class FavoritesViewModel: ObservableObject {
+final class FavoritesViewModel: ViewModel {
     @Published private(set) var favorites: [Drink] = []
     
+    var global: Global?
+    
     init() {
-        DispatchQueue.main.async {
-            self.loadFromLocalStorage()
-        }
+        self.loadFromLocalStorage()
     }
     
     func toggleDrink(_ drink: Drink) {
