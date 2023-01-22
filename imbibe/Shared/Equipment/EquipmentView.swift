@@ -28,7 +28,7 @@ struct EquipmentView: View {
                 Text(equipment.name).font(.headline)
                 
                 Text(equipment.description)
-            }.padding(.horizontal)
+            }.padding()
         }
         .presentationDetents([.medium, .large])
     }

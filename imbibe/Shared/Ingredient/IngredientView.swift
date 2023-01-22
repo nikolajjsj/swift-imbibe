@@ -40,7 +40,7 @@ struct IngredientView: View {
                     
                     IngredientDrinksList(ingredient)
                 }
-            }.padding(.horizontal)
+            }.padding()
         }
         .presentationDetents([.medium, .large])
     }

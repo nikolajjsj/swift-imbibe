@@ -43,7 +43,7 @@ struct DrinkView: View {
                     DrinkStepInstructions(drink)
                 }
             }
-            .padding(.horizontal)
+            .padding()
         }
         .presentationDetents([.medium, .large])
     }
