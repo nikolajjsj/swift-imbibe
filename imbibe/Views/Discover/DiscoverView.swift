@@ -11,8 +11,19 @@ struct DiscoverView: View {
     var body: some View {
         let columns = [ GridItem(.flexible()), GridItem(.flexible()) ]
         
-        ScrollView {
+        ScrollView(.vertical) {
             VStack(alignment: .leading) {
+                if let image = UIImage.init(named: "Ingredients") {
+                    HStack {
+                        Spacer()
+                        Image(uiImage: image)
+                            .resizable()
+                            .scaledToFit()
+                            .frame(maxWidth: 250)
+                        Spacer()
+                    }.padding(.bottom, 24)
+                }
+                
                 Text("Base Spirit")
                     .font(.headline)
                     .foregroundColor(.gray)
@@ -28,12 +39,13 @@ struct DiscoverView: View {
                                     .resizable()
                                     .scaledToFit()
                                     .frame(maxHeight: 50)
-                                    .padding(.vertical, 8)
+                                    .padding(.vertical, 5)
                             }
                             FillLabel(base.rawValue)
                         }.buttonStyle(.bordered)
                     }
-                }.padding(.bottom, 42)
+                }.padding(.bottom, 24)
+                
                 
                 Text("Origins")
                     .font(.headline)
@@ -49,11 +61,12 @@ struct DiscoverView: View {
                             FillLabel(origin.name)
                         }.buttonStyle(.bordered)
                     }
-                }.padding(.bottom, 42)
+                }.padding(.bottom, 24)
             }
             .padding(.horizontal)
         }
         .navigationTitle("Discover")
+        .navigationBarTitleDisplayMode(.inline)
     }
     
     @ViewBuilder
