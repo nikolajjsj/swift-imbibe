@@ -944,23 +944,6 @@ final class Drinks {
         whiteRussian,
     ]
     
-    static let allIconic: [Drink] = [
-        americano,
-        classicMartini,
-        daiquiri,
-        darkAndStormy,
-        manhattan,
-        mojito,
-        moscowMule,
-        negroni,
-        oldFashioned,
-        pinaColada,
-        sazerac,
-        sidecar,
-        whiskySour,
-        whiteRussian,
-    ]
-    
     // Base spirit
     static var ginBased: [Drink] {
         all.filter({ $0.base == .gin })

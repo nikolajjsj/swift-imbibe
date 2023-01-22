@@ -13,21 +13,6 @@ struct DiscoverView: View {
         
         ScrollView {
             VStack(alignment: .leading) {
-                Text("Iconic Drinks")
-                    .font(.headline)
-                    .foregroundColor(.gray)
-                LazyVGrid(columns: columns) {
-                    ForEach(Drinks.allIconic.prefix(5)) { d in
-                        DrinkCard(drink: d)
-                    }
-                    NavigationLink {
-                        DrinksList(drinks: Drinks.allIconic)
-                            .navigationTitle("Iconic Drinks")
-                    } label: {
-                        FillLabel("\(Drinks.allIconic.count - 5) more")
-                    }.buttonStyle(.bordered)
-                }.padding(.bottom, 42)
-                
                 Text("Base Spirit")
                     .font(.headline)
                     .foregroundColor(.gray)
@@ -50,7 +35,7 @@ struct DiscoverView: View {
                     }
                 }.padding(.bottom, 42)
                 
-                Text("Countries")
+                Text("Origins")
                     .font(.headline)
                     .foregroundColor(.gray)
                 LazyVGrid(columns: columns) {
