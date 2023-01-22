@@ -24,7 +24,7 @@ final class Drinks {
                 .init(ingredient: Ingredients.cremeDeCasis, amount: 15, unit: .milliliters),
                 .init(ingredient: Ingredients.simpleSirup, amount: 10, unit: .milliliters),
                 .init(ingredient: Ingredients.angosturaBitters, amount: 2, unit: .dash),
-                .init(ingredient: Ingredients.iceCubes),
+                .init(ingredient: Ingredients.ice),
             ],
             steps: [
                 .init(string: "Fill Shaker with Ice Cubes"),
@@ -50,7 +50,7 @@ final class Drinks {
                 .init(ingredient: Ingredients.sweetVermouth, amount: 30, unit: .milliliters),
                 .init(ingredient: Ingredients.campari, amount: 30, unit: .milliliters),
                 .init(ingredient: Ingredients.sodaWater),
-                .init(ingredient: Ingredients.iceCubes),
+                .init(ingredient: Ingredients.ice),
             ],
             steps: [
                 .init(string: "Fill up the Old Fashioned Glass with Ice"),
@@ -75,7 +75,7 @@ final class Drinks {
                 .init(ingredient: Ingredients.gin, amount: 75, unit: .milliliters),
                 .init(ingredient: Ingredients.dryVermouth, amount: 15, unit: .milliliters),
                 .init(ingredient: Ingredients.angosturaOrangeBitters, amount: 1, unit: .dash),
-                .init(ingredient: Ingredients.iceCubes),
+                .init(ingredient: Ingredients.ice),
             ],
             steps: [
                 .init(string: "Add Ice Cubes, Gin, Dry Vermouth, & Angostura Orange Bitters to the Mixing Glass"),
@@ -101,7 +101,7 @@ final class Drinks {
                 .init(ingredient: Ingredients.curacao, amount: 22, unit: .milliliters),
                 .init(ingredient: Ingredients.lemonJuice, amount: 22, unit: .milliliters),
                 .init(ingredient: Ingredients.absinthe, amount: 1, unit: .dash),
-                .init(ingredient: Ingredients.iceCubes),
+                .init(ingredient: Ingredients.ice),
             ],
             steps: [
                 .init(string: "Add Ice Cubes to the Shaker"),
@@ -126,7 +126,7 @@ final class Drinks {
                 .init(ingredient: Ingredients.lightRum, amount: 60, unit: .milliliters),
                 .init(ingredient: Ingredients.limeJuice, amount: 20, unit: .milliliters),
                 .init(ingredient: Ingredients.cola, amount: 120, unit: .milliliters),
-                .init(ingredient: Ingredients.iceCubes),
+                .init(ingredient: Ingredients.ice),
             ],
             steps: [
                 .init(string: "Add Ice Cubes to the Highball Glass"),
@@ -200,7 +200,7 @@ final class Drinks {
                 .init(ingredient: Ingredients.dryVermouth, amount: 15, unit: .milliliters),
                 .init(ingredient: Ingredients.olives, amount: 3, unit: .piece),
                 .init(ingredient: Ingredients.oliveBrine, amount: 15, unit: .milliliters),
-                .init(ingredient: Ingredients.iceCubes),
+                .init(ingredient: Ingredients.ice),
             ],
             steps: [
                 .init(string: "Add Olives to Mixing Glass & muddle"),
@@ -227,7 +227,7 @@ final class Drinks {
                 .init(ingredient: Ingredients.cremeDeCasis, amount: 15, unit: .milliliters),
                 .init(ingredient: Ingredients.limeJuice, amount: 15, unit: .milliliters),
                 .init(ingredient: Ingredients.gingerBeer, amount: 100, unit: .milliliters),
-                .init(ingredient: Ingredients.iceCubes),
+                .init(ingredient: Ingredients.ice),
             ],
             steps: [
                 .init(string: "Add Tequila, Creme de Casis, Lime Juice, & Ice Cubes to the Shaker"),
@@ -254,7 +254,7 @@ final class Drinks {
                 .init(ingredient: Ingredients.coffeeLiqueur, amount: 10, unit: .milliliters),
                 .init(ingredient: Ingredients.simpleSirup, amount: 20, unit: .piece),
                 .init(ingredient: Ingredients.coffee, amount: 45, unit: .milliliters),
-                .init(ingredient: Ingredients.iceCubes),
+                .init(ingredient: Ingredients.ice),
             ],
             steps: [
                 .init(string: "Fill the shaker with Ice Cubes"),
@@ -278,7 +278,7 @@ final class Drinks {
             ingredients: [
                 .init(ingredient: Ingredients.gin, amount: 45, unit: .milliliters),
                 .init(ingredient: Ingredients.dryVermouth, amount: 45, unit: .milliliters),
-                .init(ingredient: Ingredients.iceCubes),
+                .init(ingredient: Ingredients.ice),
             ],
             steps: [
                 .init(string: "Add Ice Cubes, Gin & Dry Vermouth to the Mixing Glass"),
@@ -303,7 +303,7 @@ final class Drinks {
                 .init(ingredient: Ingredients.lemonJuice, amount: 30, unit: .milliliters),
                 .init(ingredient: Ingredients.sodaWater, amount: 80, unit: .milliliters),
                 .init(ingredient: Ingredients.simpleSirup, amount: 10, unit: .milliliters),
-                .init(ingredient: Ingredients.iceCubes),
+                .init(ingredient: Ingredients.ice),
             ],
             steps: [
                 .init(string: "Fill the Shaker with Ice Cubes"),
@@ -378,7 +378,7 @@ final class Drinks {
                 .init(ingredient: Ingredients.lemonJuice, amount: 30, unit: .milliliters),
                 .init(ingredient: Ingredients.simpleSirup, amount: 30, unit: .milliliters),
                 .init(ingredient: Ingredients.cola, amount: 20, unit: .milliliters),
-                .init(ingredient: Ingredients.iceCubes),
+                .init(ingredient: Ingredients.ice),
             ],
             steps: [
                 .init(string: "Fill the Shaker with Ice Cubes"),
@@ -406,8 +406,7 @@ final class Drinks {
                 .init(ingredient: Ingredients.limeJuice, amount: 30, unit: .milliliters),
                 .init(ingredient: Ingredients.orgeatSirup, amount: 15, unit: .milliliters),
                 .init(ingredient: Ingredients.simpleSirup, amount: 10, unit: .milliliters),
-                .init(ingredient: Ingredients.iceCrushed),
-                .init(ingredient: Ingredients.iceCubes),
+                .init(ingredient: Ingredients.ice),
             ],
             steps: [
                 .init(string: "Fill the Old Fashioned Glass with Ice Crushed"),
@@ -433,7 +432,7 @@ final class Drinks {
                 .init(ingredient: Ingredients.ryeWhisky, amount: 50, unit: .milliliters),
                 .init(ingredient: Ingredients.sweetVermouth, amount: 20, unit: .milliliters),
                 .init(ingredient: Ingredients.angosturaBitters, amount: 2, unit: .dash),
-                .init(ingredient: Ingredients.iceCubes),
+                .init(ingredient: Ingredients.ice),
             ],
             steps: [
                 .init(string: "Fill up the Mixing Glass with Ice Cubes"),
@@ -458,7 +457,7 @@ final class Drinks {
                 .init(ingredient: Ingredients.tequila, amount: 35, unit: .milliliters),
                 .init(ingredient: Ingredients.cointreau, amount: 20, unit: .milliliters),
                 .init(ingredient: Ingredients.limeJuice, amount: 15, unit: .milliliters),
-                .init(ingredient: Ingredients.iceCubes),
+                .init(ingredient: Ingredients.ice),
             ],
             steps: [
                 .init(string: "Add Ice Cubes to the Shaker"),
@@ -486,7 +485,7 @@ final class Drinks {
                 .init(ingredient: Ingredients.limeJuice, amount: 25, unit: .milliliters),
                 .init(ingredient: Ingredients.sodaWater, amount: 80, unit: .milliliters),
                 .init(ingredient: Ingredients.mintLeaves, amount: 10, unit: .piece),
-                .init(ingredient: Ingredients.iceCubes),
+                .init(ingredient: Ingredients.ice),
             ],
             steps: [
                 .init(string: "Take Mint Leaves, give it a clap to release oils, and put into Highball Glass"),
@@ -513,7 +512,7 @@ final class Drinks {
                 .init(ingredient: Ingredients.vodka, amount: 60, unit: .milliliters),
                 .init(ingredient: Ingredients.limeJuice, amount: 20, unit: .milliliters),
                 .init(ingredient: Ingredients.gingerBeer, amount: 120, unit: .milliliters),
-                .init(ingredient: Ingredients.iceCubes),
+                .init(ingredient: Ingredients.ice),
             ],
             steps: [
                 .init(string: "Fill Old Fashioned Glass with Ice Cubes"),
@@ -537,7 +536,7 @@ final class Drinks {
                 .init(ingredient: Ingredients.gin, amount: 60, unit: .milliliters),
                 .init(ingredient: Ingredients.sweetVermouth, amount: 30, unit: .milliliters),
                 .init(ingredient: Ingredients.campari, amount: 30, unit: .milliliters),
-                .init(ingredient: Ingredients.iceCubes),
+                .init(ingredient: Ingredients.ice),
             ],
             steps: [
                 .init(string: "Fill up the Old Fashioned Glass with Ice"),
@@ -564,7 +563,7 @@ final class Drinks {
                 .init(ingredient: Ingredients.curacao, amount: 8, unit: .milliliters),
                 .init(ingredient: Ingredients.eggWhite, amount: 30, unit: .milliliters),
                 .init(ingredient: Ingredients.redWine, amount: 15, unit: .milliliters),
-                .init(ingredient: Ingredients.iceCubes),
+                .init(ingredient: Ingredients.ice),
             ],
             steps: [
                 .init(string: "Put Rye Whisky, Lemon Juice, Simple Sirup, Curacao, & Egg White into the Shaker"),
@@ -590,7 +589,7 @@ final class Drinks {
                 .init(ingredient: Ingredients.whisky, amount: 60, unit: .milliliters),
                 .init(ingredient: Ingredients.simpleSirup, amount: 10, unit: .milliliters),
                 .init(ingredient: Ingredients.angosturaBitters, amount: 3, unit: .dash),
-                .init(ingredient: Ingredients.iceCubes),
+                .init(ingredient: Ingredients.ice),
             ],
             steps: [
                 .init(string: "Put Whisky, Simple Sirup, & Angostura Bitters into the Old Fashioned Glass"),
@@ -615,7 +614,7 @@ final class Drinks {
                 .init(ingredient: Ingredients.orangeJuice, amount: 30, unit: .milliliters),
                 .init(ingredient: Ingredients.pineappleJuice, amount: 120, unit: .milliliters),
                 .init(ingredient: Ingredients.coconutCream, amount: 30, unit: .milliliters),
-                .init(ingredient: Ingredients.iceCubes),
+                .init(ingredient: Ingredients.ice),
             ],
             steps: [
                 .init(string: "Add Ice Cubes to the Shaker"),
@@ -640,7 +639,7 @@ final class Drinks {
                 .init(ingredient: Ingredients.amaro, amount: 25, unit: .milliliters),
                 .init(ingredient: Ingredients.aperol, amount: 25, unit: .milliliters),
                 .init(ingredient: Ingredients.lemonJuice, amount: 25, unit: .milliliters),
-                .init(ingredient: Ingredients.iceCubes),
+                .init(ingredient: Ingredients.ice),
             ],
             steps: [
                 .init(string: "Add Ice Cubes, Bourbon Whisky, Amaro, Aperol, & Lemon Juice into the Shaker"),
@@ -665,7 +664,7 @@ final class Drinks {
                 .init(ingredient: Ingredients.lemonJuice, amount: 25, unit: .milliliters),
                 .init(ingredient: Ingredients.honeySirup, amount: 25, unit: .milliliters),
                 .init(ingredient: Ingredients.ginger, amount: 1, unit: .piece),
-                .init(ingredient: Ingredients.iceCubes),
+                .init(ingredient: Ingredients.ice),
             ],
             steps: [
                 .init(string: "Do 3-4 slices of Ginger and drop those into the Shaker"),
@@ -692,7 +691,7 @@ final class Drinks {
                 .init(ingredient: Ingredients.gin, amount: 45, unit: .milliliters),
                 .init(ingredient: Ingredients.dryVermouth, amount: 25, unit: .milliliters),
                 .init(ingredient: Ingredients.sweetVermouth, amount: 25, unit: .milliliters),
-                .init(ingredient: Ingredients.iceCubes),
+                .init(ingredient: Ingredients.ice),
             ],
             steps: [
                 .init(string: "Add Ice Cubes, Gin, Dry Vermouth, & Sweet Vermouth to the Mixing Glass"),
@@ -717,7 +716,7 @@ final class Drinks {
                 .init(ingredient: Ingredients.coconutCream, amount: 45, unit: .milliliters),
                 .init(ingredient: Ingredients.pineappleJuice, amount: 45, unit: .milliliters),
                 .init(ingredient: Ingredients.pineapple, amount: 3, unit: .piece),
-                .init(ingredient: Ingredients.iceCubes),
+                .init(ingredient: Ingredients.ice),
             ],
             steps: [
                 .init(string: "Fill the Blender with Ice Cubes"),
@@ -742,7 +741,7 @@ final class Drinks {
                 .init(ingredient: Ingredients.scotchWhisky, amount: 60, unit: .milliliters),
                 .init(ingredient: Ingredients.drambuie, amount: 30, unit: .milliliters),
                 .init(ingredient: Ingredients.angosturaBitters, amount: 2, unit: .dash),
-                .init(ingredient: Ingredients.iceCubes),
+                .init(ingredient: Ingredients.ice),
             ],
             steps: [
                 .init(string: "Add Scotch Whisky, Drambuie, & Ice Cubes in the Mixing Glass"),
@@ -767,7 +766,7 @@ final class Drinks {
                 .init(ingredient: Ingredients.absinthe, amount: 2, unit: .dash),
                 .init(ingredient: Ingredients.simpleSirup, amount: 15, unit: .milliliters),
                 .init(ingredient: Ingredients.peychaudBitters, amount: 2, unit: .dash),
-                .init(ingredient: Ingredients.iceCubes),
+                .init(ingredient: Ingredients.ice),
             ],
             steps: [
                 .init(string: "Use the Absinthe to rinse the Old Fashioned Flass"),
@@ -792,7 +791,7 @@ final class Drinks {
                 .init(ingredient: Ingredients.cognac, amount: 60, unit: .milliliters),
                 .init(ingredient: Ingredients.curacao, amount: 20, unit: .milliliters),
                 .init(ingredient: Ingredients.lemonJuice, amount: 20, unit: .milliliters),
-                .init(ingredient: Ingredients.iceCubes),
+                .init(ingredient: Ingredients.ice),
             ],
             steps: [
                 .init(string: "Fill Shaker with Ice Cubes"),
@@ -818,7 +817,7 @@ final class Drinks {
                 .init(ingredient: Ingredients.apricotLiqueur, amount: 30, unit: .milliliters),
                 .init(ingredient: Ingredients.coconutCream, amount: 30, unit: .milliliters),
                 .init(ingredient: Ingredients.lemonJuice, amount: 30, unit: .milliliters),
-                .init(ingredient: Ingredients.iceCrushed),
+                .init(ingredient: Ingredients.ice),
             ],
             steps: [
                 .init(string: "In the Highball Glass add Gold Rum, Dark Rum, Apricot Liqueur, Coconut Cream, & Lemon Juice"),
@@ -844,7 +843,7 @@ final class Drinks {
                 .init(ingredient: Ingredients.eggWhite, amount: 30, unit: .milliliters),
                 .init(ingredient: Ingredients.simpleSirup, amount: 15, unit: .milliliters),
                 .init(ingredient: Ingredients.angosturaBitters, amount: 2, unit: .dash),
-                .init(ingredient: Ingredients.iceCubes),
+                .init(ingredient: Ingredients.ice),
             ],
             steps: [
                 .init(string: "Put Bourbon Whisky, Lemon Juice, Egg White, & Simple Sirup into the Shaker"),
@@ -870,7 +869,7 @@ final class Drinks {
                 .init(ingredient: Ingredients.gin, amount: 45, unit: .milliliters),
                 .init(ingredient: Ingredients.lilletBlanc, amount: 25, unit: .milliliters),
                 .init(ingredient: Ingredients.suze, amount: 25, unit: .milliliters),
-                .init(ingredient: Ingredients.iceCubes),
+                .init(ingredient: Ingredients.ice),
             ],
             steps: [
                 .init(string: "Add Gin, Suze, Lillet Blanc into the Mixing Glass"),
@@ -897,7 +896,7 @@ final class Drinks {
                 .init(ingredient: Ingredients.vodka, amount: 45, unit: .milliliters),
                 .init(ingredient: Ingredients.kahlua, amount: 25, unit: .milliliters),
                 .init(ingredient: Ingredients.cream, amount: 25, unit: .milliliters),
-                .init(ingredient: Ingredients.iceCubes),
+                .init(ingredient: Ingredients.ice),
             ],
             steps: [
                 .init(string: "Fill the Old Fashioned Glass with Ice Cubes"),
