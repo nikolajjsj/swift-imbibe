@@ -139,23 +139,6 @@
 			path = Bar;
 			sourceTree = "<group>";
 		};
-		D1174456297C3076009CAFC7 /* Constants */ = {
-			isa = PBXGroup;
-			children = (
-				D1174451297C2D80009CAFC7 /* Icons.swift */,
-				D1FDAE41297AA18700D69804 /* Colors.swift */,
-			);
-			path = Constants;
-			sourceTree = "<group>";
-		};
-		D1174463297D2F58009CAFC7 /* Helpers */ = {
-			isa = PBXGroup;
-			children = (
-				D17BB61E297345BA004F08F7 /* LocalStorage.swift */,
-			);
-			path = Helpers;
-			sourceTree = "<group>";
-		};
 		D1194A652971A4A100E4C1E7 /* Settings */ = {
 			isa = PBXGroup;
 			children = (
@@ -201,18 +184,47 @@
 		D1E5B3A92972C97A001DF274 /* Utility */ = {
 			isa = PBXGroup;
 			children = (
+				D117445B297D23CF009CAFC7 /* ErrorMessageView.swift */,
 				D1E5BBCA29705D2500BA60F9 /* WrappingHStack.swift */,
 			);
 			path = Utility;
 			sourceTree = "<group>";
 		};
-		D1F0087D296EBB86007E09B7 /* Environments */ = {
+		D1E74808297D6B45002B48CE /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				D1DD34BC297403E4006EE244 /* Equipment */,
+				D1DD34BB297403CE006EE244 /* Ingredient */,
+				D1DD34BA297403B7006EE244 /* Drink */,
+				D1E5B3A92972C97A001DF274 /* Utility */,
+				D1194A652971A4A100E4C1E7 /* Settings */,
+				D1174453297C2EF0009CAFC7 /* Bar */,
+				D1F79043296E8DA900F3CB30 /* Discover */,
+				D1F7903B296E813100F3CB30 /* Ingredients */,
+				D1F79022296D766000F3CB30 /* Drinks */,
+				D1F79039296E803E00F3CB30 /* AppView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		D1E74809297D6B50002B48CE /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
 				D1F0087E296EBB90007E09B7 /* AppState-ViewModel.swift */,
 				D1174461297D2E07009CAFC7 /* Favorites-ViewModel.swift */,
 			);
-			path = Environments;
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		D1E7480A297D6C16002B48CE /* Lifecycle */ = {
+			isa = PBXGroup;
+			children = (
+				D1F7900E296D75EE00F3CB30 /* Persistence.swift */,
+				D1174451297C2D80009CAFC7 /* Icons.swift */,
+				D1FDAE41297AA18700D69804 /* Colors.swift */,
+				D17BB61E297345BA004F08F7 /* LocalStorage.swift */,
+			);
+			path = Lifecycle;
 			sourceTree = "<group>";
 		};
 		D1F79000296D75EE00F3CB30 = {
@@ -234,16 +246,12 @@
 		D1F7900B296D75EE00F3CB30 /* imbibe */ = {
 			isa = PBXGroup;
 			children = (
-				D1174463297D2F58009CAFC7 /* Helpers */,
-				D1174456297C3076009CAFC7 /* Constants */,
-				D1F0087D296EBB86007E09B7 /* Environments */,
-				D1F7903E296E81D400F3CB30 /* Shared */,
-				D1F79029296D829C00F3CB30 /* Core Data */,
-				D1F79026296D78CD00F3CB30 /* Data */,
-				D1F79023296D76C300F3CB30 /* Models */,
-				D1F79021296D765100F3CB30 /* Extensions */,
-				D1F79020296D762900F3CB30 /* Features */,
 				D1F7900C296D75EE00F3CB30 /* imbibeApp.swift */,
+				D1E7480A297D6C16002B48CE /* Lifecycle */,
+				D1F79021296D765100F3CB30 /* Extensions */,
+				D1F79023296D76C300F3CB30 /* Models */,
+				D1E74809297D6B50002B48CE /* ViewModels */,
+				D1E74808297D6B45002B48CE /* Views */,
 				D1F79015296D75EF00F3CB30 /* Assets.xcassets */,
 				D1F79017296D75EF00F3CB30 /* imbibe.entitlements */,
 				D1F79010296D75EE00F3CB30 /* imbibe.xcdatamodeld */,
@@ -259,19 +267,6 @@
 				D1F79019296D75EF00F3CB30 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
-			sourceTree = "<group>";
-		};
-		D1F79020296D762900F3CB30 /* Features */ = {
-			isa = PBXGroup;
-			children = (
-				D1194A652971A4A100E4C1E7 /* Settings */,
-				D1174453297C2EF0009CAFC7 /* Bar */,
-				D1F79043296E8DA900F3CB30 /* Discover */,
-				D1F7903B296E813100F3CB30 /* Ingredients */,
-				D1F79022296D766000F3CB30 /* Drinks */,
-				D1F79039296E803E00F3CB30 /* AppView.swift */,
-			);
-			path = Features;
 			sourceTree = "<group>";
 		};
 		D1F79021296D765100F3CB30 /* Extensions */ = {
@@ -300,6 +295,10 @@
 		D1F79023296D76C300F3CB30 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				D1F79027296D78DA00F3CB30 /* Drinks.swift */,
+				D1F79031296DC1BE00F3CB30 /* Ingredients.swift */,
+				D1F79033296DC1DA00F3CB30 /* Origins.swift */,
+				D1F79035296DC1EB00F3CB30 /* Equipments.swift */,
 				D1F79024296D76D400F3CB30 /* Drink.swift */,
 				D1F00880296EC065007E09B7 /* DrinkStep.swift */,
 				D1F00882296EC078007E09B7 /* Ingredient.swift */,
@@ -309,43 +308,12 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
-		D1F79026296D78CD00F3CB30 /* Data */ = {
-			isa = PBXGroup;
-			children = (
-				D1F79027296D78DA00F3CB30 /* Drinks.swift */,
-				D1F79031296DC1BE00F3CB30 /* Ingredients.swift */,
-				D1F79033296DC1DA00F3CB30 /* Origins.swift */,
-				D1F79035296DC1EB00F3CB30 /* Equipments.swift */,
-			);
-			path = Data;
-			sourceTree = "<group>";
-		};
-		D1F79029296D829C00F3CB30 /* Core Data */ = {
-			isa = PBXGroup;
-			children = (
-				D1F7900E296D75EE00F3CB30 /* Persistence.swift */,
-			);
-			path = "Core Data";
-			sourceTree = "<group>";
-		};
 		D1F7903B296E813100F3CB30 /* Ingredients */ = {
 			isa = PBXGroup;
 			children = (
 				D1F7903C296E813F00F3CB30 /* IngredientsView.swift */,
 			);
 			path = Ingredients;
-			sourceTree = "<group>";
-		};
-		D1F7903E296E81D400F3CB30 /* Shared */ = {
-			isa = PBXGroup;
-			children = (
-				D1DD34BC297403E4006EE244 /* Equipment */,
-				D1DD34BB297403CE006EE244 /* Ingredient */,
-				D1DD34BA297403B7006EE244 /* Drink */,
-				D1E5B3A92972C97A001DF274 /* Utility */,
-				D117445B297D23CF009CAFC7 /* ErrorMessageView.swift */,
-			);
-			path = Shared;
 			sourceTree = "<group>";
 		};
 		D1F79043296E8DA900F3CB30 /* Discover */ = {
