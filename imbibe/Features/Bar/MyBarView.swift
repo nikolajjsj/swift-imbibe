@@ -28,9 +28,7 @@ struct MyBarView: View {
         .navigationBarTitleDisplayMode(.inline)
     }
     
-    var drinks: [Drink] {
-        Drinks.all.filter({ $0.ingredients.allSatisfy({ selected.contains($0.ingredient.name) }) })
-    }
+    var drinks: [Drink] { Drinks.available(selections: selected) }
 }
 
 struct SelectableIngredients: View {
@@ -59,9 +57,9 @@ struct SelectableIngredients: View {
                     }
                     .padding(8)
                     .frame(maxWidth: .infinity)
-                    .background(RoundedRectangle(cornerRadius: 10).fill(.regularMaterial))
+                    .background(RoundedRectangle(cornerRadius: 10, style: .continuous).fill(.regularMaterial))
                     .overlay(
-                        RoundedRectangle(cornerRadius: 10)
+                        RoundedRectangle(cornerRadius: 10, style: .continuous)
                             .stroke(isSelected ? .blue : .gray, lineWidth: 4)
                     )
                     .onTapGesture {
@@ -87,9 +85,7 @@ struct SelectableIngredients: View {
         }
     }
     
-    var drinks: [Drink] {
-        Drinks.all.filter({ $0.ingredients.allSatisfy({ selected.contains($0.ingredient.name) }) })
-    }
+    var drinks: [Drink] { Drinks.available(selections: selected) }
 }
 
 struct MyBarView_Previews: PreviewProvider {

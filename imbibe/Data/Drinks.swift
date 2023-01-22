@@ -986,6 +986,11 @@ final class Drinks {
         Dictionary(grouping: all, by: { $0.origin})
     }
     
+    // Get all drinks that are available with the gives ingredients
+    static func available(selections: [String]) -> [Drink] {
+        Drinks.all.filter({ $0.ingredients.allSatisfy({ selections.contains($0.ingredient.name) }) })
+    }
+    
     // Random drink
     static func random() -> Drink {
         let random = self.all.randomElement()

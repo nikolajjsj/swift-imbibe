@@ -39,15 +39,15 @@ struct BarView: View {
 //                subtitle: "Add your own notes to each drink, eg. taste notes, drink tweaks, or thoughts"
 //            )
 
-            NavigationLink {
-                EmptyView()
-            } label: {
-                ListItem(
-                    image: "Tips",
-                    title: "Tips",
-                    subtitle: "Our tips that will transform your drinks & experience in mixology"
-                )
-            }
+//            NavigationLink {
+//                EmptyView()
+//            } label: {
+//                ListItem(
+//                    image: "Tips",
+//                    title: "Tips",
+//                    subtitle: "Our tips that will transform your drinks & experience in mixology"
+//                )
+//            }
 
             NavigationLink {
                 BooksView()
@@ -62,9 +62,7 @@ struct BarView: View {
         .navigationTitle("Your Bar")
     }
     
-    var drinks: [Drink] {
-        Drinks.all.filter({ $0.ingredients.allSatisfy({ selected.contains($0.ingredient.name) }) })
-    }
+    var drinks: [Drink] { Drinks.available(selections: selected) }
     
     @ViewBuilder
     func ListItem(image: String, title: String, subtitle: String) -> some View {

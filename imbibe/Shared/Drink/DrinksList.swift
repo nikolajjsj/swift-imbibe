@@ -13,8 +13,10 @@ struct DrinksList: View {
     @State private var query = ""
     
     var body: some View {
+        let cols = [ GridItem(.flexible()), GridItem(.flexible()) ]
+        
         ScrollView {
-            LazyVGrid(columns: [ GridItem(.flexible()), GridItem(.flexible()) ]) {
+            LazyVGrid(columns: cols) {
                 ForEach(filtered) { d in
                     DrinkCard(drink: d)
                 }
