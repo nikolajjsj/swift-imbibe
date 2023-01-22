@@ -120,6 +120,14 @@ Champagne has been used for a variety of different sparkling wines, though many 
         origin: nil,
         description: ""
     )
+    static let cocktailCherry: Ingredient = Ingredient(
+        name: "Cocktail Cherry",
+        image: "Cocktail Cherry",
+        color: Colors.red,
+        strength: 0,
+        origin: nil,
+        description: "A Cocktail Cherry is a Cherry that has been marinating in a sugar marinade."
+    )
     static let coconutCream: Ingredient = Ingredient(
         name: "Coconut Cream",
         image: "Coconut Cream",
@@ -171,6 +179,14 @@ A type/brand of tripple sec (Orange liqueur) produced in Saint-Barthèlemy-d'Anj
         strength: 0,
         origin: nil,
         description: "The most popular carbonated soft drinks in the world."
+    )
+    static let cucumber: Ingredient = Ingredient(
+        name: "Cucumber",
+        image: "Cucumber",
+        color: Colors.green,
+        strength: 0,
+        origin: nil,
+        description: ""
     )
     static let curacao: Ingredient = Ingredient(
         name: "Curacao",
@@ -473,6 +489,14 @@ Originally created between 1849 and 1857 by Antoine Amèdèe Peychaud, often com
 A wine made from a dark-colored grape. The color can range from intense violet, to a dark red (near brown for older wines) color.
 """
     )
+    static let roseWater: Ingredient = Ingredient(
+        name: "Rose Water",
+        image: "Rose Water",
+        color: Colors.red,
+        strength: 5,
+        origin: nil,
+        description: ""
+    )
     static let rum: Ingredient = Ingredient(
         name: "Rum",
         image: "Rum",
@@ -584,12 +608,14 @@ Whisky is made from fermented mash containing various grains, including: barley,
         calvados,
         champagne,
         cremeDeCasis,
+        cocktailCherry,
         coconutCream,
         coffee,
         coffeeLiqueur,
         cognac,
         cointreau,
         cola,
+        cucumber,
         curacao,
         cream,
         darkRum,

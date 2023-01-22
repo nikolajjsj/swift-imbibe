@@ -677,6 +677,36 @@ final class Drinks {
             ]
         )
     
+    static let romeoAndJuliet: Drink =
+        .init(
+            name: "Romeo and Juliet",
+            description: "",
+            image: "Romeo and Juliet",
+            color: Colors.red,
+            year: 2007,
+            base: .gin,
+            origin: Origins.unitedStates,
+            equipments: [Equipments.cocktailGlass, Equipments.shaker, Equipments.strainer],
+            ingredients: [
+                .init(ingredient: Ingredients.gin, amount: 60, unit: .milliliters),
+                .init(ingredient: Ingredients.simpleSirup, amount: 25, unit: .milliliters),
+                .init(ingredient: Ingredients.limeJuice, amount: 25, unit: .milliliters),
+                .init(ingredient: Ingredients.roseWater, amount: 3, unit: .drop),
+                .init(ingredient: Ingredients.cucumber, amount: 3, unit: .piece),
+                .init(ingredient: Ingredients.mintLeaves, amount: 3, unit: .piece),
+                .init(ingredient: Ingredients.ice),
+            ],
+            steps: [
+                .init(string: "In the shaker add 3 slices of Cucumber & a pinch of salt"),
+                .init(string: "Muddle"),
+                .init(string: "Add Gin, Simple Sirup, Lime Juice, and Rose Water"),
+                .init(string: "Add Ice and shake for 10-15 seconds"),
+                .init(string: "Strain into the Cocktail Glass"),
+                .init(string: "Garnish with a single Mint Leaf, and on top of it a single drop of Rose Water"),
+            ]
+        )
+
+    
     static let perfectMartini: Drink =
         .init(
             name: "Perfect Martini",
@@ -905,6 +935,35 @@ final class Drinks {
                 .init(string: "Then add the Cream"),
             ]
         )
+    static let wisconsinOldFashioned: Drink =
+        .init(
+            name: "Wisconsin Old Fashioned",
+            description: "",
+            image: "Wisconsin Old Fashioned",
+            color: Colors.orange,
+            year: 1880,
+            base: .cognac,
+            origin: Origins.unitedStates,
+            equipments: [ Equipments.oldFashionedGlass, Equipments.muddler ],
+            ingredients: [
+                .init(ingredient: Ingredients.cognac, amount: 60, unit: .milliliters),
+                .init(ingredient: Ingredients.simpleSirup, amount: 7, unit: .milliliters),
+                .init(ingredient: Ingredients.angosturaBitters, amount: 4, unit: .dash),
+                .init(ingredient: Ingredients.orange, amount: 1, unit: .piece),
+                .init(ingredient: Ingredients.cocktailCherry, amount: 1, unit: .piece),
+                .init(ingredient: Ingredients.sodaWater, amount: 30, unit: .milliliters),
+                .init(ingredient: Ingredients.ice),
+            ],
+            steps: [
+                .init(string: "Make a Orange Wheel, and slice it in quarters"),
+                .init(string: "Take two of the quarters and put in the Old Fashioned Glas"),
+                .init(string: "Add a Cocktail Cherry, Simple Sirup, & Angostura Bitters"),
+                .init(string: "Muddle and make sure not to muddle the Orange peel"),
+                .init(string: "Then add the Cognac & some lightly Crushed Ice"),
+                .init(string: "Top up with the Soda Water"),
+                .init(string: "Garnish with the other half of the Orange Wheel"),
+            ]
+        )
     
     static let all: [Drink] = [
         americano,
@@ -935,6 +994,7 @@ final class Drinks {
         paperPlane,
         pinaColada,
         penicillin,
+        romeoAndJuliet,
         rustyNail,
         sazerac,
         sidecar,
@@ -942,6 +1002,7 @@ final class Drinks {
         whiskySour,
         whiteNegroni,
         whiteRussian,
+        wisconsinOldFashioned,
     ]
     
     // Base spirit
