@@ -8,23 +8,19 @@
 import SwiftUI
 
 struct IngredientsInspector: View {
-    let drink: Drink
-    
-    @State private var servings = 1
-    @State private var unit: UnitVolume = .milliliters
+    @StateObject var vm: ViewModel
     
     init(_ drink: Drink) {
-        self.drink = drink
+        self._vm = StateObject(wrappedValue: ViewModel(drink: drink))
     }
     
     var body: some View {
         VStack {
-            Text("Ingredients (\(drink.ingredients.count))").font(.headline)
-            
+            Text("Ingredients (\(vm.ingredientCount))").font(.headline)
             VStack {
                 HStack {
                     Text("Servings").frame(minWidth: 80)
-                    Picker("", selection: $servings) {
+                    Picker("", selection: $vm.servings) {
                         ForEach(1 ..< 5, id: \.self) { serving in
                             Text("\(serving)").tag(serving)
                         }
@@ -33,7 +29,7 @@ struct IngredientsInspector: View {
                 
                 HStack {
                     Text("Unit").frame(minWidth: 80)
-                    Picker("", selection: $unit) {
+                    Picker("", selection: $vm.unit) {
                         Text(UnitVolume.milliliters.symbol).tag(UnitVolume.milliliters)
                         Text(UnitVolume.centiliters.symbol).tag(UnitVolume.centiliters)
                         Text(UnitVolume.fluidOunces.symbol).tag(UnitVolume.fluidOunces)
@@ -42,49 +38,78 @@ struct IngredientsInspector: View {
                 }
             }.padding(.vertical, 6)
             
-            LazyVGrid(columns: [GridItem(.flexible())]) {
-                ForEach(drink.ingredients) { i in
-                    IngredientDetailPill(i, servings: servings, unit: unit)
-                }
-            }
+            ForEach(vm.drink.ingredients, content: IngredientDetailPill)
         }.detailCard()
     }
     
     @ViewBuilder
-    func IngredientDetailPill(_ ingredient: IngredientWithVolume, servings: Int, unit: UnitVolume) -> some View {
-        let bg = ingredient.ingredient.color
-        let fg = bg.contrastColor
-        
+    func IngredientDetailPill(i: IngredientWithVolume) -> some View {
         HStack {
-            if ingredient.unit?.symbol == "dash" || ingredient.unit?.symbol == "drop" || ingredient.unit?.symbol == "piece" {
-                if let singleAmount = ingredient.amount {
-                    let amount = singleAmount * Double(servings)
-                    
-                    Text(amount.formatted(.number))
-                    if let symbol = ingredient.unit?.symbol {
-                        Text(symbol + (amount > 1 ? "s" : ""))
-                    }
-                }
-            } else {
-                if let singleAmount = ingredient.toUnit(unit) {
-                    let amount = singleAmount * Double(servings)
-                    
-                    Text(amount.rounded(toPlaces: 1).formatted(.number))
-                    Text(unit.symbol)
+            if let amount = vm.ingredientAmount(i) {
+                Text(amount)
+                if let unit = vm.ingredientUnit(i) {
+                    Text(unit)
                 }
             }
             Spacer()
-            Text(ingredient.ingredient.name)
+            VStack(alignment: .trailing) {
+                Text(i.ingredient.name)
+                if let alt = vm.getAlternative(i), vm.shouldUseAlternative(i) {
+                    Text("You can use **\(alt.name)** instead")
+                        .font(.footnote)
+                        .opacity(0.8)
+                }
+            }
         }
         .lineLimit(1)
-        .padding()
-        .background(Capsule().fill(bg))
-        .foregroundColor(fg)
+        .padding(15)
+        .background(RoundedRectangle(cornerRadius: 10, style: .continuous).fill(i.ingredient.color))
+        .foregroundColor(i.ingredient.color.contrastColor)
+    }
+}
+
+extension IngredientsInspector {
+    @MainActor
+    final class ViewModel: ObservableObject {
+        @Published var drink: Drink
+        @Published var servings = 1
+        @Published var unit: UnitVolume = .milliliters
+        
+        @AppStorage(LocalStorageKeys.barIngredients.rawValue) private var selected: [String] = []
+        
+        init(drink: Drink) {
+            self.drink = drink
+        }
+        
+        var ingredientCount: Int { drink.ingredients.count }
+        
+        func ingredientAmount(_ i: IngredientWithVolume) -> String? {
+            let isCustomSymbol = ["dash", "drop", "piece"].contains(i.unit?.symbol)
+            guard let amount = isCustomSymbol ? i.amount : i.toUnit(self.unit) else { return nil }
+            
+            return (amount * Double(self.servings)).rounded(toPlaces: 1).formatted(.number)
+        }
+        
+        func ingredientUnit(_ i: IngredientWithVolume) -> String? {
+            if ["dash", "drop", "piece"].contains(i.unit?.symbol) {
+                return i.unit?.symbol
+            } else {
+                return unit.symbol
+            }
+        }
+        
+        func shouldUseAlternative(_ i: IngredientWithVolume) -> Bool {
+            !selected.contains(i.ingredient.name)
+        }
+        
+        func getAlternative(_ i: IngredientWithVolume) -> Ingredient? {
+            i.ingredient.alternatives.first(where: { selected.contains($0.name) })
+        }
     }
 }
 
 struct IngredientsInspector_Previews: PreviewProvider {
     static var previews: some View {
-        IngredientsInspector(Drinks.mojito)
+        IngredientsInspector(Drinks.whiskySour)
     }
 }

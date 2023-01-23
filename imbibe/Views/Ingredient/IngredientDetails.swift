@@ -18,7 +18,7 @@ struct IngredientDetails: View {
         VStack {
             Text(ingredient.name).font(.headline).padding(.bottom)
             
-            Grid(alignment: .leading) {
+            Grid(alignment: .leading, horizontalSpacing: 24) {
                 GridRow {
                     Text("Strength").font(.headline)
                     Text("\(ingredient.strength)%")

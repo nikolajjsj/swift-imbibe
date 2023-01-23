@@ -18,24 +18,10 @@ struct DrinkDetails: View {
         VStack {
             Text(drink.name).font(.headline)
             
-            Grid(alignment: .leading) {
+            Grid(alignment: .leading, horizontalSpacing: 24) {
                 GridRow {
                     Text("Strength").font(.headline)
                     Text("\(drink.strength)%")
-                }
-                Divider()
-                GridRow {
-                    Text("Ingredients").font(.headline)
-                    WrappingHStack(models: drink.ingredients, viewGenerator: {i in
-                        IngredientBox(i.ingredient)
-                    }, horizontalSpacing: 4, verticalSpacing: 4)
-                }
-                Divider()
-                GridRow {
-                    Text("Equipments").font(.headline)
-                    WrappingHStack(models: drink.equipments, viewGenerator: {e in
-                        EquipmentBox(e)
-                    }, horizontalSpacing: 4, verticalSpacing: 4)
                 }
                 Divider()
                 GridRow {
@@ -48,6 +34,13 @@ struct DrinkDetails: View {
                         Text("Year").font(.headline)
                         Text("\(year.description)")
                     }
+                }
+                Divider()
+                GridRow {
+                    Text("Equipments").font(.headline)
+                    WrappingHStack(models: drink.equipments, viewGenerator: {e in
+                        EquipmentBox(e)
+                    }, horizontalSpacing: 4, verticalSpacing: 4)
                 }
             }
         }.detailCard()

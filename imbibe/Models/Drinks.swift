@@ -1032,7 +1032,10 @@ final class Drinks {
     
     // Get all drinks that are available with the gives ingredients
     static func available(selections: [String]) -> [Drink] {
-        Drinks.all.filter({ $0.ingredients.allSatisfy({ selections.contains($0.ingredient.name) }) })
+        Drinks.all.filter({ $0.ingredients.allSatisfy({
+            selections.contains($0.ingredient.name)
+            || !Set(selections).isDisjoint(with: $0.ingredient.alternatives.map({ $0.name }))
+        }) })
     }
     
     // Random drink
