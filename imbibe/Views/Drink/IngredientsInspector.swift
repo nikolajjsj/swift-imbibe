@@ -57,13 +57,19 @@ struct IngredientsInspector: View {
         
         HStack {
             if ingredient.unit?.symbol == "dash" || ingredient.unit?.symbol == "drop" || ingredient.unit?.symbol == "piece" {
-                if let amount = ingredient.amount {
-                    Text((amount * Double(servings)).formatted(.number))
-                    Text(ingredient.unit?.symbol ?? "")
+                if let singleAmount = ingredient.amount {
+                    let amount = singleAmount * Double(servings)
+                    
+                    Text(amount.formatted(.number))
+                    if let symbol = ingredient.unit?.symbol {
+                        Text(symbol + (amount > 1 ? "s" : ""))
+                    }
                 }
             } else {
-                if let amount = ingredient.toUnit(unit) {
-                    Text((amount * Double(servings)).rounded(toPlaces: 1).formatted(.number))
+                if let singleAmount = ingredient.toUnit(unit) {
+                    let amount = singleAmount * Double(servings)
+                    
+                    Text(amount.rounded(toPlaces: 1).formatted(.number))
                     Text(unit.symbol)
                 }
             }
