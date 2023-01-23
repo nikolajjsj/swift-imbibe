@@ -17,11 +17,14 @@ struct EquipmentBox: View {
     @State private var presented = false
     
     var body: some View {
+        let bgColor = Color(red: 70 / 255, green: 70 / 255, blue: 70 / 255)
+        
         Text(equipment.name)
+            .foregroundColor(.white)
             .padding(.horizontal, 12)
             .padding(.vertical, 6)
-            .background(RoundedRectangle(cornerRadius: 4).fill(.clear))
-            .background(RoundedRectangle(cornerRadius: 4).stroke(.gray, lineWidth: 1))
+            .background(RoundedRectangle(cornerRadius: 4).fill(bgColor))
+            .background(RoundedRectangle(cornerRadius: 4).stroke(.white, lineWidth: 1))
             .onTapGesture { presented.toggle() }
             .sheet(isPresented: $presented) { EquipmentView(equipment) }
     }
