@@ -30,7 +30,7 @@ struct EquipmentView: View {
                 Text(equipment.description)
             }.padding()
         }
-        .presentationDetents([.medium, .large])
+        .presentationDetents([.medium])
     }
 }
 
