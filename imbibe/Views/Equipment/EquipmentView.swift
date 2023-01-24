@@ -16,18 +16,22 @@ struct EquipmentView: View {
     
     var body: some View {
         ScrollView {
-            VStack {
+            HStack {
                 if let image = UIImage.init(named: equipment.image) {
                     Image(uiImage: image)
                         .resizable()
                         .scaledToFit()
-                        .frame(maxHeight: min(image.size.height, UIScreen.main.bounds.size.height / 3))
+                        .frame(maxHeight: min(image.size.height, 200))
                         .padding()
                 }
                 
-                Text(equipment.name).font(.headline)
+                VStack(alignment: .leading, spacing: 10) {
+                    Text(equipment.name)
+                        .font(.title2.bold())
+                    Text(equipment.description)
+                        .multilineTextAlignment(.leading)
+                }
                 
-                Text(equipment.description)
             }.padding()
         }
         .presentationDetents([.medium])
