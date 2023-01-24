@@ -99,7 +99,7 @@ extension IngredientsInspector {
         }
         
         func shouldUseAlternative(_ i: IngredientWithVolume) -> Bool {
-            !selected.contains(i.ingredient.name)
+            !selected.contains(i.ingredient.name) && !i.ingredient.alternatives.isEmpty
         }
         
         func getAlternative(_ i: IngredientWithVolume) -> Ingredient? {
