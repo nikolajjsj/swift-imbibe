@@ -45,12 +45,8 @@
 		D1F79014296D75EE00F3CB30 /* DrinksView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1F79013296D75EE00F3CB30 /* DrinksView.swift */; };
 		D1F79016296D75EF00F3CB30 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D1F79015296D75EF00F3CB30 /* Assets.xcassets */; };
 		D1F79025296D76D400F3CB30 /* Drink.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1F79024296D76D400F3CB30 /* Drink.swift */; };
-		D1F79028296D78DA00F3CB30 /* Drinks.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1F79027296D78DA00F3CB30 /* Drinks.swift */; };
 		D1F7902C296D841F00F3CB30 /* DrinkView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1F7902B296D841F00F3CB30 /* DrinkView.swift */; };
 		D1F79030296D879600F3CB30 /* ColorExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1F7902F296D879600F3CB30 /* ColorExtensions.swift */; };
-		D1F79032296DC1BE00F3CB30 /* Ingredients.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1F79031296DC1BE00F3CB30 /* Ingredients.swift */; };
-		D1F79034296DC1DA00F3CB30 /* Origins.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1F79033296DC1DA00F3CB30 /* Origins.swift */; };
-		D1F79036296DC1EB00F3CB30 /* Equipments.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1F79035296DC1EB00F3CB30 /* Equipments.swift */; };
 		D1F7903A296E803E00F3CB30 /* AppView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1F79039296E803E00F3CB30 /* AppView.swift */; };
 		D1F7903D296E813F00F3CB30 /* IngredientsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1F7903C296E813F00F3CB30 /* IngredientsView.swift */; };
 		D1F79042296E834400F3CB30 /* IngredientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1F79041296E834400F3CB30 /* IngredientView.swift */; };
@@ -102,12 +98,8 @@
 		D1F79015296D75EF00F3CB30 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D1F79017296D75EF00F3CB30 /* imbibe.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = imbibe.entitlements; sourceTree = "<group>"; };
 		D1F79024296D76D400F3CB30 /* Drink.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Drink.swift; sourceTree = "<group>"; };
-		D1F79027296D78DA00F3CB30 /* Drinks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Drinks.swift; sourceTree = "<group>"; };
 		D1F7902B296D841F00F3CB30 /* DrinkView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrinkView.swift; sourceTree = "<group>"; };
 		D1F7902F296D879600F3CB30 /* ColorExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorExtensions.swift; sourceTree = "<group>"; };
-		D1F79031296DC1BE00F3CB30 /* Ingredients.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ingredients.swift; sourceTree = "<group>"; };
-		D1F79033296DC1DA00F3CB30 /* Origins.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Origins.swift; sourceTree = "<group>"; };
-		D1F79035296DC1EB00F3CB30 /* Equipments.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Equipments.swift; sourceTree = "<group>"; };
 		D1F79039296E803E00F3CB30 /* AppView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppView.swift; sourceTree = "<group>"; };
 		D1F7903C296E813F00F3CB30 /* IngredientsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IngredientsView.swift; sourceTree = "<group>"; };
 		D1F79041296E834400F3CB30 /* IngredientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IngredientView.swift; sourceTree = "<group>"; };
@@ -303,15 +295,11 @@
 		D1F79023296D76C300F3CB30 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				D1F79027296D78DA00F3CB30 /* Drinks.swift */,
-				D1F79031296DC1BE00F3CB30 /* Ingredients.swift */,
-				D1F79033296DC1DA00F3CB30 /* Origins.swift */,
-				D1F79035296DC1EB00F3CB30 /* Equipments.swift */,
 				D1F79024296D76D400F3CB30 /* Drink.swift */,
-				D1F00880296EC065007E09B7 /* DrinkStep.swift */,
 				D1F00882296EC078007E09B7 /* Ingredient.swift */,
 				D1F00884296EC0A8007E09B7 /* Equipment.swift */,
 				D1F00886296EC0B8007E09B7 /* Origin.swift */,
+				D1F00880296EC065007E09B7 /* DrinkStep.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -401,7 +389,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D1F79028296D78DA00F3CB30 /* Drinks.swift in Sources */,
 				D1BB5B2B29741FE600CF52EE /* IngredientDrinksList.swift in Sources */,
 				D1308BAC2976D090002BF99C /* BundleExtensions.swift in Sources */,
 				D1DD34B729740335006EE244 /* DrinkStepInstructions.swift in Sources */,
@@ -427,13 +414,11 @@
 				D1E5B3B32972D052001DF274 /* NumberExtensions.swift in Sources */,
 				D17BB61F297345BA004F08F7 /* LocalStorage.swift in Sources */,
 				D1F79030296D879600F3CB30 /* ColorExtensions.swift in Sources */,
-				D1F79036296DC1EB00F3CB30 /* Equipments.swift in Sources */,
 				D1174458297D2030009CAFC7 /* BarIngredientsView.swift in Sources */,
 				D1E5B3AD2972C9D3001DF274 /* EquipmentBox.swift in Sources */,
 				D117445C297D23CF009CAFC7 /* ErrorMessageView.swift in Sources */,
 				D1DD34B929740377006EE244 /* DrinkDetails.swift in Sources */,
 				D1174465297D440C009CAFC7 /* ArrayExtensions.swift in Sources */,
-				D1F79032296DC1BE00F3CB30 /* Ingredients.swift in Sources */,
 				D1F00883296EC078007E09B7 /* Ingredient.swift in Sources */,
 				D174C2D72976E86A00E93262 /* DrinksList.swift in Sources */,
 				D1F79025296D76D400F3CB30 /* Drink.swift in Sources */,
@@ -444,7 +429,6 @@
 				D1F00885296EC0A8007E09B7 /* Equipment.swift in Sources */,
 				D1194A672971A4A900E4C1E7 /* SettingsView.swift in Sources */,
 				D17BB61D29732160004F08F7 /* CardStyle.swift in Sources */,
-				D1F79034296DC1DA00F3CB30 /* Origins.swift in Sources */,
 				D1174462297D2E07009CAFC7 /* Favorites-ViewModel.swift in Sources */,
 				D1F79049296E916C00F3CB30 /* IngredientCard.swift in Sources */,
 				D18CE3812976BDE700B997CD /* DrinksView-ViewModel.swift in Sources */,
