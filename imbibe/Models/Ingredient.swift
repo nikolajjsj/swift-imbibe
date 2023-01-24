@@ -274,6 +274,7 @@ Cognac is a double distilled wine, based on Ugni Blanc, Folle Blanche, & Colomba
         description: """
 A type/brand of tripple sec (Orange liqueur) produced in Saint-Barthèlemy-d'Anjou, France. Both enjoyed as a apèritif and digestif.
 """,
+//        alternatives: [.curacao, .grandMarnier],
         tags: [.spirit]
     )
     static let cola: Ingredient = Ingredient(
@@ -299,6 +300,7 @@ A type/brand of tripple sec (Orange liqueur) produced in Saint-Barthèlemy-d'Anj
         strength: 40,
         origin: nil,
         description: "",
+//        alternatives: [.cointreau, .grandMarnier],
         tags: [.base, .spirit]
     )
     static let cream: Ingredient = Ingredient(
@@ -318,6 +320,7 @@ A type/brand of tripple sec (Orange liqueur) produced in Saint-Barthèlemy-d'Anj
         description: """
 Dark Rum are the distilled product of sugar canes (though not exclusively sugar canes), aged for 2- or more years in oak barrels.
 """,
+//        alternatives: [.goldRum],
         tags: [.spirit]
     )
     static let demeraraSirup: Ingredient = Ingredient(
@@ -385,6 +388,7 @@ There are generally considered to be five variations for gin: London Dry, Old To
         strength: 40,
         origin: nil,
         description: "",
+//        alternatives: [.darkRum],
         tags: [.spirit]
     )
     static let ginger: Ingredient = Ingredient(
@@ -402,6 +406,7 @@ There are generally considered to be five variations for gin: London Dry, Old To
         strength: 40,
         origin: nil,
         description: "A orange liqueur with a base of Cognac.",
+//        alternatives: [.cointreau, .curacao],
         tags: [.spirit]
     )
     static let honeySirup: Ingredient = Ingredient(
@@ -454,6 +459,7 @@ A often times more peaty version of a Scotch Whisky, originating from the Island
         description: """
 A coffee liqueur from Mexico.
 """,
+//        alternatives: [.coffeeLiqueur],
         tags: [.spirit]
     )
     static let kinaLaeroDor: Ingredient = Ingredient(
@@ -696,7 +702,7 @@ All Scotch Whisky must be made in oak barrels for at least 3 years.
         name: "Suze",
         image: "Suze",
         color: Colors.yellow,
-        strength: 20,
+        strength: 15,
         origin: nil,
         description: "",
         tags: [.spirit]
