@@ -34,7 +34,7 @@ struct IngredientView: View {
 struct IngredientView_Previews: PreviewProvider {
     static var previews: some View {
         NavigationView {
-            IngredientView(ingredient: Ingredients.bourbonWhisky)
+            IngredientView(ingredient: Ingredients.aperol)
         }
     }
 }

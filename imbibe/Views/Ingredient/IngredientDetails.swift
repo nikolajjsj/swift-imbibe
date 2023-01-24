@@ -16,12 +16,17 @@ struct IngredientDetails: View {
     
     var body: some View {
         VStack {
-            Text(ingredient.name).font(.headline).padding(.bottom)
+            Text(ingredient.name)
+                .font(.headline)
+                .padding(.bottom)
             
             Grid(alignment: .leading, horizontalSpacing: 24) {
                 GridRow {
                     Text("Strength").font(.headline)
-                    Text("\(ingredient.strength)%")
+                    HStack {
+                        Text("\(ingredient.strength)%")
+                        Spacer()
+                    }
                 }
                 
                 if let origin = ingredient.origin {
@@ -50,12 +55,13 @@ struct IngredientDetails: View {
                     }
                 }
             }
-        }.detailCard()
+        }
+        .detailCard()
     }
 }
 
 struct IngredientDetails_Previews: PreviewProvider {
     static var previews: some View {
-        IngredientDetails(Ingredients.scotchWhisky)
+        IngredientDetails(Ingredients.aperol)
     }
 }
