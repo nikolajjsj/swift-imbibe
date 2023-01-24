@@ -17,17 +17,6 @@ struct DrinkView: View {
         
         ScrollView {
             ZStack(alignment: .topTrailing) {
-                if let image = UIImage.init(named: drink.image) {
-                    Image(uiImage: image)
-                        .resizable()
-                        .scaledToFill()
-                        .position(
-                            x: UIScreen.main.bounds.size.width / 2,
-                            y: UIScreen.main.bounds.size.height / 5
-                        )
-                        .blur(radius: 60)
-                }
-                
                 LazyVStack {
                     if let image = UIImage.init(named: drink.image) {
                         Image(uiImage: image)
@@ -48,7 +37,7 @@ struct DrinkView: View {
                 }
                 
                 Button {
-                    
+                    favorites.toggleDrink(drink)
                 } label: {
                     Image(systemName: isFavorited ? "star.fill" : "star")
                         .resizable()
@@ -56,11 +45,11 @@ struct DrinkView: View {
                         .foregroundColor(.black)
                         .padding(4)
                         .background(Circle().fill(.white.opacity(0.2)))
-                        .onTapGesture { favorites.toggleDrink(drink) }
                 }
             }
             .padding()
         }
+        .background(drink.color.gradient)
         .presentationDetents([.medium, .large])
     }
 }

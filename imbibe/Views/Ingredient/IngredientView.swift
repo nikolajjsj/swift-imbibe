@@ -12,36 +12,25 @@ struct IngredientView: View {
     
     var body: some View {
         ScrollView {
-            ZStack(alignment: .top) {
+            VStack {
                 if let image = UIImage.init(named: ingredient.image) {
                     Image(uiImage: image)
                         .resizable()
-                        .scaledToFill()
-                        .position(
-                            x: UIScreen.main.bounds.size.width / 2,
-                            y: UIScreen.main.bounds.size.height / 5
-                        )
-                        .blur(radius: 80)
+                        .scaledToFit()
+                        .frame(maxHeight: min(
+                            image.size.height,
+                            UIScreen.main.bounds.size.height / 3
+                        ))
+                        .padding(.vertical)
                 }
                 
-                VStack {
-                    if let image = UIImage.init(named: ingredient.image) {
-                        Image(uiImage: image)
-                            .resizable()
-                            .scaledToFit()
-                            .frame(maxHeight: min(
-                                image.size.height,
-                                UIScreen.main.bounds.size.height / 3
-                            ))
-                            .padding(.vertical)
-                    }
-                    
-                    IngredientDetails(ingredient)
-                    
-                    IngredientDrinksList(ingredient)
-                }
-            }.padding()
+                IngredientDetails(ingredient)
+                
+                IngredientDrinksList(ingredient)
+            }
         }
+        .padding(.horizontal)
+        .background(ingredient.color.gradient)
         .presentationDetents([.medium, .large])
     }
 }
