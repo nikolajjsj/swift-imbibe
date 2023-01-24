@@ -22,10 +22,7 @@ struct DrinkView: View {
                         Image(uiImage: image)
                             .resizable()
                             .scaledToFit()
-                            .frame(maxHeight: min(
-                                image.size.height,
-                                UIScreen.main.bounds.size.height / 3
-                            ))
+                            .frame(maxHeight: min(image.size.height, 300))
                             .padding(.vertical)
                     }
                     
