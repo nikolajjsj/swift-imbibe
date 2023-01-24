@@ -16,14 +16,14 @@ struct BooksView: View {
                         HStack {
                             Image(b.image)
                                 .resizable()
-                                .scaledToFill()
                                 .frame(width: 60, height: 80)
+                                .scaledToFill()
                                 .padding(.trailing)
                             
                             VStack(alignment: .leading) {
                                 Text(b.name).font(.title3.bold()).foregroundColor(.white)
                                 Text(b.description).foregroundColor(.white.opacity(0.8))
-                            }
+                            }.lineLimit(1)
                             
                             Spacer()
                         }
@@ -51,6 +51,34 @@ struct BooksView: View {
                 image: "Liquid Intelligence",
                 bgColor: Colors.black,
                 link: URL(string: "https://www.amazon.com/Liquid-Intelligence-Science-Perfect-Cocktail-ebook/dp/B00J8R3KOE")!
+            ),
+            Book(
+                name: "Imbibe!",
+                description: "David Wondrich",
+                image: "Imbibe Book",
+                bgColor: Colors.orange,
+                link: URL(string: "https://www.amazon.de/-/en/David-Wondrich/dp/0399172610")!
+            ),
+            Book(
+                name: "Smuggler's Cove: Exotic Cocktails, Rum, and the Cult of Tiki",
+                description: "Martin Cate & Rebecca Cate",
+                image: "Smugglers Cove",
+                bgColor: Colors.black,
+                link: URL(string: "https://www.amazon.de/-/en/Martin-Cate/dp/1607747324")!
+            ),
+            Book(
+                name: "The Joy of Mixology",
+                description: "Gary Regan",
+                image: "The Joy Of Mixology",
+                bgColor: Colors.red,
+                link: URL(string: "https://www.amazon.com/Joy-Mixology-Consummate-Guide-Bartenders/dp/0609608843")!
+            ),
+            Book(
+                name: "The Bon Vivant's Companion or How to Mix Drinks",
+                description: "Jerry Thomas",
+                image: "How to Mix Drinks",
+                bgColor: Colors.red,
+                link: URL(string: "https://www.amazon.com/How-Mix-Drinks-Vivants-Companion/dp/1843911981")!
             )
         ]
     }
