@@ -28,7 +28,6 @@ struct IngredientView: View {
         }
         .padding(.horizontal)
         .background(ingredient.color.gradient)
-        .presentationDetents([.medium, .large])
     }
 }
 

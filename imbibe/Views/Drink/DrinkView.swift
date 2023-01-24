@@ -47,7 +47,6 @@ struct DrinkView: View {
             .padding()
         }
         .background(drink.color.gradient)
-        .presentationDetents([.medium, .large])
     }
 }
 
