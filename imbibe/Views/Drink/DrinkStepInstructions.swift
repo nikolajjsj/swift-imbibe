@@ -39,6 +39,6 @@ struct DrinkStepInstructions: View {
 
 struct DrinkStepInstructions_Previews: PreviewProvider {
     static var previews: some View {
-        DrinkStepInstructions(Drinks.mojito)
+        DrinkStepInstructions(Drink.mojito)
     }
 }

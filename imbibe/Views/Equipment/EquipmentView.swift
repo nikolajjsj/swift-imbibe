@@ -40,6 +40,6 @@ struct EquipmentView: View {
 
 struct EquipmentView_Previews: PreviewProvider {
     static var previews: some View {
-        EquipmentView(Equipments.shaker)
+        EquipmentView(Equipment.shaker)
     }
 }

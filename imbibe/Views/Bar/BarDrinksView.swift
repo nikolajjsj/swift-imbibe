@@ -15,7 +15,7 @@ struct BarDrinksView: View {
             .navigationTitle("Available Drinks")
     }
     
-    var drinks: [Drink] { Drinks.available(selections: selected) }
+    var drinks: [Drink] { Drink.available(selections: selected) }
 }
 
 struct BarDrinksView_Previews: PreviewProvider {

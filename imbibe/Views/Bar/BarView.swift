@@ -72,7 +72,7 @@ struct BarView: View {
         .navigationTitle("Your Bar")
     }
     
-    var drinks: [Drink] { Drinks.available(selections: selected) }
+    var drinks: [Drink] { Drink.available(selections: selected) }
     
     @ViewBuilder
     func ListItem(image: String, title: String, subtitle: String) -> some View {

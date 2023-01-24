@@ -53,7 +53,7 @@ struct DrinkView: View {
 struct DrinkView_Previews: PreviewProvider {
     static var previews: some View {
         NavigationView {
-            DrinkView(drink: Drinks.mojito)
+            DrinkView(drink: Drink.mojito)
         }
         .environmentObject(FavoritesViewModel())
     }

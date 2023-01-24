@@ -49,6 +49,6 @@ struct DrinkDetails: View {
 
 struct DrinkDetails_Previews: PreviewProvider {
     static var previews: some View {
-        DrinkDetails(Drinks.mojito)
+        DrinkDetails(Drink.mojito)
     }
 }

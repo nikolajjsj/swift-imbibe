@@ -34,7 +34,7 @@ struct IngredientDrinksList: View {
     }
     
     var drinksWithIngredient: [Drink] {
-        Drinks.all.filter({ d in
+        Drink.all.filter({ d in
             d.ingredients.contains(where: { i in i.ingredient.name == ingredient.name })
         })
     }
@@ -42,6 +42,6 @@ struct IngredientDrinksList: View {
 
 struct IngredientDrinksList_Previews: PreviewProvider {
     static var previews: some View {
-        IngredientDrinksList(Ingredients.kahlua)
+        IngredientDrinksList(Ingredient.kahlua)
     }
 }

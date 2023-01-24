@@ -9,7 +9,7 @@ import Foundation
 
 @MainActor
 final class DrinksViewModel: ObservableObject {
-    @Published private(set) var drinks: [Drink] = Drinks.all
+    @Published private(set) var drinks: [Drink] = Drink.all
     @Published private(set) var strengths: [Strength] = []
     @Published private(set) var eras: [Era] = []
     
@@ -39,11 +39,11 @@ final class DrinksViewModel: ObservableObject {
     
     private func filteredByFilters() {
         if strengths.isEmpty && eras.isEmpty {
-            drinks = Drinks.all
+            drinks = Drink.all
             return
         }
         
-        drinks = Drinks.all.filter({ drink in
+        drinks = Drink.all.filter({ drink in
             strengths.first(where: { $0.compareDrink(drink) }) != nil ||
             eras.first(where: { $0.compareDrink(drink) }) != nil
         })

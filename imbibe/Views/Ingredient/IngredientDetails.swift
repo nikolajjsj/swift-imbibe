@@ -62,6 +62,6 @@ struct IngredientDetails: View {
 
 struct IngredientDetails_Previews: PreviewProvider {
     static var previews: some View {
-        IngredientDetails(Ingredients.aperol)
+        IngredientDetails(Ingredient.aperol)
     }
 }
