@@ -80,7 +80,7 @@ struct BarView: View {
             Image(image)
                 .resizable()
                 .scaledToFit()
-                .frame(width: 90, height: 90)
+                .frame(width: 70, height: 70)
                 .padding(.trailing)
             
             VStack(alignment: .leading) {
