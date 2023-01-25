@@ -17,9 +17,9 @@ struct BarIngredientsView: View {
     @AppStorage(LocalStorageKeys.barIngredients.rawValue) var selected: [String] = []
     
     @State private var query = ""
-    @State private var all: [Ingredient] = Ingredient.all
-    @State private var basics: [Ingredient] = Ingredient.all.filter({ $0.tags.contains(.base) })
-    @State private var spirits: [Ingredient] = Ingredient.all.filter({ $0.tags.contains(.spirit) })
+    @State private var all: [Ingredient] = Ingredients.instance.all
+    @State private var basics: [Ingredient] = Ingredients.instance.all.filter({ $0.tags.contains(.base) })
+    @State private var spirits: [Ingredient] = Ingredients.instance.all.filter({ $0.tags.contains(.spirit) })
     
     @State private var toggles = ToggleStates()
     
@@ -99,7 +99,7 @@ struct BarIngredientsView: View {
         }
     }
     
-    var drinks: [Drink] { Drink.available(selections: selected) }
+    var drinks: [Drink] { Drinks.instance.available(selections: selected) }
 }
 
 struct BarIngredientsView_Previews: PreviewProvider {

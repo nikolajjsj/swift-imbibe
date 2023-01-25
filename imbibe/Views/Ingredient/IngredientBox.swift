@@ -33,6 +33,6 @@ struct IngredientBox: View {
 
 struct IngredientBox_Previews: PreviewProvider {
     static var previews: some View {
-        IngredientBox(Ingredient.absinthe)
+        IngredientBox(Ingredients.instance.absinthe)
     }
 }

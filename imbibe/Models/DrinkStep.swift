@@ -7,7 +7,7 @@
 
 import Foundation
 
-class DrinkStep: Identifiable, Hashable {
+final class DrinkStep: Identifiable, Hashable {
     static func == (lhs: DrinkStep, rhs: DrinkStep) -> Bool {
         lhs.string == rhs.string
     }

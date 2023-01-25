@@ -8,7 +8,7 @@
 import Foundation
 import SwiftUI
 
-class Drink: Identifiable, Equatable, Hashable {
+final class Drink: Identifiable, Equatable, Hashable {
     static func == (lhs: Drink, rhs: Drink) -> Bool {
         lhs.name == rhs.name
     }
@@ -76,17 +76,17 @@ class Drink: Identifiable, Equatable, Hashable {
         var image: String? {
             switch self {
             case .whisky:
-                return Ingredient.whisky.image
+                return Ingredients.instance.whisky.image
             case .gin:
-                return Ingredient.gin.image
+                return Ingredients.instance.gin.image
             case .rum:
-                return Ingredient.rum.image
+                return Ingredients.instance.rum.image
             case .vodka:
-                return Ingredient.vodka.image
+                return Ingredients.instance.vodka.image
             case .tequila:
-                return Ingredient.tequila.image
+                return Ingredients.instance.tequila.image
             case .cognac:
-                return Ingredient.cognac.image
+                return Ingredients.instance.cognac.image
             default:
                 return nil
             }
@@ -95,17 +95,17 @@ class Drink: Identifiable, Equatable, Hashable {
         var drinks: [Drink] {
             switch self {
             case .whisky:
-                return whiskyBased
+                return Drinks.instance.whiskyBased
             case .gin:
-                return ginBased
+                return Drinks.instance.ginBased
             case .rum:
-                return rumBased
+                return Drinks.instance.rumBased
             case .vodka:
-                return vodkaBased
+                return Drinks.instance.vodkaBased
             case .tequila:
-                return tequilaBased
+                return Drinks.instance.tequilaBased
             case .cognac:
-                return cognacBased
+                return Drinks.instance.cognacBased
             default:
                 return []
             }
@@ -113,8 +113,11 @@ class Drink: Identifiable, Equatable, Hashable {
     }
 }
 
-extension Drink {
-    static let bourbonRenewal: Drink =
+final class Drinks {
+    static let instance = Drinks()
+    private init() { }
+    
+    let bourbonRenewal: Drink =
         .init(
             name: "Bourbon Renewal",
             description: "",
@@ -122,15 +125,15 @@ extension Drink {
             color: Colors.brown,
             year: 2004,
             base: .whisky,
-            origin: Origin.unitedStates,
-            equipments: [ Equipment.oldFashionedGlass, Equipment.shaker, Equipment.strainer ],
+            origin: Origins.instance.unitedStates,
+            equipments: [ Equipments.instance.oldFashionedGlass, Equipments.instance.shaker, Equipments.instance.strainer ],
             ingredients: [
-                .init(ingredient: Ingredient.bourbonWhisky, amount: 60, unit: .milliliters),
-                .init(ingredient: Ingredient.lemonJuice, amount: 30, unit: .milliliters),
-                .init(ingredient: Ingredient.cremeDeCasis, amount: 15, unit: .milliliters),
-                .init(ingredient: Ingredient.simpleSirup, amount: 10, unit: .milliliters),
-                .init(ingredient: Ingredient.angosturaBitters, amount: 2, unit: .dash),
-                .init(ingredient: Ingredient.ice),
+                .init(ingredient: Ingredients.instance.bourbonWhisky, amount: 60, unit: .milliliters),
+                .init(ingredient: Ingredients.instance.lemonJuice, amount: 30, unit: .milliliters),
+                .init(ingredient: Ingredients.instance.cremeDeCasis, amount: 15, unit: .milliliters),
+                .init(ingredient: Ingredients.instance.simpleSirup, amount: 10, unit: .milliliters),
+                .init(ingredient: Ingredients.instance.angosturaBitters, amount: 2, unit: .dash),
+                .init(ingredient: Ingredients.instance.ice),
             ],
             steps: [
                 .init(string: "Fill Shaker with Ice Cubes"),
@@ -142,7 +145,7 @@ extension Drink {
             ]
         )
     
-    static let americano: Drink =
+    let americano: Drink =
         .init(
             name: "Americano",
             description: "",
@@ -150,13 +153,13 @@ extension Drink {
             color: Colors.red,
             year: 1860,
             base: .other,
-            origin: Origin.italy,
-            equipments: [ Equipment.oldFashionedGlass ],
+            origin: Origins.instance.italy,
+            equipments: [ Equipments.instance.oldFashionedGlass ],
             ingredients: [
-                .init(ingredient: Ingredient.sweetVermouth, amount: 30, unit: .milliliters),
-                .init(ingredient: Ingredient.campari, amount: 30, unit: .milliliters),
-                .init(ingredient: Ingredient.sodaWater),
-                .init(ingredient: Ingredient.ice),
+                .init(ingredient: Ingredients.instance.sweetVermouth, amount: 30, unit: .milliliters),
+                .init(ingredient: Ingredients.instance.campari, amount: 30, unit: .milliliters),
+                .init(ingredient: Ingredients.instance.sodaWater),
+                .init(ingredient: Ingredients.instance.ice),
             ],
             steps: [
                 .init(string: "Fill up the Old Fashioned Glass with Ice"),
@@ -167,7 +170,7 @@ extension Drink {
             ]
         )
     
-    static let classicMartini: Drink =
+    let classicMartini: Drink =
         .init(
             name: "Classic Martini",
             description: "",
@@ -175,13 +178,13 @@ extension Drink {
             color: Colors.gray,
             year: 1922,
             base: .gin,
-            origin: Origin.unitedStates,
-            equipments: [ Equipment.cocktailGlass, Equipment.barspoon, Equipment.mixingGlass ],
+            origin: Origins.instance.unitedStates,
+            equipments: [ Equipments.instance.cocktailGlass, Equipments.instance.barspoon, Equipments.instance.mixingGlass ],
             ingredients: [
-                .init(ingredient: Ingredient.gin, amount: 75, unit: .milliliters),
-                .init(ingredient: Ingredient.dryVermouth, amount: 15, unit: .milliliters),
-                .init(ingredient: Ingredient.angosturaOrangeBitters, amount: 1, unit: .dash),
-                .init(ingredient: Ingredient.ice),
+                .init(ingredient: Ingredients.instance.gin, amount: 75, unit: .milliliters),
+                .init(ingredient: Ingredients.instance.dryVermouth, amount: 15, unit: .milliliters),
+                .init(ingredient: Ingredients.instance.angosturaOrangeBitters, amount: 1, unit: .dash),
+                .init(ingredient: Ingredients.instance.ice),
             ],
             steps: [
                 .init(string: "Add Ice Cubes, Gin, Dry Vermouth, & Angostura Orange Bitters to the Mixing Glass"),
@@ -191,7 +194,7 @@ extension Drink {
             ]
         )
     
-    static let corpseReviver: Drink =
+    let corpseReviver: Drink =
         .init(
             name: "Corpse Reviver",
             description: "",
@@ -199,15 +202,15 @@ extension Drink {
             color: Colors.orange,
             year: 1861,
             base: .gin,
-            origin: Origin.unitedStates,
-            equipments: [ Equipment.cocktailGlass, Equipment.mixingGlass, Equipment.barspoon ],
+            origin: Origins.instance.unitedStates,
+            equipments: [ Equipments.instance.cocktailGlass, Equipments.instance.mixingGlass, Equipments.instance.barspoon ],
             ingredients: [
-                .init(ingredient: Ingredient.gin, amount: 22, unit: .milliliters),
-                .init(ingredient: Ingredient.kinaLaeroDor, amount: 22, unit: .milliliters),
-                .init(ingredient: Ingredient.curacao, amount: 22, unit: .milliliters),
-                .init(ingredient: Ingredient.lemonJuice, amount: 22, unit: .milliliters),
-                .init(ingredient: Ingredient.absinthe, amount: 1, unit: .dash),
-                .init(ingredient: Ingredient.ice),
+                .init(ingredient: Ingredients.instance.gin, amount: 22, unit: .milliliters),
+                .init(ingredient: Ingredients.instance.kinaLaeroDor, amount: 22, unit: .milliliters),
+                .init(ingredient: Ingredients.instance.curacao, amount: 22, unit: .milliliters),
+                .init(ingredient: Ingredients.instance.lemonJuice, amount: 22, unit: .milliliters),
+                .init(ingredient: Ingredients.instance.absinthe, amount: 1, unit: .dash),
+                .init(ingredient: Ingredients.instance.ice),
             ],
             steps: [
                 .init(string: "Add Ice Cubes to the Shaker"),
@@ -218,7 +221,7 @@ extension Drink {
             ]
         )
     
-    static let cubaLibre: Drink =
+    let cubaLibre: Drink =
         .init(
             name: "Cuba Libre",
             description: "",
@@ -226,13 +229,13 @@ extension Drink {
             color: Colors.brown,
             year: 1900,
             base: .rum,
-            origin: Origin.cuba,
-            equipments: [ Equipment.highballGlass, Equipment.barspoon ],
+            origin: Origins.instance.cuba,
+            equipments: [ Equipments.instance.highballGlass, Equipments.instance.barspoon ],
             ingredients: [
-                .init(ingredient: Ingredient.lightRum, amount: 60, unit: .milliliters),
-                .init(ingredient: Ingredient.limeJuice, amount: 20, unit: .milliliters),
-                .init(ingredient: Ingredient.cola, amount: 120, unit: .milliliters),
-                .init(ingredient: Ingredient.ice),
+                .init(ingredient: Ingredients.instance.lightRum, amount: 60, unit: .milliliters),
+                .init(ingredient: Ingredients.instance.limeJuice, amount: 20, unit: .milliliters),
+                .init(ingredient: Ingredients.instance.cola, amount: 120, unit: .milliliters),
+                .init(ingredient: Ingredients.instance.ice),
             ],
             steps: [
                 .init(string: "Add Ice Cubes to the Highball Glass"),
@@ -243,7 +246,7 @@ extension Drink {
             ]
         )
     
-    static let daiquiri: Drink =
+    let daiquiri: Drink =
         .init(
             name: "Daiquiri",
             description: "",
@@ -251,13 +254,13 @@ extension Drink {
             color: Colors.red,
             year: 1900,
             base: .rum,
-            origin: Origin.cuba,
-            equipments: [ Equipment.cocktailGlass, Equipment.shaker ],
+            origin: Origins.instance.cuba,
+            equipments: [ Equipments.instance.cocktailGlass, Equipments.instance.shaker ],
             ingredients: [
-                .init(ingredient: Ingredient.rum, amount: 60, unit: .milliliters),
-                .init(ingredient: Ingredient.limeJuice, amount: 30, unit: .milliliters),
-                .init(ingredient: Ingredient.simpleSirup, amount: 30, unit: .milliliters),
-                .init(ingredient: Ingredient.ice),
+                .init(ingredient: Ingredients.instance.rum, amount: 60, unit: .milliliters),
+                .init(ingredient: Ingredients.instance.limeJuice, amount: 30, unit: .milliliters),
+                .init(ingredient: Ingredients.instance.simpleSirup, amount: 30, unit: .milliliters),
+                .init(ingredient: Ingredients.instance.ice),
             ],
             steps: [
                 .init(string: "Put Ice, Rum, Lime Juice, & Simple Sirup into the shaker"),
@@ -267,7 +270,7 @@ extension Drink {
             ]
         )
     
-    static let darkAndStormy: Drink =
+    let darkAndStormy: Drink =
         .init(
             name: "Dark and Stormy",
             description: "",
@@ -275,13 +278,13 @@ extension Drink {
             color: Colors.brown,
             year: 1920,
             base: .rum,
-            origin: Origin.bermuda,
-            equipments: [ Equipment.highballGlass, Equipment.barspoon ],
+            origin: Origins.instance.bermuda,
+            equipments: [ Equipments.instance.highballGlass, Equipments.instance.barspoon ],
             ingredients: [
-                .init(ingredient: Ingredient.darkRum, amount: 60, unit: .milliliters),
-                .init(ingredient: Ingredient.gingerBeer, amount: 90, unit: .milliliters),
-                .init(ingredient: Ingredient.limeJuice, amount: 15, unit: .milliliters),
-                .init(ingredient: Ingredient.ice),
+                .init(ingredient: Ingredients.instance.darkRum, amount: 60, unit: .milliliters),
+                .init(ingredient: Ingredients.instance.gingerBeer, amount: 90, unit: .milliliters),
+                .init(ingredient: Ingredients.instance.limeJuice, amount: 15, unit: .milliliters),
+                .init(ingredient: Ingredients.instance.ice),
             ],
             steps: [
                 .init(string: "Fill up the Highball Glass with Ice Cubes"),
@@ -291,7 +294,7 @@ extension Drink {
             ]
         )
     
-    static let dirtyMartini: Drink =
+    let dirtyMartini: Drink =
         .init(
             name: "Dirty Martini",
             description: "",
@@ -299,14 +302,14 @@ extension Drink {
             color: Colors.green,
             year: 1901,
             base: .gin,
-            origin: Origin.unitedStates,
-            equipments: [ Equipment.cocktailGlass, Equipment.barspoon, Equipment.mixingGlass ],
+            origin: Origins.instance.unitedStates,
+            equipments: [ Equipments.instance.cocktailGlass, Equipments.instance.barspoon, Equipments.instance.mixingGlass ],
             ingredients: [
-                .init(ingredient: Ingredient.gin, amount: 75, unit: .milliliters),
-                .init(ingredient: Ingredient.dryVermouth, amount: 15, unit: .milliliters),
-                .init(ingredient: Ingredient.olives, amount: 3, unit: .piece),
-                .init(ingredient: Ingredient.oliveBrine, amount: 15, unit: .milliliters),
-                .init(ingredient: Ingredient.ice),
+                .init(ingredient: Ingredients.instance.gin, amount: 75, unit: .milliliters),
+                .init(ingredient: Ingredients.instance.dryVermouth, amount: 15, unit: .milliliters),
+                .init(ingredient: Ingredients.instance.olives, amount: 3, unit: .piece),
+                .init(ingredient: Ingredients.instance.oliveBrine, amount: 15, unit: .milliliters),
+                .init(ingredient: Ingredients.instance.ice),
             ],
             steps: [
                 .init(string: "Add Olives to Mixing Glass & muddle"),
@@ -318,7 +321,7 @@ extension Drink {
             ]
         )
     
-    static let elDiablo: Drink =
+    let elDiablo: Drink =
         .init(
             name: "El Diablo",
             description: "",
@@ -326,14 +329,14 @@ extension Drink {
             color: Colors.red,
             year: 1946,
             base: .tequila,
-            origin: Origin.germany,
-            equipments: [ Equipment.highballGlass, Equipment.shaker, Equipment.strainer ],
+            origin: Origins.instance.germany,
+            equipments: [ Equipments.instance.highballGlass, Equipments.instance.shaker, Equipments.instance.strainer ],
             ingredients: [
-                .init(ingredient: Ingredient.tequila, amount: 30, unit: .milliliters),
-                .init(ingredient: Ingredient.cremeDeCasis, amount: 15, unit: .milliliters),
-                .init(ingredient: Ingredient.limeJuice, amount: 15, unit: .milliliters),
-                .init(ingredient: Ingredient.gingerBeer, amount: 100, unit: .milliliters),
-                .init(ingredient: Ingredient.ice),
+                .init(ingredient: Ingredients.instance.tequila, amount: 30, unit: .milliliters),
+                .init(ingredient: Ingredients.instance.cremeDeCasis, amount: 15, unit: .milliliters),
+                .init(ingredient: Ingredients.instance.limeJuice, amount: 15, unit: .milliliters),
+                .init(ingredient: Ingredients.instance.gingerBeer, amount: 100, unit: .milliliters),
+                .init(ingredient: Ingredients.instance.ice),
             ],
             steps: [
                 .init(string: "Add Tequila, Creme de Casis, Lime Juice, & Ice Cubes to the Shaker"),
@@ -345,7 +348,7 @@ extension Drink {
         )
 
     
-    static let espressoMartini: Drink =
+    let espressoMartini: Drink =
         .init(
             name: "Espresso Martini",
             description: "",
@@ -353,14 +356,14 @@ extension Drink {
             color: Colors.brown,
             year: 1980,
             base: .vodka,
-            origin: Origin.unitedKingdom,
-            equipments: [ Equipment.cocktailGlass, Equipment.shaker, Equipment.strainer ],
+            origin: Origins.instance.unitedKingdom,
+            equipments: [ Equipments.instance.cocktailGlass, Equipments.instance.shaker, Equipments.instance.strainer ],
             ingredients: [
-                .init(ingredient: Ingredient.vodka, amount: 40, unit: .milliliters),
-                .init(ingredient: Ingredient.coffeeLiqueur, amount: 10, unit: .milliliters),
-                .init(ingredient: Ingredient.simpleSirup, amount: 20, unit: .piece),
-                .init(ingredient: Ingredient.coffee, amount: 45, unit: .milliliters),
-                .init(ingredient: Ingredient.ice),
+                .init(ingredient: Ingredients.instance.vodka, amount: 40, unit: .milliliters),
+                .init(ingredient: Ingredients.instance.coffeeLiqueur, amount: 10, unit: .milliliters),
+                .init(ingredient: Ingredients.instance.simpleSirup, amount: 20, unit: .piece),
+                .init(ingredient: Ingredients.instance.coffee, amount: 45, unit: .milliliters),
+                .init(ingredient: Ingredients.instance.ice),
             ],
             steps: [
                 .init(string: "Fill the shaker with Ice Cubes"),
@@ -371,7 +374,7 @@ extension Drink {
             ]
         )
     
-    static let fityFiftyMartini: Drink =
+    let fityFiftyMartini: Drink =
         .init(
             name: "50/50 Martini",
             description: "",
@@ -379,12 +382,12 @@ extension Drink {
             color: Colors.gray,
             year: 1930,
             base: .gin,
-            origin: Origin.unitedStates,
-            equipments: [ Equipment.cocktailGlass, Equipment.barspoon, Equipment.mixingGlass ],
+            origin: Origins.instance.unitedStates,
+            equipments: [ Equipments.instance.cocktailGlass, Equipments.instance.barspoon, Equipments.instance.mixingGlass ],
             ingredients: [
-                .init(ingredient: Ingredient.gin, amount: 45, unit: .milliliters),
-                .init(ingredient: Ingredient.dryVermouth, amount: 45, unit: .milliliters),
-                .init(ingredient: Ingredient.ice),
+                .init(ingredient: Ingredients.instance.gin, amount: 45, unit: .milliliters),
+                .init(ingredient: Ingredients.instance.dryVermouth, amount: 45, unit: .milliliters),
+                .init(ingredient: Ingredients.instance.ice),
             ],
             steps: [
                 .init(string: "Add Ice Cubes, Gin & Dry Vermouth to the Mixing Glass"),
@@ -394,7 +397,7 @@ extension Drink {
             ]
         )
     
-    static let ginFizz: Drink =
+    let ginFizz: Drink =
         .init(
             name: "Gin Fizz",
             description: "",
@@ -402,14 +405,14 @@ extension Drink {
             color: Colors.gray,
             year: 1888,
             base: .gin,
-            origin: Origin.unitedKingdom,
-            equipments: [ Equipment.highballGlass, Equipment.shaker ],
+            origin: Origins.instance.unitedKingdom,
+            equipments: [ Equipments.instance.highballGlass, Equipments.instance.shaker ],
             ingredients: [
-                .init(ingredient: Ingredient.gin, amount: 60, unit: .milliliters),
-                .init(ingredient: Ingredient.lemonJuice, amount: 30, unit: .milliliters),
-                .init(ingredient: Ingredient.sodaWater, amount: 80, unit: .milliliters),
-                .init(ingredient: Ingredient.simpleSirup, amount: 10, unit: .milliliters),
-                .init(ingredient: Ingredient.ice),
+                .init(ingredient: Ingredients.instance.gin, amount: 60, unit: .milliliters),
+                .init(ingredient: Ingredients.instance.lemonJuice, amount: 30, unit: .milliliters),
+                .init(ingredient: Ingredients.instance.sodaWater, amount: 80, unit: .milliliters),
+                .init(ingredient: Ingredients.instance.simpleSirup, amount: 10, unit: .milliliters),
+                .init(ingredient: Ingredients.instance.ice),
             ],
             steps: [
                 .init(string: "Fill the Shaker with Ice Cubes"),
@@ -421,7 +424,7 @@ extension Drink {
             ]
         )
     
-    static let hotToddy: Drink =
+    let hotToddy: Drink =
         .init(
             name: "Hot Toddy",
             description: "",
@@ -429,12 +432,12 @@ extension Drink {
             color: Colors.orange,
             year: 1800,
             base: .whisky,
-            origin: Origin.scotland,
-            equipments: [ Equipment.toddyGlass ],
+            origin: Origins.instance.scotland,
+            equipments: [ Equipments.instance.toddyGlass ],
             ingredients: [
-                .init(ingredient: Ingredient.whisky, amount: 60, unit: .milliliters),
-                .init(ingredient: Ingredient.demeraraSirup, amount: 15, unit: .milliliters),
-                .init(ingredient: Ingredient.coffee),
+                .init(ingredient: Ingredients.instance.whisky, amount: 60, unit: .milliliters),
+                .init(ingredient: Ingredients.instance.demeraraSirup, amount: 15, unit: .milliliters),
+                .init(ingredient: Ingredients.instance.coffee),
             ],
             steps: [
                 .init(string: "Add Whisky & Demerara Sirup into the Toddy Glass"),
@@ -443,7 +446,7 @@ extension Drink {
             ]
         )
     
-    static let irishCoffee: Drink =
+    let irishCoffee: Drink =
         .init(
             name: "Irish Coffee",
             description: "",
@@ -451,12 +454,12 @@ extension Drink {
             color: Colors.brown,
             year: 1943,
             base: .whisky,
-            origin: Origin.ireland,
-            equipments: [ Equipment.toddyGlass ],
+            origin: Origins.instance.ireland,
+            equipments: [ Equipments.instance.toddyGlass ],
             ingredients: [
-                .init(ingredient: Ingredient.irishWhisky, amount: 30, unit: .milliliters),
-                .init(ingredient: Ingredient.simpleSirup, amount: 15, unit: .milliliters),
-                .init(ingredient: Ingredient.coffee),
+                .init(ingredient: Ingredients.instance.irishWhisky, amount: 30, unit: .milliliters),
+                .init(ingredient: Ingredients.instance.simpleSirup, amount: 15, unit: .milliliters),
+                .init(ingredient: Ingredients.instance.coffee),
             ],
             steps: [
                 .init(string: "Add Irish Whisky & Simple Sirup into the Toddy Glass"),
@@ -465,7 +468,7 @@ extension Drink {
             ]
         )
     
-    static let longIslandIceTea: Drink =
+    let longIslandIceTea: Drink =
         .init(
             name: "Long Island Ice Tea",
             description: "",
@@ -473,18 +476,18 @@ extension Drink {
             color: Colors.orange,
             year: 1972,
             base: .other,
-            origin: Origin.unitedStates,
-            equipments: [ Equipment.highballGlass, Equipment.barspoon ],
+            origin: Origins.instance.unitedStates,
+            equipments: [ Equipments.instance.highballGlass, Equipments.instance.barspoon ],
             ingredients: [
-                .init(ingredient: Ingredient.tequila, amount: 15, unit: .milliliters),
-                .init(ingredient: Ingredient.vodka, amount: 15, unit: .milliliters),
-                .init(ingredient: Ingredient.rum, amount: 15, unit: .milliliters),
-                .init(ingredient: Ingredient.curacao, amount: 15, unit: .milliliters),
-                .init(ingredient: Ingredient.gin, amount: 15, unit: .milliliters),
-                .init(ingredient: Ingredient.lemonJuice, amount: 30, unit: .milliliters),
-                .init(ingredient: Ingredient.simpleSirup, amount: 30, unit: .milliliters),
-                .init(ingredient: Ingredient.cola, amount: 20, unit: .milliliters),
-                .init(ingredient: Ingredient.ice),
+                .init(ingredient: Ingredients.instance.tequila, amount: 15, unit: .milliliters),
+                .init(ingredient: Ingredients.instance.vodka, amount: 15, unit: .milliliters),
+                .init(ingredient: Ingredients.instance.rum, amount: 15, unit: .milliliters),
+                .init(ingredient: Ingredients.instance.curacao, amount: 15, unit: .milliliters),
+                .init(ingredient: Ingredients.instance.gin, amount: 15, unit: .milliliters),
+                .init(ingredient: Ingredients.instance.lemonJuice, amount: 30, unit: .milliliters),
+                .init(ingredient: Ingredients.instance.simpleSirup, amount: 30, unit: .milliliters),
+                .init(ingredient: Ingredients.instance.cola, amount: 20, unit: .milliliters),
+                .init(ingredient: Ingredients.instance.ice),
             ],
             steps: [
                 .init(string: "Fill the Shaker with Ice Cubes"),
@@ -495,7 +498,7 @@ extension Drink {
             ]
         )
     
-    static let maitai: Drink =
+    let maitai: Drink =
         .init(
             name: "Mai Tai",
             description: "",
@@ -503,16 +506,16 @@ extension Drink {
             color: Colors.orange,
             year: 1944,
             base: .rum,
-            origin: Origin.unitedStates,
-            equipments: [ Equipment.oldFashionedGlass, Equipment.shaker, Equipment.strainer ],
+            origin: Origins.instance.unitedStates,
+            equipments: [ Equipments.instance.oldFashionedGlass, Equipments.instance.shaker, Equipments.instance.strainer ],
             ingredients: [
-                .init(ingredient: Ingredient.darkRum, amount: 30, unit: .milliliters),
-                .init(ingredient: Ingredient.lightRum, amount: 30, unit: .milliliters),
-                .init(ingredient: Ingredient.curacao, amount: 15, unit: .milliliters),
-                .init(ingredient: Ingredient.limeJuice, amount: 30, unit: .milliliters),
-                .init(ingredient: Ingredient.orgeatSirup, amount: 15, unit: .milliliters),
-                .init(ingredient: Ingredient.simpleSirup, amount: 10, unit: .milliliters),
-                .init(ingredient: Ingredient.ice),
+                .init(ingredient: Ingredients.instance.darkRum, amount: 30, unit: .milliliters),
+                .init(ingredient: Ingredients.instance.lightRum, amount: 30, unit: .milliliters),
+                .init(ingredient: Ingredients.instance.curacao, amount: 15, unit: .milliliters),
+                .init(ingredient: Ingredients.instance.limeJuice, amount: 30, unit: .milliliters),
+                .init(ingredient: Ingredients.instance.orgeatSirup, amount: 15, unit: .milliliters),
+                .init(ingredient: Ingredients.instance.simpleSirup, amount: 10, unit: .milliliters),
+                .init(ingredient: Ingredients.instance.ice),
             ],
             steps: [
                 .init(string: "Fill the Old Fashioned Glass with Ice Crushed"),
@@ -524,7 +527,7 @@ extension Drink {
             ]
         )
     
-    static let manhattan: Drink =
+    let manhattan: Drink =
         .init(
             name: "Manhattan",
             description: "",
@@ -532,13 +535,13 @@ extension Drink {
             color: Colors.red,
             year: 1880,
             base: .whisky,
-            origin: Origin.unitedStates,
-            equipments: [ Equipment.cocktailGlass, Equipment.mixingGlass, Equipment.barspoon ],
+            origin: Origins.instance.unitedStates,
+            equipments: [ Equipments.instance.cocktailGlass, Equipments.instance.mixingGlass, Equipments.instance.barspoon ],
             ingredients: [
-                .init(ingredient: Ingredient.ryeWhisky, amount: 50, unit: .milliliters),
-                .init(ingredient: Ingredient.sweetVermouth, amount: 20, unit: .milliliters),
-                .init(ingredient: Ingredient.angosturaBitters, amount: 2, unit: .dash),
-                .init(ingredient: Ingredient.ice),
+                .init(ingredient: Ingredients.instance.ryeWhisky, amount: 50, unit: .milliliters),
+                .init(ingredient: Ingredients.instance.sweetVermouth, amount: 20, unit: .milliliters),
+                .init(ingredient: Ingredients.instance.angosturaBitters, amount: 2, unit: .dash),
+                .init(ingredient: Ingredients.instance.ice),
             ],
             steps: [
                 .init(string: "Fill up the Mixing Glass with Ice Cubes"),
@@ -549,7 +552,7 @@ extension Drink {
             ]
         )
     
-    static let margarita: Drink =
+    let margarita: Drink =
         .init(
             name: "Margarita",
             description: "",
@@ -557,13 +560,13 @@ extension Drink {
             color: Colors.yellow,
             year: 1937,
             base: .tequila,
-            origin: Origin.mexico,
-            equipments: [ Equipment.cocktailGlass, Equipment.shaker, Equipment.strainer ],
+            origin: Origins.instance.mexico,
+            equipments: [ Equipments.instance.cocktailGlass, Equipments.instance.shaker, Equipments.instance.strainer ],
             ingredients: [
-                .init(ingredient: Ingredient.tequila, amount: 35, unit: .milliliters),
-                .init(ingredient: Ingredient.cointreau, amount: 20, unit: .milliliters),
-                .init(ingredient: Ingredient.limeJuice, amount: 15, unit: .milliliters),
-                .init(ingredient: Ingredient.ice),
+                .init(ingredient: Ingredients.instance.tequila, amount: 35, unit: .milliliters),
+                .init(ingredient: Ingredients.instance.cointreau, amount: 20, unit: .milliliters),
+                .init(ingredient: Ingredients.instance.limeJuice, amount: 15, unit: .milliliters),
+                .init(ingredient: Ingredients.instance.ice),
             ],
             steps: [
                 .init(string: "Add Ice Cubes to the Shaker"),
@@ -575,7 +578,7 @@ extension Drink {
             ]
         )
     
-    static let mojito: Drink =
+    let mojito: Drink =
         .init(
             name: "Mojito",
             description: "",
@@ -583,15 +586,15 @@ extension Drink {
             color: Colors.green,
             year: 1927,
             base: .rum,
-            origin: Origin.cuba,
-            equipments: [ Equipment.highballGlass, Equipment.muddler, Equipment.barspoon, Equipment.shaker ],
+            origin: Origins.instance.cuba,
+            equipments: [ Equipments.instance.highballGlass, Equipments.instance.muddler, Equipments.instance.barspoon, Equipments.instance.shaker ],
             ingredients: [
-                .init(ingredient: Ingredient.lightRum, amount: 60, unit: .milliliters),
-                .init(ingredient: Ingredient.demeraraSirup, amount: 15, unit: .milliliters),
-                .init(ingredient: Ingredient.limeJuice, amount: 25, unit: .milliliters),
-                .init(ingredient: Ingredient.sodaWater, amount: 80, unit: .milliliters),
-                .init(ingredient: Ingredient.mintLeaves, amount: 10, unit: .piece),
-                .init(ingredient: Ingredient.ice),
+                .init(ingredient: Ingredients.instance.lightRum, amount: 60, unit: .milliliters),
+                .init(ingredient: Ingredients.instance.demeraraSirup, amount: 15, unit: .milliliters),
+                .init(ingredient: Ingredients.instance.limeJuice, amount: 25, unit: .milliliters),
+                .init(ingredient: Ingredients.instance.sodaWater, amount: 80, unit: .milliliters),
+                .init(ingredient: Ingredients.instance.mintLeaves, amount: 10, unit: .piece),
+                .init(ingredient: Ingredients.instance.ice),
             ],
             steps: [
                 .init(string: "Take Mint Leaves, give it a clap to release oils, and put into Highball Glass"),
@@ -604,7 +607,7 @@ extension Drink {
             ]
         )
     
-    static let moscowMule: Drink =
+    let moscowMule: Drink =
         .init(
             name: "Moscow Mule",
             description: "",
@@ -612,13 +615,13 @@ extension Drink {
             color: Colors.orange,
             year: 1941,
             base: .vodka,
-            origin: Origin.unitedStates,
-            equipments: [ Equipment.oldFashionedGlass, Equipment.barspoon ],
+            origin: Origins.instance.unitedStates,
+            equipments: [ Equipments.instance.oldFashionedGlass, Equipments.instance.barspoon ],
             ingredients: [
-                .init(ingredient: Ingredient.vodka, amount: 60, unit: .milliliters),
-                .init(ingredient: Ingredient.limeJuice, amount: 20, unit: .milliliters),
-                .init(ingredient: Ingredient.gingerBeer, amount: 120, unit: .milliliters),
-                .init(ingredient: Ingredient.ice),
+                .init(ingredient: Ingredients.instance.vodka, amount: 60, unit: .milliliters),
+                .init(ingredient: Ingredients.instance.limeJuice, amount: 20, unit: .milliliters),
+                .init(ingredient: Ingredients.instance.gingerBeer, amount: 120, unit: .milliliters),
+                .init(ingredient: Ingredients.instance.ice),
             ],
             steps: [
                 .init(string: "Fill Old Fashioned Glass with Ice Cubes"),
@@ -628,7 +631,7 @@ extension Drink {
             ]
         )
     
-    static let negroni: Drink =
+    let negroni: Drink =
         .init(
             name: "Negroni",
             description: "",
@@ -636,13 +639,13 @@ extension Drink {
             color: Colors.red,
             year: 1860,
             base: .gin,
-            origin: Origin.italy,
-            equipments: [ Equipment.barspoon, Equipment.oldFashionedGlass ],
+            origin: Origins.instance.italy,
+            equipments: [ Equipments.instance.barspoon, Equipments.instance.oldFashionedGlass ],
             ingredients: [
-                .init(ingredient: Ingredient.gin, amount: 60, unit: .milliliters),
-                .init(ingredient: Ingredient.sweetVermouth, amount: 30, unit: .milliliters),
-                .init(ingredient: Ingredient.campari, amount: 30, unit: .milliliters),
-                .init(ingredient: Ingredient.ice),
+                .init(ingredient: Ingredients.instance.gin, amount: 60, unit: .milliliters),
+                .init(ingredient: Ingredients.instance.sweetVermouth, amount: 30, unit: .milliliters),
+                .init(ingredient: Ingredients.instance.campari, amount: 30, unit: .milliliters),
+                .init(ingredient: Ingredients.instance.ice),
             ],
             steps: [
                 .init(string: "Fill up the Old Fashioned Glass with Ice"),
@@ -652,7 +655,7 @@ extension Drink {
             ]
         )
     
-    static let newYourSour: Drink =
+    let newYourSour: Drink =
         .init(
             name: "New York Sour",
             description: "",
@@ -660,16 +663,16 @@ extension Drink {
             color: Colors.orange,
             year: 1880,
             base: .whisky,
-            origin: Origin.unitedStates,
-            equipments: [ Equipment.oldFashionedGlass, Equipment.shaker ],
+            origin: Origins.instance.unitedStates,
+            equipments: [ Equipments.instance.oldFashionedGlass, Equipments.instance.shaker ],
             ingredients: [
-                .init(ingredient: Ingredient.ryeWhisky, amount: 60, unit: .milliliters),
-                .init(ingredient: Ingredient.lemonJuice, amount: 30, unit: .milliliters),
-                .init(ingredient: Ingredient.simpleSirup, amount: 15, unit: .milliliters),
-                .init(ingredient: Ingredient.curacao, amount: 8, unit: .milliliters),
-                .init(ingredient: Ingredient.eggWhite, amount: 30, unit: .milliliters),
-                .init(ingredient: Ingredient.redWine, amount: 15, unit: .milliliters),
-                .init(ingredient: Ingredient.ice),
+                .init(ingredient: Ingredients.instance.ryeWhisky, amount: 60, unit: .milliliters),
+                .init(ingredient: Ingredients.instance.lemonJuice, amount: 30, unit: .milliliters),
+                .init(ingredient: Ingredients.instance.simpleSirup, amount: 15, unit: .milliliters),
+                .init(ingredient: Ingredients.instance.curacao, amount: 8, unit: .milliliters),
+                .init(ingredient: Ingredients.instance.eggWhite, amount: 30, unit: .milliliters),
+                .init(ingredient: Ingredients.instance.redWine, amount: 15, unit: .milliliters),
+                .init(ingredient: Ingredients.instance.ice),
             ],
             steps: [
                 .init(string: "Put Rye Whisky, Lemon Juice, Simple Sirup, Curacao, & Egg White into the Shaker"),
@@ -681,7 +684,7 @@ extension Drink {
             ]
         )
     
-    static let oldFashioned: Drink =
+    let oldFashioned: Drink =
         .init(
             name: "Old Fashioned",
             description: "",
@@ -689,13 +692,13 @@ extension Drink {
             color: Colors.orange,
             year: 1880,
             base: .whisky,
-            origin: Origin.unitedStates,
-            equipments: [ Equipment.barspoon, Equipment.oldFashionedGlass ],
+            origin: Origins.instance.unitedStates,
+            equipments: [ Equipments.instance.barspoon, Equipments.instance.oldFashionedGlass ],
             ingredients: [
-                .init(ingredient: Ingredient.whisky, amount: 60, unit: .milliliters),
-                .init(ingredient: Ingredient.simpleSirup, amount: 10, unit: .milliliters),
-                .init(ingredient: Ingredient.angosturaBitters, amount: 3, unit: .dash),
-                .init(ingredient: Ingredient.ice),
+                .init(ingredient: Ingredients.instance.whisky, amount: 60, unit: .milliliters),
+                .init(ingredient: Ingredients.instance.simpleSirup, amount: 10, unit: .milliliters),
+                .init(ingredient: Ingredients.instance.angosturaBitters, amount: 3, unit: .dash),
+                .init(ingredient: Ingredients.instance.ice),
             ],
             steps: [
                 .init(string: "Put Whisky, Simple Sirup, & Angostura Bitters into the Old Fashioned Glass"),
@@ -705,7 +708,7 @@ extension Drink {
             ]
         )
     
-    static let painkiller: Drink =
+    let painkiller: Drink =
         .init(
             name: "Painkiller",
             description: "",
@@ -713,14 +716,14 @@ extension Drink {
             color: Colors.orange,
             year: 1970,
             base: .rum,
-            origin: Origin.britishVirginIslands,
-            equipments: [ Equipment.oldFashionedGlass, Equipment.shaker ],
+            origin: Origins.instance.britishVirginIslands,
+            equipments: [ Equipments.instance.oldFashionedGlass, Equipments.instance.shaker ],
             ingredients: [
-                .init(ingredient: Ingredient.darkRum, amount: 60, unit: .milliliters),
-                .init(ingredient: Ingredient.orangeJuice, amount: 30, unit: .milliliters),
-                .init(ingredient: Ingredient.pineappleJuice, amount: 120, unit: .milliliters),
-                .init(ingredient: Ingredient.coconutCream, amount: 30, unit: .milliliters),
-                .init(ingredient: Ingredient.ice),
+                .init(ingredient: Ingredients.instance.darkRum, amount: 60, unit: .milliliters),
+                .init(ingredient: Ingredients.instance.orangeJuice, amount: 30, unit: .milliliters),
+                .init(ingredient: Ingredients.instance.pineappleJuice, amount: 120, unit: .milliliters),
+                .init(ingredient: Ingredients.instance.coconutCream, amount: 30, unit: .milliliters),
+                .init(ingredient: Ingredients.instance.ice),
             ],
             steps: [
                 .init(string: "Add Ice Cubes to the Shaker"),
@@ -730,7 +733,7 @@ extension Drink {
             ]
         )
     
-    static let paperPlane: Drink =
+    let paperPlane: Drink =
         .init(
             name: "Paper Plane",
             description: "",
@@ -738,14 +741,14 @@ extension Drink {
             color: Colors.orange,
             year: 2008,
             base: .whisky,
-            origin: Origin.unitedStates,
-            equipments: [ Equipment.cocktailGlass, Equipment.shaker, Equipment.strainer ],
+            origin: Origins.instance.unitedStates,
+            equipments: [ Equipments.instance.cocktailGlass, Equipments.instance.shaker, Equipments.instance.strainer ],
             ingredients: [
-                .init(ingredient: Ingredient.bourbonWhisky, amount: 25, unit: .milliliters),
-                .init(ingredient: Ingredient.amaro, amount: 25, unit: .milliliters),
-                .init(ingredient: Ingredient.aperol, amount: 25, unit: .milliliters),
-                .init(ingredient: Ingredient.lemonJuice, amount: 25, unit: .milliliters),
-                .init(ingredient: Ingredient.ice),
+                .init(ingredient: Ingredients.instance.bourbonWhisky, amount: 25, unit: .milliliters),
+                .init(ingredient: Ingredients.instance.amaro, amount: 25, unit: .milliliters),
+                .init(ingredient: Ingredients.instance.aperol, amount: 25, unit: .milliliters),
+                .init(ingredient: Ingredients.instance.lemonJuice, amount: 25, unit: .milliliters),
+                .init(ingredient: Ingredients.instance.ice),
             ],
             steps: [
                 .init(string: "Add Ice Cubes, Bourbon Whisky, Amaro, Aperol, & Lemon Juice into the Shaker"),
@@ -754,7 +757,7 @@ extension Drink {
             ]
         )
     
-    static let penicillin: Drink =
+    let penicillin: Drink =
         .init(
             name: "Penicillin",
             description: "",
@@ -762,15 +765,15 @@ extension Drink {
             color: Colors.yellow,
             year: 2000,
             base: .whisky,
-            origin: Origin.unitedStates,
-            equipments: [ Equipment.oldFashionedGlass, Equipment.shaker, Equipment.strainer, Equipment.muddler ],
+            origin: Origins.instance.unitedStates,
+            equipments: [ Equipments.instance.oldFashionedGlass, Equipments.instance.shaker, Equipments.instance.strainer, Equipments.instance.muddler ],
             ingredients: [
-                .init(ingredient: Ingredient.islayWhisky, amount: 10, unit: .milliliters),
-                .init(ingredient: Ingredient.scotchWhisky, amount: 60, unit: .milliliters),
-                .init(ingredient: Ingredient.lemonJuice, amount: 25, unit: .milliliters),
-                .init(ingredient: Ingredient.honeySirup, amount: 25, unit: .milliliters),
-                .init(ingredient: Ingredient.ginger, amount: 1, unit: .piece),
-                .init(ingredient: Ingredient.ice),
+                .init(ingredient: Ingredients.instance.islayWhisky, amount: 10, unit: .milliliters),
+                .init(ingredient: Ingredients.instance.scotchWhisky, amount: 60, unit: .milliliters),
+                .init(ingredient: Ingredients.instance.lemonJuice, amount: 25, unit: .milliliters),
+                .init(ingredient: Ingredients.instance.honeySirup, amount: 25, unit: .milliliters),
+                .init(ingredient: Ingredients.instance.ginger, amount: 1, unit: .piece),
+                .init(ingredient: Ingredients.instance.ice),
             ],
             steps: [
                 .init(string: "Do 3-4 slices of Ginger and drop those into the Shaker"),
@@ -783,7 +786,7 @@ extension Drink {
             ]
         )
     
-    static let romeoAndJuliet: Drink =
+    let romeoAndJuliet: Drink =
         .init(
             name: "Romeo and Juliet",
             description: "",
@@ -791,16 +794,16 @@ extension Drink {
             color: Colors.red,
             year: 2007,
             base: .gin,
-            origin: Origin.unitedStates,
-            equipments: [Equipment.cocktailGlass, Equipment.shaker, Equipment.strainer],
+            origin: Origins.instance.unitedStates,
+            equipments: [Equipments.instance.cocktailGlass, Equipments.instance.shaker, Equipments.instance.strainer],
             ingredients: [
-                .init(ingredient: Ingredient.gin, amount: 60, unit: .milliliters),
-                .init(ingredient: Ingredient.simpleSirup, amount: 25, unit: .milliliters),
-                .init(ingredient: Ingredient.limeJuice, amount: 25, unit: .milliliters),
-                .init(ingredient: Ingredient.roseWater, amount: 3, unit: .drop),
-                .init(ingredient: Ingredient.cucumber, amount: 3, unit: .piece),
-                .init(ingredient: Ingredient.mintLeaves, amount: 3, unit: .piece),
-                .init(ingredient: Ingredient.ice),
+                .init(ingredient: Ingredients.instance.gin, amount: 60, unit: .milliliters),
+                .init(ingredient: Ingredients.instance.simpleSirup, amount: 25, unit: .milliliters),
+                .init(ingredient: Ingredients.instance.limeJuice, amount: 25, unit: .milliliters),
+                .init(ingredient: Ingredients.instance.roseWater, amount: 3, unit: .drop),
+                .init(ingredient: Ingredients.instance.cucumber, amount: 3, unit: .piece),
+                .init(ingredient: Ingredients.instance.mintLeaves, amount: 3, unit: .piece),
+                .init(ingredient: Ingredients.instance.ice),
             ],
             steps: [
                 .init(string: "In the shaker add 3 slices of Cucumber & a pinch of salt"),
@@ -813,7 +816,7 @@ extension Drink {
         )
 
     
-    static let perfectMartini: Drink =
+    let perfectMartini: Drink =
         .init(
             name: "Perfect Martini",
             description: "",
@@ -821,13 +824,13 @@ extension Drink {
             color: Colors.gray,
             year: 1948,
             base: .gin,
-            origin: Origin.unitedStates,
-            equipments: [ Equipment.cocktailGlass, Equipment.barspoon, Equipment.mixingGlass ],
+            origin: Origins.instance.unitedStates,
+            equipments: [ Equipments.instance.cocktailGlass, Equipments.instance.barspoon, Equipments.instance.mixingGlass ],
             ingredients: [
-                .init(ingredient: Ingredient.gin, amount: 45, unit: .milliliters),
-                .init(ingredient: Ingredient.dryVermouth, amount: 25, unit: .milliliters),
-                .init(ingredient: Ingredient.sweetVermouth, amount: 25, unit: .milliliters),
-                .init(ingredient: Ingredient.ice),
+                .init(ingredient: Ingredients.instance.gin, amount: 45, unit: .milliliters),
+                .init(ingredient: Ingredients.instance.dryVermouth, amount: 25, unit: .milliliters),
+                .init(ingredient: Ingredients.instance.sweetVermouth, amount: 25, unit: .milliliters),
+                .init(ingredient: Ingredients.instance.ice),
             ],
             steps: [
                 .init(string: "Add Ice Cubes, Gin, Dry Vermouth, & Sweet Vermouth to the Mixing Glass"),
@@ -837,7 +840,7 @@ extension Drink {
             ]
         )
     
-    static let pinaColada: Drink =
+    let pinaColada: Drink =
         .init(
             name: "Piña Colada",
             description: "",
@@ -845,14 +848,14 @@ extension Drink {
             color: Colors.brown,
             year: 1920,
             base: .rum,
-            origin: Origin.puertoRico,
-            equipments: [ Equipment.cocktailGlass, Equipment.barspoon, Equipment.blender ],
+            origin: Origins.instance.puertoRico,
+            equipments: [ Equipments.instance.cocktailGlass, Equipments.instance.barspoon, Equipments.instance.blender ],
             ingredients: [
-                .init(ingredient: Ingredient.darkRum, amount: 45, unit: .milliliters),
-                .init(ingredient: Ingredient.coconutCream, amount: 45, unit: .milliliters),
-                .init(ingredient: Ingredient.pineappleJuice, amount: 45, unit: .milliliters),
-                .init(ingredient: Ingredient.pineapple, amount: 3, unit: .piece),
-                .init(ingredient: Ingredient.ice),
+                .init(ingredient: Ingredients.instance.darkRum, amount: 45, unit: .milliliters),
+                .init(ingredient: Ingredients.instance.coconutCream, amount: 45, unit: .milliliters),
+                .init(ingredient: Ingredients.instance.pineappleJuice, amount: 45, unit: .milliliters),
+                .init(ingredient: Ingredients.instance.pineapple, amount: 3, unit: .piece),
+                .init(ingredient: Ingredients.instance.ice),
             ],
             steps: [
                 .init(string: "Fill the Blender with Ice Cubes"),
@@ -863,7 +866,7 @@ extension Drink {
             ]
         )
     
-    static let rustyNail: Drink =
+    let rustyNail: Drink =
         .init(
             name: "Rusty Nail",
             description: "",
@@ -871,13 +874,13 @@ extension Drink {
             color: Colors.brown,
             year: 1960,
             base: .whisky,
-            origin: Origin.unitedStates,
-            equipments: [ Equipment.oldFashionedGlass, Equipment.mixingGlass, Equipment.strainer ],
+            origin: Origins.instance.unitedStates,
+            equipments: [ Equipments.instance.oldFashionedGlass, Equipments.instance.mixingGlass, Equipments.instance.strainer ],
             ingredients: [
-                .init(ingredient: Ingredient.scotchWhisky, amount: 60, unit: .milliliters),
-                .init(ingredient: Ingredient.drambuie, amount: 30, unit: .milliliters),
-                .init(ingredient: Ingredient.angosturaBitters, amount: 2, unit: .dash),
-                .init(ingredient: Ingredient.ice),
+                .init(ingredient: Ingredients.instance.scotchWhisky, amount: 60, unit: .milliliters),
+                .init(ingredient: Ingredients.instance.drambuie, amount: 30, unit: .milliliters),
+                .init(ingredient: Ingredients.instance.angosturaBitters, amount: 2, unit: .dash),
+                .init(ingredient: Ingredients.instance.ice),
             ],
             steps: [
                 .init(string: "Add Scotch Whisky, Drambuie, & Ice Cubes in the Mixing Glass"),
@@ -887,7 +890,7 @@ extension Drink {
             ]
         )
     
-    static let sazerac: Drink =
+    let sazerac: Drink =
         .init(
             name: "Sazerac",
             description: "",
@@ -895,14 +898,14 @@ extension Drink {
             color: Colors.brown,
             year: 1950,
             base: .whisky,
-            origin: Origin.unitedStates,
-            equipments: [ Equipment.mixingGlass, Equipment.barspoon, Equipment.oldFashionedGlass ],
+            origin: Origins.instance.unitedStates,
+            equipments: [ Equipments.instance.mixingGlass, Equipments.instance.barspoon, Equipments.instance.oldFashionedGlass ],
             ingredients: [
-                .init(ingredient: Ingredient.ryeWhisky, amount: 60, unit: .milliliters),
-                .init(ingredient: Ingredient.absinthe, amount: 2, unit: .dash),
-                .init(ingredient: Ingredient.simpleSirup, amount: 15, unit: .milliliters),
-                .init(ingredient: Ingredient.peychaudBitters, amount: 2, unit: .dash),
-                .init(ingredient: Ingredient.ice),
+                .init(ingredient: Ingredients.instance.ryeWhisky, amount: 60, unit: .milliliters),
+                .init(ingredient: Ingredients.instance.absinthe, amount: 2, unit: .dash),
+                .init(ingredient: Ingredients.instance.simpleSirup, amount: 15, unit: .milliliters),
+                .init(ingredient: Ingredients.instance.peychaudBitters, amount: 2, unit: .dash),
+                .init(ingredient: Ingredients.instance.ice),
             ],
             steps: [
                 .init(string: "Use the Absinthe to rinse the Old Fashioned Flass"),
@@ -913,7 +916,7 @@ extension Drink {
             ]
         )
     
-    static let sidecar: Drink =
+    let sidecar: Drink =
         .init(
             name: "Sidecar",
             description: "",
@@ -921,13 +924,13 @@ extension Drink {
             color: Colors.orange,
             year: 1922,
             base: .cognac,
-            origin: Origin.france,
-            equipments: [ Equipment.shaker, Equipment.cocktailGlass ],
+            origin: Origins.instance.france,
+            equipments: [ Equipments.instance.shaker, Equipments.instance.cocktailGlass ],
             ingredients: [
-                .init(ingredient: Ingredient.cognac, amount: 60, unit: .milliliters),
-                .init(ingredient: Ingredient.curacao, amount: 20, unit: .milliliters),
-                .init(ingredient: Ingredient.lemonJuice, amount: 20, unit: .milliliters),
-                .init(ingredient: Ingredient.ice),
+                .init(ingredient: Ingredients.instance.cognac, amount: 60, unit: .milliliters),
+                .init(ingredient: Ingredients.instance.curacao, amount: 20, unit: .milliliters),
+                .init(ingredient: Ingredients.instance.lemonJuice, amount: 20, unit: .milliliters),
+                .init(ingredient: Ingredients.instance.ice),
             ],
             steps: [
                 .init(string: "Fill Shaker with Ice Cubes"),
@@ -937,7 +940,7 @@ extension Drink {
             ]
         )
     
-    static let theTradewinds: Drink =
+    let theTradewinds: Drink =
         .init(
             name: "The Tradewinds",
             description: "",
@@ -945,15 +948,15 @@ extension Drink {
             color: Colors.yellow,
             year: 1970,
             base: .rum,
-            origin: Origin.caribbean,
-            equipments: [ Equipment.highballGlass, Equipment.barspoon ],
+            origin: Origins.instance.caribbean,
+            equipments: [ Equipments.instance.highballGlass, Equipments.instance.barspoon ],
             ingredients: [
-                .init(ingredient: Ingredient.goldRum, amount: 30, unit: .milliliters),
-                .init(ingredient: Ingredient.darkRum, amount: 30, unit: .milliliters),
-                .init(ingredient: Ingredient.apricotLiqueur, amount: 30, unit: .milliliters),
-                .init(ingredient: Ingredient.coconutCream, amount: 30, unit: .milliliters),
-                .init(ingredient: Ingredient.lemonJuice, amount: 30, unit: .milliliters),
-                .init(ingredient: Ingredient.ice),
+                .init(ingredient: Ingredients.instance.goldRum, amount: 30, unit: .milliliters),
+                .init(ingredient: Ingredients.instance.darkRum, amount: 30, unit: .milliliters),
+                .init(ingredient: Ingredients.instance.apricotLiqueur, amount: 30, unit: .milliliters),
+                .init(ingredient: Ingredients.instance.coconutCream, amount: 30, unit: .milliliters),
+                .init(ingredient: Ingredients.instance.lemonJuice, amount: 30, unit: .milliliters),
+                .init(ingredient: Ingredients.instance.ice),
             ],
             steps: [
                 .init(string: "In the Highball Glass add Gold Rum, Dark Rum, Apricot Liqueur, Coconut Cream, & Lemon Juice"),
@@ -963,7 +966,7 @@ extension Drink {
             ]
         )
     
-    static let whiskySour: Drink =
+    let whiskySour: Drink =
         .init(
             name: "Whisky Sour",
             description: "",
@@ -971,15 +974,15 @@ extension Drink {
             color: Colors.orange,
             year: 1870,
             base: .whisky,
-            origin: Origin.unitedStates,
-            equipments: [ Equipment.oldFashionedGlass, Equipment.shaker ],
+            origin: Origins.instance.unitedStates,
+            equipments: [ Equipments.instance.oldFashionedGlass, Equipments.instance.shaker ],
             ingredients: [
-                .init(ingredient: Ingredient.bourbonWhisky, amount: 60, unit: .milliliters),
-                .init(ingredient: Ingredient.lemonJuice, amount: 30, unit: .milliliters),
-                .init(ingredient: Ingredient.eggWhite, amount: 30, unit: .milliliters),
-                .init(ingredient: Ingredient.simpleSirup, amount: 15, unit: .milliliters),
-                .init(ingredient: Ingredient.angosturaBitters, amount: 2, unit: .dash),
-                .init(ingredient: Ingredient.ice),
+                .init(ingredient: Ingredients.instance.bourbonWhisky, amount: 60, unit: .milliliters),
+                .init(ingredient: Ingredients.instance.lemonJuice, amount: 30, unit: .milliliters),
+                .init(ingredient: Ingredients.instance.eggWhite, amount: 30, unit: .milliliters),
+                .init(ingredient: Ingredients.instance.simpleSirup, amount: 15, unit: .milliliters),
+                .init(ingredient: Ingredients.instance.angosturaBitters, amount: 2, unit: .dash),
+                .init(ingredient: Ingredients.instance.ice),
             ],
             steps: [
                 .init(string: "Put Bourbon Whisky, Lemon Juice, Egg White, & Simple Sirup into the Shaker"),
@@ -991,7 +994,7 @@ extension Drink {
             ]
         )
     
-    static let whiteNegroni: Drink =
+    let whiteNegroni: Drink =
         .init(
             name: "White Negroni",
             description: "",
@@ -999,13 +1002,13 @@ extension Drink {
             color: Colors.gray,
             year: 2002,
             base: .gin,
-            origin: Origin.france,
-            equipments: [ Equipment.oldFashionedGlass, Equipment.mixingGlass, Equipment.strainer ],
+            origin: Origins.instance.france,
+            equipments: [ Equipments.instance.oldFashionedGlass, Equipments.instance.mixingGlass, Equipments.instance.strainer ],
             ingredients: [
-                .init(ingredient: Ingredient.gin, amount: 45, unit: .milliliters),
-                .init(ingredient: Ingredient.lilletBlanc, amount: 25, unit: .milliliters),
-                .init(ingredient: Ingredient.suze, amount: 25, unit: .milliliters),
-                .init(ingredient: Ingredient.ice),
+                .init(ingredient: Ingredients.instance.gin, amount: 45, unit: .milliliters),
+                .init(ingredient: Ingredients.instance.lilletBlanc, amount: 25, unit: .milliliters),
+                .init(ingredient: Ingredients.instance.suze, amount: 25, unit: .milliliters),
+                .init(ingredient: Ingredients.instance.ice),
             ],
             steps: [
                 .init(string: "Add Gin, Suze, Lillet Blanc into the Mixing Glass"),
@@ -1018,7 +1021,7 @@ extension Drink {
         )
 
     
-    static let whiteRussian: Drink =
+    let whiteRussian: Drink =
         .init(
             name: "White Russian",
             description: "",
@@ -1026,13 +1029,13 @@ extension Drink {
             color: Colors.brown,
             year: 1949,
             base: .gin,
-            origin: Origin.belgium,
-            equipments: [ Equipment.oldFashionedGlass, Equipment.shaker ],
+            origin: Origins.instance.belgium,
+            equipments: [ Equipments.instance.oldFashionedGlass, Equipments.instance.shaker ],
             ingredients: [
-                .init(ingredient: Ingredient.vodka, amount: 45, unit: .milliliters),
-                .init(ingredient: Ingredient.kahlua, amount: 25, unit: .milliliters),
-                .init(ingredient: Ingredient.cream, amount: 25, unit: .milliliters),
-                .init(ingredient: Ingredient.ice),
+                .init(ingredient: Ingredients.instance.vodka, amount: 45, unit: .milliliters),
+                .init(ingredient: Ingredients.instance.kahlua, amount: 25, unit: .milliliters),
+                .init(ingredient: Ingredients.instance.cream, amount: 25, unit: .milliliters),
+                .init(ingredient: Ingredients.instance.ice),
             ],
             steps: [
                 .init(string: "Fill the Old Fashioned Glass with Ice Cubes"),
@@ -1041,7 +1044,7 @@ extension Drink {
                 .init(string: "Then add the Cream"),
             ]
         )
-    static let wisconsinOldFashioned: Drink =
+    let wisconsinOldFashioned: Drink =
         .init(
             name: "Wisconsin Old Fashioned",
             description: "",
@@ -1049,16 +1052,16 @@ extension Drink {
             color: Colors.orange,
             year: 1880,
             base: .cognac,
-            origin: Origin.unitedStates,
-            equipments: [ Equipment.oldFashionedGlass, Equipment.muddler ],
+            origin: Origins.instance.unitedStates,
+            equipments: [ Equipments.instance.oldFashionedGlass, Equipments.instance.muddler ],
             ingredients: [
-                .init(ingredient: Ingredient.cognac, amount: 60, unit: .milliliters),
-                .init(ingredient: Ingredient.simpleSirup, amount: 7, unit: .milliliters),
-                .init(ingredient: Ingredient.angosturaBitters, amount: 4, unit: .dash),
-                .init(ingredient: Ingredient.orange, amount: 1, unit: .piece),
-                .init(ingredient: Ingredient.cocktailCherry, amount: 1, unit: .piece),
-                .init(ingredient: Ingredient.sodaWater, amount: 30, unit: .milliliters),
-                .init(ingredient: Ingredient.ice),
+                .init(ingredient: Ingredients.instance.cognac, amount: 60, unit: .milliliters),
+                .init(ingredient: Ingredients.instance.simpleSirup, amount: 7, unit: .milliliters),
+                .init(ingredient: Ingredients.instance.angosturaBitters, amount: 4, unit: .dash),
+                .init(ingredient: Ingredients.instance.orange, amount: 1, unit: .piece),
+                .init(ingredient: Ingredients.instance.cocktailCherry, amount: 1, unit: .piece),
+                .init(ingredient: Ingredients.instance.sodaWater, amount: 30, unit: .milliliters),
+                .init(ingredient: Ingredients.instance.ice),
             ],
             steps: [
                 .init(string: "Make a Orange Wheel, and slice it in quarters"),
@@ -1071,73 +1074,75 @@ extension Drink {
             ]
         )
     
-    static let all: [Drink] = [
-        americano,
-        bourbonRenewal,
-        classicMartini,
-        corpseReviver,
-        cubaLibre,
-        daiquiri,
-        darkAndStormy,
-        dirtyMartini,
-        elDiablo,
-        espressoMartini,
-        fityFiftyMartini,
-        ginFizz,
-        hotToddy,
-        irishCoffee,
-        longIslandIceTea,
-        maitai,
-        manhattan,
-        margarita,
-        mojito,
-        moscowMule,
-        negroni,
-        newYourSour,
-        oldFashioned,
-        perfectMartini,
-        painkiller,
-        paperPlane,
-        pinaColada,
-        penicillin,
-        romeoAndJuliet,
-        rustyNail,
-        sazerac,
-        sidecar,
-        theTradewinds,
-        whiskySour,
-        whiteNegroni,
-        whiteRussian,
-        wisconsinOldFashioned,
-    ]
+    var all: [Drink] {
+        [
+            americano,
+            bourbonRenewal,
+            classicMartini,
+            corpseReviver,
+            cubaLibre,
+            daiquiri,
+            darkAndStormy,
+            dirtyMartini,
+            elDiablo,
+            espressoMartini,
+            fityFiftyMartini,
+            ginFizz,
+            hotToddy,
+            irishCoffee,
+            longIslandIceTea,
+            maitai,
+            manhattan,
+            margarita,
+            mojito,
+            moscowMule,
+            negroni,
+            newYourSour,
+            oldFashioned,
+            perfectMartini,
+            painkiller,
+            paperPlane,
+            pinaColada,
+            penicillin,
+            romeoAndJuliet,
+            rustyNail,
+            sazerac,
+            sidecar,
+            theTradewinds,
+            whiskySour,
+            whiteNegroni,
+            whiteRussian,
+            wisconsinOldFashioned,
+        ]
+    }
     
     // Base spirit
-    static var ginBased: [Drink] {
+    var ginBased: [Drink] {
         all.filter({ $0.base == .gin })
     }
-    static var whiskyBased: [Drink] {
+    var whiskyBased: [Drink] {
         all.filter({ $0.base == .whisky })
     }
-    static var rumBased: [Drink] {
+    var rumBased: [Drink] {
         all.filter({ $0.base == .rum })
     }
-    static var cognacBased: [Drink] {
+    var cognacBased: [Drink] {
         all.filter({ $0.base == .cognac })
     }
-    static var tequilaBased: [Drink] {
+    var tequilaBased: [Drink] {
         all.filter({ $0.base == .tequila })
     }
-    static var vodkaBased: [Drink] {
+    var vodkaBased: [Drink] {
         all.filter({ $0.base == .vodka })
     }
     
     // Country
-    static var countries: Dictionary<Origin, [Drink]> {
+    var countries: Dictionary<Origin, [Drink]> {
         Dictionary(grouping: all, by: { $0.origin})
     }
     
     // Get all drinks that are available with the gives ingredients
-    static func available(selections: [String]) -> [Drink] {
+    func available(selections: [String]) -> [Drink] {
         all.filter({ $0.ingredients.allSatisfy({
             selections.contains($0.ingredient.name)
             || !Set(selections).isDisjoint(with: $0.ingredient.alternatives.map({ $0.name }))

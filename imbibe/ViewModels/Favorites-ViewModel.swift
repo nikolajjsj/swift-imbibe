@@ -32,6 +32,6 @@ final class FavoritesViewModel: ViewModel {
     
     private func loadFromLocalStorage() {
         let lsFavorites = LocalStorage.get(type: [String].self, forKey: LocalStorageKeys.favorites) ?? []
-        favorites = Drink.all.filter({ lsFavorites.contains($0.name) })
+        favorites = Drinks.instance.all.filter({ lsFavorites.contains($0.name) })
     }
 }

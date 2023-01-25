@@ -32,6 +32,6 @@ struct EquipmentBox: View {
 
 struct EquipmentBox_Previews: PreviewProvider {
     static var previews: some View {
-        EquipmentBox(Equipment.shaker)
+        EquipmentBox(Equipments.instance.shaker)
     }
 }

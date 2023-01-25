@@ -51,9 +51,9 @@ struct DiscoverView: View {
                     .font(.headline)
                     .foregroundColor(.gray)
                 LazyVGrid(columns: columns) {
-                    ForEach(Array(Drink.countries.keys).sorted(by: { $0.name < $1.name }), id: \.name) { origin in
+                    ForEach(Array(Drinks.instance.countries.keys).sorted(by: { $0.name < $1.name }), id: \.name) { origin in
                         NavigationLink {
-                            DrinksList(drinks: Drink.countries[origin] ?? [])
+                            DrinksList(drinks: Drinks.instance.countries[origin] ?? [])
                                 .navigationTitle("\(origin.flag)\(origin.name)")
                         } label: {
                             Spacer()

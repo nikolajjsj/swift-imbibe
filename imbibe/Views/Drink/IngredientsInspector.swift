@@ -110,6 +110,6 @@ extension IngredientsInspector {
 
 struct IngredientsInspector_Previews: PreviewProvider {
     static var previews: some View {
-        IngredientsInspector(Drink.whiskySour)
+        IngredientsInspector(Drinks.instance.whiskySour)
     }
 }
