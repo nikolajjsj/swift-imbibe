@@ -24,7 +24,7 @@ final class Ingredient: Identifiable, Equatable, Hashable {
     let strength: Int
     let origin: Origin?
     let description: String
-    let alternatives: [Ingredient]
+    let namedAlternatives: [String]
     let tags: [Tag]
     
     init(
@@ -35,7 +35,7 @@ final class Ingredient: Identifiable, Equatable, Hashable {
         strength: Int,
         origin: Origin?,
         description: String,
-        alternatives: [Ingredient] = [],
+        namedAlternatives: [String] = [],
         tags: [Tag] = []
     ) {
         self.id = id
@@ -45,8 +45,14 @@ final class Ingredient: Identifiable, Equatable, Hashable {
         self.strength = strength
         self.origin = origin
         self.description = description
-        self.alternatives = alternatives
+        self.namedAlternatives = namedAlternatives
         self.tags = tags
+    }
+    
+    var alternatives: [Ingredient] {
+        namedAlternatives
+            .map({ str in Ingredients.instance.all.first(where: { $0.name == str }) })
+            .compactMap({ $0 })
     }
     
     enum Tag: String {
@@ -178,7 +184,19 @@ Angostura makes the most famous and widely used type of herbal Bitters. Angostur
         description: """
 A type of Whisky that typically has a rich & sweet taste, made of at least 51% corn aged in new-oak barrels. Bourbon has to be made in the United States to be able to call itself a Bourbon Whisky.
 """,
-//        alternatives: [Ingredients.instance.whisky],
+        namedAlternatives: ["Whisky"],
+        tags: [.spirit]
+    )
+    let brandy: Ingredient = Ingredient(
+        name: "Brandy",
+        image: "Brandy",
+        color: Colors.brown,
+        strength: 40,
+        origin: Origins.instance.worldwide,
+        description: """
+Like Cognac, Brandy is distilled spirit made from fermented wine, but unlike Cognac, Brandy can be defined as Brandy regardsless of origin.
+""",
+        namedAlternatives: ["Cognac"],
         tags: [.spirit]
     )
     let campari: Ingredient = Ingredient(
@@ -265,6 +283,7 @@ Champagne has been used for a variety of different sparkling wines, though many 
         description: """
 Cognac is a double distilled wine, based on Ugni Blanc, Folle Blanche, & Colombard grapes that are aged in oak barrels. Like Champagne, Cognac is exclusively produced in France in the Cognac region.
 """,
+        namedAlternatives: ["Brandy"],
         tags: [.base, .spirit]
     )
     let cointreau: Ingredient = Ingredient(
@@ -276,7 +295,7 @@ Cognac is a double distilled wine, based on Ugni Blanc, Folle Blanche, & Colomba
         description: """
 A type/brand of tripple sec (Orange liqueur) produced in Saint-Barthèlemy-d'Anjou, France. Both enjoyed as a apèritif and digestif.
 """,
-        //        alternatives: [.curacao, .grandMarnier],
+        namedAlternatives: ["Curacao", "Grand Marnier"],
         tags: [.spirit]
     )
     let cola: Ingredient = Ingredient(
@@ -302,7 +321,7 @@ A type/brand of tripple sec (Orange liqueur) produced in Saint-Barthèlemy-d'Anj
         strength: 40,
         origin: nil,
         description: "",
-        //        alternatives: [.cointreau, .grandMarnier],
+        namedAlternatives: ["Cointreau", "Grand Marnier"],
         tags: [.base, .spirit]
     )
     let cream: Ingredient = Ingredient(
@@ -322,7 +341,7 @@ A type/brand of tripple sec (Orange liqueur) produced in Saint-Barthèlemy-d'Anj
         description: """
 Dark Rum are the distilled product of sugar canes (though not exclusively sugar canes), aged for 2- or more years in oak barrels.
 """,
-        //        alternatives: [.goldRum],
+        namedAlternatives: ["Gold Rum"],
         tags: [.spirit]
     )
     let demeraraSirup: Ingredient = Ingredient(
@@ -390,7 +409,7 @@ There are generally considered to be five variations for gin: London Dry, Old To
         strength: 40,
         origin: nil,
         description: "",
-//        alternatives: [Ingredients.instance.darkRum],
+        namedAlternatives: ["Dark Rum"],
         tags: [.spirit]
     )
     let ginger: Ingredient = Ingredient(
@@ -408,8 +427,17 @@ There are generally considered to be five variations for gin: London Dry, Old To
         strength: 40,
         origin: nil,
         description: "A orange liqueur with a base of Cognac.",
-        //        alternatives: [.cointreau, .curacao],
+        namedAlternatives: ["Cointreau", "Curacao"],
         tags: [.spirit]
+    )
+    let grapefruitJuice: Ingredient = Ingredient(
+        name: "Grapefruit Juice",
+        image: "Grapefruit Juice",
+        color: Colors.red,
+        strength: 0,
+        origin: nil,
+        description: "",
+        tags: [.base]
     )
     let honeySirup: Ingredient = Ingredient(
         name: "Honey Sirup",
@@ -437,7 +465,7 @@ There are generally considered to be five variations for gin: London Dry, Old To
         description: """
 Once the most popular spirit in the world, going from over 30 distilleries to only 3 by the later 1900s. Though Irish Whisky has seen a boost in popularity in later years, and are on pace to become a highly popular spirit again.
 """,
-//        alternatives: [Ingredients.instance.whisky],
+        namedAlternatives: ["Whisky"],
         tags: [.spirit]
     )
     let islayWhisky: Ingredient = Ingredient(
@@ -449,7 +477,7 @@ Once the most popular spirit in the world, going from over 30 distilleries to on
         description: """
 A often times more peaty version of a Scotch Whisky, originating from the Island of Islay.
 """,
-//        alternatives: [Ingredients.instance.scotchWhisky, Ingredients.instance.whisky],
+        namedAlternatives: ["Whisky", "Scotch Whisky"],
         tags: [.spirit]
     )
     let kahlua: Ingredient = Ingredient(
@@ -461,7 +489,7 @@ A often times more peaty version of a Scotch Whisky, originating from the Island
         description: """
 A coffee liqueur from Mexico.
 """,
-//        alternatives: [Ingredients.instance.coffeeLiqueur],
+        namedAlternatives: ["Coffee Liqueur"],
         tags: [.spirit]
     )
     let kinaLaeroDor: Ingredient = Ingredient(
@@ -562,7 +590,7 @@ A coffee liqueur from Mexico.
     )
     let orangeJuice: Ingredient = Ingredient(
         name: "Orange Juice",
-        image: "Orange",
+        image: "Orange Juice",
         color: Colors.orange,
         strength: 0,
         origin: nil,
@@ -610,7 +638,7 @@ Originally created between 1849 and 1857 by Antoine Amèdèe Peychaud, often com
     )
     let pineappleJuice: Ingredient = Ingredient(
         name: "Pineapple Juice",
-        image: "Pineapple",
+        image: "Pineapple Juice",
         color: Colors.yellow,
         strength: 0,
         origin: nil,
@@ -657,7 +685,7 @@ A spirit made from distilled sugarcane molasses or sugarcane juice, and then age
         description: """
 A type of whisky made from at least 51% rye, and should be aged in charred new-oak-barrels for at least 2 years.
 """,
-//        alternatives: [Ingredients.instance.whisky],
+        namedAlternatives: ["Whisky"],
         tags: [.spirit]
     )
     let scotchWhisky: Ingredient = Ingredient(
@@ -670,7 +698,7 @@ A type of whisky made from at least 51% rye, and should be aged in charred new-o
 Scotch Whisky is divided up into 5 distinct categories: single malt, single grain, blended malt, blended grain, and blended Scotch Whisky.
 All Scotch Whisky must be made in oak barrels for at least 3 years.
 """,
-//        alternatives: [Ingredients.instance.whisky],
+        namedAlternatives: ["Whisky"],
         tags: [.spirit]
     )
     let simpleSirup: Ingredient = Ingredient(
@@ -764,6 +792,7 @@ Whisky is made from fermented mash containing various grains, including: barley,
             aperol,
             apricotLiqueur,
             bourbonWhisky,
+            brandy,
             campari,
             calvados,
             champagne,
@@ -788,6 +817,7 @@ Whisky is made from fermented mash containing various grains, including: barley,
             goldRum,
             ginger,
             grandMarnier,
+            grapefruitJuice,
             honeySirup,
             ice,
             irishWhisky,
