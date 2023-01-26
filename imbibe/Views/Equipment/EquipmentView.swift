@@ -34,7 +34,7 @@ struct EquipmentView: View {
                 
             }.padding()
         }
-        .presentationDetents([.medium])
+        .presentationDetents([.height(250)])
     }
 }
 
