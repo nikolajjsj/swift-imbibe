@@ -9,6 +9,7 @@ import SwiftUI
 
 struct IngredientsInspector: View {
     @StateObject var vm: ViewModel
+    @State private var sheetIngredient: Ingredient? = nil
     
     init(_ drink: Drink) {
         self._vm = StateObject(wrappedValue: ViewModel(drink: drink))
@@ -39,7 +40,9 @@ struct IngredientsInspector: View {
             }.padding(.vertical, 6)
             
             ForEach(vm.drink.ingredients, content: IngredientDetailPill)
-        }.detailCard()
+        }
+        .detailCard()
+        .sheet(item: $sheetIngredient, content: { i in IngredientView(ingredient: i) })
     }
     
     @ViewBuilder
@@ -65,6 +68,7 @@ struct IngredientsInspector: View {
         .padding(15)
         .background(RoundedRectangle(cornerRadius: 10, style: .continuous).fill(i.ingredient.color))
         .foregroundColor(i.ingredient.color.contrastColor)
+        .onTapGesture { sheetIngredient = i.ingredient }
     }
 }
 
