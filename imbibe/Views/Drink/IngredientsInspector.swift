@@ -67,6 +67,7 @@ struct IngredientsInspector: View {
         .lineLimit(1)
         .padding(15)
         .background(RoundedRectangle(cornerRadius: 10, style: .continuous).fill(i.ingredient.color))
+        .background(RoundedRectangle(cornerRadius: 10, style: .continuous).stroke(Color.label, lineWidth: 1))
         .foregroundColor(i.ingredient.color.contrastColor)
         .onTapGesture { sheetIngredient = i.ingredient }
     }
