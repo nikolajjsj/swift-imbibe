@@ -9,9 +9,41 @@ import Foundation
 
 @MainActor
 final class DrinksViewModel: ObservableObject {
-    @Published private(set) var drinks: [Drink] = Drinks.instance.all
     @Published private(set) var strengths: [Strength] = []
     @Published private(set) var eras: [Era] = []
+    @Published private(set) var baseSpirits: [Drink.Base] = []
+    
+    @Published var sort: Sort = .name
+    @Published var query: String = ""
+    @Published var showFilters: Bool = false
+    
+    var drinks: [Drink] {
+        var all: [Drink]
+        if strengths.isEmpty && eras.isEmpty && baseSpirits.isEmpty {
+            all = Drinks.instance.all
+        } else {
+            all = Drinks.instance.all.filter({ drink in
+                strengths.first(where: { $0.compareDrink(drink) }) != nil ||
+                eras.first(where: { $0.compareDrink(drink) }) != nil ||
+                baseSpirits.contains(drink.base)
+            })
+        }
+        
+        switch sort {
+        case .name:
+            return all.sorted(by: { $0.name < $1.name })
+        case .strength:
+            return all.sorted(by: { $0.strength < $1.strength })
+        }
+    }
+    
+    var filtered: [Drink] {
+        if query.isEmpty {
+            return drinks
+        } else {
+            return drinks.filter({ $0.name.localizedCaseInsensitiveContains(query) })
+        }
+    }
     
     func updateStrengths(_ strength: Strength) {
         if strengths.contains(strength) {
@@ -19,7 +51,6 @@ final class DrinksViewModel: ObservableObject {
         } else {
             strengths.append(strength)
         }
-        filteredByFilters()
     }
     
     func updateEras(_ era: Era) {
@@ -28,25 +59,25 @@ final class DrinksViewModel: ObservableObject {
         } else {
             eras.append(era)
         }
-        filteredByFilters()
+    }
+    
+    func updateBaseSpirits(_ base: Drink.Base) {
+        if baseSpirits.contains(base) {
+            baseSpirits = baseSpirits.filter({ $0 != base })
+        } else {
+            baseSpirits.append(base)
+        }
     }
     
     func clearAll() {
         strengths.removeAll()
         eras.removeAll()
-        filteredByFilters()
+        baseSpirits.removeAll()
     }
     
-    private func filteredByFilters() {
-        if strengths.isEmpty && eras.isEmpty {
-            drinks = Drinks.instance.all
-            return
-        }
-        
-        drinks = Drinks.instance.all.filter({ drink in
-            strengths.first(where: { $0.compareDrink(drink) }) != nil ||
-            eras.first(where: { $0.compareDrink(drink) }) != nil
-        })
+    enum Sort: String, CaseIterable {
+        case name = "Name"
+        case strength = "Strength"
     }
     
     enum Strength: String, CaseIterable {

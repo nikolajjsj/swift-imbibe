@@ -15,51 +15,67 @@ struct DrinkFilters: View {
     
     var body: some View {
         VStack {
-            HStack {
-                Text("     ")
-                Spacer()
-                Text("Filters").font(.headline)
-                Spacer()
-                Button(role: .destructive, action: { vm.clearAll() }, label: {
-                    Text("Clear")
-                })
-            }
-            .padding(.horizontal)
-            .padding(.vertical)
-            
-            ScrollView {
-                VStack(alignment: .leading) {
-                    Text("Strength").font(.headline)
-                    LazyVStack {
-                        ForEach(DrinksViewModel.Strength.allCases, id: \.self) { strength in
-                            FilterOption(
-                                label: strength.rawValue.description,
-                                selected: vm.strengths.contains(strength),
-                                onChanged: { vm.updateStrengths(strength) }
-                            )
-                        }
-                    }.padding(.bottom, 32)
-                    
-                    Text("Era").font(.headline)
-                    LazyVStack {
-                        ForEach(DrinksViewModel.Era.allCases, id: \.self) { era in
-                            FilterOption(
-                                label: era.label,
-                                selected: vm.eras.contains(era),
-                                onChanged: { vm.updateEras(era) }
-                            )
+            List {
+                Section {
+                    Picker("Sort by", selection: $vm.sort) {
+                        ForEach(DrinksViewModel.Sort.allCases, id: \.self) { sort in
+                            Text(sort.rawValue).tag(sort)
                         }
                     }
-                }.padding(.horizontal)
+                } header: {
+                    Text("Sorting").font(.headline)
+                }
+                
+                Section {
+                    ForEach(DrinksViewModel.Strength.allCases, id: \.self) { strength in
+                        FilterOption(
+                            label: strength.rawValue.description,
+                            selected: vm.strengths.contains(strength),
+                            onChanged: { vm.updateStrengths(strength) }
+                        )
+                    }
+                } header: {
+                    Text("Strength").font(.headline)
+                }
+                
+                Section {
+                    ForEach(Drink.Base.all, id: \.self) { base in
+                        FilterOption(
+                            label: base.rawValue.description,
+                            selected: vm.baseSpirits.contains(base),
+                            onChanged: { vm.updateBaseSpirits(base) }
+                        )
+                    }
+                } header: {
+                    Text("Base Spirit").font(.headline)
+                }
+                
+                Section {
+                    ForEach(DrinksViewModel.Era.allCases, id: \.self) { era in
+                        FilterOption(
+                            label: era.label,
+                            selected: vm.eras.contains(era),
+                            onChanged: { vm.updateEras(era) }
+                        )
+                    }
+                } header: {
+                    Text("Era").font(.headline)
+                }
             }
             
-            Button { dismiss() } label: {
-                Spacer()
-                Text("Done (\(vm.drinks.count) Drinks)")
-                    .font(.title2.bold())
-                    .padding(.vertical, 8)
-                Spacer()
+            HStack {
+                Button(role: .destructive, action: { vm.clearAll() }, label: {
+                    Text("Clear")
+                        .frame(maxWidth: 100)
+                })
+                
+                
+                Button(action: { dismiss() }, label: {
+                    Text("Done (\(vm.drinks.count) Drinks)")
+                        .frame(maxWidth: .infinity)
+                })
             }
+            .font(.callout.bold())
             .buttonStyle(.borderedProminent)
             .padding(.horizontal)
         }
