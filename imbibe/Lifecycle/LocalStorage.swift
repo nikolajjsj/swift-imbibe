@@ -10,6 +10,8 @@ import Foundation
 enum LocalStorageKeys: String, CaseIterable {
     case unit = "default_volumetric_unit"
     
+    case onboarded = "user_has_been_onboarded"
+    
     case favorites = "user_favorites"
     case barIngredients = "user_bar_ingredients"
 }

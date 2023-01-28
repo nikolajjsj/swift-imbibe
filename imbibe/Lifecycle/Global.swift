@@ -16,11 +16,25 @@ class Global: ObservableObject {
     @Published var ingredientsPath: [Route] = []
     @Published var barPath: [Route] = []
     
+    @Published private(set) var onboarded: Bool = LocalStorage.get(type: Bool.self, forKey: .onboarded) ?? false
+    func toggleOnboarded() {
+        self.onboarded.toggle()
+        LocalStorage.set(value: self.onboarded, key: .onboarded)
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1, execute: self.clearAllPaths)
+    }
+    
+    private func clearAllPaths() {
+        tab = .discover
+        discoverPath.removeAll()
+        drinksPath.removeAll()
+        ingredientsPath.removeAll()
+        barPath.removeAll()
+    }
+    
+    
     // MARK: - Properties
     
-    var currentTab: Tab {
-        return tab
-    }
+    var currentTab: Tab { tab }
 }
 
 enum Tab: Hashable {

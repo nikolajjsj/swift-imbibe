@@ -8,10 +8,26 @@
 import SwiftUI
 
 struct SettingsView: View {
+    @EnvironmentObject var global: Global
+    
     var body: some View {
         NavigationView {
             List {
                 detailSection
+                
+                Section {
+                    Button(role: .destructive) {
+                        withAnimation {
+                            global.toggleOnboarded()
+                        }
+                    } label: {
+                        Text("Clear")
+                    }
+                } header: {
+                    Text("App")
+                } footer: {
+                    Text("This will reset you to the onboarding step, resulting in the onboarding page to be shown again")
+                }
             }
             .navigationTitle("Settings")
         }
@@ -47,15 +63,6 @@ struct SettingsView: View {
                 }
             }
         }
-    }
-    
-    func getAppIcon() -> String? {
-        guard let infoPlist = Bundle.main.infoDictionary else { return nil }
-        guard let bundleIcons = infoPlist["CFBundleIcons"] as? NSDictionary else { return nil }
-        guard let bundlePrimaryIcon = bundleIcons["CFBundlePrimaryIcon"] as? NSDictionary else { return nil }
-        guard let bundleIconFiles = bundlePrimaryIcon["CFBundleIconFiles"] as? NSArray else { return nil }
-        guard let appIcon = bundleIconFiles.lastObject as? String else { return nil }
-        return appIcon
     }
 }
 

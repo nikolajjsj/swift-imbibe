@@ -11,6 +11,15 @@ struct AppView: View {
     @EnvironmentObject var global: Global
     
     var body: some View {
+        if !global.onboarded {
+            OnboardingView()
+        } else {
+            Main()
+        }
+    }
+    
+    @ViewBuilder
+    private func Main() -> some View {
         TabView(selection: $global.tab) {
             NavigationStack(path: $global.discoverPath) {
                 DiscoverView().navigationDestination(for: Route.self, destination: routeView)
@@ -59,7 +68,7 @@ struct AppView: View {
     }
     
     @ViewBuilder
-    func routeView(route: Route?) -> some View {
+    private func routeView(route: Route?) -> some View {
         switch route {
         default:
             Text("No selection")
