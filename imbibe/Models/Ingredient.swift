@@ -344,14 +344,14 @@ Dark Rum are the distilled product of sugar canes (though not exclusively sugar 
         namedAlternatives: ["Gold Rum"],
         tags: [.spirit]
     )
-    let demeraraSirup: Ingredient = Ingredient(
-        name: "Demerara Sirup",
-        image: "Demerara Sirup",
+    let demeraraSyrup: Ingredient = Ingredient(
+        name: "Demerara Syrup",
+        image: "Demerara Syrup",
         color: Colors.brown,
         strength: 0,
         origin: nil,
         description: """
-Made up of 2 parts demerara sugar to 1 part water. Warmed up in a saucepan, on medium heat, constantly stirring until all the sugar has been dissolved. In contrast to a Simple Sirup, demerara Sirup has a deeper, darker, caramel-like flavor.
+Made up of 2 parts demerara sugar to 1 part water. Warmed up in a saucepan, on medium heat, constantly stirring until all the sugar has been dissolved. In contrast to a Simple Syrup, demerara Syrup has a deeper, darker, caramel-like flavor.
 """,
         tags: [.base]
     )
@@ -439,9 +439,9 @@ There are generally considered to be five variations for gin: London Dry, Old To
         description: "",
         tags: [.base]
     )
-    let honeySirup: Ingredient = Ingredient(
-        name: "Honey Sirup",
-        image: "Honey Sirup",
+    let honeySyrup: Ingredient = Ingredient(
+        name: "Honey Syrup",
+        image: "Honey Syrup",
         color: Colors.yellow,
         strength: 0,
         origin: nil,
@@ -608,9 +608,9 @@ A freshly squeezed juice, usually sweet, used in a variety of different drinks.
         description: "",
         tags: [.base]
     )
-    let orgeatSirup: Ingredient = Ingredient(
-        name: "Orgeat Sirup",
-        image: "Orgeat Sirup",
+    let orgeatSyrup: Ingredient = Ingredient(
+        name: "Orgeat Syrup",
+        image: "Orgeat Syrup",
         color: Colors.gray,
         strength: 0,
         origin: nil,
@@ -710,9 +710,9 @@ All Scotch Whisky must be made in oak barrels for at least 3 years.
         namedAlternatives: ["Whisky"],
         tags: [.spirit]
     )
-    let simpleSirup: Ingredient = Ingredient(
-        name: "Simple Sirup",
-        image: "Simple Sirup",
+    let simpleSyrup: Ingredient = Ingredient(
+        name: "Simple Syrup",
+        image: "Simple Syrup",
         color: Colors.white,
         strength: 0,
         origin: nil,
@@ -817,7 +817,7 @@ Whisky is made from fermented mash containing various grains, including: barley,
             curacao,
             cream,
             darkRum,
-            demeraraSirup,
+            demeraraSyrup,
             drambuie,
             dryVermouth,
             eggWhite,
@@ -827,7 +827,7 @@ Whisky is made from fermented mash containing various grains, including: barley,
             ginger,
             grandMarnier,
             grapefruitJuice,
-            honeySirup,
+            honeySyrup,
             ice,
             irishWhisky,
             kahlua,
@@ -844,7 +844,7 @@ Whisky is made from fermented mash containing various grains, including: barley,
             olives,
             orangeJuice,
             orange,
-            orgeatSirup,
+            orgeatSyrup,
             peychaudBitters,
             pineappleJuice,
             pineapple,
@@ -853,7 +853,7 @@ Whisky is made from fermented mash containing various grains, including: barley,
             rum,
             ryeWhisky,
             scotchWhisky,
-            simpleSirup,
+            simpleSyrup,
             sodaWater,
             sugar,
             suze,
