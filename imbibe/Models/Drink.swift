@@ -813,7 +813,6 @@ final class Drinks {
             ]
         )
 
-    
     let perfectMartini: Drink =
         .init(
             name: "Perfect Martini",
@@ -1018,7 +1017,6 @@ final class Drinks {
             ]
         )
 
-    
     let whiteRussian: Drink =
         .init(
             name: "White Russian",
@@ -1042,6 +1040,7 @@ final class Drinks {
                 .init(string: "Then add the Cream"),
             ]
         )
+    
     let wisconsinOldFashioned: Drink =
         .init(
             name: "Wisconsin Old Fashioned",

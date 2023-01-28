@@ -645,6 +645,15 @@ Originally created between 1849 and 1857 by Antoine Amèdèe Peychaud, often com
         description: "",
         tags: [.base]
     )
+    let pisco: Ingredient = Ingredient(
+        name: "Pisco",
+        image: "Pisco",
+        color: Colors.yellow,
+        strength: 40,
+        origin: nil,
+        description: "",
+        tags: [.spirit]
+    )
     let redWine: Ingredient = Ingredient(
         name: "Red Wine",
         image: "Red Wine",
@@ -839,6 +848,7 @@ Whisky is made from fermented mash containing various grains, including: barley,
             peychaudBitters,
             pineappleJuice,
             pineapple,
+            pisco,
             redWine,
             rum,
             ryeWhisky,
