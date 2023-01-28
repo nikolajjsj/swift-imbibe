@@ -44,6 +44,7 @@ final class Origins {
     let ireland: Origin = Origin( name: "Ireland", flag: "🇮🇪" )
     let italy: Origin = Origin( name: "Italy", flag: "🇮🇹" )
     let mexico: Origin = Origin( name: "Mexico", flag: "🇲🇽" )
+    let peru: Origin = Origin( name: "Peru", flag: "🇵🇪" )
     let poland: Origin = Origin( name: "Poland", flag: "🇵🇱" )
     let puertoRico: Origin = Origin( name: "Puerto Rico", flag: "🇵🇷" )
     let scotland: Origin = Origin( name: "Scotland", flag: "🏴󠁧󠁢󠁳󠁣󠁴󠁿" )

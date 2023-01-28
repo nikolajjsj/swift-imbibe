@@ -862,6 +862,32 @@ final class Drinks {
                 .init(string: "Garnish with Cherry, Pineapple, and a Cocktail Umbrella"),
             ]
         )
+        
+    let piscoOldFashioned: Drink =
+        .init(
+            name: "Pisco Old Fashioned",
+            description: "",
+            image: "Pisco Old Fashioned",
+            color: Colors.gray,
+            base: .other,
+            origin: Origins.instance.peru,
+            equipments: [ Equipments.instance.oldFashionedGlass, Equipments.instance.barspoon ],
+            ingredients: [
+                .init(ingredient: Ingredients.instance.pisco, amount: 60, unit: .milliliters),
+                .init(ingredient: Ingredients.instance.simpleSyrup, amount: 8, unit: .milliliters),
+                .init(ingredient: Ingredients.instance.angosturaOrangeBitters, amount: 2, unit: .dash),
+                .init(ingredient: Ingredients.instance.angosturaBitters, amount: 5, unit: .dash),
+                .init(ingredient: Ingredients.instance.ice),
+            ],
+            steps: [
+                .init(string: "Add a large Ice Cube into the Old Fashioned Glass"),
+                .init(string: "Add Angostura Orange Bitters, Simple Syrup, & Pisco"),
+                .init(string: "Stir for 10-15 seconds"),
+                .init(string: "Make a float of Angostura Bitters"),
+                .init(string: "Garnish with Orange Peel"),
+            ]
+        )
+
     
     let rustyNail: Drink =
         .init(
