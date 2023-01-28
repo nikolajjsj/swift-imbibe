@@ -670,15 +670,13 @@ final class Drinks {
                 .init(ingredient: Ingredients.instance.lemonJuice, amount: 30, unit: .milliliters),
                 .init(ingredient: Ingredients.instance.simpleSirup, amount: 15, unit: .milliliters),
                 .init(ingredient: Ingredients.instance.curacao, amount: 8, unit: .milliliters),
-                .init(ingredient: Ingredients.instance.eggWhite, amount: 30, unit: .milliliters),
                 .init(ingredient: Ingredients.instance.redWine, amount: 15, unit: .milliliters),
                 .init(ingredient: Ingredients.instance.ice),
             ],
             steps: [
-                .init(string: "Put Rye Whisky, Lemon Juice, Simple Sirup, Curacao, & Egg White into the Shaker"),
-                .init(string: "Dry shake (without ice for about 10 seconds)"),
+                .init(string: "Put Rye Whisky, Lemon Juice, Simple Sirup, & Curacao into the Shaker"),
                 .init(string: "Add Ice Cubes"),
-                .init(string: "Shake again (10-15 seconds)"),
+                .init(string: "Shake for 10-15 seconds"),
                 .init(string: "Strain into the Old Fashioned Glas"),
                 .init(string: "Add a float of Red Wine"),
             ]
