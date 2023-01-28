@@ -688,7 +688,7 @@ final class Drinks {
             description: "",
             image: "Old Fashioned",
             color: Colors.orange,
-            year: 1880,
+            year: 1833,
             base: .whisky,
             origin: Origins.instance.unitedStates,
             equipments: [ Equipments.instance.barspoon, Equipments.instance.oldFashionedGlass ],
@@ -869,6 +869,7 @@ final class Drinks {
             description: "",
             image: "Pisco Old Fashioned",
             color: Colors.gray,
+            year: 1833,
             base: .other,
             origin: Origins.instance.peru,
             equipments: [ Equipments.instance.oldFashionedGlass, Equipments.instance.barspoon ],
@@ -887,7 +888,34 @@ final class Drinks {
                 .init(string: "Garnish with Orange Peel"),
             ]
         )
-
+    
+    let rumOldFashioned: Drink =
+        .init(
+            name: "Rum Old Fashioned",
+            description: "",
+            image: "Rum Old Fashioned",
+            color: Colors.orange,
+            year: 1833,
+            base: .rum,
+            origin: Origins.instance.unitedStates,
+            equipments: [ Equipments.instance.oldFashionedGlass, Equipments.instance.barspoon, Equipments.instance.muddler ],
+            ingredients: [
+                .init(ingredient: Ingredients.instance.darkRum, amount: 60, unit: .milliliters),
+                .init(ingredient: Ingredients.instance.simpleSyrup, amount: 8, unit: .milliliters),
+                .init(ingredient: Ingredients.instance.demeraraSyrup, amount: 8, unit: .milliliters),
+                .init(ingredient: Ingredients.instance.angosturaBitters, amount: 2, unit: .dash),
+                .init(ingredient: Ingredients.instance.lime),
+                .init(ingredient: Ingredients.instance.ice),
+            ],
+            steps: [
+                .init(string: "Cut 3 thin slices of Lime and add into the Old Fashioned Glass"),
+                .init(string: "Add Demerara Syrup, Angostura Bitters"),
+                .init(string: "Muddle"),
+                .init(string: "Add a Large Ice Cube"),
+                .init(string: "Add Dark Rum"),
+                .init(string: "Stir and enjoy"),
+            ]
+        )
     
     let rustyNail: Drink =
         .init(
@@ -1125,8 +1153,10 @@ final class Drinks {
             perfectMartini,
             painkiller,
             paperPlane,
-            pinaColada,
             penicillin,
+            pinaColada,
+            piscoOldFashioned,
+            rumOldFashioned,
             romeoAndJuliet,
             rustyNail,
             sazerac,
