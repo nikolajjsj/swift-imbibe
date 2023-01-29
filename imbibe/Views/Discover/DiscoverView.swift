@@ -13,7 +13,7 @@ struct DiscoverView: View {
         
         ScrollView(.vertical) {
             VStack(alignment: .leading) {
-                if let image = UIImage.init(named: "Ingredients") {
+                if let image = UIImage.init(named: "Tips") {
                     HStack {
                         Spacer()
                         Image(uiImage: image)
