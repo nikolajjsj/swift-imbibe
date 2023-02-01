@@ -50,7 +50,7 @@ struct BarView: View {
 //            )
 
             NavigationLink {
-                EmptyView()
+                TipsView()
             } label: {
                 ListItem(
                     image: "Tips",
