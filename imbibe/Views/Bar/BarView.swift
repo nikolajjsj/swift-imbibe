@@ -49,15 +49,15 @@ struct BarView: View {
 //                subtitle: "Add your own notes to each drink, eg. taste notes, drink tweaks, or thoughts"
 //            )
 
-            NavigationLink {
-                TipsView()
-            } label: {
-                ListItem(
-                    image: "Tips",
-                    title: "Tips",
-                    subtitle: "Tips & tricks regarding mixology"
-                )
-            }
+//            NavigationLink {
+//                TipsView()
+//            } label: {
+//                ListItem(
+//                    image: "Tips",
+//                    title: "Tips",
+//                    subtitle: "Tips & tricks regarding mixology"
+//                )
+//            }
 
             NavigationLink {
                 BooksView()
