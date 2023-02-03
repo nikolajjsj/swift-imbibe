@@ -22,7 +22,7 @@ struct OnboardingView: View {
                     .frame(width: 100, height: 100)
                 
                 VStack(spacing: 10) {
-                    Title("👋 Welcome to Imbibe!")
+                    Title("👋 Welcome to Cocktail Craft!")
                     Subtitle("Take your first step towards better drinks.")
                 }
                 

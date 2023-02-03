@@ -43,7 +43,7 @@ struct SettingsView: View {
                     .frame(width: 72, height: 72)
                 
                 VStack(alignment: .leading) {
-                    Text("Imbibe!")
+                    Text("Cocktail Craft!")
                         .font(.title.bold())
                     
                     Text("by Nikolaj Jensen")
