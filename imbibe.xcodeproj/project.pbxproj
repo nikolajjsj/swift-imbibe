@@ -56,7 +56,6 @@
 		D1F79045296E8DB200F3CB30 /* DiscoverView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1F79044296E8DB200F3CB30 /* DiscoverView.swift */; };
 		D1F79047296E90C800F3CB30 /* DrinkCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1F79046296E90C800F3CB30 /* DrinkCard.swift */; };
 		D1F79049296E916C00F3CB30 /* IngredientCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1F79048296E916C00F3CB30 /* IngredientCard.swift */; };
-		D1FC81C629826E48000AB863 /* PopupView in Frameworks */ = {isa = PBXBuildFile; productRef = D1FC81C529826E48000AB863 /* PopupView */; };
 		D1FDAE42297AA18700D69804 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1FDAE41297AA18700D69804 /* Colors.swift */; };
 /* End PBXBuildFile section */
 
@@ -121,7 +120,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D1FC81C629826E48000AB863 /* PopupView in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -356,7 +354,6 @@
 			);
 			name = imbibe;
 			packageProductDependencies = (
-				D1FC81C529826E48000AB863 /* PopupView */,
 			);
 			productName = imbibe;
 			productReference = D1F79009296D75EE00F3CB30 /* imbibe.app */;
@@ -387,7 +384,6 @@
 			);
 			mainGroup = D1F79000296D75EE00F3CB30;
 			packageReferences = (
-				D1FC81C429826E48000AB863 /* XCRemoteSwiftPackageReference "PopupView" */,
 			);
 			productRefGroup = D1F7900A296D75EE00F3CB30 /* Products */;
 			projectDirPath = "";
@@ -678,25 +674,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCRemoteSwiftPackageReference section */
-		D1FC81C429826E48000AB863 /* XCRemoteSwiftPackageReference "PopupView" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/exyte/PopupView";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 2.0.0;
-			};
-		};
-/* End XCRemoteSwiftPackageReference section */
-
-/* Begin XCSwiftPackageProductDependency section */
-		D1FC81C529826E48000AB863 /* PopupView */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = D1FC81C429826E48000AB863 /* XCRemoteSwiftPackageReference "PopupView" */;
-			productName = PopupView;
-		};
-/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		D1F79010296D75EE00F3CB30 /* imbibe.xcdatamodeld */ = {
