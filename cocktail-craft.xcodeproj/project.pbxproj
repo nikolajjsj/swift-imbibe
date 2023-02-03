@@ -44,7 +44,7 @@
 		D1F00887296EC0B8007E09B7 /* Origin.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1F00886296EC0B8007E09B7 /* Origin.swift */; };
 		D1F7900D296D75EE00F3CB30 /* imbibeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1F7900C296D75EE00F3CB30 /* imbibeApp.swift */; };
 		D1F7900F296D75EE00F3CB30 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1F7900E296D75EE00F3CB30 /* Persistence.swift */; };
-		D1F79012296D75EE00F3CB30 /* imbibe.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D1F79010296D75EE00F3CB30 /* imbibe.xcdatamodeld */; };
+		D1F79012296D75EE00F3CB30 /* cocktail-craft.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D1F79010296D75EE00F3CB30 /* cocktail-craft.xcdatamodeld */; };
 		D1F79014296D75EE00F3CB30 /* DrinksView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1F79013296D75EE00F3CB30 /* DrinksView.swift */; };
 		D1F79016296D75EF00F3CB30 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D1F79015296D75EF00F3CB30 /* Assets.xcassets */; };
 		D1F79025296D76D400F3CB30 /* Drink.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1F79024296D76D400F3CB30 /* Drink.swift */; };
@@ -96,13 +96,13 @@
 		D1F00882296EC078007E09B7 /* Ingredient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ingredient.swift; sourceTree = "<group>"; };
 		D1F00884296EC0A8007E09B7 /* Equipment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Equipment.swift; sourceTree = "<group>"; };
 		D1F00886296EC0B8007E09B7 /* Origin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Origin.swift; sourceTree = "<group>"; };
-		D1F79009296D75EE00F3CB30 /* imbibe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = imbibe.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D1F79009296D75EE00F3CB30 /* cocktail-craft.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "cocktail-craft.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D1F7900C296D75EE00F3CB30 /* imbibeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = imbibeApp.swift; sourceTree = "<group>"; };
 		D1F7900E296D75EE00F3CB30 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
 		D1F79011296D75EE00F3CB30 /* imbibe.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = imbibe.xcdatamodel; sourceTree = "<group>"; };
 		D1F79013296D75EE00F3CB30 /* DrinksView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrinksView.swift; sourceTree = "<group>"; };
 		D1F79015296D75EF00F3CB30 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		D1F79017296D75EF00F3CB30 /* imbibe.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = imbibe.entitlements; sourceTree = "<group>"; };
+		D1F79017296D75EF00F3CB30 /* cocktail-craft.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "cocktail-craft.entitlements"; sourceTree = "<group>"; };
 		D1F79024296D76D400F3CB30 /* Drink.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Drink.swift; sourceTree = "<group>"; };
 		D1F7902B296D841F00F3CB30 /* DrinkView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrinkView.swift; sourceTree = "<group>"; };
 		D1F7902F296D879600F3CB30 /* ColorExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorExtensions.swift; sourceTree = "<group>"; };
@@ -255,7 +255,7 @@
 		D1F79000296D75EE00F3CB30 = {
 			isa = PBXGroup;
 			children = (
-				D1F7900B296D75EE00F3CB30 /* imbibe */,
+				D1F7900B296D75EE00F3CB30 /* cocktail-craft */,
 				D1F7900A296D75EE00F3CB30 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -263,12 +263,12 @@
 		D1F7900A296D75EE00F3CB30 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				D1F79009296D75EE00F3CB30 /* imbibe.app */,
+				D1F79009296D75EE00F3CB30 /* cocktail-craft.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		D1F7900B296D75EE00F3CB30 /* imbibe */ = {
+		D1F7900B296D75EE00F3CB30 /* cocktail-craft */ = {
 			isa = PBXGroup;
 			children = (
 				D1F7900C296D75EE00F3CB30 /* imbibeApp.swift */,
@@ -281,11 +281,11 @@
 				D1F79021296D765100F3CB30 /* Extensions */,
 				D1E74811297D6F84002B48CE /* Helpers */,
 				D1F79015296D75EF00F3CB30 /* Assets.xcassets */,
-				D1F79017296D75EF00F3CB30 /* imbibe.entitlements */,
-				D1F79010296D75EE00F3CB30 /* imbibe.xcdatamodeld */,
+				D1F79017296D75EF00F3CB30 /* cocktail-craft.entitlements */,
+				D1F79010296D75EE00F3CB30 /* cocktail-craft.xcdatamodeld */,
 				D1520ED02978326A006C1519 /* Info.plist */,
 			);
-			path = imbibe;
+			path = "cocktail-craft";
 			sourceTree = "<group>";
 		};
 		D1F79021296D765100F3CB30 /* Extensions */ = {
@@ -340,9 +340,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		D1F79008296D75EE00F3CB30 /* imbibe */ = {
+		D1F79008296D75EE00F3CB30 /* cocktail-craft */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = D1F7901D296D75EF00F3CB30 /* Build configuration list for PBXNativeTarget "imbibe" */;
+			buildConfigurationList = D1F7901D296D75EF00F3CB30 /* Build configuration list for PBXNativeTarget "cocktail-craft" */;
 			buildPhases = (
 				D1F79005296D75EE00F3CB30 /* Sources */,
 				D1F79006296D75EE00F3CB30 /* Frameworks */,
@@ -352,11 +352,11 @@
 			);
 			dependencies = (
 			);
-			name = imbibe;
+			name = "cocktail-craft";
 			packageProductDependencies = (
 			);
 			productName = imbibe;
-			productReference = D1F79009296D75EE00F3CB30 /* imbibe.app */;
+			productReference = D1F79009296D75EE00F3CB30 /* cocktail-craft.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -374,7 +374,7 @@
 					};
 				};
 			};
-			buildConfigurationList = D1F79004296D75EE00F3CB30 /* Build configuration list for PBXProject "imbibe" */;
+			buildConfigurationList = D1F79004296D75EE00F3CB30 /* Build configuration list for PBXProject "cocktail-craft" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -389,7 +389,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				D1F79008296D75EE00F3CB30 /* imbibe */,
+				D1F79008296D75EE00F3CB30 /* cocktail-craft */,
 			);
 		};
 /* End PBXProject section */
@@ -422,7 +422,7 @@
 				D1F7900D296D75EE00F3CB30 /* imbibeApp.swift in Sources */,
 				D1E5B3AB2972C998001DF274 /* IngredientBox.swift in Sources */,
 				D1F00881296EC065007E09B7 /* DrinkStep.swift in Sources */,
-				D1F79012296D75EE00F3CB30 /* imbibe.xcdatamodeld in Sources */,
+				D1F79012296D75EE00F3CB30 /* cocktail-craft.xcdatamodeld in Sources */,
 				D1F79045296E8DB200F3CB30 /* DiscoverView.swift in Sources */,
 				D1DD34BE297412AF006EE244 /* EquipmentView.swift in Sources */,
 				D16D80942976985600D163B3 /* DrinkFilters.swift in Sources */,
@@ -579,14 +579,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = imbibe/imbibe.entitlements;
+				CODE_SIGN_ENTITLEMENTS = "cocktail-craft/cocktail-craft.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 52;
+				CURRENT_PROJECT_VERSION = 53;
 				DEVELOPMENT_TEAM = YRQMPX5YW2;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = imbibe/Info.plist;
+				INFOPLIST_FILE = "cocktail-craft/Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = "Cocktail Craft";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
@@ -618,14 +618,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = imbibe/imbibe.entitlements;
+				CODE_SIGN_ENTITLEMENTS = "cocktail-craft/cocktail-craft.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 52;
+				CURRENT_PROJECT_VERSION = 53;
 				DEVELOPMENT_TEAM = YRQMPX5YW2;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = imbibe/Info.plist;
+				INFOPLIST_FILE = "cocktail-craft/Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = "Cocktail Craft";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
@@ -655,7 +655,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		D1F79004296D75EE00F3CB30 /* Build configuration list for PBXProject "imbibe" */ = {
+		D1F79004296D75EE00F3CB30 /* Build configuration list for PBXProject "cocktail-craft" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				D1F7901B296D75EF00F3CB30 /* Debug */,
@@ -664,7 +664,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		D1F7901D296D75EF00F3CB30 /* Build configuration list for PBXNativeTarget "imbibe" */ = {
+		D1F7901D296D75EF00F3CB30 /* Build configuration list for PBXNativeTarget "cocktail-craft" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				D1F7901E296D75EF00F3CB30 /* Debug */,
@@ -676,13 +676,13 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		D1F79010296D75EE00F3CB30 /* imbibe.xcdatamodeld */ = {
+		D1F79010296D75EE00F3CB30 /* cocktail-craft.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
 				D1F79011296D75EE00F3CB30 /* imbibe.xcdatamodel */,
 			);
 			currentVersion = D1F79011296D75EE00F3CB30 /* imbibe.xcdatamodel */;
-			path = imbibe.xcdatamodeld;
+			path = "cocktail-craft.xcdatamodeld";
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};
