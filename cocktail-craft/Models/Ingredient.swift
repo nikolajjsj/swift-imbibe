@@ -373,6 +373,16 @@ Made up of 2 parts demerara sugar to 1 part water. Warmed up in a saucepan, on m
         description: "Vermouth is a fortified wine flavored with spices, herbs, and bark.",
         tags: [.base, .spirit]
     )
+    let dubbonetRouge: Ingredient = Ingredient(
+        name: "Dubonnet Rouge",
+        image: "Dubonnet Rouge",
+        color: Colors.red,
+        strength: 18,
+        origin: Origins.instance.france,
+        description: "Dubonnet Rouge is a fortified wine very similar to Sweet Vermouth.",
+        namedAlternatives: ["Sweet Vermouth"],
+        tags: [.base, .spirit]
+    )
     let eggWhite: Ingredient = Ingredient(
         name: "Egg White",
         image: "Egg White",
@@ -820,6 +830,7 @@ Whisky is made from fermented mash containing various grains, including: barley,
             demeraraSyrup,
             drambuie,
             dryVermouth,
+            dubbonetRouge,
             eggWhite,
             gin,
             gingerBeer,

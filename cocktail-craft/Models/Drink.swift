@@ -294,6 +294,35 @@ final class Drinks {
             ]
         )
     
+    let deshler: Drink =
+        .init(
+            name: "Deshler",
+            description: "",
+            image: "Deshler",
+            color: Colors.red,
+            year: 1917,
+            base: .whisky,
+            origin: Origins.instance.unitedStates,
+            equipments: [ Equipments.instance.cocktailGlass, Equipments.instance.shaker, Equipments.instance.strainer ],
+            ingredients: [
+                .init(ingredient: Ingredients.instance.ryeWhisky, amount: 25, unit: .milliliters),
+                .init(ingredient: Ingredients.instance.dubbonetRouge, amount: 25, unit: .milliliters),
+                .init(ingredient: Ingredients.instance.peychaudBitters, amount: 2, unit: .dash),
+                .init(ingredient: Ingredients.instance.cointreau, amount: 2, unit: .dash),
+                .init(ingredient: Ingredients.instance.lemon, amount: 1, unit: .piece),
+                .init(ingredient: Ingredients.instance.orange, amount: 1, unit: .piece),
+                .init(ingredient: Ingredients.instance.ice),
+            ],
+            steps: [
+                .init(string: "Take a swath of Lemon peel, and express the oils into the Shaker, and drop it in"),
+                .init(string: "Then take 2 swaths of Orange peel, and do the same"),
+                .init(string: "Add the Rye Whisky, Dubonnet Rouge, Peychaud Bitters, & Cointreau"),
+                .init(string: "Add Ice and shake for 10-15 seconds"),
+                .init(string: "Strain into the Cocktail Glass"),
+                .init(string: "Garnish with a Orange Twist"),
+            ]
+        )
+    
     let dirtyMartini: Drink =
         .init(
             name: "Dirty Martini",
@@ -575,6 +604,62 @@ final class Drinks {
                 .init(string: "Add a salt rim to the Cocktail Glass"),
                 .init(string: "Strain into the Cocktail Class"),
                 .init(string: "Garnish with a Lime Wedge"),
+            ]
+        )
+    
+    let modernDeshler: Drink =
+        .init(
+            name: "Modern Deshler",
+            description: "",
+            image: "Modern Deshler",
+            color: Colors.red,
+            year: 2000,
+            base: .whisky,
+            origin: Origins.instance.unitedStates,
+            equipments: [ Equipments.instance.cocktailGlass, Equipments.instance.mixingGlass, Equipments.instance.barspoon, Equipments.instance.strainer ],
+            ingredients: [
+                .init(ingredient: Ingredients.instance.ryeWhisky, amount: 60, unit: .milliliters),
+                .init(ingredient: Ingredients.instance.dubbonetRouge, amount: 30, unit: .milliliters),
+                .init(ingredient: Ingredients.instance.cointreau, amount: 8, unit: .milliliters),
+                .init(ingredient: Ingredients.instance.peychaudBitters, amount: 2, unit: .dash),
+                .init(ingredient: Ingredients.instance.lemon, amount: 1, unit: .piece),
+                .init(ingredient: Ingredients.instance.orange, amount: 1, unit: .piece),
+                .init(ingredient: Ingredients.instance.ice),
+            ],
+            steps: [
+                .init(string: "Take a swath of Lemon peel & Orange Peel, and express the oils into the Mixing Glass, and drop it in"),
+                .init(string: "Add the Rye Whisky, Dubonnet Rouge, Peychaud Bitters, & Cointreau"),
+                .init(string: "Add Ice and stir for 30 seconds"),
+                .init(string: "Strain into the Cocktail Glass"),
+                .init(string: "Garnish with a Orange Twist"),
+            ]
+        )
+    
+    let modernDeshlerTwisted: Drink =
+        .init(
+            name: "Modern Deshler Twisted",
+            description: "",
+            image: "Modern Deshler Twisted",
+            color: Colors.red,
+            year: 2000,
+            base: .whisky,
+            origin: Origins.instance.unitedStates,
+            equipments: [ Equipments.instance.cocktailGlass, Equipments.instance.mixingGlass, Equipments.instance.barspoon, Equipments.instance.strainer ],
+            ingredients: [
+                .init(ingredient: Ingredients.instance.bourbonWhisky, amount: 60, unit: .milliliters),
+                .init(ingredient: Ingredients.instance.sweetVermouth, amount: 30, unit: .milliliters),
+                .init(ingredient: Ingredients.instance.curacao, amount: 15, unit: .milliliters),
+                .init(ingredient: Ingredients.instance.peychaudBitters, amount: 2, unit: .dash),
+                .init(ingredient: Ingredients.instance.lemon, amount: 1, unit: .piece),
+                .init(ingredient: Ingredients.instance.orange, amount: 1, unit: .piece),
+                .init(ingredient: Ingredients.instance.ice),
+            ],
+            steps: [
+                .init(string: "Take a swath of Lemon peel & Orange Peel, and express the oils into the Mixing Glass, and drop it in"),
+                .init(string: "Add the Bourbon Whisky, Sweet Vermouth, Curacao, & Peychaud Bitters"),
+                .init(string: "Add Ice and stir for 30 seconds"),
+                .init(string: "Strain into the Cocktail Glass"),
+                .init(string: "Garnish with a Orange Twist"),
             ]
         )
     
@@ -1134,6 +1219,7 @@ final class Drinks {
             cubaLibre,
             daiquiri,
             darkAndStormy,
+            deshler,
             dirtyMartini,
             elDiablo,
             espressoMartini,
@@ -1145,6 +1231,8 @@ final class Drinks {
             maitai,
             manhattan,
             margarita,
+            modernDeshler,
+            modernDeshlerTwisted,
             mojito,
             moscowMule,
             negroni,
