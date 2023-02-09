@@ -17,7 +17,7 @@ struct DrinkView: View {
         
         ScrollView {
             ZStack(alignment: .topTrailing) {
-                LazyVStack {
+                VStack {
                     if let image = UIImage.init(named: drink.image) {
                         Image(uiImage: image)
                             .resizable()
