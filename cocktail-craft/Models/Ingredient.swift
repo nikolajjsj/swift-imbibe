@@ -449,6 +449,15 @@ There are generally considered to be five variations for gin: London Dry, Old To
         description: "",
         tags: [.base]
     )
+    let grenadine: Ingredient = Ingredient(
+        name: "Grenadine",
+        image: "Grenadine",
+        color: Colors.red,
+        strength: 0,
+        origin: nil,
+        description: "",
+        tags: [.base]
+    )
     let honeySyrup: Ingredient = Ingredient(
         name: "Honey Syrup",
         image: "Honey Syrup",
@@ -847,6 +856,7 @@ Whisky is made from fermented mash containing various grains, including: barley,
             ginger,
             grandMarnier,
             grapefruitJuice,
+            grenadine,
             honeySyrup,
             ice,
             irishWhisky,

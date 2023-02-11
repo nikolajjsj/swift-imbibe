@@ -117,6 +117,32 @@ final class Drinks {
     static let instance = Drinks()
     private init() { }
     
+    let _12MileLimit: Drink =
+        .init(
+            name: "12 Mile Limit",
+            description: "",
+            image: "12 Mile Limit",
+            color: Colors.yellow,
+            year: 1898,
+            base: .rum,
+            origin: Origins.instance.unitedStates,
+            equipments: [ Equipments.instance.oldFashionedGlass, Equipments.instance.shaker, Equipments.instance.strainer ],
+            ingredients: [
+                .init(ingredient: Ingredients.instance.lightRum, amount: 30, unit: .milliliters),
+                .init(ingredient: Ingredients.instance.ryeWhisky, amount: 15, unit: .milliliters),
+                .init(ingredient: Ingredients.instance.brandy, amount: 15, unit: .milliliters),
+                .init(ingredient: Ingredients.instance.lemonJuice, amount: 15, unit: .milliliters),
+                .init(ingredient: Ingredients.instance.grenadine, amount: 15, unit: .milliliters),
+                .init(ingredient: Ingredients.instance.ice),
+            ],
+            steps: [
+                .init(string: "Into the Shaker add Light Rum, Rye Whisky, Brandy, Lemon Juice, & Grenadine"),
+                .init(string: "Add Ice and shake for 10-15 seconds"),
+                .init(string: "Strain into the Old Fashioned Glass"),
+                .init(string: "Garnish with a Lemon Twist"),
+            ]
+        )
+    
     let bourbonRenewal: Drink =
         .init(
             name: "Bourbon Renewal",
@@ -1266,6 +1292,7 @@ final class Drinks {
     
     var all: [Drink] {
         [
+            _12MileLimit,
             americano,
             bourbonRenewal,
             brooklyn,
