@@ -1156,6 +1156,31 @@ final class Drinks {
             ]
         )
     
+    let theMomisette: Drink =
+        .init(
+            name: "The Momisette",
+            description: "",
+            image: "The Momisette",
+            color: Colors.white,
+            year: 1840,
+            base: .other,
+            origin: Origins.instance.france,
+            equipments: [ Equipments.instance.highballGlass, Equipments.instance.shaker, Equipments.instance.strainer ],
+            ingredients: [
+                .init(ingredient: Ingredients.instance.absinthe, amount: 45, unit: .milliliters),
+                .init(ingredient: Ingredients.instance.orgeatSyrup, amount: 25, unit: .milliliters),
+                .init(ingredient: Ingredients.instance.lemonJuice, amount: 15, unit: .milliliters),
+                .init(ingredient: Ingredients.instance.sodaWater, amount: 90, unit: .milliliters),
+                .init(ingredient: Ingredients.instance.ice),
+            ],
+            steps: [
+                .init(string: "In the Shaker add Absinthe, Lemon Juice, & Orgeat Syrup"),
+                .init(string: "Add Ice & shake for 10-15 seconds"),
+                .init(string: "Add Ice to the Highball Glass"),
+                .init(string: "Strain into the Highball Glass and combine with Soda Water"),
+            ]
+        )
+    
     let theTradewinds: Drink =
         .init(
             name: "The Tradewinds",
@@ -1332,6 +1357,7 @@ final class Drinks {
             sazerac,
             sidecar,
             tartan,
+            theMomisette,
             theTradewinds,
             whiskySour,
             whiteNegroni,
