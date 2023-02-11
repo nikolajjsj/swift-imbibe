@@ -145,6 +145,33 @@ final class Drinks {
             ]
         )
     
+    let brooklyn: Drink =
+        .init(
+            name: "Brooklyn",
+            description: "",
+            image: "Brooklyn",
+            color: Colors.orange,
+            year: 1908,
+            base: .whisky,
+            origin: Origins.instance.unitedStates,
+            equipments: [ Equipments.instance.oldFashionedGlass, Equipments.instance.mixingGlass, Equipments.instance.strainer, Equipments.instance.barspoon ],
+            ingredients: [
+                .init(ingredient: Ingredients.instance.ryeWhisky, amount: 60, unit: .milliliters),
+                .init(ingredient: Ingredients.instance.dryVermouth, amount: 30, unit: .milliliters),
+                .init(ingredient: Ingredients.instance.maraschinoLiqueur, amount: 10, unit: .milliliters),
+                .init(ingredient: Ingredients.instance.amaro, amount: 10, unit: .milliliters),
+                .init(ingredient: Ingredients.instance.angosturaOrangeBitters, amount: 2, unit: .dash),
+                .init(ingredient: Ingredients.instance.ice),
+            ],
+            steps: [
+                .init(string: "To the Mixing Glass add Rye Whisky, Dry Vermouth, Maraschino Liqueur, Amaro, & Angostura Orange Bitters"),
+                .init(string: "Fill with Ice"),
+                .init(string: "Stir for 30-45 seconds"),
+                .init(string: "Garnish with a Cocktail Cherry, in the bottom of the Cocktail Glass"),
+                .init(string: "Strain into the Cocktail Glass"),
+            ]
+        )
+    
     let americano: Drink =
         .init(
             name: "Americano",
@@ -1076,6 +1103,33 @@ final class Drinks {
             ]
         )
     
+    let tartan: Drink =
+        .init(
+            name: "Tartan",
+            description: "",
+            image: "Tartan",
+            color: Colors.orange,
+            year: 2020,
+            base: .whisky,
+            origin: Origins.instance.unitedStates,
+            equipments: [ Equipments.instance.cocktailGlass, Equipments.instance.mixingGlass, Equipments.instance.barspoon, Equipments.instance.strainer ],
+            ingredients: [
+                .init(ingredient: Ingredients.instance.scotchWhisky, amount: 45, unit: .milliliters),
+                .init(ingredient: Ingredients.instance.sweetVermouth, amount: 25, unit: .milliliters),
+                .init(ingredient: Ingredients.instance.drambuie, amount: 8, unit: .milliliters),
+                .init(ingredient: Ingredients.instance.amaro, amount: 8, unit: .milliliters),
+                .init(ingredient: Ingredients.instance.angosturaBitters, amount: 3, unit: .dash),
+                .init(ingredient: Ingredients.instance.orange, amount: 1, unit: .piece),
+                .init(ingredient: Ingredients.instance.ice),
+            ],
+            steps: [
+                .init(string: "In the Mixing Glass add Scotch Whisky, Sweet Vermouth, Drambuie, Amaro, & Angostura Bitters"),
+                .init(string: "Add Ice & stir for 30-40 seconds"),
+                .init(string: "Strain into the Cocktail Glass"),
+                .init(string: "Garnish with a Orange Twist"),
+            ]
+        )
+    
     let theTradewinds: Drink =
         .init(
             name: "The Tradewinds",
@@ -1214,6 +1268,7 @@ final class Drinks {
         [
             americano,
             bourbonRenewal,
+            brooklyn,
             classicMartini,
             corpseReviver,
             cubaLibre,
@@ -1249,6 +1304,7 @@ final class Drinks {
             rustyNail,
             sazerac,
             sidecar,
+            tartan,
             theTradewinds,
             whiskySour,
             whiteNegroni,

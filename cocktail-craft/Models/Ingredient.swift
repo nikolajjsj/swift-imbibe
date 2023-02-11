@@ -573,6 +573,15 @@ A coffee liqueur from Mexico.
         description: "",
         tags: [.base]
     )
+    let maraschinoLiqueur: Ingredient = Ingredient(
+        name: "Maraschino Liqueur",
+        image: "Maraschino Liqueur",
+        color: Colors.red,
+        strength: 32,
+        origin: nil,
+        description: "",
+        tags: [.base, .spirit]
+    )
     let mintLeaves: Ingredient = Ingredient(
         name: "Mint Leaves",
         image: "Mint Leaves",
