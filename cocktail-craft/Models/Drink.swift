@@ -1398,4 +1398,14 @@ final class Drinks {
             || !Set(selections).isDisjoint(with: $0.ingredient.alternatives.map({ $0.name }))
         }) })
     }
+    
+    // See which ingredients are missing for drinks
+    func missingIngredients(selections: [String]) -> Dictionary<[Ingredient], [Drink]> {
+        let hasMissingIngredients = all.filter({ !$0.ingredients.allSatisfy({ selections.contains($0.ingredient.name) }) })
+        
+        return Dictionary(
+            grouping: hasMissingIngredients,
+            by: { $0.ingredients.map{ $0.ingredient }.filter({ !selections.contains($0.name) }) }
+        )
+    }
 }
