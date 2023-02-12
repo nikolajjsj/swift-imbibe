@@ -31,6 +31,8 @@ struct DrinksHelper: View {
     @AppStorage(LocalStorageKeys.barIngredients.rawValue) var selected: [String] = []
     
     @State private var missingCount = 1
+    @State private var confirmation = false
+    @State private var ingredients: [Ingredient] = []
     
     var body: some View {
         NavigationView {
@@ -48,9 +50,19 @@ struct DrinksHelper: View {
                     let names = m.map{$0.name}.joined(separator: ", ")
                     
                     Section {
-                        VStack(alignment: .leading) {
-                            Text("Result of adding: \(names)").font(.headline)
-                            Text("\(drinks.count) additional drink\(drinks.count <= 1 ? "" : "s")")
+                        HStack {
+                            VStack(alignment: .leading) {
+                                Text("Result of adding: \(names)").font(.headline)
+                                Text("\(drinks.count) additional drink\(drinks.count <= 1 ? "" : "s")")
+                            }
+                            Spacer()
+                            Button {
+                                ingredients = m
+                                confirmation.toggle()
+                            } label: {
+                                Image(systemName: "plus.circle.fill")
+                                    .imageScale(.large)
+                            }
                         }
                         
                         ForEach(drinks) {
@@ -64,6 +76,22 @@ struct DrinksHelper: View {
             .toolbar {
                 ToolbarItem(placement: .navigationBarTrailing) {
                     Button("Done") { dismiss() }
+                }
+            }
+            .confirmationDialog("Add ingredients to your bar", isPresented: $confirmation) {
+                Button("Yes, add ingredients") {
+                    for ingredient in ingredients {
+                        let idx = selected.firstIndex(of: ingredient.name)
+                        if let idx {
+                            selected.remove(at: idx)
+                        } else {
+                            selected.append(ingredient.name)
+                        }
+                    }
+                }
+                Button("Cancel", role: .cancel) {
+                    confirmation = false
+                    ingredients = []
                 }
             }
         }
