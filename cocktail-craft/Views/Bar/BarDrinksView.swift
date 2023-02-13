@@ -13,14 +13,20 @@ struct BarDrinksView: View {
     @State private var helperSheet = false
     
     var body: some View {
-        DrinksList(drinks: drinks)
-            .navigationTitle("Available Drinks")
-            .toolbar {
-                ToolbarItem(placement: .navigationBarTrailing) {
-                    Button("Helper") { helperSheet.toggle() }
-                }
+        ScrollView {
+            Button { helperSheet.toggle() } label: {
+                Text("Need more drinks?")
+                    .font(.headline)
+                    .padding(.vertical, 5)
+                    .frame(maxWidth: .infinity)
             }
-            .sheet(isPresented: $helperSheet) { DrinksHelper() }
+            .buttonStyle(.bordered)
+            .padding(.horizontal)
+            
+            DrinksList(drinks: drinks)
+        }
+        .navigationTitle("Available Drinks")
+        .sheet(isPresented: $helperSheet) { DrinksHelper() }
     }
     
     var drinks: [Drink] { Drinks.instance.available(selections: selected) }
@@ -100,7 +106,16 @@ struct DrinksHelper: View {
     var sortedKeys: [[Ingredient]] {
         let dict = missing.filter({ $0.key.count == missingCount })
         return Array(dict.keys)
-            .sorted(by: { (dict[$0] ?? []).count > (dict[$1] ?? []).count })
+            .sorted { lhs, rhs in
+                let lhsArr = dict[lhs] ?? []
+                let rhsArr = dict[rhs] ?? []
+                
+                if lhsArr.count == rhsArr.count {
+                    return lhs.first?.name ?? "" < rhs.first?.name ?? ""
+                }
+                
+                return lhsArr.count > rhsArr.count
+            }
     }
     
     var missing: Dictionary<[Ingredient], [Drink]> {
