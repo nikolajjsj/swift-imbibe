@@ -58,7 +58,7 @@ struct DrinksHelper: View {
                     Section {
                         HStack {
                             VStack(alignment: .leading) {
-                                Text("Result of adding: \(names)").font(.headline)
+                                Text("Add: \(names)").font(.headline)
                                 Text("\(drinks.count) additional drink\(drinks.count <= 1 ? "" : "s")")
                             }
                             Spacer()
@@ -84,8 +84,8 @@ struct DrinksHelper: View {
                     Button("Done") { dismiss() }
                 }
             }
-            .confirmationDialog("Add ingredients to your bar", isPresented: $confirmation) {
-                Button("Yes, add ingredients") {
+            .confirmationDialog("", isPresented: $confirmation) {
+                Button("Yes, add: \(ingredients.map{$0.name}.joined(separator: ", "))") {
                     for ingredient in ingredients {
                         let idx = selected.firstIndex(of: ingredient.name)
                         if let idx {
@@ -94,10 +94,6 @@ struct DrinksHelper: View {
                             selected.append(ingredient.name)
                         }
                     }
-                }
-                Button("Cancel", role: .cancel) {
-                    confirmation = false
-                    ingredients = []
                 }
             }
         }
