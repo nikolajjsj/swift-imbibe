@@ -25,9 +25,6 @@ struct imbibeApp: App {
                 .environmentObject(global)
                 .environmentObject(favoritesVM)
                 .environment(\.managedObjectContext, persistenceController.container.viewContext)
-                .onAppear {
-                    favoritesVM.prepare(with: global)
-                }
         }
     }
 }

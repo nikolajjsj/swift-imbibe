@@ -14,7 +14,9 @@ struct ToggleStates {
 }
 
 struct BarIngredientsView: View {
-    @AppStorage(LocalStorageKeys.barIngredients.rawValue) var selected: [String] = []
+    @Environment(\.managedObjectContext) private var moc
+    
+    @FetchRequest(sortDescriptors: [], animation: .default) var selected: FetchedResults<SelectedIngredient>
     
     @State private var query = ""
     @State private var all: [Ingredient] = Ingredients.instance.all
@@ -62,8 +64,7 @@ struct BarIngredientsView: View {
     
     @ViewBuilder
     func selectableIngredientCard(ingredient: Ingredient) -> some View {
-        let idx = selected.firstIndex(of: ingredient.name)
-        let isSelected = idx != nil
+        let selectedIngredient = selected.first(where: { $0.name == ingredient.name })
         
         VStack {
             Spacer()
@@ -79,13 +80,16 @@ struct BarIngredientsView: View {
         }
         .padding(6)
         .frame(maxWidth: .infinity)
-        .background(RoundedRectangle(cornerRadius: 10, style: .continuous).fill(isSelected ? ingredient.color : .clear))
-        .foregroundColor(isSelected ? ingredient.color.contrastColor : nil)
+        .background(RoundedRectangle(cornerRadius: 10, style: .continuous).fill(selectedIngredient != nil ? ingredient.color : .clear))
+        .foregroundColor(selectedIngredient != nil ? ingredient.color.contrastColor : nil)
         .onTapGesture {
-            if let idx {
-                selected.remove(at: idx)
+            if let selectedIngredient {
+                moc.delete(selectedIngredient)
+                moc.quickSave()
             } else {
-                selected.append(ingredient.name)
+                let selection = SelectedIngredient(context: moc)
+                selection.name = ingredient.name
+                moc.quickSave()
             }
         }
     }
@@ -99,7 +103,10 @@ struct BarIngredientsView: View {
         }
     }
     
-    var drinks: [Drink] { Drinks.instance.available(selections: selected) }
+    var drinks: [Drink] {
+        let selections = selected.map({ $0.name! })
+        return Drinks.instance.available(selections: selections)
+    }
 }
 
 struct BarIngredientsView_Previews: PreviewProvider {

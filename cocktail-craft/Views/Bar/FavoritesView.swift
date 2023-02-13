@@ -8,17 +8,22 @@
 import SwiftUI
 
 struct FavoritesView: View {
-    @EnvironmentObject var fvm: FavoritesViewModel
+    @FetchRequest(sortDescriptors: [], animation: .default) var favorites: FetchedResults<Favorite>
     
     var body: some View {
-        DrinksList(drinks: fvm.favorites)
+        DrinksList(drinks: drinks)
             .navigationTitle("Favorites")
+    }
+    
+    var drinks: [Drink] {
+        Drinks.instance.all.filter({ drink in
+            favorites.contains(where: { drink.name == $0.name })
+        })
     }
 }
 
 struct FavoritesView_Previews: PreviewProvider {
     static var previews: some View {
         FavoritesView()
-        .environmentObject(FavoritesViewModel())
     }
 }

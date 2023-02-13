@@ -80,7 +80,7 @@ extension IngredientsInspector {
         @Published var servings = 1
         @Published var unit: UnitVolume = .milliliters
         
-        @AppStorage(LocalStorageKeys.barIngredients.rawValue) private var selected: [String] = []
+        @FetchRequest(sortDescriptors: [], animation: .default) var selected: FetchedResults<SelectedIngredient>
         
         init(drink: Drink) {
             self.drink = drink
@@ -104,11 +104,13 @@ extension IngredientsInspector {
         }
         
         func shouldUseAlternative(_ i: IngredientWithVolume) -> Bool {
-            !selected.contains(i.ingredient.name) && !i.ingredient.alternatives.isEmpty
+            !selected.contains(where: { $0.name == i.ingredient.name }) && !i.ingredient.alternatives.isEmpty
         }
         
         func getAlternative(_ i: IngredientWithVolume) -> Ingredient? {
-            i.ingredient.alternatives.first(where: { selected.contains($0.name) })
+            i.ingredient.alternatives.first(where: { item in
+                selected.contains(where: { $0.name == item.name })
+            })
         }
     }
 }

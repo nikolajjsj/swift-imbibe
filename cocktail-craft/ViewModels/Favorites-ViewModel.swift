@@ -7,31 +7,52 @@
 
 import Foundation
 
-final class FavoritesViewModel: ViewModel {
-    @Published private(set) var favorites: [Drink] = []
-    
-    var global: Global?
+final class FavoritesViewModel: ObservableObject {
+    private let viewContext = PersistenceController.shared.container.viewContext
     
     init() {
         self.loadFromLocalStorage()
     }
     
-    func toggleDrink(_ drink: Drink) {
-        if favorites.contains(drink) {
-            favorites.removeAll(where: { $0.name == drink.name })
-        } else {
-            favorites.append(drink)
-        }
-        self.saveToLocalStorage()
-    }
-    
-    private func saveToLocalStorage() {
-        let toSave = favorites.map({ $0.name })
-        LocalStorage.set(value: toSave, key: LocalStorageKeys.favorites)
-    }
-    
     private func loadFromLocalStorage() {
+        // Convert local storage favorites into core data versions
         let lsFavorites = LocalStorage.get(type: [String].self, forKey: LocalStorageKeys.favorites) ?? []
-        favorites = Drinks.instance.all.filter({ lsFavorites.contains($0.name) })
+        let favorites = Favorite.fetchRequest()
+        do {
+            let result = try viewContext.fetch(favorites)
+            
+            // Check if core data contains all favorites from local storage
+            for favorite in lsFavorites {
+                if !result.contains(where: { $0.name == favorite }) {
+                    let item = Favorite(context: viewContext)
+                    item.name = favorite
+                }
+            }
+            viewContext.quickSave()
+            
+            LocalStorage.remove(key: LocalStorageKeys.favorites)
+        } catch {
+            print("Couldn't fetch items: \(error.localizedDescription)")
+        }
+        
+        // Convert local storage bar ingredients into core data versions
+        let lsSelections = LocalStorage.get(type: [String].self, forKey: LocalStorageKeys.barIngredients) ?? []
+        let selections = SelectedIngredient.fetchRequest()
+        do {
+            let result = try viewContext.fetch(selections)
+            
+            // Check if core data contains all favorites from local storage
+            for selection in lsSelections {
+                if !result.contains(where: { $0.name == selection }) {
+                    let item = SelectedIngredient(context: viewContext)
+                    item.name = selection
+                }
+            }
+            viewContext.quickSave()
+            
+            LocalStorage.remove(key: LocalStorageKeys.barIngredients)
+        } catch {
+            print("Couldn't fetch items: \(error.localizedDescription)")
+        }
     }
 }

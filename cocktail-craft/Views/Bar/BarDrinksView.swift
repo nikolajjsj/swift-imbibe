@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct BarDrinksView: View {
-    @AppStorage(LocalStorageKeys.barIngredients.rawValue) var selected: [String] = []
+    @FetchRequest(sortDescriptors: [], animation: .default) var selected: FetchedResults<SelectedIngredient>
     
     @State private var helperSheet = false
     
@@ -29,12 +29,17 @@ struct BarDrinksView: View {
         .sheet(isPresented: $helperSheet) { DrinksHelper() }
     }
     
-    var drinks: [Drink] { Drinks.instance.available(selections: selected) }
+    var drinks: [Drink] {
+        let selections = selected.map({ $0.name! })
+        return Drinks.instance.available(selections: selections)
+    }
 }
 
 struct DrinksHelper: View {
+    @Environment(\.managedObjectContext) private var moc
     @Environment(\.dismiss) var dismiss
-    @AppStorage(LocalStorageKeys.barIngredients.rawValue) var selected: [String] = []
+    
+    @FetchRequest(sortDescriptors: [], animation: .default) var selected: FetchedResults<SelectedIngredient>
     
     @State private var missingCount = 1
     @State private var confirmation = false
@@ -87,11 +92,12 @@ struct DrinksHelper: View {
             .confirmationDialog("", isPresented: $confirmation) {
                 Button("Yes, add: \(ingredients.map{$0.name}.joined(separator: ", "))") {
                     for ingredient in ingredients {
-                        let idx = selected.firstIndex(of: ingredient.name)
-                        if let idx {
-                            selected.remove(at: idx)
-                        } else {
-                            selected.append(ingredient.name)
+                        let selection = selected.first(where: { $0.name == ingredient.name })
+                        
+                        if selection == nil {
+                            let newSelection = SelectedIngredient(context: moc)
+                            newSelection.name = ingredient.name
+                            moc.quickSave()
                         }
                     }
                 }
@@ -115,7 +121,8 @@ struct DrinksHelper: View {
     }
     
     var missing: Dictionary<[Ingredient], [Drink]> {
-        Drinks.instance.missingIngredients(selections: selected)
+        let selections = selected.map({ $0.name! })
+        return Drinks.instance.missingIngredients(selections: selections)
     }
 }
 

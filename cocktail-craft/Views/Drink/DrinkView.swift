@@ -8,12 +8,13 @@
 import SwiftUI
 
 struct DrinkView: View {
-    @EnvironmentObject private var favorites: FavoritesViewModel
+    @Environment(\.managedObjectContext) private var moc
+    @FetchRequest(sortDescriptors: [], animation: .default) var favorites: FetchedResults<Favorite>
     
     let drink: Drink
     
     var body: some View {
-        let isFavorited = favorites.favorites.contains(where: { $0.name == drink.name })
+        let isFavorited = favorites.contains(where: { $0.name == drink.name })
         
         ScrollView {
             ZStack(alignment: .topTrailing) {
@@ -34,7 +35,14 @@ struct DrinkView: View {
                 }
                 
                 Button {
-                    favorites.toggleDrink(drink)
+                    if let favorite = favorites.first(where: { $0.name == drink.name }) {
+                        moc.delete(favorite)
+                        moc.quickSave()
+                    } else {
+                        let newFavorite = Favorite(context: moc)
+                        newFavorite.name = drink.name
+                        moc.quickSave()
+                    }
                 } label: {
                     Image(systemName: isFavorited ? "star.fill" : "star")
                         .resizable()
@@ -55,6 +63,5 @@ struct DrinkView_Previews: PreviewProvider {
         NavigationView {
             DrinkView(drink: Drinks.instance.mojito)
         }
-        .environmentObject(FavoritesViewModel())
     }
 }

@@ -6,10 +6,11 @@
 //
 
 import SwiftUI
+import CoreData
 
 struct BarView: View {
-    @EnvironmentObject var fvm: FavoritesViewModel
-    @AppStorage(LocalStorageKeys.barIngredients.rawValue) var selected: [String] = []
+    @FetchRequest(sortDescriptors: [], animation: .default) var favorites: FetchedResults<Favorite>
+    @FetchRequest(sortDescriptors: [], animation: .default) var selected: FetchedResults<SelectedIngredient>
     
     var body: some View {
         List {
@@ -38,7 +39,7 @@ struct BarView: View {
             } label: {
                 ListItem(
                     image: "Star",
-                    title: "Favorites (\(fvm.favorites.count))",
+                    title: "Favorites (\(favorites.count))",
                     subtitle: "Mark your favorites drinks, to get quick and easy access to them"
                 )
             }
@@ -72,7 +73,10 @@ struct BarView: View {
         .navigationTitle("Your Bar")
     }
     
-    var drinks: [Drink] { Drinks.instance.available(selections: selected) }
+    var drinks: [Drink] {
+        let selections = selected.map({ $0.name! })
+        return Drinks.instance.available(selections: selections)
+    }
     
     @ViewBuilder
     func ListItem(image: String, title: String, subtitle: String) -> some View {
@@ -96,6 +100,5 @@ struct BarView_Previews: PreviewProvider {
         NavigationView {
             BarView()
         }
-        .environmentObject(FavoritesViewModel())
     }
 }
