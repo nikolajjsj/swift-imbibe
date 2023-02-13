@@ -24,6 +24,7 @@ final class Drink: Identifiable, Equatable, Hashable {
     let color: Color
     let year: Int?
     let base: Base
+    let category: Category?
     let origin: Origin
     let equipments: [Equipment]
     let ingredients: [IngredientWithVolume]
@@ -37,6 +38,7 @@ final class Drink: Identifiable, Equatable, Hashable {
         color: Color,
         year: Int? = nil,
         base: Base,
+        category: Category? = nil,
         origin: Origin,
         equipments: [Equipment],
         ingredients: [IngredientWithVolume],
@@ -49,6 +51,7 @@ final class Drink: Identifiable, Equatable, Hashable {
         self.color = color
         self.year = year
         self.base = base
+        self.category = category
         self.origin = origin
         self.equipments = equipments
         self.ingredients = ingredients
@@ -57,6 +60,33 @@ final class Drink: Identifiable, Equatable, Hashable {
     
     var strength: Int {
         Int(ingredients.reduce(0.0, { $0 + Double($1.ingredient.strength) }) / Double(ingredients.count))
+    }
+    
+    enum Category: String {
+        case tiki = "Tiki"
+        case sour = "Sour"
+        
+        static var all: [Category] {
+            [.tiki, .sour]
+        }
+        
+        var image: String? {
+            switch self {
+            case .tiki:
+                return "CategoryTiki"
+            case .sour:
+                return "CategorySour"
+            }
+        }
+        
+        var drinks: [Drink] {
+            switch self {
+            case .tiki:
+                return Drinks.instance.tikiDrinks
+            case .sour:
+                return Drinks.instance.sourDrinks
+            }
+        }
     }
     
     enum Base: String {
@@ -125,6 +155,7 @@ final class Drinks {
             color: Colors.yellow,
             year: 1898,
             base: .rum,
+            category: .sour,
             origin: Origins.instance.unitedStates,
             equipments: [ Equipments.instance.oldFashionedGlass, Equipments.instance.shaker, Equipments.instance.strainer ],
             ingredients: [
@@ -151,6 +182,7 @@ final class Drinks {
             color: Colors.brown,
             year: 2004,
             base: .whisky,
+            category: .sour,
             origin: Origins.instance.unitedStates,
             equipments: [ Equipments.instance.oldFashionedGlass, Equipments.instance.shaker, Equipments.instance.strainer ],
             ingredients: [
@@ -282,6 +314,7 @@ final class Drinks {
             color: Colors.brown,
             year: 1900,
             base: .rum,
+            category: .tiki,
             origin: Origins.instance.cuba,
             equipments: [ Equipments.instance.highballGlass, Equipments.instance.barspoon ],
             ingredients: [
@@ -307,6 +340,7 @@ final class Drinks {
             color: Colors.red,
             year: 1900,
             base: .rum,
+            category: .tiki,
             origin: Origins.instance.cuba,
             equipments: [ Equipments.instance.cocktailGlass, Equipments.instance.shaker ],
             ingredients: [
@@ -331,6 +365,7 @@ final class Drinks {
             color: Colors.brown,
             year: 1920,
             base: .rum,
+            category: .tiki,
             origin: Origins.instance.bermuda,
             equipments: [ Equipments.instance.highballGlass, Equipments.instance.barspoon ],
             ingredients: [
@@ -588,6 +623,7 @@ final class Drinks {
             color: Colors.orange,
             year: 1944,
             base: .rum,
+            category: .tiki,
             origin: Origins.instance.unitedStates,
             equipments: [ Equipments.instance.oldFashionedGlass, Equipments.instance.shaker, Equipments.instance.strainer ],
             ingredients: [
@@ -724,6 +760,7 @@ final class Drinks {
             color: Colors.green,
             year: 1927,
             base: .rum,
+            category: .tiki,
             origin: Origins.instance.cuba,
             equipments: [ Equipments.instance.highballGlass, Equipments.instance.muddler, Equipments.instance.barspoon, Equipments.instance.shaker ],
             ingredients: [
@@ -801,6 +838,7 @@ final class Drinks {
             color: Colors.orange,
             year: 1880,
             base: .whisky,
+            category: .sour,
             origin: Origins.instance.unitedStates,
             equipments: [ Equipments.instance.oldFashionedGlass, Equipments.instance.shaker ],
             ingredients: [
@@ -852,6 +890,7 @@ final class Drinks {
             color: Colors.orange,
             year: 1970,
             base: .rum,
+            category: .tiki,
             origin: Origins.instance.britishVirginIslands,
             equipments: [ Equipments.instance.oldFashionedGlass, Equipments.instance.shaker ],
             ingredients: [
@@ -901,6 +940,7 @@ final class Drinks {
             color: Colors.yellow,
             year: 2000,
             base: .whisky,
+            category: .sour,
             origin: Origins.instance.unitedStates,
             equipments: [ Equipments.instance.oldFashionedGlass, Equipments.instance.shaker, Equipments.instance.strainer, Equipments.instance.muddler ],
             ingredients: [
@@ -930,6 +970,7 @@ final class Drinks {
             color: Colors.red,
             year: 2007,
             base: .gin,
+            category: .sour,
             origin: Origins.instance.unitedStates,
             equipments: [Equipments.instance.cocktailGlass, Equipments.instance.shaker, Equipments.instance.strainer],
             ingredients: [
@@ -983,6 +1024,7 @@ final class Drinks {
             color: Colors.brown,
             year: 1920,
             base: .rum,
+            category: .tiki,
             origin: Origins.instance.puertoRico,
             equipments: [ Equipments.instance.cocktailGlass, Equipments.instance.barspoon, Equipments.instance.blender ],
             ingredients: [
@@ -1164,6 +1206,7 @@ final class Drinks {
             color: Colors.white,
             year: 1840,
             base: .other,
+            category: .sour,
             origin: Origins.instance.france,
             equipments: [ Equipments.instance.highballGlass, Equipments.instance.shaker, Equipments.instance.strainer ],
             ingredients: [
@@ -1189,6 +1232,7 @@ final class Drinks {
             color: Colors.yellow,
             year: 1970,
             base: .rum,
+            category: .tiki,
             origin: Origins.instance.caribbean,
             equipments: [ Equipments.instance.highballGlass, Equipments.instance.barspoon ],
             ingredients: [
@@ -1215,6 +1259,7 @@ final class Drinks {
             color: Colors.orange,
             year: 1898,
             base: .whisky,
+            category: .sour,
             origin: Origins.instance.unitedStates,
             equipments: [ Equipments.instance.cocktailGlass, Equipments.instance.shaker, Equipments.instance.strainer ],
             ingredients: [
@@ -1240,6 +1285,7 @@ final class Drinks {
             color: Colors.red,
             year: 2008,
             base: .other,
+            category: .sour,
             origin: Origins.instance.unitedStates,
             equipments: [ Equipments.instance.cocktailGlass, Equipments.instance.shaker, Equipments.instance.strainer ],
             ingredients: [
@@ -1264,6 +1310,7 @@ final class Drinks {
             color: Colors.red,
             year: 2009,
             base: .other,
+            category: .sour,
             origin: Origins.instance.unitedStates,
             equipments: [ Equipments.instance.cocktailGlass, Equipments.instance.shaker, Equipments.instance.strainer ],
             ingredients: [
@@ -1288,6 +1335,7 @@ final class Drinks {
             color: Colors.orange,
             year: 1870,
             base: .whisky,
+            category: .sour,
             origin: Origins.instance.unitedStates,
             equipments: [ Equipments.instance.oldFashionedGlass, Equipments.instance.shaker ],
             ingredients: [
@@ -1460,6 +1508,14 @@ final class Drinks {
     }
     var vodkaBased: [Drink] {
         all.filter({ $0.base == .vodka })
+    }
+    
+    // Categories
+    var tikiDrinks: [Drink] {
+        all.filter({ $0.category == .tiki })
+    }
+    var sourDrinks: [Drink] {
+        all.filter({ $0.category == .sour })
     }
     
     // Country
