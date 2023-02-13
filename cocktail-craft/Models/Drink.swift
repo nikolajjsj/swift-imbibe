@@ -1207,6 +1207,79 @@ final class Drinks {
             ]
         )
     
+    let theWardEight: Drink =
+        .init(
+            name: "The Ward Eight",
+            description: "",
+            image: "The Ward Eight",
+            color: Colors.orange,
+            year: 1898,
+            base: .whisky,
+            origin: Origins.instance.unitedStates,
+            equipments: [ Equipments.instance.cocktailGlass, Equipments.instance.shaker, Equipments.instance.strainer ],
+            ingredients: [
+                .init(ingredient: Ingredients.instance.ryeWhisky, amount: 60, unit: .milliliters),
+                .init(ingredient: Ingredients.instance.lemonJuice, amount: 15, unit: .milliliters),
+                .init(ingredient: Ingredients.instance.orangeJuice, amount: 15, unit: .milliliters),
+                .init(ingredient: Ingredients.instance.grenadine, amount: 10, unit: .milliliters),
+                .init(ingredient: Ingredients.instance.ice),
+            ],
+            steps: [
+                .init(string: "In the Shaker add Rye Whisky, Lemon Juice, Orange Juice, & Grenadine"),
+                .init(string: "Add Ice and shake for 10-15 seconds"),
+                .init(string: "Strain into the Cocktail Glass"),
+                .init(string: "Garnish with a quarter of a Orange wheel, or a Cocktal Cherry or both"),
+            ]
+        )
+    
+    let trinidadEspecial: Drink =
+        .init(
+            name: "Trinidad Especial",
+            description: "",
+            image: "Trinidad Especial",
+            color: Colors.red,
+            year: 2008,
+            base: .other,
+            origin: Origins.instance.unitedStates,
+            equipments: [ Equipments.instance.cocktailGlass, Equipments.instance.shaker, Equipments.instance.strainer ],
+            ingredients: [
+                .init(ingredient: Ingredients.instance.angosturaBitters, amount: 30, unit: .milliliters),
+                .init(ingredient: Ingredients.instance.pisco, amount: 20, unit: .milliliters),
+                .init(ingredient: Ingredients.instance.lemonJuice, amount: 25, unit: .milliliters),
+                .init(ingredient: Ingredients.instance.orgeatSyrup, amount: 30, unit: .milliliters),
+                .init(ingredient: Ingredients.instance.ice),
+            ],
+            steps: [
+                .init(string: "In the Shaker add Angostura Bitters, Pisco, Lemon Juice, & Orgeat Syrup"),
+                .init(string: "Add Ice and shake for 10-15 seconds"),
+                .init(string: "Strain into the Cocktail Glass"),
+            ]
+        )
+    
+    let trinidadSour: Drink =
+        .init(
+            name: "Trinidad Sour",
+            description: "",
+            image: "Trinidad Sour",
+            color: Colors.red,
+            year: 2009,
+            base: .other,
+            origin: Origins.instance.unitedStates,
+            equipments: [ Equipments.instance.cocktailGlass, Equipments.instance.shaker, Equipments.instance.strainer ],
+            ingredients: [
+                .init(ingredient: Ingredients.instance.angosturaBitters, amount: 30, unit: .milliliters),
+                .init(ingredient: Ingredients.instance.ryeWhisky, amount: 20, unit: .milliliters),
+                .init(ingredient: Ingredients.instance.lemonJuice, amount: 25, unit: .milliliters),
+                .init(ingredient: Ingredients.instance.orgeatSyrup, amount: 30, unit: .milliliters),
+                .init(ingredient: Ingredients.instance.ice),
+            ],
+            steps: [
+                .init(string: "In the Shaker add Angostura Bitters, Rye Whisky, Lemon Juice, & Orgeat Syrup"),
+                .init(string: "Add Ice and shake for 10-15 seconds"),
+                .init(string: "Strain into the Cocktail Glass"),
+            ]
+        )
+    
     let whiskySour: Drink =
         .init(
             name: "Whisky Sour",
@@ -1359,6 +1432,9 @@ final class Drinks {
             tartan,
             theMomisette,
             theTradewinds,
+            theWardEight,
+            trinidadEspecial,
+            trinidadSour,
             whiskySour,
             whiteNegroni,
             whiteRussian,
