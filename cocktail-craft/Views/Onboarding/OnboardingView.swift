@@ -70,7 +70,7 @@ struct OnboardingView: View {
     func DoneButton() -> some View {
         Button {
             withAnimation {
-                global.toggleOnboarded()
+                global.setOnboarded(true)
             }
         } label: {
             Text("Done").font(.title.bold())

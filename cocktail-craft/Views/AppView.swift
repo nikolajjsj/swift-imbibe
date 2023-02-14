@@ -82,5 +82,6 @@ struct AppView_Previews: PreviewProvider {
     static var previews: some View {
         AppView()
             .environmentObject(Global())
+            .environment(\.managedObjectContext, PersistenceController.preview.container.viewContext)
     }
 }

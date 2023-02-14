@@ -18,7 +18,7 @@ struct SettingsView: View {
                 Section {
                     Button(role: .destructive) {
                         withAnimation {
-                            global.toggleOnboarded()
+                            global.setOnboarded(false)
                         }
                     } label: {
                         Text("Clear")

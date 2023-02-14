@@ -38,13 +38,13 @@
 		D1E7480E297D6F44002B48CE /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1E7480D297D6F44002B48CE /* ViewModel.swift */; };
 		D1E74810297D6F6F002B48CE /* Global.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1E7480F297D6F6F002B48CE /* Global.swift */; };
 		D1E74813297D727E002B48CE /* BarDrinksView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1E74812297D727E002B48CE /* BarDrinksView.swift */; };
+		D1EAB05D299B68E700E7D07D /* cocktail-craft.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D1EAB05B299B68E700E7D07D /* cocktail-craft.xcdatamodeld */; };
 		D1F00881296EC065007E09B7 /* DrinkStep.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1F00880296EC065007E09B7 /* DrinkStep.swift */; };
 		D1F00883296EC078007E09B7 /* Ingredient.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1F00882296EC078007E09B7 /* Ingredient.swift */; };
 		D1F00885296EC0A8007E09B7 /* Equipment.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1F00884296EC0A8007E09B7 /* Equipment.swift */; };
 		D1F00887296EC0B8007E09B7 /* Origin.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1F00886296EC0B8007E09B7 /* Origin.swift */; };
 		D1F7900D296D75EE00F3CB30 /* imbibeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1F7900C296D75EE00F3CB30 /* imbibeApp.swift */; };
 		D1F7900F296D75EE00F3CB30 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1F7900E296D75EE00F3CB30 /* Persistence.swift */; };
-		D1F79012296D75EE00F3CB30 /* cocktail-craft.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D1F79010296D75EE00F3CB30 /* cocktail-craft.xcdatamodeld */; };
 		D1F79014296D75EE00F3CB30 /* DrinksView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1F79013296D75EE00F3CB30 /* DrinksView.swift */; };
 		D1F79016296D75EF00F3CB30 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D1F79015296D75EF00F3CB30 /* Assets.xcassets */; };
 		D1F79025296D76D400F3CB30 /* Drink.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1F79024296D76D400F3CB30 /* Drink.swift */; };
@@ -92,6 +92,7 @@
 		D1E7480D297D6F44002B48CE /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
 		D1E7480F297D6F6F002B48CE /* Global.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Global.swift; sourceTree = "<group>"; };
 		D1E74812297D727E002B48CE /* BarDrinksView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarDrinksView.swift; sourceTree = "<group>"; };
+		D1EAB05C299B68E700E7D07D /* cocktail-craft.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "cocktail-craft.xcdatamodel"; sourceTree = "<group>"; };
 		D1F00880296EC065007E09B7 /* DrinkStep.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrinkStep.swift; sourceTree = "<group>"; };
 		D1F00882296EC078007E09B7 /* Ingredient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ingredient.swift; sourceTree = "<group>"; };
 		D1F00884296EC0A8007E09B7 /* Equipment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Equipment.swift; sourceTree = "<group>"; };
@@ -99,7 +100,6 @@
 		D1F79009296D75EE00F3CB30 /* cocktail-craft.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "cocktail-craft.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D1F7900C296D75EE00F3CB30 /* imbibeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = imbibeApp.swift; sourceTree = "<group>"; };
 		D1F7900E296D75EE00F3CB30 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
-		D1F79011296D75EE00F3CB30 /* imbibe.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = imbibe.xcdatamodel; sourceTree = "<group>"; };
 		D1F79013296D75EE00F3CB30 /* DrinksView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrinksView.swift; sourceTree = "<group>"; };
 		D1F79015296D75EF00F3CB30 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D1F79017296D75EF00F3CB30 /* cocktail-craft.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "cocktail-craft.entitlements"; sourceTree = "<group>"; };
@@ -281,7 +281,7 @@
 				D1E74811297D6F84002B48CE /* Helpers */,
 				D1F79015296D75EF00F3CB30 /* Assets.xcassets */,
 				D1F79017296D75EF00F3CB30 /* cocktail-craft.entitlements */,
-				D1F79010296D75EE00F3CB30 /* cocktail-craft.xcdatamodeld */,
+				D1EAB05B299B68E700E7D07D /* cocktail-craft.xcdatamodeld */,
 				D1520ED02978326A006C1519 /* Info.plist */,
 			);
 			path = "cocktail-craft";
@@ -417,12 +417,12 @@
 				D1F7903D296E813F00F3CB30 /* IngredientsView.swift in Sources */,
 				D117445E297D2A21009CAFC7 /* BooksView.swift in Sources */,
 				D1E7480E297D6F44002B48CE /* ViewModel.swift in Sources */,
+				D1EAB05D299B68E700E7D07D /* cocktail-craft.xcdatamodeld in Sources */,
 				D1FDAE42297AA18700D69804 /* Colors.swift in Sources */,
 				D1F79042296E834400F3CB30 /* IngredientView.swift in Sources */,
 				D1F7900D296D75EE00F3CB30 /* imbibeApp.swift in Sources */,
 				D1E5B3AB2972C998001DF274 /* IngredientBox.swift in Sources */,
 				D1F00881296EC065007E09B7 /* DrinkStep.swift in Sources */,
-				D1F79012296D75EE00F3CB30 /* cocktail-craft.xcdatamodeld in Sources */,
 				D1F79045296E8DB200F3CB30 /* DiscoverView.swift in Sources */,
 				D1DD34BE297412AF006EE244 /* EquipmentView.swift in Sources */,
 				D16D80942976985600D163B3 /* DrinkFilters.swift in Sources */,
@@ -580,8 +580,9 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = "cocktail-craft/cocktail-craft.entitlements";
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 63;
+				CURRENT_PROJECT_VERSION = 64;
 				DEVELOPMENT_TEAM = YRQMPX5YW2;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
@@ -606,6 +607,7 @@
 				MARKETING_VERSION = 1.1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.nikolajjsj.imbibe;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = auto;
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -620,8 +622,9 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = "cocktail-craft/cocktail-craft.entitlements";
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 63;
+				CURRENT_PROJECT_VERSION = 64;
 				DEVELOPMENT_TEAM = YRQMPX5YW2;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
@@ -646,6 +649,7 @@
 				MARKETING_VERSION = 1.1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.nikolajjsj.imbibe;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = auto;
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -678,12 +682,12 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		D1F79010296D75EE00F3CB30 /* cocktail-craft.xcdatamodeld */ = {
+		D1EAB05B299B68E700E7D07D /* cocktail-craft.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				D1F79011296D75EE00F3CB30 /* imbibe.xcdatamodel */,
+				D1EAB05C299B68E700E7D07D /* cocktail-craft.xcdatamodel */,
 			);
-			currentVersion = D1F79011296D75EE00F3CB30 /* imbibe.xcdatamodel */;
+			currentVersion = D1EAB05C299B68E700E7D07D /* cocktail-craft.xcdatamodel */;
 			path = "cocktail-craft.xcdatamodeld";
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;

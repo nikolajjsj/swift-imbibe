@@ -17,9 +17,9 @@ class Global: ObservableObject {
     @Published var barPath: [Route] = []
     
     @Published private(set) var onboarded: Bool = LocalStorage.get(type: Bool.self, forKey: .onboarded) ?? false
-    func toggleOnboarded() {
-        self.onboarded.toggle()
-        LocalStorage.set(value: self.onboarded, key: .onboarded)
+    func setOnboarded(_ value: Bool) {
+        self.onboarded = value
+        LocalStorage.set(value: value, key: .onboarded)
         DispatchQueue.main.asyncAfter(deadline: .now() + 1, execute: self.clearAllPaths)
     }
     

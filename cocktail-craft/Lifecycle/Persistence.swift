@@ -9,20 +9,21 @@ import CoreData
 
 struct PersistenceController {
     static let shared = PersistenceController()
+    
+    let container: NSPersistentCloudKitContainer
 
     static var preview: PersistenceController = {
         let result = PersistenceController(inMemory: true)
         let viewContext = result.container.viewContext
-        do {
-            try viewContext.save()
-        } catch {
-            let nsError = error as NSError
-            print("Unresolved error \(nsError), \(nsError.userInfo)")
-        }
+        
+        let favorite1 = Favorite(context: viewContext)
+        favorite1.name = Drinks.instance.mojito.name
+        let selectedIngredient1 = SelectedIngredient(context: viewContext)
+        selectedIngredient1.name = Ingredients.instance.orgeatSyrup.name
+        viewContext.quickSave()
+        
         return result
     }()
-
-    let container: NSPersistentCloudKitContainer
 
     init(inMemory: Bool = false) {
         container = NSPersistentCloudKitContainer(name: "cocktail-craft")
@@ -31,52 +32,28 @@ struct PersistenceController {
         
         let dbURL = URL.storeURL(for: "group.cocktail-craft", databaseName: "cocktail-craft")
         
-        let storeDescription = NSPersistentStoreDescription(url: dbURL)
-        storeDescription.setOption(true as NSNumber, forKey: NSPersistentHistoryTrackingKey)
-        
-        // For mocking purposes
-        if inMemory { storeDescription.url = URL(fileURLWithPath: "/dev/null") }
-        
-        // Set the container options on the cloud store
-        storeDescription.cloudKitContainerOptions = NSPersistentCloudKitContainerOptions(
-            containerIdentifier: "iCloud.com.nikolajjsj.cocktail-craft"
+        let store = NSPersistentStoreDescription(url: dbURL)
+        store.cloudKitContainerOptions = NSPersistentCloudKitContainerOptions(
+            containerIdentifier: "iCloud.com.nikolajjsj.cocktailcraft"
         )
         
-        // Update the container's list of store descriptions
-        container.persistentStoreDescriptions = [ storeDescription ]
-        container.loadPersistentStores(completionHandler: { (storeDescription, error) in
+        if inMemory { store.url = URL(fileURLWithPath: "/dev/null") }
+        
+        container.persistentStoreDescriptions = [ store ]
+        container.loadPersistentStores(completionHandler: { (store, error) in
             if let error = error as NSError? {
                 print("Unresolved error \(error), \(error.userInfo)")
             }
         })
         
-        // Only initialize the schema when building the app with the
-        // Debug build configuration.
+        
         #if DEBUG
         do {
-            // Use the container to initialize the development schema.
             try container.initializeCloudKitSchema(options: [])
         } catch {
-            print("Could not instantiate cloudkit schema")
+            print("Unable to initialize CloudKit schema: \(error.localizedDescription)")
         }
         #endif
-    }
-    
-    func saveContext() {
-        let context = container.viewContext
-        if context.hasChanges {
-            do {
-                try context.save()
-            } catch {
-                let nserror = error as NSError
-                print("Unresolved error \(nserror), \(nserror.userInfo)")
-            }
-        }
-    }
-    
-    func delete(_ object: NSManagedObject) {
-        let context = container.viewContext
-        context.delete(object)
     }
 }
 
