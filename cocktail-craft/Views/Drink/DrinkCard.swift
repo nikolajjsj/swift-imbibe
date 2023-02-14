@@ -30,8 +30,8 @@ struct DrinkCard: View {
                     .multilineTextAlignment(.leading)
                 
                 VStack {
-                    Text("\(drink.ingredients.count) ingredients")
-                    Text("\(drink.strength)% strength")
+                    Text("\(drink.ingredients.count) ingredients").lineLimit(1)
+                    Text("\(drink.strength)% strength").lineLimit(1)
                 }
                 .font(.footnote)
                 .opacity(0.9)

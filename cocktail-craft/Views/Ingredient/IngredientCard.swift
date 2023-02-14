@@ -31,6 +31,7 @@ struct IngredientCard: View {
                     .multilineTextAlignment(.leading)
                 
                 Text("\(ingredient.strength)%")
+                    .lineLimit(1)
                     .opacity(0.9)
             }
             .foregroundColor(background.contrastColor)
