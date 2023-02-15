@@ -117,6 +117,15 @@ Many misconceptions about absinthe, has arised through the years. One especially
 """,
         tags: [.spirit]
     )
+    let agaveNectar: Ingredient = Ingredient(
+        name: "Agave Nectar",
+        image: "Agave Nectar",
+        color: Colors.brown,
+        strength: 0,
+        origin: nil,
+        description: "",
+        tags: []
+    )
     let amaretto: Ingredient = Ingredient(
         name: "Amaretto",
         image: "Amaretto",
@@ -591,6 +600,15 @@ A coffee liqueur from Mexico.
         description: "",
         tags: [.base, .spirit]
     )
+    let mezcal: Ingredient = Ingredient(
+        name: "Mezcal",
+        image: "Mezcal",
+        color: Colors.white,
+        strength: 40,
+        origin: Origins.instance.mexico,
+        description: "",
+        tags: [.spirit]
+    )
     let mintLeaves: Ingredient = Ingredient(
         name: "Mint Leaves",
         image: "Mint Leaves",
@@ -869,6 +887,8 @@ Whisky is made from fermented mash containing various grains, including: barley,
             lightRum,
             lime,
             limeJuice,
+            maraschinoLiqueur,
+            mezcal,
             mintLeaves,
             oliveBrine,
             olives,

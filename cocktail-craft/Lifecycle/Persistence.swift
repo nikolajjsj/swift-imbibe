@@ -17,7 +17,7 @@ struct PersistenceController {
         let viewContext = result.container.viewContext
         
         let favorite1 = Favorite(context: viewContext)
-        favorite1.name = Drinks.instance.mojito.name
+        favorite1.name = mojito.name
         let selectedIngredient1 = SelectedIngredient(context: viewContext)
         selectedIngredient1.name = Ingredients.instance.orgeatSyrup.name
         viewContext.quickSave()

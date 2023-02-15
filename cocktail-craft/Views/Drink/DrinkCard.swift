@@ -28,6 +28,7 @@ struct DrinkCard: View {
                 Text(drink.name)
                     .font(.headline)
                     .multilineTextAlignment(.leading)
+                    .lineLimit(2)
                 
                 VStack {
                     Text("\(drink.ingredients.count) ingredients").lineLimit(1)
@@ -51,6 +52,6 @@ struct DrinkCard: View {
 
 struct DrinkCard_Previews: PreviewProvider {
     static var previews: some View {
-        DrinkCard(drink: Drinks.instance.oldFashioned)
+        DrinkCard(drink: oldFashioned)
     }
 }
