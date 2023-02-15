@@ -1134,6 +1134,32 @@ let theMomisette: Drink =
         ]
     )
 
+let theScofflaw: Drink =
+    .init(
+        name: "The Scofflaw",
+        description: "",
+        image: "The Scofflaw",
+        color: Colors.orange,
+        year: 1924,
+        base: .whisky,
+        origin: Origins.instance.france,
+        equipments: [ Equipments.instance.cocktailGlass, Equipments.instance.shaker, Equipments.instance.strainer ],
+        ingredients: [
+            .init(ingredient: Ingredients.instance.ryeWhisky, amount: 45, unit: .milliliters),
+            .init(ingredient: Ingredients.instance.dryVermouth, amount: 30, unit: .milliliters),
+            .init(ingredient: Ingredients.instance.lemonJuice, amount: 15, unit: .milliliters),
+            .init(ingredient: Ingredients.instance.grenadine, amount: 8, unit: .milliliters),
+            .init(ingredient: Ingredients.instance.angosturaOrangeBitters, amount: 2, unit: .dash),
+            .init(ingredient: Ingredients.instance.ice),
+        ],
+        steps: [
+            .init(string: "In the Shaker add Rye Whisky, Dry Vermouth, Lemon Juice, Grenadine, & Angostura Orange Bitters"),
+            .init(string: "Add Ice and shake for 10-15 seconds"),
+            .init(string: "Strain into the Cocktail Glass"),
+            .init(string: "Garnish with Orange Twist"),
+        ]
+    )
+
 let theTradewinds: Drink =
     .init(
         name: "The Tradewinds",

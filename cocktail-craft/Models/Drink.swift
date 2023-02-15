@@ -192,6 +192,7 @@ final class Drinks {
             tartan,
             theLastWord,
             theMomisette,
+            theScofflaw,
             theTradewinds,
             theWardEight,
             trinidadEspecial,
