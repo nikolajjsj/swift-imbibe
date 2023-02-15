@@ -190,6 +190,7 @@ final class Drinks {
             sazerac,
             sidecar,
             tartan,
+            theLastWord,
             theMomisette,
             theTradewinds,
             theWardEight,

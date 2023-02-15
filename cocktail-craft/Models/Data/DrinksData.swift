@@ -1084,6 +1084,30 @@ let tartan: Drink =
         ]
     )
 
+let theLastWord: Drink =
+    .init(
+        name: "The Last Word",
+        description: "",
+        image: "The Last Word",
+        color: Colors.white,
+        year: 1915,
+        base: .gin,
+        origin: Origins.instance.unitedStates,
+        equipments: [ Equipments.instance.cocktailGlass, Equipments.instance.shaker, Equipments.instance.strainer ],
+        ingredients: [
+            .init(ingredient: Ingredients.instance.gin, amount: 30, unit: .milliliters),
+            .init(ingredient: Ingredients.instance.chartreuse, amount: 30, unit: .milliliters),
+            .init(ingredient: Ingredients.instance.maraschinoLiqueur, amount: 30, unit: .milliliters),
+            .init(ingredient: Ingredients.instance.limeJuice, amount: 30, unit: .milliliters),
+            .init(ingredient: Ingredients.instance.ice),
+        ],
+        steps: [
+            .init(string: "In the Shaker add Gin, Chartreuse, Maraschino Liqueur, & Lime Juice"),
+            .init(string: "Add Ice and shake for 10-15 seconds"),
+            .init(string: "Strain into the Cocktail Glass"),
+        ]
+    )
+
 let theMomisette: Drink =
     .init(
         name: "The Momisette",

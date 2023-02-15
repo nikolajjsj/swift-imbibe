@@ -241,6 +241,15 @@ Champagne has been used for a variety of different sparkling wines, though many 
 """,
         tags: [.base, .spirit]
     )
+    let chartreuse: Ingredient = Ingredient(
+        name: "Chartreuse",
+        image: "Chartreuse",
+        color: Colors.green,
+        strength: 55,
+        origin: nil,
+        description: "",
+        tags: [.spirit]
+    )
     let cremeDeCasis: Ingredient = Ingredient(
         name: "Creme de Casis",
         image: "Creme de Casis",
