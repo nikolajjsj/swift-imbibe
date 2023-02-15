@@ -374,6 +374,31 @@ let fityFiftyMartini: Drink =
         ]
     )
 
+let ford: Drink =
+    .init(
+        name: "Ford",
+        description: "",
+        image: "Ford",
+        color: Colors.gray,
+        year: 1895,
+        base: .gin,
+        origin: Origins.instance.unitedStates,
+        equipments: [ Equipments.instance.cocktailGlass, Equipments.instance.mixingGlass, Equipments.instance.barspoon, Equipments.instance.strainer ],
+        ingredients: [
+            .init(ingredient: Ingredients.instance.oldTomGin, amount: 45, unit: .milliliters),
+            .init(ingredient: Ingredients.instance.dryVermouth, amount: 45, unit: .milliliters),
+            .init(ingredient: Ingredients.instance.benedictine, amount: 8, unit: .milliliters),
+            .init(ingredient: Ingredients.instance.angosturaOrangeBitters, amount: 2, unit: .dash),
+            .init(ingredient: Ingredients.instance.ice),
+        ],
+        steps: [
+            .init(string: "In the Mixing Glass add Old Tom Gin, Dry Vermouth, Benedictine, & Angostura Orange Bitters"),
+            .init(string: "Add Ice and stir for 30-45 seconds"),
+            .init(string: "Strain into the Cocktail Glass"),
+            .init(string: "Garnish with a Orange Twist"),
+        ]
+    )
+
 let ginFizz: Drink =
     .init(
         name: "Gin Fizz",
@@ -980,6 +1005,31 @@ let rumOldFashioned: Drink =
             .init(string: "Add a Large Ice Cube"),
             .init(string: "Add Dark Rum"),
             .init(string: "Stir and enjoy"),
+        ]
+    )
+
+let rollsRoyce: Drink =
+    .init(
+        name: "Rolls Royce",
+        description: "",
+        image: "Rolls Royce",
+        color: Colors.gray,
+        year: 1930,
+        base: .gin,
+        origin: Origins.instance.unitedStates,
+        equipments: [ Equipments.instance.cocktailGlass, Equipments.instance.mixingGlass, Equipments.instance.barspoon, Equipments.instance.strainer ],
+        ingredients: [
+            .init(ingredient: Ingredients.instance.gin, amount: 60, unit: .milliliters),
+            .init(ingredient: Ingredients.instance.dryVermouth, amount: 15, unit: .milliliters),
+            .init(ingredient: Ingredients.instance.sweetVermouth, amount: 15, unit: .milliliters),
+            .init(ingredient: Ingredients.instance.benedictine, amount: 8, unit: .milliliters),
+            .init(ingredient: Ingredients.instance.ice),
+        ],
+        steps: [
+            .init(string: "In the Mixing Glass add Gin, Dry Vermouth, Sweet Vermouth, & Benedictine"),
+            .init(string: "Add Ice and stir for 30-45 seconds"),
+            .init(string: "Strain into the Cocktail Glass"),
+            .init(string: "Garnish with a Lemon Twist"),
         ]
     )
 

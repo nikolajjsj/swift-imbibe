@@ -184,6 +184,15 @@ Angostura makes the most famous and widely used type of herbal Bitters. Angostur
         description: "",
         tags: [.spirit]
     )
+    let benedictine: Ingredient = Ingredient(
+        name: "Benedictine",
+        image: "Benedictine",
+        color: Colors.red,
+        strength: 40,
+        origin: nil,
+        description: "",
+        tags: [.spirit]
+    )
     let bourbonWhisky: Ingredient = Ingredient(
         name: "Bourbon Whisky",
         image: "Bourbon Whisky",
@@ -627,6 +636,15 @@ A coffee liqueur from Mexico.
         description: "",
         tags: [.base]
     )
+    let oldTomGin: Ingredient = Ingredient(
+        name: "Old Tom Gin",
+        image: "Old Tom Gin",
+        color: Colors.white,
+        strength: 40,
+        origin: nil,
+        description: "",
+        namedAlternatives: ["Gin"]
+    )
     let oliveBrine: Ingredient = Ingredient(
         name: "Olive Brine",
         image: "Olives",
@@ -855,6 +873,7 @@ Whisky is made from fermented mash containing various grains, including: barley,
             angosturaOrangeBitters,
             aperol,
             apricotLiqueur,
+            benedictine,
             bourbonWhisky,
             brandy,
             campari,
@@ -899,6 +918,7 @@ Whisky is made from fermented mash containing various grains, including: barley,
             maraschinoLiqueur,
             mezcal,
             mintLeaves,
+            oldTomGin,
             oliveBrine,
             olives,
             orangeJuice,
