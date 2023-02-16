@@ -18,11 +18,13 @@ struct SettingsView: View {
                 detailSection
                 
                 Section {
-                    Picker("Volume unit", selection: $unit) {
-                        ForEach(usedUnitVolumeMetrics, id: \.symbol) { uv in
-                            Text(uv.symbol).tag(uv.symbol)
+                    Picker("Volume", selection: $unit) {
+                        ForEach(usedUnitVolumeMetrics, id: \.symbol) { unit in
+                            Text(unit.symbol)
                         }
                     }
+                } header: {
+                    Text("Units")
                 }
                 
                 Section {

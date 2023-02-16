@@ -31,8 +31,8 @@ struct IngredientsInspector: View {
                 HStack {
                     Text("Unit").frame(minWidth: 80)
                     Picker("", selection: $vm.unit) {
-                        ForEach(usedUnitVolumeMetrics, id: \.symbol) { uv in
-                            Text(uv.symbol).tag(uv.symbol)
+                        ForEach(usedUnitVolumeMetrics, id: \.symbol) { u in
+                            Text(u.symbol)
                         }
                     }.pickerStyle(.segmented)
                 }
