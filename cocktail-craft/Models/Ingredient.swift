@@ -857,6 +857,18 @@ All Scotch Whisky must be made in oak barrels for at least 3 years.
         namedAlternatives: ["Whisky"],
         tags: [.spirit]
     )
+    let sherry: Ingredient = Ingredient(
+        name: "Sherry",
+        image: "Sherry",
+        color: Colors.red,
+        strength: 18,
+        origin: nil,
+        description: """
+A fortified wine made up of white grapes, originating from Spain.
+""",
+        namedAlternatives: ["Whisky"],
+        tags: [.spirit]
+    )
     let simpleSyrup: Ingredient = Ingredient(
         name: "Simple Syrup",
         image: "Simple Syrup",

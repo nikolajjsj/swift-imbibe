@@ -398,6 +398,37 @@ let fityFiftyMartini: Drink =
         ]
     )
 
+let fogCutter: Drink =
+    .init(
+        name: "Fog Cutter",
+        description: "",
+        image: "Fog Cutter",
+        color: Colors.yellow,
+        year: 1947,
+        base: .rum,
+        category: .tiki,
+        origin: Origins.instance.unitedStates,
+        equipments: [ Equipments.instance.oldFashionedGlass, Equipments.instance.shaker, Equipments.instance.strainer ],
+        ingredients: [
+            .init(ingredient: Ingredients.instance.lightRum, amount: 45, unit: .milliliters),
+            .init(ingredient: Ingredients.instance.cognac, amount: 30, unit: .milliliters),
+            .init(ingredient: Ingredients.instance.gin, amount: 15, unit: .milliliters),
+            .init(ingredient: Ingredients.instance.orgeatSyrup, amount: 15, unit: .milliliters),
+            .init(ingredient: Ingredients.instance.orangeJuice, amount: 30, unit: .milliliters),
+            .init(ingredient: Ingredients.instance.lemonJuice, amount: 60, unit: .milliliters),
+            .init(ingredient: Ingredients.instance.sherry, amount: 15, unit: .milliliters),
+            .init(ingredient: Ingredients.instance.ice),
+        ],
+        steps: [
+            .init(string: "Fill the Old Fashioned Glass with Crushed Ice"),
+            .init(string: "In the Shaker add Light Rum, Cognac, Gin, Orgeat Syrup, Orange Juice, & Lemon Juice"),
+            .init(string: "Add Ice and shake for 10-15 seconds"),
+            .init(string: "Strain into the old Fashioned Glass"),
+            .init(string: "Add a float of Sherry"),
+            .init(string: "Garnish with some Mint"),
+        ]
+    )
+
 let ford: Drink =
     .init(
         name: "Ford",
@@ -491,6 +522,38 @@ let irishCoffee: Drink =
             .init(string: "Add Irish Whisky & Simple Syrup into the Toddy Glass"),
             .init(string: "Top up with hot Coffee"),
             .init(string: "Garnish with Whipped Cream"),
+        ]
+    )
+
+let jetPilot: Drink =
+    .init(
+        name: "Jet Pilot",
+        description: "",
+        image: "Jet Pilot",
+        color: Colors.blue,
+        year: 1958,
+        base: .rum,
+        category: .tiki,
+        origin: Origins.instance.unitedStates,
+        equipments: [ Equipments.instance.tikiGlass, Equipments.instance.shaker, Equipments.instance.strainer ],
+        ingredients: [
+            .init(ingredient: Ingredients.instance.jamaicanRum, amount: 30, unit: .milliliters),
+            .init(ingredient: Ingredients.instance.puertoRicanRum, amount: 20, unit: .milliliters),
+            .init(ingredient: Ingredients.instance.demerara151Rum, amount: 20, unit: .milliliters),
+            .init(ingredient: Ingredients.instance.absinthe, amount: 15, unit: .milliliters),
+            .init(ingredient: Ingredients.instance.grapefruitJuice, amount: 15, unit: .milliliters),
+            .init(ingredient: Ingredients.instance.limeJuice, amount: 15, unit: .milliliters),
+            .init(ingredient: Ingredients.instance.cinnamonSyrup, amount: 15, unit: .milliliters),
+            .init(ingredient: Ingredients.instance.falernum, amount: 15, unit: .milliliters),
+            .init(ingredient: Ingredients.instance.angosturaBitters, amount: 1, unit: .dash),
+            .init(ingredient: Ingredients.instance.ice),
+        ],
+        steps: [
+            .init(string: "Fill the Tiki Glass with Crushed Ice"),
+            .init(string: "In the Shaker add Jamaican Rum, Puerto Rican Rum, Demerara 151 Rum, Absinthe, Grapefruit Juice, Lime Juice, Cinnamon Syrup, Falernum, & Angostura Bitters"),
+            .init(string: "Add Ice and shake for 10-15 seconds"),
+            .init(string: "Strain into the Tiki Glass"),
+            .init(string: "Garnish with Cocktail Cherry"),
         ]
     )
 
@@ -711,6 +774,35 @@ let moscowMule: Drink =
             .init(string: "Add Vodka & Lime Juice and stir with the Barspoon"),
             .init(string: "Then top up with Ginger Beer"),
             .init(string: "Garnish with a Lime Wedge"),
+        ]
+    )
+
+let navyGrog: Drink =
+    .init(
+        name: "Navy Grog",
+        description: "",
+        image: "Navy Grog",
+        color: Colors.blue,
+        year: 1950,
+        base: .rum,
+        category: .tiki,
+        origin: Origins.instance.unitedStates,
+        equipments: [ Equipments.instance.oldFashionedGlass, Equipments.instance.shaker, Equipments.instance.strainer ],
+        ingredients: [
+            .init(ingredient: Ingredients.instance.jamaicanRum, amount: 30, unit: .milliliters),
+            .init(ingredient: Ingredients.instance.demerara151Rum, amount: 30, unit: .milliliters),
+            .init(ingredient: Ingredients.instance.puertoRicanRum, amount: 30, unit: .milliliters),
+            .init(ingredient: Ingredients.instance.limeJuice, amount: 20, unit: .milliliters),
+            .init(ingredient: Ingredients.instance.grapefruitJuice, amount: 20, unit: .milliliters),
+            .init(ingredient: Ingredients.instance.demeraraSyrup, amount: 8, unit: .milliliters),
+            .init(ingredient: Ingredients.instance.ice),
+        ],
+        steps: [
+            .init(string: "Fill the Old Fashioned Glass with Crushed Ice"),
+            .init(string: "In the Shaker add Jamaican Rum, Demerara 151 Rum, Puerto Rican Rum, Lime Juice, Grapefruit Juice, & Demerara Syrup"),
+            .init(string: "Add Ice and shake for 10-15 seconds"),
+            .init(string: "Strain into the old Fashioned Glass"),
+            .init(string: "Garnish with some Mint"),
         ]
     )
 
