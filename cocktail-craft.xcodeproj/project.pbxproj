@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		D10A3757299AAB8900C68443 /* NSManagedObject+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D10A3756299AAB8900C68443 /* NSManagedObject+Extensions.swift */; };
-		D110CBA6298A6CB200DB8E6F /* TipsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D110CBA5298A6CB200DB8E6F /* TipsView.swift */; };
 		D1174452297C2D80009CAFC7 /* Icons.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1174451297C2D80009CAFC7 /* Icons.swift */; };
 		D1174455297C2F67009CAFC7 /* BarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1174454297C2F67009CAFC7 /* BarView.swift */; };
 		D1174458297D2030009CAFC7 /* BarIngredientsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1174457297D2030009CAFC7 /* BarIngredientsView.swift */; };
@@ -62,7 +61,6 @@
 
 /* Begin PBXFileReference section */
 		D10A3756299AAB8900C68443 /* NSManagedObject+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSManagedObject+Extensions.swift"; sourceTree = "<group>"; };
-		D110CBA5298A6CB200DB8E6F /* TipsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TipsView.swift; sourceTree = "<group>"; };
 		D1174451297C2D80009CAFC7 /* Icons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Icons.swift; sourceTree = "<group>"; };
 		D1174454297C2F67009CAFC7 /* BarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarView.swift; sourceTree = "<group>"; };
 		D1174457297D2030009CAFC7 /* BarIngredientsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarIngredientsView.swift; sourceTree = "<group>"; };
@@ -136,7 +134,6 @@
 				D1174459297D203B009CAFC7 /* FavoritesView.swift */,
 				D117445D297D2A21009CAFC7 /* BooksView.swift */,
 				D1E74812297D727E002B48CE /* BarDrinksView.swift */,
-				D110CBA5298A6CB200DB8E6F /* TipsView.swift */,
 			);
 			path = Bar;
 			sourceTree = "<group>";
@@ -439,7 +436,6 @@
 				D16D80942976985600D163B3 /* DrinkFilters.swift in Sources */,
 				D1174452297C2D80009CAFC7 /* Icons.swift in Sources */,
 				D1E74813297D727E002B48CE /* BarDrinksView.swift in Sources */,
-				D110CBA6298A6CB200DB8E6F /* TipsView.swift in Sources */,
 				D1E5B3B52972D1C8001DF274 /* IngredientsInspector.swift in Sources */,
 				D1E74810297D6F6F002B48CE /* Global.swift in Sources */,
 				D1F79014296D75EE00F3CB30 /* DrinksView.swift in Sources */,
