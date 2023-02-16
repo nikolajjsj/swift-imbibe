@@ -111,12 +111,12 @@ final class Drink: Identifiable, Equatable, Hashable {
         case rum = "Rum"
         case vodka = "Vodka"
         case tequila = "Tequila"
-        case cognac = "Cognac"
+        case brandy = "Brandy"
         
         case other = "Other"
         
         static var all: [Base] {
-            [.whisky, .gin, .rum, .vodka, .tequila, .cognac]
+            [.whisky, .gin, .rum, .vodka, .tequila, .brandy]
         }
         
         var image: String? {
@@ -131,8 +131,8 @@ final class Drink: Identifiable, Equatable, Hashable {
                 return Ingredients.instance.vodka.image
             case .tequila:
                 return Ingredients.instance.tequila.image
-            case .cognac:
-                return Ingredients.instance.cognac.image
+            case .brandy:
+                return Ingredients.instance.brandy.image
             default:
                 return nil
             }
@@ -150,8 +150,8 @@ final class Drink: Identifiable, Equatable, Hashable {
                 return Drinks.instance.vodkaBased
             case .tequila:
                 return Drinks.instance.tequilaBased
-            case .cognac:
-                return Drinks.instance.cognacBased
+            case .brandy:
+                return Drinks.instance.brandyBased
             default:
                 return []
             }
@@ -236,8 +236,8 @@ final class Drinks {
     var rumBased: [Drink] {
         all.filter({ $0.base == .rum })
     }
-    var cognacBased: [Drink] {
-        all.filter({ $0.base == .cognac })
+    var brandyBased: [Drink] {
+        all.filter({ $0.base == .brandy })
     }
     var tequilaBased: [Drink] {
         all.filter({ $0.base == .tequila })

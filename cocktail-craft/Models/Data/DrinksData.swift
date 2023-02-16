@@ -1115,7 +1115,7 @@ let sidecar: Drink =
         image: "Sidecar",
         color: Colors.orange,
         year: 1922,
-        base: .cognac,
+        base: .brandy,
         origin: Origins.instance.france,
         equipments: [ Equipments.instance.shaker, Equipments.instance.cocktailGlass ],
         ingredients: [
@@ -1512,7 +1512,7 @@ let wisconsinOldFashioned: Drink =
         image: "Wisconsin Old Fashioned",
         color: Colors.orange,
         year: 1880,
-        base: .cognac,
+        base: .brandy,
         origin: Origins.instance.unitedStates,
         equipments: [ Equipments.instance.oldFashionedGlass, Equipments.instance.muddler ],
         ingredients: [
