@@ -88,11 +88,11 @@ final class DrinksViewModel: ObservableObject {
         func compareDrink(_ d: Drink) -> Bool {
             switch self {
             case .light:
-                return d.strength < 10
+                return d.strength < 15
             case .medium:
-                return d.strength >= 10 && d.strength < 20
+                return d.strength >= 15 && d.strength < 25
             case .strong:
-                return d.strength >= 20
+                return d.strength >= 25
             }
         }
     }
