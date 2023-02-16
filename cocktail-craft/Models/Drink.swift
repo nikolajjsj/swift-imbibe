@@ -60,11 +60,20 @@ final class Drink: Identifiable, Equatable, Hashable {
     
     private var drinkVolume: Double {
         var volume = 0.0
+        
         for ingredient in ingredients {
-            volume += (ingredient.unit == .milliliters ? (ingredient.amount ?? 0.0) : 0.0)
+            guard let unit = ingredient.unit else { continue }
+            let skippedSymbols = ["piece"]
+            guard !skippedSymbols.contains(unit.symbol) else { continue }
+            
+            guard let amount = ingredient.toUnit(.milliliters) else { continue }
+            
+            volume += amount
         }
+        
         return volume
     }
+    
     
     var strength: Int {
         let alcohols = ingredients.filter({ $0.ingredient.strength != 0 })

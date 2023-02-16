@@ -13,18 +13,7 @@ extension UnitVolume {
     static let piece = UnitVolume(symbol: "piece")
     
     static func fromSymbol(_ symbol: String) -> UnitVolume? {
-        switch symbol {
-        case UnitVolume.milliliters.symbol:
-            return UnitVolume.milliliters
-        case UnitVolume.centiliters.symbol:
-            return UnitVolume.centiliters
-        case UnitVolume.fluidOunces.symbol:
-            return UnitVolume.fluidOunces
-        case UnitVolume.teaspoons.symbol:
-            return UnitVolume.teaspoons
-        default:
-            return nil
-        }
+        usedUnitVolumeMetrics.first(where: { $0.symbol == symbol })
     }
 }
 
