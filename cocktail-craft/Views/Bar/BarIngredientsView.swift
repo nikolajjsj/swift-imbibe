@@ -7,12 +7,6 @@
 
 import SwiftUI
 
-struct ToggleStates {
-    var basics: Bool = true
-    var spirits: Bool = true
-    var all: Bool = true
-}
-
 struct BarIngredientsView: View {
     @Environment(\.managedObjectContext) private var moc
     
@@ -20,7 +14,6 @@ struct BarIngredientsView: View {
     
     @State private var query = ""
     @State private var all: [Ingredient] = Ingredients.instance.all
-    @State private var toggles = ToggleStates()
     @State private var selectedIngredient: Ingredient? = nil
     
     var body: some View {
@@ -28,9 +21,12 @@ struct BarIngredientsView: View {
         
         ScrollView {
             LazyVStack {
-                Text("\(filtered.count) results")
-                    .foregroundColor(.gray)
-                    .padding(.vertical)
+                if !query.isEmpty {
+                    Text("\(filtered.count) results")
+                        .foregroundColor(.gray)
+                        .padding(.vertical)
+                }
+                
                 LazyVGrid(columns: columns) {
                     ForEach(filtered, content: selectableIngredientCard)
                 }
