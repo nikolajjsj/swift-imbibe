@@ -20,45 +20,24 @@ struct BarIngredientsView: View {
     
     @State private var query = ""
     @State private var all: [Ingredient] = Ingredients.instance.all
-    @State private var basics: [Ingredient] = Ingredients.instance.all.filter({ $0.tags.contains(.base) })
-    @State private var spirits: [Ingredient] = Ingredients.instance.all.filter({ $0.tags.contains(.spirit) })
-    
     @State private var toggles = ToggleStates()
-    
     @State private var selectedIngredient: Ingredient? = nil
     
     var body: some View {
         let columns = [GridItem(.flexible()), GridItem(.flexible()), GridItem(.flexible())]
         
         ScrollView {
-            LazyVStack(alignment: .leading) {
-                if query.isEmpty {
-                    Text("Basics (\(basics.count))").font(.title2.bold())
-                    LazyVGrid(columns: columns) {
-                        ForEach(basics, content: selectableIngredientCard)
-                    }
-                    
-                    Text("Spirits (\(spirits.count))").font(.title2.bold())
-                    LazyVGrid(columns: columns) {
-                        ForEach(spirits, content: selectableIngredientCard)
-                    }
-                    
-                    Text("All (\(all.count))").font(.title2.bold())
-                    LazyVGrid(columns: columns) {
-                        ForEach(all, content: selectableIngredientCard)
-                    }
-                } else {
-                    Text("\(filtered.count) results")
-                        .foregroundColor(.gray)
-                        .padding(.vertical)
-                    LazyVGrid(columns: columns) {
-                        ForEach(filtered, content: selectableIngredientCard)
-                    }
+            LazyVStack {
+                Text("\(filtered.count) results")
+                    .foregroundColor(.gray)
+                    .padding(.vertical)
+                LazyVGrid(columns: columns) {
+                    ForEach(filtered, content: selectableIngredientCard)
                 }
             }.padding(.horizontal)
         }
         .searchable(text: $query, placement: .navigationBarDrawer(displayMode: .always))
-        .navigationBarTitle("My Ingredients")
+        .navigationBarTitle("Bar Ingredients")
         .sheet(item: $selectedIngredient, content: { i in IngredientView(ingredient: i) })
     }
     
@@ -94,18 +73,12 @@ struct BarIngredientsView: View {
         }
     }
     
-    @MainActor
     var filtered: [Ingredient] {
         if query.isEmpty {
             return all
         } else {
             return all.filter({ $0.name.localizedCaseInsensitiveContains(query) })
         }
-    }
-    
-    var drinks: [Drink] {
-        let selections = selected.map({ $0.name! })
-        return Drinks.instance.available(selections: selections)
     }
 }
 
