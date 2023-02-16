@@ -23,7 +23,7 @@ final class Drink: Identifiable, Equatable, Hashable {
     let image: String
     let color: Color
     let year: Int?
-    let base: Base
+    let base: Base?
     let category: Category?
     let origin: Origin
     let equipments: [Equipment]
@@ -37,7 +37,7 @@ final class Drink: Identifiable, Equatable, Hashable {
         image: String,
         color: Color,
         year: Int? = nil,
-        base: Base,
+        base: Base? = nil,
         category: Category? = nil,
         origin: Origin,
         equipments: [Equipment],
@@ -113,8 +113,6 @@ final class Drink: Identifiable, Equatable, Hashable {
         case tequila = "Tequila"
         case brandy = "Brandy"
         
-        case other = "Other"
-        
         static var all: [Base] {
             [.whisky, .gin, .rum, .vodka, .tequila, .brandy]
         }
@@ -133,8 +131,6 @@ final class Drink: Identifiable, Equatable, Hashable {
                 return Ingredients.instance.tequila.image
             case .brandy:
                 return Ingredients.instance.brandy.image
-            default:
-                return nil
             }
         }
         
@@ -152,8 +148,6 @@ final class Drink: Identifiable, Equatable, Hashable {
                 return Drinks.instance.tequilaBased
             case .brandy:
                 return Drinks.instance.brandyBased
-            default:
-                return []
             }
         }
     }

@@ -25,7 +25,7 @@ final class DrinksViewModel: ObservableObject {
             all = Drinks.instance.all.filter({ drink in
                 strengths.first(where: { $0.compareDrink(drink) }) != nil ||
                 eras.first(where: { $0.compareDrink(drink) }) != nil ||
-                baseSpirits.contains(drink.base)
+                (drink.base != nil && baseSpirits.contains(drink.base!))
             })
         }
         

@@ -41,7 +41,6 @@ let americano: Drink =
         image: "Americano",
         color: Colors.red,
         year: 1860,
-        base: .other,
         origin: Origins.instance.italy,
         equipments: [ Equipments.instance.oldFashionedGlass ],
         ingredients: [
@@ -502,7 +501,6 @@ let longIslandIceTea: Drink =
         image: "Long Island Ice Tea",
         color: Colors.orange,
         year: 1972,
-        base: .other,
         origin: Origins.instance.unitedStates,
         equipments: [ Equipments.instance.highballGlass, Equipments.instance.barspoon ],
         ingredients: [
@@ -986,7 +984,6 @@ let piscoOldFashioned: Drink =
         image: "Pisco Old Fashioned",
         color: Colors.gray,
         year: 1833,
-        base: .other,
         origin: Origins.instance.peru,
         equipments: [ Equipments.instance.oldFashionedGlass, Equipments.instance.barspoon ],
         ingredients: [
@@ -1244,7 +1241,6 @@ let theMomisette: Drink =
         image: "The Momisette",
         color: Colors.white,
         year: 1840,
-        base: .other,
         category: .sour,
         origin: Origins.instance.france,
         equipments: [ Equipments.instance.highballGlass, Equipments.instance.shaker, Equipments.instance.strainer ],
@@ -1383,7 +1379,6 @@ let trinidadEspecial: Drink =
         image: "Trinidad Especial",
         color: Colors.red,
         year: 2008,
-        base: .other,
         category: .sour,
         origin: Origins.instance.unitedStates,
         equipments: [ Equipments.instance.cocktailGlass, Equipments.instance.shaker, Equipments.instance.strainer ],
@@ -1408,7 +1403,6 @@ let trinidadSour: Drink =
         image: "Trinidad Sour",
         color: Colors.red,
         year: 2009,
-        base: .other,
         category: .sour,
         origin: Origins.instance.unitedStates,
         equipments: [ Equipments.instance.cocktailGlass, Equipments.instance.shaker, Equipments.instance.strainer ],
