@@ -413,7 +413,7 @@ Dark Rum are the distilled product of sugar canes (though not exclusively sugar 
         strength: 40,
         origin: nil,
         description: "",
-        namedAlternatives: ["Rum"],
+        namedAlternatives: ["Dark Rum"],
         tags: [.spirit]
     )
     let demeraraSyrup: Ingredient = Ingredient(
@@ -590,7 +590,7 @@ A often times more peaty version of a Scotch Whisky, originating from the Island
         Jamaican rum is often times known for their funky aroma, and their strong flavor emphasizing fruits like: pineapples, and overripe banana.
         Jamaican rum has to be made in Jamaica, and the molasses used should also be made in Jamaica. Up to 2.5% of another substance, like: sugar, can be added into Jamaican rum, intended to add extra flavoring.
         """,
-        namedAlternatives: ["Rum"],
+        namedAlternatives: ["Dark Rum"],
         tags: [.spirit]
     )
     let kahlua: Ingredient = Ingredient(
@@ -804,7 +804,7 @@ Originally created between 1849 and 1857 by Antoine Amèdèe Peychaud, often com
         Puerto Rican rums are light and oaky, very dry and distilled using column stills.
         They must, by law, be aged for at least one year, and three years in the case of dark rums.
         """,
-        namedAlternatives: ["Rum"],
+        namedAlternatives: ["Dark Rum"],
         tags: [.spirit]
     )
     let redWine: Ingredient = Ingredient(
