@@ -586,7 +586,10 @@ A often times more peaty version of a Scotch Whisky, originating from the Island
         color: Colors.brown,
         strength: 40,
         origin: nil,
-        description: "",
+        description: """
+        Jamaican rum is often times known for their funky aroma, and their strong flavor emphasizing fruits like: pineapples, and overripe banana.
+        Jamaican rum has to be made in Jamaica, and the molasses used should also be made in Jamaica. Up to 2.5% of another substance, like: sugar, can be added into Jamaican rum, intended to add extra flavoring.
+        """,
         namedAlternatives: ["Rum"],
         tags: [.spirit]
     )
@@ -797,7 +800,10 @@ Originally created between 1849 and 1857 by Antoine Amèdèe Peychaud, often com
         color: Colors.brown,
         strength: 40,
         origin: nil,
-        description: "",
+        description: """
+        Puerto Rican rums are light and oaky, very dry and distilled using column stills.
+        They must, by law, be aged for at least one year, and three years in the case of dark rums.
+        """,
         namedAlternatives: ["Rum"],
         tags: [.spirit]
     )
