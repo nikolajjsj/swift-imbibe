@@ -21,6 +21,7 @@
 		D174C2D72976E86A00E93262 /* DrinksList.swift in Sources */ = {isa = PBXBuildFile; fileRef = D174C2D62976E86A00E93262 /* DrinksList.swift */; };
 		D17BB61D29732160004F08F7 /* CardStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = D17BB61C29732160004F08F7 /* CardStyle.swift */; };
 		D17BB61F297345BA004F08F7 /* LocalStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = D17BB61E297345BA004F08F7 /* LocalStorage.swift */; };
+		D181F09F299E57FC00EB8A6F /* UnitVolume+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D181F09E299E57FC00EB8A6F /* UnitVolume+Extensions.swift */; };
 		D1830351299CA96900FD9EA8 /* DrinksData.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1830350299CA96900FD9EA8 /* DrinksData.swift */; };
 		D18CE3812976BDE700B997CD /* DrinksView-ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D18CE3802976BDE700B997CD /* DrinksView-ViewModel.swift */; };
 		D1BB5B2929741F8000CF52EE /* IngredientDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1BB5B2829741F8000CF52EE /* IngredientDetails.swift */; };
@@ -75,6 +76,7 @@
 		D174C2D62976E86A00E93262 /* DrinksList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrinksList.swift; sourceTree = "<group>"; };
 		D17BB61C29732160004F08F7 /* CardStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardStyle.swift; sourceTree = "<group>"; };
 		D17BB61E297345BA004F08F7 /* LocalStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalStorage.swift; sourceTree = "<group>"; };
+		D181F09E299E57FC00EB8A6F /* UnitVolume+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UnitVolume+Extensions.swift"; sourceTree = "<group>"; };
 		D1830350299CA96900FD9EA8 /* DrinksData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrinksData.swift; sourceTree = "<group>"; };
 		D18CE3802976BDE700B997CD /* DrinksView-ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DrinksView-ViewModel.swift"; sourceTree = "<group>"; };
 		D1BB5B2829741F8000CF52EE /* IngredientDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IngredientDetails.swift; sourceTree = "<group>"; };
@@ -302,6 +304,7 @@
 				D1308BAB2976D090002BF99C /* Bundle+Extensions.swift */,
 				D1174464297D440C009CAFC7 /* Array+Extensions.swift */,
 				D10A3756299AAB8900C68443 /* NSManagedObject+Extensions.swift */,
+				D181F09E299E57FC00EB8A6F /* UnitVolume+Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -445,6 +448,7 @@
 				D17BB61F297345BA004F08F7 /* LocalStorage.swift in Sources */,
 				D1F79030296D879600F3CB30 /* Color+Extensions.swift in Sources */,
 				D1174458297D2030009CAFC7 /* BarIngredientsView.swift in Sources */,
+				D181F09F299E57FC00EB8A6F /* UnitVolume+Extensions.swift in Sources */,
 				D1E5B3AD2972C9D3001DF274 /* EquipmentBox.swift in Sources */,
 				D117445C297D23CF009CAFC7 /* ErrorMessageView.swift in Sources */,
 				D1DD34B929740377006EE244 /* DrinkDetails.swift in Sources */,

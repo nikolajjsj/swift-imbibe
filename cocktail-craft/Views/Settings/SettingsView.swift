@@ -10,10 +10,20 @@ import SwiftUI
 struct SettingsView: View {
     @EnvironmentObject var global: Global
     
+    @AppStorage(LocalStorageKeys.unit.rawValue) var unit = UnitVolume.milliliters.symbol
+    
     var body: some View {
         NavigationView {
             List {
                 detailSection
+                
+                Section {
+                    Picker("Volume unit", selection: $unit) {
+                        ForEach(usedUnitVolumeMetrics, id: \.symbol) { uv in
+                            Text(uv.symbol).tag(uv.symbol)
+                        }
+                    }
+                }
                 
                 Section {
                     Button(role: .destructive) {

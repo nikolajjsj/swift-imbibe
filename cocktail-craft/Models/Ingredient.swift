@@ -95,12 +95,6 @@ final class IngredientWithVolume: Identifiable, Hashable {
     }
 }
 
-extension UnitVolume {
-    static let dash = UnitVolume(symbol: "dash")
-    static let drop = UnitVolume(symbol: "drop")
-    static let piece = UnitVolume(symbol: "piece")
-}
-
 final class Ingredients {
     static let instance = Ingredients()
     private init() { }

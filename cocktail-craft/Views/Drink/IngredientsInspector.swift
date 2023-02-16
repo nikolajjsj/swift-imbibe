@@ -31,10 +31,9 @@ struct IngredientsInspector: View {
                 HStack {
                     Text("Unit").frame(minWidth: 80)
                     Picker("", selection: $vm.unit) {
-                        Text(UnitVolume.milliliters.symbol).tag(UnitVolume.milliliters)
-                        Text(UnitVolume.centiliters.symbol).tag(UnitVolume.centiliters)
-                        Text(UnitVolume.fluidOunces.symbol).tag(UnitVolume.fluidOunces)
-                        Text(UnitVolume.teaspoons.symbol).tag(UnitVolume.teaspoons)
+                        ForEach(usedUnitVolumeMetrics, id: \.symbol) { uv in
+                            Text(uv.symbol).tag(uv.symbol)
+                        }
                     }.pickerStyle(.segmented)
                 }
             }.padding(.vertical, 6)
@@ -78,7 +77,7 @@ extension IngredientsInspector {
     final class ViewModel: ObservableObject {
         @Published var drink: Drink
         @Published var servings = 1
-        @Published var unit: UnitVolume = .milliliters
+        @AppStorage(LocalStorageKeys.unit.rawValue) var unit = UnitVolume.milliliters.symbol
         
         @FetchRequest(sortDescriptors: [], animation: .default) var selected: FetchedResults<SelectedIngredient>
         
@@ -90,7 +89,9 @@ extension IngredientsInspector {
         
         func ingredientAmount(_ i: IngredientWithVolume) -> String? {
             let isCustomSymbol = ["dash", "drop", "piece"].contains(i.unit?.symbol)
-            guard let amount = isCustomSymbol ? i.amount : i.toUnit(self.unit) else { return nil }
+            let currentUnit = UnitVolume.fromSymbol(unit)
+            guard let currentUnit else { return nil }
+            guard let amount = isCustomSymbol ? i.amount : i.toUnit(currentUnit) else { return nil }
             
             return (amount * Double(self.servings)).rounded(toPlaces: 1).formatted(.number)
         }
@@ -99,7 +100,7 @@ extension IngredientsInspector {
             if ["dash", "drop", "piece"].contains(i.unit?.symbol) {
                 return i.unit?.symbol
             } else {
-                return unit.symbol
+                return unit
             }
         }
         
