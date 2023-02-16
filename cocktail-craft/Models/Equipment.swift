@@ -71,6 +71,11 @@ Sometimes a cocktail glass is also referred to as a martini glass.
         description: "Used to strain the content from either a Shaker or a Mixing Glass, into a glass for serving.",
         image: "Strainer"
     )
+    let tikiGlass: Equipment = Equipment(
+        name: "Tiki Glass",
+        description: "Used to serve Tiki style cocktails",
+        image: "Tiki Glass"
+    )
     let toddyGlass: Equipment = Equipment(
         name: "Toddy Glass",
         description: "Used to serve hot drinks, eg. Hot Toddy and Irish Coffee",
@@ -86,18 +91,4 @@ Sometimes a cocktail glass is also referred to as a martini glass.
         description: "A tall and thin glass, taller than a Old Fashioned/lowball glass.",
         image: "Highball Glass"
     )
-    
-    var all: [Equipment] {
-        [
-            barspoon,
-            blender,
-            cocktailGlass,
-            mixingGlass,
-            oldFashionedGlass,
-            shaker,
-            strainer,
-            muddler,
-            highballGlass,
-        ]
-    }
 }

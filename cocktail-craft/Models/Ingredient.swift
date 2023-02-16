@@ -104,7 +104,6 @@ extension UnitVolume {
 final class Ingredients {
     static let instance = Ingredients()
     private init() { }
-    
     let absinthe: Ingredient = Ingredient(
         name: "Absinthe",
         image: "Absinthe",
@@ -193,6 +192,15 @@ Angostura makes the most famous and widely used type of herbal Bitters. Angostur
         description: "",
         tags: [.spirit]
     )
+    let blackBerries: Ingredient = Ingredient(
+        name: "Black Berries",
+        image: "Black Berries",
+        color: Colors.blue,
+        strength: 0,
+        origin: nil,
+        description: "",
+        tags: []
+    )
     let bourbonWhisky: Ingredient = Ingredient(
         name: "Bourbon Whisky",
         image: "Bourbon Whisky",
@@ -259,11 +267,38 @@ Champagne has been used for a variety of different sparkling wines, though many 
         description: "",
         tags: [.spirit]
     )
+    let cinnamonSyrup: Ingredient = Ingredient(
+        name: "Cinnamon Syrup",
+        image: "Cinnamon Syrup",
+        color: Colors.brown,
+        strength: 0,
+        origin: nil,
+        description: "",
+        tags: []
+    )
     let cremeDeCasis: Ingredient = Ingredient(
         name: "Creme de Casis",
         image: "Creme de Casis",
         color: Colors.gray,
         strength: 25,
+        origin: nil,
+        description: "",
+        tags: [.spirit]
+    )
+    let cremeDeMure: Ingredient = Ingredient(
+        name: "Creme de Mure",
+        image: "Creme de Mure",
+        color: Colors.red,
+        strength: 16,
+        origin: nil,
+        description: "",
+        tags: [.spirit]
+    )
+    let cremeDeViolette: Ingredient = Ingredient(
+        name: "Creme de Violette",
+        image: "Creme de Violette",
+        color: Colors.blue,
+        strength: 22,
         origin: nil,
         description: "",
         tags: [.spirit]
@@ -371,6 +406,16 @@ Dark Rum are the distilled product of sugar canes (though not exclusively sugar 
         namedAlternatives: ["Gold Rum"],
         tags: [.spirit]
     )
+    let demerara151Rum: Ingredient = Ingredient(
+        name: "Demerara 151 Rum",
+        image: "Demerara 151 Rum",
+        color: Colors.brown,
+        strength: 40,
+        origin: nil,
+        description: "",
+        namedAlternatives: ["Rum"],
+        tags: [.spirit]
+    )
     let demeraraSyrup: Ingredient = Ingredient(
         name: "Demerara Syrup",
         image: "Demerara Syrup",
@@ -418,6 +463,15 @@ Made up of 2 parts demerara sugar to 1 part water. Warmed up in a saucepan, on m
         origin: nil,
         description: "The non-yolk part of the egg.",
         tags: [.base]
+    )
+    let falernum: Ingredient = Ingredient(
+        name: "Falernum",
+        image: "Falernum",
+        color: Colors.white,
+        strength: 11,
+        origin: nil,
+        description: "",
+        tags: [.spirit]
     )
     let gin: Ingredient = Ingredient(
         name: "Gin",
@@ -524,6 +578,16 @@ Once the most popular spirit in the world, going from over 30 distilleries to on
 A often times more peaty version of a Scotch Whisky, originating from the Island of Islay.
 """,
         namedAlternatives: ["Whisky", "Scotch Whisky"],
+        tags: [.spirit]
+    )
+    let jamaicanRum: Ingredient = Ingredient(
+        name: "Jamaican Rum",
+        image: "Jamaican Rum",
+        color: Colors.brown,
+        strength: 40,
+        origin: nil,
+        description: "",
+        namedAlternatives: ["Rum"],
         tags: [.spirit]
     )
     let kahlua: Ingredient = Ingredient(
@@ -727,6 +791,16 @@ Originally created between 1849 and 1857 by Antoine Amèdèe Peychaud, often com
         description: "",
         tags: [.spirit]
     )
+    let puertoRicanRum: Ingredient = Ingredient(
+        name: "Puerto Rican Rum",
+        image: "Puerto Rican Rum",
+        color: Colors.brown,
+        strength: 40,
+        origin: nil,
+        description: "",
+        namedAlternatives: ["Rum"],
+        tags: [.spirit]
+    )
     let redWine: Ingredient = Ingredient(
         name: "Red Wine",
         image: "Red Wine",
@@ -864,6 +938,7 @@ Whisky is made from fermented mash containing various grains, including: barley,
         tags: [.base, .spirit]
     )
     
+    
     var all: [Ingredient]{
         [
             absinthe,
@@ -874,12 +949,15 @@ Whisky is made from fermented mash containing various grains, including: barley,
             aperol,
             apricotLiqueur,
             benedictine,
+            blackBerries,
             bourbonWhisky,
             brandy,
             campari,
             calvados,
             champagne,
             cremeDeCasis,
+            cremeDeMure,
+            cremeDeViolette,
             cocktailCherry,
             coconutCream,
             coffee,
@@ -891,11 +969,13 @@ Whisky is made from fermented mash containing various grains, including: barley,
             curacao,
             cream,
             darkRum,
+            demerara151Rum,
             demeraraSyrup,
             drambuie,
             dryVermouth,
             dubbonetRouge,
             eggWhite,
+            falernum,
             gin,
             gingerBeer,
             goldRum,
@@ -906,6 +986,7 @@ Whisky is made from fermented mash containing various grains, including: barley,
             honeySyrup,
             ice,
             irishWhisky,
+            jamaicanRum,
             kahlua,
             kinaLaeroDor,
             lemon,
@@ -928,6 +1009,7 @@ Whisky is made from fermented mash containing various grains, including: barley,
             pineappleJuice,
             pineapple,
             pisco,
+            puertoRicanRum,
             redWine,
             rum,
             ryeWhisky,

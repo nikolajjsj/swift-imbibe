@@ -59,6 +59,31 @@ let americano: Drink =
         ]
     )
 
+let aviation: Drink =
+    .init(
+        name: "Aviation",
+        description: "",
+        image: "Aviation",
+        color: Colors.blue,
+        year: 1916,
+        base: .gin,
+        origin: Origins.instance.unitedStates,
+        equipments: [ Equipments.instance.cocktailGlass, Equipments.instance.mixingGlass, Equipments.instance.barspoon, Equipments.instance.strainer ],
+        ingredients: [
+            .init(ingredient: Ingredients.instance.gin, amount: 60, unit: .milliliters),
+            .init(ingredient: Ingredients.instance.cremeDeViolette, amount: 8, unit: .milliliters),
+            .init(ingredient: Ingredients.instance.maraschinoLiqueur, amount: 8, unit: .milliliters),
+            .init(ingredient: Ingredients.instance.lemonJuice, amount: 15, unit: .milliliters),
+            .init(ingredient: Ingredients.instance.ice),
+        ],
+        steps: [
+            .init(string: "In the Mixing Glass add Gin, Creme de Violette, Maraschino Liqueur, & Lemon Juice"),
+            .init(string: "Add Ice and stir for 30-45 seconds"),
+            .init(string: "Add a Cocktail Cherry in the bottom of the Cocktail Glass"),
+            .init(string: "Strain into the Cocktail Glass"),
+        ]
+    )
+
 let bourbonRenewal: Drink =
     .init(
         name: "Bourbon Renewal",
@@ -1134,6 +1159,60 @@ let tartan: Drink =
         ]
     )
 
+let theBijou: Drink =
+    .init(
+        name: "The Bijou",
+        description: "",
+        image: "The Bijou",
+        color: Colors.yellow,
+        year: 1890,
+        base: .gin,
+        origin: Origins.instance.unitedStates,
+        equipments: [ Equipments.instance.cocktailGlass, Equipments.instance.mixingGlass, Equipments.instance.barspoon, Equipments.instance.strainer ],
+        ingredients: [
+            .init(ingredient: Ingredients.instance.gin, amount: 30, unit: .milliliters),
+            .init(ingredient: Ingredients.instance.sweetVermouth, amount: 30, unit: .milliliters),
+            .init(ingredient: Ingredients.instance.chartreuse, amount: 30, unit: .milliliters),
+            .init(ingredient: Ingredients.instance.angosturaOrangeBitters, amount: 1, unit: .dash),
+            .init(ingredient: Ingredients.instance.ice),
+        ],
+        steps: [
+            .init(string: "In the Mixing Glass add Gin, Sweet Vermouth, Chartreuse, & Angostura Orange Bitters"),
+            .init(string: "Add Ice and stir for ~30 seconds"),
+            .init(string: "Strain into the Cocktail Glass"),
+            .init(string: "Garnish with a Cocktail Cherry"),
+        ]
+    )
+
+let theBramble: Drink =
+    .init(
+        name: "The Bramble",
+        description: "",
+        image: "The Bramble",
+        color: Colors.blue,
+        year: 1985,
+        base: .gin,
+        category: .sour,
+        origin: Origins.instance.unitedKingdom,
+        equipments: [ Equipments.instance.oldFashionedGlass, Equipments.instance.shaker, Equipments.instance.strainer ],
+        ingredients: [
+            .init(ingredient: Ingredients.instance.gin, amount: 45, unit: .milliliters),
+            .init(ingredient: Ingredients.instance.cremeDeMure, amount: 15, unit: .milliliters),
+            .init(ingredient: Ingredients.instance.lemonJuice, amount: 20, unit: .milliliters),
+            .init(ingredient: Ingredients.instance.simpleSyrup, amount: 15, unit: .milliliters),
+            .init(ingredient: Ingredients.instance.blackBerries, amount: 1, unit: .piece),
+            .init(ingredient: Ingredients.instance.ice),
+        ],
+        steps: [
+            .init(string: "In the Shaker add Gin, Lemon Juice, & Simple Sirup"),
+            .init(string: "Add Ice and shake for 5-10 seconds"),
+            .init(string: "Fill the Old Fashioned Glass with Crushed Ice"),
+            .init(string: "Strain into the Old Fashioned Glass"),
+            .init(string: "Add a float of the Creme de Mure"),
+            .init(string: "Garnish with a Black Berry"),
+        ]
+    )
+
 let theLastWord: Drink =
     .init(
         name: "The Last Word",
@@ -1260,6 +1339,40 @@ let theWardEight: Drink =
             .init(string: "Add Ice and shake for 10-15 seconds"),
             .init(string: "Strain into the Cocktail Glass"),
             .init(string: "Garnish with a quarter of a Orange wheel, or a Cocktal Cherry or both"),
+        ]
+    )
+
+let theZombie: Drink =
+    .init(
+        name: "The Zombie",
+        description: "",
+        image: "The Zombie",
+        color: Colors.yellow,
+        year: 1934,
+        base: .rum,
+        category: .tiki,
+        origin: Origins.instance.unitedStates,
+        equipments: [ Equipments.instance.tikiGlass, Equipments.instance.shaker ],
+        ingredients: [
+            .init(ingredient: Ingredients.instance.jamaicanRum, amount: 45, unit: .milliliters),
+            .init(ingredient: Ingredients.instance.puertoRicanRum, amount: 45, unit: .milliliters),
+            .init(ingredient: Ingredients.instance.demerara151Rum, amount: 30, unit: .milliliters),
+            .init(ingredient: Ingredients.instance.falernum, amount: 15, unit: .milliliters),
+            .init(ingredient: Ingredients.instance.absinthe, amount: 5, unit: .milliliters),
+            .init(ingredient: Ingredients.instance.angosturaBitters, amount: 3, unit: .dash),
+            .init(ingredient: Ingredients.instance.grapefruitJuice, amount: 30, unit: .milliliters),
+            .init(ingredient: Ingredients.instance.limeJuice, amount: 20, unit: .milliliters),
+            .init(ingredient: Ingredients.instance.cinnamonSyrup, amount: 15, unit: .milliliters),
+            .init(ingredient: Ingredients.instance.grenadine, amount: 8, unit: .milliliters),
+            .init(ingredient: Ingredients.instance.mintLeaves, amount: 15, unit: .piece),
+            .init(ingredient: Ingredients.instance.ice),
+        ],
+        steps: [
+            .init(string: "Fill the Tiki Glass with Crushed Ice (save some of the Crushed Ice for the Shaker)"),
+            .init(string: "In the Shaker add Jamaican Rum, Puerto Rican Rum, Demerara 151 Rum, Falernum, Absinthe, Angostura Bitters, Grapefruit Juice, Lime Juice, Cinnamon Syrup, & Grenadine"),
+            .init(string: "Add some of the Crushed Ice and shake for 10-15 seconds"),
+            .init(string: "Pour into the Tiki Glass"),
+            .init(string: "Garnish with some Mint"),
         ]
     )
 

@@ -58,8 +58,24 @@ final class Drink: Identifiable, Equatable, Hashable {
         self.steps = steps
     }
     
+    private var drinkVolume: Double {
+        var volume = 0.0
+        for ingredient in ingredients {
+            volume += (ingredient.unit == .milliliters ? (ingredient.amount ?? 0.0) : 0.0)
+        }
+        return volume
+    }
+    
     var strength: Int {
-        Int(ingredients.reduce(0.0, { $0 + Double($1.ingredient.strength) }) / Double(ingredients.count))
+        let alcohols = ingredients.filter({ $0.ingredient.strength != 0 })
+        
+        var alcoholContent = 0.0
+        for alcohol in alcohols {
+            if alcohol.unit != .milliliters { continue }
+            alcoholContent += ( (Double(alcohol.ingredient.strength) / 100) * (alcohol.amount ?? 0.0) )
+        }
+        
+        return Int((alcoholContent / drinkVolume) * 100)
     }
     
     enum Category: String {
@@ -151,6 +167,7 @@ final class Drinks {
         [
             _12MileLimit,
             americano,
+            aviation,
             bourbonRenewal,
             brooklyn,
             classicMartini,
@@ -192,11 +209,14 @@ final class Drinks {
             sazerac,
             sidecar,
             tartan,
+            theBijou,
+            theBramble,
             theLastWord,
             theMomisette,
             theScofflaw,
             theTradewinds,
             theWardEight,
+            theZombie,
             trinidadEspecial,
             trinidadSour,
             whiskySour,
