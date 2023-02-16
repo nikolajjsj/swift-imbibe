@@ -21,7 +21,7 @@ struct IngredientsView: View {
             }
             .padding(.horizontal)
         }
-        .searchable(text: $query)
+        .searchable(text: $query, placement: .navigationBarDrawer(displayMode: .always))
         .navigationTitle("Ingredients")
     }
     
