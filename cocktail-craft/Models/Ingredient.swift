@@ -328,6 +328,7 @@ Champagne has been used for a variety of different sparkling wines, though many 
         strength: 20,
         origin: nil,
         description: "A Liqueur based on coffee with varying degrees of sweetness",
+        namedAlternatives: ["Kahlua"],
         tags: [.spirit]
     )
     let cognac: Ingredient = Ingredient(
