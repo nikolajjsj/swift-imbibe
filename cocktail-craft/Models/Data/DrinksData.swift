@@ -362,7 +362,7 @@ let espressoMartini: Drink =
         ingredients: [
             .init(ingredient: Ingredients.instance.vodka, amount: 40, unit: .milliliters),
             .init(ingredient: Ingredients.instance.coffeeLiqueur, amount: 10, unit: .milliliters),
-            .init(ingredient: Ingredients.instance.simpleSyrup, amount: 20, unit: .piece),
+            .init(ingredient: Ingredients.instance.simpleSyrup, amount: 20, unit: .milliliters),
             .init(ingredient: Ingredients.instance.coffee, amount: 45, unit: .milliliters),
             .init(ingredient: Ingredients.instance.ice),
         ],
