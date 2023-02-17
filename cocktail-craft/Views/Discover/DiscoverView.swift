@@ -55,19 +55,21 @@ struct DiscoverView: View {
                             DrinksList(drinks: category.drinks)
                                 .navigationTitle(category.rawValue)
                         } label: {
-                            if let image = category.image {
-                                Spacer()
-                                Image(image)
-                                    .resizable()
-                                    .scaledToFit()
-                                    .frame(maxHeight: 50)
-                                    .padding(.vertical, 5)
+                            VStack(spacing: 16) {
+                                if let image = category.image {
+                                    Image(image)
+                                        .resizable()
+                                        .scaledToFit()
+                                        .frame(maxHeight: 120)
+                                }
+                                Text(category.rawValue)
+                                    .font(.title3.bold())
                             }
-                            FillLabel(category.rawValue)
+                            .padding(.vertical, 8)
+                            .frame(maxWidth: .infinity)
                         }.buttonStyle(.bordered)
                     }
                 }.padding(.bottom, 24)
-                
                 
                 Text("Origins")
                     .font(.headline)
@@ -85,6 +87,7 @@ struct DiscoverView: View {
                     }
                 }.padding(.bottom, 24)
             }
+//            .frame(maxWidth: 800)
             .padding(.horizontal)
         }
         .navigationTitle("Discover")
