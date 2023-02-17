@@ -1351,6 +1351,34 @@ let theMomisette: Drink =
         ]
     )
 
+let theQueensParkSwizzle: Drink =
+    .init(
+        name: "The Queen's Park Swizzle",
+        description: "",
+        image: "The Queen's Park Swizzle",
+        color: Colors.yellow,
+        year: 1920,
+        base: .rum,
+        origin: Origins.instance.trinidadAndTobago,
+        equipments: [ Equipments.instance.highballGlass, Equipments.instance.barspoon ],
+        ingredients: [
+            .init(ingredient: Ingredients.instance.rum, amount: 60, unit: .milliliters),
+            .init(ingredient: Ingredients.instance.demeraraSyrup, amount: 15, unit: .milliliters),
+            .init(ingredient: Ingredients.instance.limeJuice, amount: 20, unit: .milliliters),
+            .init(ingredient: Ingredients.instance.angosturaBitters, amount: 6, unit: .dash),
+            .init(ingredient: Ingredients.instance.mintLeaves, amount: 10, unit: .piece),
+            .init(ingredient: Ingredients.instance.ice),
+        ],
+        steps: [
+            .init(string: "In the Highball Glass add Mint Leaves and press lightly with a Barspoon"),
+            .init(string: "Add Rum, Demerara Syrup, & Lime Juice"),
+            .init(string: "Fill up with Crushed Ice"),
+            .init(string: "Stir for ~20 seconds"),
+            .init(string: "Add some more Crushed Ice on the top & top off with Angostura Bitters"),
+            .init(string: "Garnish with some Mint"),
+        ]
+    )
+
 let theScofflaw: Drink =
     .init(
         name: "The Scofflaw",

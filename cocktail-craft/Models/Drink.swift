@@ -219,6 +219,7 @@ final class Drinks {
             theBramble,
             theLastWord,
             theMomisette,
+            theQueensParkSwizzle,
             theScofflaw,
             theTradewinds,
             theWardEight,
