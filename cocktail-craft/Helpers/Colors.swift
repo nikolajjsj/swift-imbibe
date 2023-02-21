@@ -16,6 +16,7 @@ final class Colors {
     static let gray = Color.gray
     static let green = Color(red: 150 / 255, green: 212 / 255, blue: 76 / 255)
     static let orange = Color(red: 221 / 255, green: 173 / 255, blue: 91 / 255)
+    static let pink = Color(red: 255 / 255, green: 192 / 255, blue: 203 / 255)
     static let red = Color(red: 206 / 255, green: 120 / 255, blue: 120 / 255)
     static let white = Color(red: 224 / 255, green: 224 / 255, blue: 224 / 255)
     static let yellow = Color(red: 232 / 255, green: 221 / 255, blue: 124 / 255)

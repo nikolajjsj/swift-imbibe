@@ -659,9 +659,9 @@ let illegal: Drink =
 
 let irishCoffee: Drink =
     .init(
-        name: "Irish coffee",
+        name: "Irish Coffee",
         description: "",
-        image: "Irish coffee",
+        image: "Irish Coffee",
         color: Colors.brown,
         year: 1943,
         base: .whisky,
@@ -955,6 +955,30 @@ let moscowMule: Drink =
         ]
     )
 
+let nakedAndFamous: Drink =
+    .init(
+        name: "Naked and Famous",
+        description: "",
+        image: "Naked and Famous",
+        color: Colors.orange,
+        year: 2011,
+        category: .sour,
+        origin: Origins.instance.unitedStates,
+        equipments: [ Equipments.instance.cocktailGlass, Equipments.instance.shaker, Equipments.instance.strainer ],
+        ingredients: [
+            .init(ingredient: Ingredients.instance.mezcal, amount: 25, unit: .milliliters),
+            .init(ingredient: Ingredients.instance.chartreuse, amount: 25, unit: .milliliters),
+            .init(ingredient: Ingredients.instance.aperol, amount: 25, unit: .milliliters),
+            .init(ingredient: Ingredients.instance.limeJuice, amount: 25, unit: .milliliters),
+            .init(ingredient: Ingredients.instance.ice),
+        ],
+        steps: [
+            .init(string: "In the Shaker add Mezcal, Chartreuse, Aperol, & Lime Juice"),
+            .init(string: "Add Ice and shake for 10-15 seconds"),
+            .init(string: "Strain into a Cocktail Glass"),
+        ]
+    )
+
 let navyGrog: Drink =
     .init(
         name: "Navy Grog",
@@ -1062,6 +1086,34 @@ let oaxacaOldFashioned: Drink =
         ]
     )
 
+let oldCuban: Drink =
+    .init(
+        name: "Old Cuban",
+        description: "",
+        image: "Old Cuban",
+        color: Colors.yellow,
+        year: 2001,
+        base: .rum,
+        category: .sour,
+        origin: Origins.instance.unitedStates,
+        equipments: [ Equipments.instance.cocktailGlass, Equipments.instance.shaker, Equipments.instance.strainer ],
+        ingredients: [
+            .init(ingredient: Ingredients.instance.rum, amount: 25, unit: .milliliters),
+            .init(ingredient: Ingredients.instance.limeJuice, amount: 25, unit: .milliliters),
+            .init(ingredient: Ingredients.instance.simpleSyrup, amount: 25, unit: .milliliters),
+            .init(ingredient: Ingredients.instance.angosturaBitters, amount: 25, unit: .milliliters),
+            .init(ingredient: Ingredients.instance.prosecco, amount: 25, unit: .milliliters),
+            .init(ingredient: Ingredients.instance.mintLeaves, amount: 8, unit: .piece),
+            .init(ingredient: Ingredients.instance.ice),
+        ],
+        steps: [
+            .init(string: "In the Shaker add Rum, Lime Juice, Simple Syrup, Angostura Bitters, & Mint Leaves"),
+            .init(string: "Add Ice and shake for 10-15 seconds"),
+            .init(string: "Strain into a Cocktail Glass"),
+            .init(string: "Garnish with Mint"),
+        ]
+    )
+
 let oldFashioned: Drink =
     .init(
         name: "Old Fashioned",
@@ -1109,6 +1161,32 @@ let painkiller: Drink =
             .init(string: "Add Dark Rum, Pineapple Juice, Coconut Cream, Orange Juice"),
             .init(string: "Shake (10-15 seconds)"),
             .init(string: "Pour everything into the Old Fashioned Glass"),
+        ]
+    )
+
+let paloma: Drink =
+    .init(
+        name: "Paloma",
+        description: "",
+        image: "Paloma",
+        color: Colors.white,
+        year: 1950,
+        base: .tequila,
+        origin: Origins.instance.unitedStates,
+        equipments: [ Equipments.instance.highballGlass, Equipments.instance.shaker, Equipments.instance.strainer ],
+        ingredients: [
+            .init(ingredient: Ingredients.instance.tequila, amount: 60, unit: .milliliters),
+            .init(ingredient: Ingredients.instance.limeJuice, amount: 5, unit: .milliliters),
+            .init(ingredient: Ingredients.instance.pinkGrapefruitSoda, amount: 100, unit: .milliliters),
+            .init(ingredient: Ingredients.instance.salt),
+            .init(ingredient: Ingredients.instance.ice),
+        ],
+        steps: [
+            .init(string: "In the Highball Glass add Tequila, Lime Juice, and a pinch of Salt"),
+            .init(string: "Add Ice"),
+            .init(string: "Top up with Pink Grapefruit Soda"),
+            .init(string: "Stir gently"),
+            .init(string: "Garnish with a Lime Twist"),
         ]
     )
 

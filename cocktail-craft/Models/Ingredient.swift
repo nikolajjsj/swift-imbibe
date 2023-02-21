@@ -796,6 +796,15 @@ Originally created between 1849 and 1857 by Antoine Amèdèe Peychaud, often com
         description: "",
         tags: [.base]
     )
+    let pinkGrapefruitSoda: Ingredient = Ingredient(
+        name: "Pink Grapefruit Soda",
+        image: "Pink Grapefruit Soda",
+        color: Colors.pink,
+        strength: 0,
+        origin: nil,
+        description: "",
+        tags: []
+    )
     let pisco: Ingredient = Ingredient(
         name: "Pisco",
         image: "Pisco",
@@ -878,6 +887,15 @@ A type of whisky made from at least 51% rye, and should be aged in charred new-o
 """,
         namedAlternatives: ["Whisky"],
         tags: [.spirit]
+    )
+    let salt: Ingredient = Ingredient(
+        name: "Salt",
+        image: "Sugar",
+        color: Colors.white,
+        strength: 0,
+        origin: nil,
+        description: "",
+        tags: [.base]
     )
     let scotchWhisky: Ingredient = Ingredient(
         name: "Scotch Whisky",
@@ -1065,6 +1083,7 @@ Whisky is made from fermented mash containing various grains, including: barley,
             peychaudBitters,
             pineappleJuice,
             pineapple,
+            pinkGrapefruitSoda,
             pisco,
             prosecco,
             puertoRicanRum,
@@ -1072,6 +1091,7 @@ Whisky is made from fermented mash containing various grains, including: barley,
             redWine,
             rum,
             ryeWhisky,
+            salt,
             scotchWhisky,
             simpleSyrup,
             sodaWater,
