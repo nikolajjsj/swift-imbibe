@@ -237,6 +237,7 @@ final class Drinks {
             theZombie,
             tipperary,
             tommysMargarita,
+            southside,
             trinidadEspecial,
             trinidadSour,
             whiskySour,

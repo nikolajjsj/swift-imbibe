@@ -1822,6 +1822,33 @@ let tommysMargarita: Drink =
         ]
     )
 
+let southside: Drink =
+    .init(
+        name: "Southside",
+        description: "",
+        image: "Southside",
+        color: Colors.white,
+        year: 1917,
+        base: .gin,
+        category: .sour,
+        origin: Origins.instance.unitedStates,
+        equipments: [ Equipments.instance.cocktailGlass, Equipments.instance.shaker, Equipments.instance.strainer ],
+        ingredients: [
+            .init(ingredient: Ingredients.instance.gin, amount: 60, unit: .milliliters),
+            .init(ingredient: Ingredients.instance.lemonJuice, amount: 30, unit: .milliliters),
+            .init(ingredient: Ingredients.instance.simpleSyrup, amount: 15, unit: .milliliters),
+            .init(ingredient: Ingredients.instance.mintLeaves, amount: 6, unit: .piece),
+            .init(ingredient: Ingredients.instance.eggWhite, amount: 2, unit: .drop),
+            .init(ingredient: Ingredients.instance.ice),
+        ],
+        steps: [
+            .init(string: "In the Shaker add Gin, Lemon Juice, Simple Syrup, Mint Leaves, & Egg White"),
+            .init(string: "Add Ice and shake for 10-15 seconds"),
+            .init(string: "Strain into a Cocktail Glass"),
+            .init(string: "Garnish with some Mint"),
+        ]
+    )
+
 let trinidadEspecial: Drink =
     .init(
         name: "Trinidad Especial",
