@@ -7,6 +7,21 @@
 
 import CoreData
 
+fileprivate let favorites: [String] = [
+    mojito.name,
+    oldFashioned.name,
+    whiskySour.name
+]
+
+fileprivate let selectedIngredients: [String] = [
+    Ingredients.instance.orgeatSyrup.name,
+    Ingredients.instance.coffee.name,
+    Ingredients.instance.vodka.name,
+    Ingredients.instance.kahlua.name,
+    Ingredients.instance.simpleSyrup.name,
+    Ingredients.instance.ice.name,
+]
+
 struct PersistenceController {
     static let shared = PersistenceController()
     
@@ -16,10 +31,14 @@ struct PersistenceController {
         let result = PersistenceController(inMemory: true)
         let viewContext = result.container.viewContext
         
-        let favorite1 = Favorite(context: viewContext)
-        favorite1.name = mojito.name
-        let selectedIngredient1 = SelectedIngredient(context: viewContext)
-        selectedIngredient1.name = Ingredients.instance.orgeatSyrup.name
+        for favorite in favorites {
+            let f = Favorite(context: viewContext)
+            f.name = favorite
+        }
+        for selected in selectedIngredients {
+            let s = SelectedIngredient(context: viewContext)
+            s.name = selected
+        }
         viewContext.quickSave()
         
         return result
