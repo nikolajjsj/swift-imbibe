@@ -26,20 +26,6 @@ struct SettingsView: View {
                 } header: {
                     Text("Units")
                 }
-                
-                Section {
-                    Button(role: .destructive) {
-                        withAnimation {
-                            global.setOnboarded(false)
-                        }
-                    } label: {
-                        Text("Clear")
-                    }
-                } header: {
-                    Text("App")
-                } footer: {
-                    Text("This will reset you to the onboarding step, resulting in the onboarding page to be shown again")
-                }
             }
             .navigationTitle("Settings")
         }
