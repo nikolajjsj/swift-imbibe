@@ -1615,7 +1615,7 @@ let whiteRussian: Drink =
             .init(string: "Fill the Old Fashioned Glass with Ice Cubes"),
             .init(string: "Add Vodka & Kahlua"),
             .init(string: "Stir together"),
-            .init(string: "Then add the Cream"),
+            .init(string: "Add a float of Cream"),
         ]
     )
 
