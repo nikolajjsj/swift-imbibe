@@ -594,9 +594,7 @@ A often times more peaty version of a Scotch Whisky, originating from the Island
         color: Colors.yellow,
         strength: 20,
         origin: Origins.instance.mexico,
-        description: """
-A coffee liqueur from Mexico.
-""",
+        description: "A coffee liqueur from Mexico.",
         namedAlternatives: ["Coffee Liqueur"],
         tags: [.spirit]
     )

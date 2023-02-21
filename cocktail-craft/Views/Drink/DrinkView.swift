@@ -29,7 +29,7 @@ struct DrinkView: View {
                     
                     DrinkDetails(drink)
                     
-                    IngredientsInspector(drink)
+                    IngredientsInspector(drink: drink)
                     
                     DrinkStepInstructions(drink)
                 }
@@ -61,7 +61,8 @@ struct DrinkView: View {
 struct DrinkView_Previews: PreviewProvider {
     static var previews: some View {
         NavigationView {
-            DrinkView(drink: jetPilot)
+            DrinkView(drink: theZombie)
         }
+        .environment(\.managedObjectContext, PersistenceController.preview.container.viewContext)
     }
 }

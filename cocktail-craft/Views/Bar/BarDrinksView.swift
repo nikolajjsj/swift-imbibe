@@ -30,7 +30,7 @@ struct BarDrinksView: View {
     }
     
     var drinks: [Drink] {
-        let selections = selected.map({ $0.name! })
+        let selections = selected.compactMap({ $0.name })
         return Drinks.instance.available(selections: selections)
     }
 }
@@ -131,5 +131,6 @@ struct BarDrinksView_Previews: PreviewProvider {
         NavigationView {
             BarDrinksView()
         }
+        .environment(\.managedObjectContext, PersistenceController.preview.container.viewContext)
     }
 }

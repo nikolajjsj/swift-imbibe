@@ -42,5 +42,6 @@ struct DrinksView_Previews: PreviewProvider {
         NavigationView {
             DrinksView()
         }
+        .environment(\.managedObjectContext, PersistenceController.preview.container.viewContext)
     }
 }

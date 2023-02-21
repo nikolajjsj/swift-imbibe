@@ -268,10 +268,13 @@ final class Drinks {
     
     // Get all drinks that are available with the gives ingredients
     func available(selections: [String]) -> [Drink] {
-        all.filter({ $0.ingredients.allSatisfy({
-            selections.contains($0.ingredient.name)
-            || !Set(selections).isDisjoint(with: $0.ingredient.alternatives.map({ $0.name }))
-        }) })
+        let selectionsSet = Set(selections)
+        
+        return all.filter({
+            $0.ingredients.allSatisfy({
+                selections.contains($0.ingredient.name) || !selectionsSet.isDisjoint(with: $0.ingredient.alternatives.map({ $0.name }))
+            })
+        })
     }
     
     // See which ingredients are missing for drinks
