@@ -468,6 +468,24 @@ Made up of 2 parts demerara sugar to 1 part water. Warmed up in a saucepan, on m
         description: "",
         tags: [.spirit]
     )
+    let fernetBranca: Ingredient = Ingredient(
+        name: "Fernet Branca",
+        image: "Fernet Branca",
+        color: Colors.black,
+        strength: 40,
+        origin: nil,
+        description: "",
+        tags: [.spirit]
+    )
+    let galliano: Ingredient = Ingredient(
+        name: "Galliano",
+        image: "Galliano",
+        color: Colors.gray,
+        strength: 30,
+        origin: nil,
+        description: "",
+        tags: [.spirit]
+    )
     let gin: Ingredient = Ingredient(
         name: "Gin",
         image: "Gin",
@@ -787,6 +805,15 @@ Originally created between 1849 and 1857 by Antoine Amèdèe Peychaud, often com
         description: "",
         tags: [.spirit]
     )
+    let prosecco: Ingredient = Ingredient(
+        name: "Prosecco",
+        image: "Prosecco",
+        color: Colors.gray,
+        strength: 11,
+        origin: nil,
+        description: "",
+        tags: [.spirit]
+    )
     let puertoRicanRum: Ingredient = Ingredient(
         name: "Puerto Rican Rum",
         image: "Puerto Rican Rum",
@@ -798,6 +825,15 @@ Originally created between 1849 and 1857 by Antoine Amèdèe Peychaud, often com
         They must, by law, be aged for at least one year, and three years in the case of dark rums.
         """,
         namedAlternatives: ["Dark Rum"],
+        tags: [.spirit]
+    )
+    let raspberryLiqueur: Ingredient = Ingredient(
+        name: "Raspberry Liqueur",
+        image: "Raspberry Liqueur",
+        color: Colors.red,
+        strength: 11,
+        origin: nil,
+        description: "",
         tags: [.spirit]
     )
     let redWine: Ingredient = Ingredient(
@@ -937,6 +973,14 @@ Vodka is primarly made from grains and/or potatos, but also other items such as:
 """,
         tags: [.base, .spirit]
     )
+    let water: Ingredient = Ingredient(
+        name: "Water",
+        image: "Water",
+        color: Colors.white,
+        strength: 0,
+        origin: Origins.instance.worldwide,
+        description: ""
+    )
     let whisky: Ingredient = Ingredient(
         name: "Whisky",
         image: "Whisky",
@@ -987,6 +1031,8 @@ Whisky is made from fermented mash containing various grains, including: barley,
             dubbonetRouge,
             eggWhite,
             falernum,
+            fernetBranca,
+            galliano,
             gin,
             gingerBeer,
             goldRum,
@@ -1020,7 +1066,9 @@ Whisky is made from fermented mash containing various grains, including: barley,
             pineappleJuice,
             pineapple,
             pisco,
+            prosecco,
             puertoRicanRum,
+            raspberryLiqueur,
             redWine,
             rum,
             ryeWhisky,
@@ -1032,6 +1080,7 @@ Whisky is made from fermented mash containing various grains, including: barley,
             sweetVermouth,
             tequila,
             vodka,
+            water,
             whisky,
         ]
     }
