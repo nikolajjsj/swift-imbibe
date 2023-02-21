@@ -49,7 +49,7 @@ struct DrinksHelper: View {
         NavigationView {
             List {
                 Section {
-                    Picker("# missing ingredients", selection: $missingCount) {
+                    Picker("Max number of missing ingredients", selection: $missingCount) {
                         ForEach(1...3, id: \.self) {
                             Text("\($0)").tag($0)
                         }
@@ -106,7 +106,7 @@ struct DrinksHelper: View {
     }
     
     var sortedKeys: [[Ingredient]] {
-        let dict = missing.filter({ $0.key.count == missingCount })
+        let dict = missing.filter({ $0.key.count <= missingCount })
         return Array(dict.keys)
             .sorted { lhs, rhs in
                 let lhsArr = dict[lhs] ?? []
