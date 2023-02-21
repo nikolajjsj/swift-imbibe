@@ -1477,6 +1477,30 @@ let sidecar: Drink =
         ]
     )
 
+let spritz: Drink =
+    .init(
+        name: "Spritz",
+        description: "",
+        image: "Spritz",
+        color: Colors.red,
+        year: 1820,
+        origin: Origins.instance.italy,
+        equipments: [ Equipments.instance.cocktailGlass ],
+        ingredients: [
+            .init(ingredient: Ingredients.instance.prosecco, amount: 90, unit: .milliliters),
+            .init(ingredient: Ingredients.instance.aperol, amount: 60, unit: .milliliters),
+            .init(ingredient: Ingredients.instance.sodaWater),
+            .init(ingredient: Ingredients.instance.ice),
+        ],
+        steps: [
+            .init(string: "In the Cocktail Glass add Prosecco & Aperol"),
+            .init(string: "Add Ice"),
+            .init(string: "Stir gently"),
+            .init(string: "Top up with a splash of Soda Water"),
+            .init(string: "Garnish with a Orange Wheel"),
+        ]
+    )
+
 let tartan: Drink =
     .init(
         name: "Tartan",
@@ -1745,6 +1769,56 @@ let theZombie: Drink =
             .init(string: "Add some of the Crushed Ice and shake for 10-15 seconds"),
             .init(string: "Pour into the Tiki Glass"),
             .init(string: "Garnish with some Mint"),
+        ]
+    )
+
+let tipperary: Drink =
+    .init(
+        name: "Tipperary",
+        description: "",
+        image: "Tipperary",
+        color: Colors.orange,
+        year: 1917,
+        base: .whisky,
+        origin: Origins.instance.unitedStates,
+        equipments: [ Equipments.instance.cocktailGlass, Equipments.instance.mixingGlass, Equipments.instance.barspoon, Equipments.instance.strainer ],
+        ingredients: [
+            .init(ingredient: Ingredients.instance.irishWhisky, amount: 50, unit: .milliliters),
+            .init(ingredient: Ingredients.instance.sweetVermouth, amount: 25, unit: .milliliters),
+            .init(ingredient: Ingredients.instance.chartreuse, amount: 15, unit: .milliliters),
+            .init(ingredient: Ingredients.instance.angosturaBitters, amount: 2, unit: .dash),
+            .init(ingredient: Ingredients.instance.ice),
+        ],
+        steps: [
+            .init(string: "In the Mixing Glass add Irish Whisky, Sweet Vermouth, Chartreuse, & Angostura Bitters"),
+            .init(string: "Add Ice and stir for 30-45 seconds"),
+            .init(string: "Strain into a Cocktail Glass"),
+            .init(string: "Garnish with Orange Twist"),
+        ]
+    )
+
+let tommysMargarita: Drink =
+    .init(
+        name: "Tommy's Margarita",
+        description: "",
+        image: "Tommy's Margarita",
+        color: Colors.white,
+        year: 1990,
+        base: .tequila,
+        category: .sour,
+        origin: Origins.instance.mexico,
+        equipments: [ Equipments.instance.oldFashionedGlass, Equipments.instance.shaker, Equipments.instance.strainer ],
+        ingredients: [
+            .init(ingredient: Ingredients.instance.tequila, amount: 60, unit: .milliliters),
+            .init(ingredient: Ingredients.instance.limeJuice, amount: 30, unit: .milliliters),
+            .init(ingredient: Ingredients.instance.agaveNectar, amount: 30, unit: .milliliters),
+            .init(ingredient: Ingredients.instance.ice),
+        ],
+        steps: [
+            .init(string: "In the Shaker add Tequila, Lime Juice, & Agave Nectar"),
+            .init(string: "Add Ice and shake for 10-15 seconds"),
+            .init(string: "Strain into a Old Fashioned Glass"),
+            .init(string: "Garnish with a Lime Wedge"),
         ]
     )
 
