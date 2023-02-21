@@ -33,12 +33,14 @@ struct DrinkStepInstructions: View {
                 
                 Divider()
             }
-        }.detailCard()
+        }
+        .fixedSize(horizontal: false, vertical: true)
+        .detailCard()
     }
 }
 
 struct DrinkStepInstructions_Previews: PreviewProvider {
     static var previews: some View {
-        DrinkStepInstructions(mojito)
+        DrinkStepInstructions(theZombie)
     }
 }
