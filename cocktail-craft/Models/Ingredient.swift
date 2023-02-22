@@ -261,6 +261,15 @@ Champagne has been used for a variety of different sparkling wines, though many 
         description: "",
         tags: [.spirit]
     )
+    let cherryLiqueur: Ingredient = Ingredient(
+        name: "Cherry Liqueur",
+        image: "Cherry Liqueur",
+        color: Colors.red,
+        strength: 25,
+        origin: nil,
+        description: "",
+        tags: [.spirit]
+    )
     let cinnamonSyrup: Ingredient = Ingredient(
         name: "Cinnamon Syrup",
         image: "Cinnamon Syrup",

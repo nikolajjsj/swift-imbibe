@@ -48,6 +48,7 @@ final class Origins {
     let poland: Origin = Origin( name: "Poland", flag: "🇵🇱" )
     let puertoRico: Origin = Origin( name: "Puerto Rico", flag: "🇵🇷" )
     let scotland: Origin = Origin( name: "Scotland", flag: "🏴󠁧󠁢󠁳󠁣󠁴󠁿" )
+    let singapore: Origin = Origin( name: "Singapore", flag: "🇸🇬" )
     let trinidadAndTobago: Origin = Origin( name: "Trinidad and Tobago", flag: "🇹🇹" )
     let unitedKingdom: Origin = Origin( name: "United Kingdom", flag: "🇬🇧" )
     let unitedStates: Origin = Origin( name: "United States", flag: "🇺🇸" )
@@ -59,6 +60,7 @@ final class Origins {
             
             belgium,
             bermuda,
+            brazil,
             britishVirginIslands,
             cuba,
             france,
@@ -66,9 +68,11 @@ final class Origins {
             ireland,
             italy,
             mexico,
+            peru,
             poland,
             puertoRico,
             scotland,
+            singapore,
             trinidadAndTobago,
             unitedKingdom,
             unitedStates,
