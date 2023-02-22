@@ -43,6 +43,11 @@ final class Equipments {
         description: "A kitchen appliance used to blend stuff together.",
         image: "Blender"
     )
+    let champagneGlass: Equipment = Equipment(
+        name: "Champagne Glass",
+        description: "As stemmed glass, usually used to serve up Champagne",
+        image: "Champagne Glass"
+    )
     let cocktailGlass: Equipment = Equipment(
         name: "Cocktail Glass",
         description: """

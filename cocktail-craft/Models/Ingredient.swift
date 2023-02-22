@@ -270,10 +270,37 @@ Champagne has been used for a variety of different sparkling wines, though many 
         description: "",
         tags: []
     )
+    let cranberryJuice: Ingredient = Ingredient(
+        name: "Cranberry Juice",
+        image: "Cranberry Juice",
+        color: Colors.red,
+        strength: 0,
+        origin: nil,
+        description: "",
+        tags: []
+    )
+    let cremeDeCacao: Ingredient = Ingredient(
+        name: "Creme de Cacao",
+        image: "Creme de Cacao",
+        color: Colors.white,
+        strength: 25,
+        origin: nil,
+        description: "",
+        tags: [.spirit]
+    )
     let cremeDeCasis: Ingredient = Ingredient(
         name: "Creme de Casis",
         image: "Creme de Casis",
         color: Colors.gray,
+        strength: 25,
+        origin: nil,
+        description: "",
+        tags: [.spirit]
+    )
+    let cremeDeMenthe: Ingredient = Ingredient(
+        name: "Creme de Menthe",
+        image: "Creme de Menthe",
+        color: Colors.green,
         strength: 25,
         origin: nil,
         description: "",
@@ -1028,6 +1055,9 @@ Whisky is made from fermented mash containing various grains, including: barley,
             campari,
             calvados,
             champagne,
+            chartreuse,
+            cinnamonSyrup,
+            cranberryJuice,
             cremeDeCasis,
             cremeDeMure,
             cremeDeViolette,

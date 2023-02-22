@@ -137,6 +137,27 @@ let beesKnees: Drink =
         ]
     )
 
+let blackRussian: Drink =
+    .init(
+        name: "Black Russian",
+        description: "",
+        image: "Black Russian",
+        color: Colors.black,
+        year: 1949,
+        base: .vodka,
+        origin: Origins.instance.belgium,
+        equipments: [ Equipments.instance.oldFashionedGlass ],
+        ingredients: [
+            .init(ingredient: Ingredients.instance.vodka, amount: 60, unit: .milliliters),
+            .init(ingredient: Ingredients.instance.coffeeLiqueur, amount: 25, unit: .milliliters),
+            .init(ingredient: Ingredients.instance.ice),
+        ],
+        steps: [
+            .init(string: "In the Old Fashioned Glass add Vodka & Coffee Liqueur"),
+            .init(string: "Add Ice and stir gently"),
+        ]
+    )
+
 let bourbonRenewal: Drink =
     .init(
         name: "Bourbon Renewal",
@@ -220,6 +241,31 @@ let canchanchara: Drink =
         ]
     )
 
+let champagneCocktail: Drink =
+    .init(
+        name: "Champagne Cocktail",
+        description: "",
+        image: "Champagne Cocktail",
+        color: Colors.yellow,
+        year: 1862,
+        origin: Origins.instance.unitedStates,
+        equipments: [ Equipments.instance.champagneGlass ],
+        ingredients: [
+            .init(ingredient: Ingredients.instance.champagne, amount: 90, unit: .milliliters),
+            .init(ingredient: Ingredients.instance.cognac, amount: 10, unit: .milliliters),
+            .init(ingredient: Ingredients.instance.angosturaBitters, amount: 2, unit: .dash),
+            .init(ingredient: Ingredients.instance.grandMarnier, amount: 3, unit: .drop),
+            .init(ingredient: Ingredients.instance.simpleSyrup, amount: 10, unit: .milliliters),
+            .init(ingredient: Ingredients.instance.ice),
+        ],
+        steps: [
+            .init(string: "In a Cocktail Glass add Cognac, Simple Syrup, & Angostura Bitters"),
+            .init(string: "Top up with Champagne"),
+            .init(string: "Add a few drops of Grand Marnier"),
+            .init(string: "Garnish with Lemon Twist and/or Cocktail Cherry"),
+        ]
+    )
+
 let classicMartini: Drink =
     .init(
         name: "Classic Martini",
@@ -268,6 +314,31 @@ let corpseReviver: Drink =
             .init(string: "Shake (10-15 seconds)"),
             .init(string: "Strain into the Cocktail Glass"),
             .init(string: "Garnish with a Cherry"),
+        ]
+    )
+
+let cosmopolitan: Drink =
+    .init(
+        name: "Cosmopolitan",
+        description: "",
+        image: "Cosmopolitan",
+        color: Colors.red,
+        year: 1975,
+        base: .vodka,
+        origin: Origins.instance.unitedStates,
+        equipments: [ Equipments.instance.cocktailGlass, Equipments.instance.shaker, Equipments.instance.strainer ],
+        ingredients: [
+            .init(ingredient: Ingredients.instance.vodka, amount: 40, unit: .milliliters),
+            .init(ingredient: Ingredients.instance.cointreau, amount: 15, unit: .milliliters),
+            .init(ingredient: Ingredients.instance.limeJuice, amount: 15, unit: .milliliters),
+            .init(ingredient: Ingredients.instance.cranberryJuice, amount: 30, unit: .milliliters),
+            .init(ingredient: Ingredients.instance.ice),
+        ],
+        steps: [
+            .init(string: "In a Shaker add Vodka, Cointreau, Lime Juice, & Cranberry Juice"),
+            .init(string: "Add Ice and shake for 10-15 seconds"),
+            .init(string: "Strain into a Cocktail Glass"),
+            .init(string: "Garnish with a Lemon Twist"),
         ]
     )
 
@@ -556,6 +627,31 @@ let ford: Drink =
         ]
     )
 
+let french75: Drink =
+    .init(
+        name: "French 75",
+        description: "",
+        image: "French 75",
+        color: Colors.yellow,
+        year: 1915,
+        base: .gin,
+        origin: Origins.instance.france,
+        equipments: [ Equipments.instance.champagneGlass, Equipments.instance.shaker, Equipments.instance.strainer ],
+        ingredients: [
+            .init(ingredient: Ingredients.instance.gin, amount: 30, unit: .milliliters),
+            .init(ingredient: Ingredients.instance.lemonJuice, amount: 15, unit: .milliliters),
+            .init(ingredient: Ingredients.instance.simpleSyrup, amount: 15, unit: .milliliters),
+            .init(ingredient: Ingredients.instance.champagne, amount: 60, unit: .milliliters),
+            .init(ingredient: Ingredients.instance.ice),
+        ],
+        steps: [
+            .init(string: "In a Shaker add Gin, Lemon Juice, & Simple Syrup"),
+            .init(string: "Add Ice and shake for 10-15 seconds"),
+            .init(string: "Strain into a Champagne Glass"),
+            .init(string: "Top up with Champagne & stir gently"),
+        ]
+    )
+
 let frenchMartini: Drink =
     .init(
         name: "French Martini",
@@ -604,6 +700,28 @@ let ginFizz: Drink =
             .init(string: "Strain into the Cocktail Glass"),
             .init(string: "Top up with Soda Water"),
             .init(string: "Garnish with a Lemon Slice"),
+        ]
+    )
+
+let grasshopper: Drink =
+    .init(
+        name: "Grasshopper",
+        description: "",
+        image: "Grasshopper",
+        color: Colors.green,
+        year: 1918,
+        origin: Origins.instance.unitedStates,
+        equipments: [ Equipments.instance.cocktailGlass, Equipments.instance.shaker, Equipments.instance.strainer ],
+        ingredients: [
+            .init(ingredient: Ingredients.instance.cremeDeCacao, amount: 20, unit: .milliliters),
+            .init(ingredient: Ingredients.instance.cremeDeMenthe, amount: 20, unit: .milliliters),
+            .init(ingredient: Ingredients.instance.cream, amount: 20, unit: .milliliters),
+            .init(ingredient: Ingredients.instance.ice),
+        ],
+        steps: [
+            .init(string: "In a Shaker add Creme De Cacao, Creme De Menthe, & Cream"),
+            .init(string: "Add Ice and shake for 10-15 seconds"),
+            .init(string: "Strain into a Cocktail Glass"),
         ]
     )
 
