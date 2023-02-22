@@ -963,6 +963,27 @@ let margarita: Drink =
         ]
     )
 
+let mimosa: Drink =
+    .init(
+        name: "Mimosa",
+        description: "",
+        image: "Mimosa",
+        color: Colors.yellow,
+        year: 1925,
+        origin: Origins.instance.france,
+        equipments: [ Equipments.instance.champagneGlass ],
+        ingredients: [
+            .init(ingredient: Ingredients.instance.prosecco, amount: 75, unit: .milliliters),
+            .init(ingredient: Ingredients.instance.orangeJuice, amount: 75, unit: .milliliters),
+            .init(ingredient: Ingredients.instance.ice),
+        ],
+        steps: [
+            .init(string: "In the Champagne Glass add Prosecco & Orange Juice"),
+            .init(string: "Stir gently"),
+            .init(string: "Garnish with a Orange Twist"),
+        ]
+    )
+
 let mintJulep: Drink =
     .init(
         name: "Mint Julep",
@@ -1579,7 +1600,7 @@ let sazerac: Drink =
         year: 1950,
         base: .whisky,
         origin: Origins.instance.unitedStates,
-        equipments: [ Equipments.instance.mixingGlass, Equipments.instance.barspoon, Equipments.instance.oldFashionedGlass ],
+        equipments: [ Equipments.instance.oldFashionedGlass, Equipments.instance.mixingGlass, Equipments.instance.barspoon ],
         ingredients: [
             .init(ingredient: Ingredients.instance.ryeWhisky, amount: 60, unit: .milliliters),
             .init(ingredient: Ingredients.instance.absinthe, amount: 2, unit: .dash),
@@ -1593,6 +1614,29 @@ let sazerac: Drink =
             .init(string: "Stir with Barspoon"),
             .init(string: "Strain into the Old Fashioned Glass"),
             .init(string: "Garnish with a Lemon Twist"),
+        ]
+    )
+
+let seaBreeze: Drink =
+    .init(
+        name: "Sea Breeze",
+        description: "",
+        image: "Sea Breeze",
+        color: Colors.blue,
+        year: 1920,
+        base: .vodka,
+        origin: Origins.instance.unitedStates,
+        equipments: [ Equipments.instance.highballGlass ],
+        ingredients: [
+            .init(ingredient: Ingredients.instance.vodka, amount: 40, unit: .milliliters),
+            .init(ingredient: Ingredients.instance.cranberryJuice, amount: 120, unit: .milliliters),
+            .init(ingredient: Ingredients.instance.grapefruitJuice, amount: 30, unit: .milliliters),
+            .init(ingredient: Ingredients.instance.ice),
+        ],
+        steps: [
+            .init(string: "In a Highball Glass add Vodka, Cranberry Juice, & Grapefruit Juice"),
+            .init(string: "Fill with Ice"),
+            .init(string: "Garnish with a Orange Twist and/or a Cocktail Cherry"),
         ]
     )
 
@@ -1696,6 +1740,31 @@ let tartan: Drink =
             .init(string: "In the Mixing Glass add Scotch Whisky, Sweet Vermouth, Drambuie, Amaro, & Angostura Bitters"),
             .init(string: "Add Ice & stir for 30-40 seconds"),
             .init(string: "Strain into the Cocktail Glass"),
+            .init(string: "Garnish with a Orange Twist"),
+        ]
+    )
+
+let tequilaSunrise: Drink =
+    .init(
+        name: "Tequila Sunrise",
+        description: "",
+        image: "Tequila Sunrise",
+        color: Colors.red,
+        year: 1930,
+        base: .tequila,
+        category: .sour,
+        origin: Origins.instance.unitedStates,
+        equipments: [ Equipments.instance.highballGlass ],
+        ingredients: [
+            .init(ingredient: Ingredients.instance.tequila, amount: 45, unit: .milliliters),
+            .init(ingredient: Ingredients.instance.orangeJuice, amount: 90, unit: .milliliters),
+            .init(ingredient: Ingredients.instance.grenadine, amount: 15, unit: .milliliters),
+            .init(ingredient: Ingredients.instance.ice),
+        ],
+        steps: [
+            .init(string: "Fill a Highball Glass with Ice"),
+            .init(string: "Add Tequila & Orange Juice"),
+            .init(string: "Gently add Grenadine"),
             .init(string: "Garnish with a Orange Twist"),
         ]
     )
