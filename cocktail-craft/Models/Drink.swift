@@ -169,12 +169,17 @@ final class Drinks {
     var all: [Drink] {
         [
             _12MileLimit,
+            alexander,
             americano,
+            angelFace,
             aviation,
             barracuda,
             beesKnees,
+            betweenTheSheets,
             blackRussian,
+            boulevardier,
             bourbonRenewal,
+            brandyCrusta,
             brooklyn,
             canchanchara,
             champagneCocktail,
