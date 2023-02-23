@@ -44,7 +44,7 @@ let alexander: Drink =
         origin: Origins.instance.unitedStates,
         equipments: [ Equipments.instance.cocktailGlass, Equipments.instance.shaker, Equipments.instance.strainer ],
         ingredients: [
-            .init(ingredient: Ingredients.instance.cognac, amount: 30, unit: .milliliters),
+            .init(ingredient: Ingredients.instance.gin, amount: 30, unit: .milliliters),
             .init(ingredient: Ingredients.instance.cremeDeCacao, amount: 30, unit: .milliliters),
             .init(ingredient: Ingredients.instance.cream, amount: 30, unit: .milliliters),
             .init(ingredient: Ingredients.instance.ice),
