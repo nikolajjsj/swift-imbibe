@@ -194,7 +194,7 @@ let betweenTheSheets: Drink =
         origin: Origins.instance.france,
         equipments: [ Equipments.instance.cocktailGlass, Equipments.instance.shaker, Equipments.instance.strainer ],
         ingredients: [
-            .init(ingredient: Ingredients.instance.rum, amount: 30, unit: .milliliters),
+            .init(ingredient: Ingredients.instance.lightRum, amount: 30, unit: .milliliters),
             .init(ingredient: Ingredients.instance.cognac, amount: 30, unit: .milliliters),
             .init(ingredient: Ingredients.instance.curacao, amount: 30, unit: .milliliters),
             .init(ingredient: Ingredients.instance.lemonJuice, amount: 20, unit: .milliliters),
@@ -294,10 +294,10 @@ let brandyCrusta: Drink =
         equipments: [ Equipments.instance.champagneGlass, Equipments.instance.mixingGlass, Equipments.instance.strainer, Equipments.instance.barspoon ],
         ingredients: [
             .init(ingredient: Ingredients.instance.brandy, amount: 50, unit: .milliliters),
-            .init(ingredient: Ingredients.instance.maraschinoLiqueur, amount: 50, unit: .milliliters),
-            .init(ingredient: Ingredients.instance.curacao, amount: 50, unit: .milliliters),
-            .init(ingredient: Ingredients.instance.lemonJuice, amount: 50, unit: .milliliters),
-            .init(ingredient: Ingredients.instance.simpleSyrup, amount: 50, unit: .milliliters),
+            .init(ingredient: Ingredients.instance.maraschinoLiqueur, amount: 8, unit: .milliliters),
+            .init(ingredient: Ingredients.instance.curacao, amount: 5, unit: .milliliters),
+            .init(ingredient: Ingredients.instance.lemonJuice, amount: 15, unit: .milliliters),
+            .init(ingredient: Ingredients.instance.simpleSyrup, amount: 5, unit: .milliliters),
             .init(ingredient: Ingredients.instance.angosturaBitters, amount: 2, unit: .dash),
             .init(ingredient: Ingredients.instance.ice),
         ],
