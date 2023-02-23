@@ -678,6 +678,28 @@ let french75: Drink =
         ]
     )
 
+let frenchConnection: Drink =
+    .init(
+        name: "French Connection",
+        description: "",
+        image: "French Connection",
+        color: Colors.orange,
+        year: 1977,
+        base: .brandy,
+        origin: Origins.instance.unitedStates,
+        equipments: [ Equipments.instance.oldFashionedGlass ],
+        ingredients: [
+            .init(ingredient: Ingredients.instance.cognac, amount: 35, unit: .milliliters),
+            .init(ingredient: Ingredients.instance.amaretto, amount: 35, unit: .milliliters),
+            .init(ingredient: Ingredients.instance.ice),
+        ],
+        steps: [
+            .init(string: "Add Ice to a Old Fashioned Glass"),
+            .init(string: "Add Cognac & Amaretto"),
+            .init(string: "Stir gently"),
+        ]
+    )
+
 let frenchMartini: Drink =
     .init(
         name: "French Martini",
@@ -795,6 +817,29 @@ let hemmingwaySpecial: Drink =
             .init(string: "In a Shaker add Rum, Grapefruit Juice, Maraschino Liqueur, & Lime Juice"),
             .init(string: "Add Ice and shake for 10-15 seconds"),
             .init(string: "Strain into a Cocktail Glass"),
+        ]
+    )
+
+let horsesNeck: Drink =
+    .init(
+        name: "Horse's Neck",
+        description: "",
+        image: "Horse's Neck",
+        color: Colors.yellow,
+        year: 1895,
+        base: .brandy,
+        origin: Origins.instance.unitedStates,
+        equipments: [ Equipments.instance.highballGlass ],
+        ingredients: [
+            .init(ingredient: Ingredients.instance.cognac, amount: 40, unit: .milliliters),
+            .init(ingredient: Ingredients.instance.gingerBeer, amount: 120, unit: .milliliters),
+            .init(ingredient: Ingredients.instance.angosturaBitters, amount: 2, unit: .dash),
+            .init(ingredient: Ingredients.instance.ice),
+        ],
+        steps: [
+            .init(string: "Add Ice to a Highball Glass"),
+            .init(string: "Add Cognac, Ginger Beer, & Angostura Bitters"),
+            .init(string: "Garnish with Lemon Spiral"),
         ]
     )
 
