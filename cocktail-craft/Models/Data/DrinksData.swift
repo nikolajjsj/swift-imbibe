@@ -1459,6 +1459,31 @@ let mojito: Drink =
         ]
     )
 
+let monkeyGland: Drink =
+    .init(
+        name: "Monkey Gland",
+        description: "",
+        image: "Monkey Gland",
+        color: Colors.orange,
+        year: 1925,
+        base: .gin,
+        category: .sour,
+        origin: Origins.instance.france,
+        equipments: [ Equipments.instance.cocktailGlass, Equipments.instance.shaker, Equipments.instance.strainer ],
+        ingredients: [
+            .init(ingredient: Ingredients.instance.gin, amount: 45, unit: .milliliters),
+            .init(ingredient: Ingredients.instance.orangeJuice, amount: 45, unit: .milliliters),
+            .init(ingredient: Ingredients.instance.absinthe, amount: 5, unit: .milliliters),
+            .init(ingredient: Ingredients.instance.grenadine, amount: 5, unit: .milliliters),
+            .init(ingredient: Ingredients.instance.ice),
+        ],
+        steps: [
+            .init(string: "In a Shaker add Gin, Orange Juice, Absinthe, & Grenadine"),
+            .init(string: "Add Ice and shake for 10-15 seconds"),
+            .init(string: "Strain into a Cocktail Glass"),
+        ]
+    )
+
 let moscowMule: Drink =
     .init(
         name: "Moscow Mule",
@@ -1692,6 +1717,29 @@ let painkiller: Drink =
         ]
     )
 
+let paradise: Drink =
+    .init(
+        name: "Paradise",
+        description: "",
+        image: "Paradise",
+        color: Colors.orange,
+        year: 1930,
+        base: .gin,
+        origin: Origins.instance.unitedKingdom,
+        equipments: [ Equipments.instance.cocktailGlass, Equipments.instance.shaker, Equipments.instance.strainer ],
+        ingredients: [
+            .init(ingredient: Ingredients.instance.gin, amount: 30, unit: .milliliters),
+            .init(ingredient: Ingredients.instance.brandy, amount: 20, unit: .milliliters),
+            .init(ingredient: Ingredients.instance.orangeJuice, amount: 15, unit: .milliliters),
+            .init(ingredient: Ingredients.instance.ice),
+        ],
+        steps: [
+            .init(string: "In a Shaker add Gin, Brandy, & Orange Juice"),
+            .init(string: "Add Ice and shake for 10-15 seconds"),
+            .init(string: "Strain into a Cocktail Glass"),
+        ]
+    )
+
 let paloma: Drink =
     .init(
         name: "Paloma",
@@ -1875,6 +1923,29 @@ let piscoOldFashioned: Drink =
             .init(string: "Stir for 10-15 seconds"),
             .init(string: "Make a float of Angostura Bitters"),
             .init(string: "Garnish with Orange Peel"),
+        ]
+    )
+
+let plantersPunch: Drink =
+    .init(
+        name: "Planter's Punch",
+        description: "",
+        image: "Planter's Punch",
+        color: Colors.orange,
+        year: 1895,
+        base: .rum,
+        category: .sour,
+        origin: Origins.instance.jamaica,
+        equipments: [ Equipments.instance.oldFashionedGlass ],
+        ingredients: [
+            .init(ingredient: Ingredients.instance.jamaicanRum, amount: 45, unit: .milliliters),
+            .init(ingredient: Ingredients.instance.limeJuice, amount: 15, unit: .milliliters),
+            .init(ingredient: Ingredients.instance.simpleSyrup, amount: 30, unit: .milliliters),
+            .init(ingredient: Ingredients.instance.ice),
+        ],
+        steps: [
+            .init(string: "In a Old Fashioned Glass add Jamaican Rum, Lime Juice, & Simple Syrup"),
+            .init(string: "Add Ice and stir gently"),
         ]
     )
 

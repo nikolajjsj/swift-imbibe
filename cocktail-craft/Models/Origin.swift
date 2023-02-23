@@ -43,6 +43,7 @@ final class Origins {
     let germany: Origin = Origin( name: "Germany", flag: "🇩🇪" )
     let ireland: Origin = Origin( name: "Ireland", flag: "🇮🇪" )
     let italy: Origin = Origin( name: "Italy", flag: "🇮🇹" )
+    let jamaica: Origin = Origin(name: "Jamaica", flag: "🇯🇲")
     let mexico: Origin = Origin( name: "Mexico", flag: "🇲🇽" )
     let peru: Origin = Origin( name: "Peru", flag: "🇵🇪" )
     let poland: Origin = Origin( name: "Poland", flag: "🇵🇱" )
@@ -67,6 +68,7 @@ final class Origins {
             germany,
             ireland,
             italy,
+            jamaica,
             mexico,
             peru,
             poland,
