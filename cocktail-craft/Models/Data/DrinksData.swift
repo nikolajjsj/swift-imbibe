@@ -299,7 +299,7 @@ let corpseReviver: Drink =
         year: 1861,
         base: .gin,
         origin: Origins.instance.unitedStates,
-        equipments: [ Equipments.instance.cocktailGlass, Equipments.instance.mixingGlass, Equipments.instance.barspoon ],
+        equipments: [ Equipments.instance.cocktailGlass, Equipments.instance.shaker, Equipments.instance.strainer ],
         ingredients: [
             .init(ingredient: Ingredients.instance.gin, amount: 22, unit: .milliliters),
             .init(ingredient: Ingredients.instance.kinaLaeroDor, amount: 22, unit: .milliliters),
@@ -314,6 +314,32 @@ let corpseReviver: Drink =
             .init(string: "Shake (10-15 seconds)"),
             .init(string: "Strain into the Cocktail Glass"),
             .init(string: "Garnish with a Cherry"),
+        ]
+    )
+
+let corpseReviver2: Drink =
+    .init(
+        name: "Corpse Reviver #2",
+        description: "",
+        image: "Corpse Reviver #2",
+        color: Colors.white,
+        year: 1950,
+        base: .gin,
+        origin: Origins.instance.unitedStates,
+        equipments: [ Equipments.instance.cocktailGlass, Equipments.instance.shaker, Equipments.instance.barspoon ],
+        ingredients: [
+            .init(ingredient: Ingredients.instance.gin, amount: 22, unit: .milliliters),
+            .init(ingredient: Ingredients.instance.cointreau, amount: 22, unit: .milliliters),
+            .init(ingredient: Ingredients.instance.lilletBlanc, amount: 22, unit: .milliliters),
+            .init(ingredient: Ingredients.instance.lemonJuice, amount: 22, unit: .milliliters),
+            .init(ingredient: Ingredients.instance.absinthe, amount: 1, unit: .dash),
+            .init(ingredient: Ingredients.instance.ice),
+        ],
+        steps: [
+            .init(string: "In a Shaker add Gin, Cointreau, Lillet Blanc, Lemon Juice, & Absinthe"),
+            .init(string: "Add Ice and shake for 10-15 seconds"),
+            .init(string: "Strain into the Cocktail Glass"),
+            .init(string: "Garnish with a Orange Twist"),
         ]
     )
 
@@ -703,6 +729,29 @@ let ginFizz: Drink =
         ]
     )
 
+let goldenDream: Drink =
+    .init(
+        name: "Golden Dream",
+        description: "",
+        image: "Golden Dream",
+        color: Colors.yellow,
+        year: 1970,
+        origin: Origins.instance.unitedStates,
+        equipments: [ Equipments.instance.cocktailGlass, Equipments.instance.shaker, Equipments.instance.strainer ],
+        ingredients: [
+            .init(ingredient: Ingredients.instance.galliano, amount: 20, unit: .milliliters),
+            .init(ingredient: Ingredients.instance.curacao, amount: 20, unit: .milliliters),
+            .init(ingredient: Ingredients.instance.orangeJuice, amount: 20, unit: .milliliters),
+            .init(ingredient: Ingredients.instance.cream, amount: 10, unit: .milliliters),
+            .init(ingredient: Ingredients.instance.ice),
+        ],
+        steps: [
+            .init(string: "In a Shaker add Galliano, Curacao, Orange Juice, & Cream"),
+            .init(string: "Add Ice and shake for 5-10 seconds"),
+            .init(string: "Strain into a Cocktail Glass"),
+        ]
+    )
+
 let grasshopper: Drink =
     .init(
         name: "Grasshopper",
@@ -720,6 +769,30 @@ let grasshopper: Drink =
         ],
         steps: [
             .init(string: "In a Shaker add Creme De Cacao, Creme De Menthe, & Cream"),
+            .init(string: "Add Ice and shake for 10-15 seconds"),
+            .init(string: "Strain into a Cocktail Glass"),
+        ]
+    )
+
+let hemmingwaySpecial: Drink =
+    .init(
+        name: "Hemmingway Special",
+        description: "",
+        image: "Hemmingway Special",
+        color: Colors.black,
+        year: 1930,
+        base: .rum,
+        origin: Origins.instance.cuba,
+        equipments: [ Equipments.instance.cocktailGlass, Equipments.instance.shaker, Equipments.instance.strainer ],
+        ingredients: [
+            .init(ingredient: Ingredients.instance.rum, amount: 60, unit: .milliliters),
+            .init(ingredient: Ingredients.instance.grapefruitJuice, amount: 40, unit: .milliliters),
+            .init(ingredient: Ingredients.instance.maraschinoLiqueur, amount: 15, unit: .milliliters),
+            .init(ingredient: Ingredients.instance.limeJuice, amount: 15, unit: .milliliters),
+            .init(ingredient: Ingredients.instance.ice),
+        ],
+        steps: [
+            .init(string: "In a Shaker add Rum, Grapefruit Juice, Maraschino Liqueur, & Lime Juice"),
             .init(string: "Add Ice and shake for 10-15 seconds"),
             .init(string: "Strain into a Cocktail Glass"),
         ]
