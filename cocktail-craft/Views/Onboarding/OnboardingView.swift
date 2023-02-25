@@ -11,6 +11,7 @@ struct OnboardingView: View {
     @EnvironmentObject var global: Global
     
     @State private var tab: Int = 0
+    @State private var ingredientSheet: Bool = false
     
     var body: some View {
         TabView(selection: $tab) {
@@ -32,18 +33,42 @@ struct OnboardingView: View {
             VStack(spacing: 32) {
                 VStack(spacing: 10) {
                     Title("🫵 Your Bar")
-                    Subtitle("Find out which drinks you can mix with the ingredients you have")
+                    Subtitle("Add ingredients to your bar and see which cocktails you can mix")
+                    
+                    Button("Add Ingredients", action: { ingredientSheet.toggle() })
+                        .bold()
                 }
+                
+                Image("Ingredients")
+                    .resizable()
+                    .scaledToFit()
+                
+                NextButton()
+            }.padding(32).tag(1)
+            
+            VStack(spacing: 42) {
+                Title("🎉 Enjoy your next cocktail")
                 
                 Image("Tips")
                     .resizable()
                     .scaledToFit()
                 
                 DoneButton()
-            }.padding(32).tag(1)
+            }.padding(32).tag(2)
         }
         .tabViewStyle(.page(indexDisplayMode: .always))
-        .background(Color.red.opacity(0.2).gradient)
+        .background(Color.accentColor.opacity(0.15).gradient)
+        .sheet(isPresented: $ingredientSheet) {
+            NavigationView {
+                BarIngredientsView()
+                    .navigationBarTitleDisplayMode(.inline)
+                    .toolbar {
+                        ToolbarItem(placement: .navigationBarTrailing) {
+                            Button("Done", action: { ingredientSheet.toggle() })
+                        }
+                    }
+            }
+        }
     }
     
     func Title(_ text: String) -> some View {
@@ -80,6 +105,9 @@ struct OnboardingView: View {
 
 struct OnboardingView_Previews: PreviewProvider {
     static var previews: some View {
-        OnboardingView()
+        NavigationView {
+            OnboardingView()
+        }
+        .environment(\.managedObjectContext, PersistenceController.preview.container.viewContext)
     }
 }
