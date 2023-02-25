@@ -19,10 +19,35 @@ struct DiscoverView: View {
                         Image(uiImage: image)
                             .resizable()
                             .scaledToFit()
-                            .frame(maxWidth: 250)
+                            .frame(maxWidth: 240)
                         Spacer()
                     }.padding(.bottom, 24)
                 }
+                
+                Text("Styles")
+                    .font(.headline)
+                    .foregroundColor(.gray)
+                LazyVGrid(columns: columns) {
+                    ForEach(Drink.Category.all, id: \.rawValue) { category in
+                        NavigationLink {
+                            DrinksList(drinks: category.drinks)
+                                .navigationTitle(category.rawValue)
+                        } label: {
+                            VStack {
+                                if let image = category.image {
+                                    Image(image)
+                                        .resizable()
+                                        .scaledToFit()
+                                        .frame(maxWidth: 120, maxHeight: 120)
+                                }
+                                Text(category.rawValue)
+                                    .font(.headline.bold())
+                            }
+                            .padding(.vertical, 5)
+                            .frame(maxWidth: .infinity)
+                        }.buttonStyle(.bordered)
+                    }
+                }.padding(.bottom, 24)
                 
                 Text("Base Spirit")
                     .font(.headline)
@@ -46,30 +71,6 @@ struct DiscoverView: View {
                     }
                 }.padding(.bottom, 24)
                 
-                Text("Styles")
-                    .font(.headline)
-                    .foregroundColor(.gray)
-                LazyVGrid(columns: columns) {
-                    ForEach(Drink.Category.all, id: \.rawValue) { category in
-                        NavigationLink {
-                            DrinksList(drinks: category.drinks)
-                                .navigationTitle(category.rawValue)
-                        } label: {
-                            VStack(spacing: 16) {
-                                if let image = category.image {
-                                    Image(image)
-                                        .resizable()
-                                        .scaledToFit()
-                                        .frame(maxHeight: 120)
-                                }
-                                Text(category.rawValue)
-                                    .font(.title3.bold())
-                            }
-                            .padding(.vertical, 8)
-                            .frame(maxWidth: .infinity)
-                        }.buttonStyle(.bordered)
-                    }
-                }.padding(.bottom, 24)
                 
                 Text("Origins")
                     .font(.headline)
