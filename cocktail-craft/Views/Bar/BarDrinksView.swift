@@ -23,7 +23,7 @@ struct BarDrinksView: View {
             .buttonStyle(.bordered)
             .padding(.horizontal)
             
-            DrinksList(drinks: drinks)
+            DrinksListView(drinks: drinks)
         }
         .navigationTitle("Available Drinks")
         .sheet(isPresented: $helperSheet) { DrinksHelper() }

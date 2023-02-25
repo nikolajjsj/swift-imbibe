@@ -30,7 +30,7 @@ struct DiscoverView: View {
                 LazyVGrid(columns: columns) {
                     ForEach(Drink.Category.all, id: \.rawValue) { category in
                         NavigationLink {
-                            DrinksList(drinks: category.drinks)
+                            DrinksListView(drinks: category.drinks)
                                 .navigationTitle(category.rawValue)
                         } label: {
                             VStack {
@@ -55,7 +55,7 @@ struct DiscoverView: View {
                 LazyVGrid(columns: columns) {
                     ForEach(Drink.Base.all, id: \.rawValue) { base in
                         NavigationLink {
-                            DrinksList(drinks: base.drinks)
+                            DrinksListView(drinks: base.drinks)
                                 .navigationTitle("\(base.rawValue) Based")
                         } label: {
                             if let image = base.image {
@@ -78,7 +78,7 @@ struct DiscoverView: View {
                 LazyVGrid(columns: columns) {
                     ForEach(Array(Drinks.instance.countries.keys).sorted(by: { $0.name < $1.name }), id: \.name) { origin in
                         NavigationLink {
-                            DrinksList(drinks: Drinks.instance.countries[origin] ?? [])
+                            DrinksListView(drinks: Drinks.instance.countries[origin] ?? [])
                                 .navigationTitle("\(origin.flag)\(origin.name)")
                         } label: {
                             Spacer()
@@ -88,7 +88,6 @@ struct DiscoverView: View {
                     }
                 }.padding(.bottom, 24)
             }
-//            .frame(maxWidth: 800)
             .padding(.horizontal)
         }
         .navigationTitle("Discover")

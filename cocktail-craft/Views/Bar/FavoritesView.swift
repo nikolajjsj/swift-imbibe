@@ -11,7 +11,7 @@ struct FavoritesView: View {
     @FetchRequest(sortDescriptors: [], animation: .default) var favorites: FetchedResults<Favorite>
     
     var body: some View {
-        DrinksList(drinks: drinks)
+        DrinksListView(drinks: drinks)
             .navigationTitle("Favorites")
     }
     
@@ -24,6 +24,8 @@ struct FavoritesView: View {
 
 struct FavoritesView_Previews: PreviewProvider {
     static var previews: some View {
-        FavoritesView()
+        NavigationView {
+            FavoritesView()
+        }
     }
 }

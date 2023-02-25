@@ -1,14 +1,16 @@
 //
-//  DrinksView-ViewModel.swift
-//  imbibe
+//  DrinksList+ViewModel.swift
+//  cocktail-craft
 //
-//  Created by Nikolaj Johannes Skole Jensen on 17/01/2023.
+//  Created by Nikolaj Johannes Skole Jensen on 25/02/2023.
 //
 
 import Foundation
 
 @MainActor
-final class DrinksViewModel: ObservableObject {
+final class DrinksListViewModel: ObservableObject {
+    @Published private(set) var drinks: [Drink] = []
+    
     @Published private(set) var strengths: [Strength] = []
     @Published private(set) var eras: [Era] = []
     @Published private(set) var baseSpirits: [Drink.Base] = []
@@ -17,12 +19,16 @@ final class DrinksViewModel: ObservableObject {
     @Published var query: String = ""
     @Published var showFilters: Bool = false
     
-    var drinks: [Drink] {
-        var all: [Drink]
+    init(drinks: [Drink]) {
+        self.drinks = drinks
+    }
+    
+    var shownDrinks: [Drink] {
+        var shown: [Drink]
         if strengths.isEmpty && eras.isEmpty && baseSpirits.isEmpty {
-            all = Drinks.instance.all
+            shown = drinks
         } else {
-            all = Drinks.instance.all.filter({ drink in
+            shown = drinks.filter({ drink in
                 strengths.first(where: { $0.compareDrink(drink) }) != nil ||
                 eras.first(where: { $0.compareDrink(drink) }) != nil ||
                 (drink.base != nil && baseSpirits.contains(drink.base!))
@@ -31,17 +37,17 @@ final class DrinksViewModel: ObservableObject {
         
         switch sort {
         case .name:
-            return all.sorted(by: { $0.name < $1.name })
+            return shown.sorted(by: { $0.name < $1.name })
         case .strength:
-            return all.sorted(by: { $0.strength < $1.strength })
+            return shown.sorted(by: { $0.strength < $1.strength })
         }
     }
     
     var filtered: [Drink] {
         if query.isEmpty {
-            return drinks
+            return shownDrinks
         } else {
-            return drinks.filter({ $0.name.localizedCaseInsensitiveContains(query) })
+            return shownDrinks.filter({ $0.name.localizedCaseInsensitiveContains(query) })
         }
     }
     

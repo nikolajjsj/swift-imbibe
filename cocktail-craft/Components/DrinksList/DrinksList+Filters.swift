@@ -1,24 +1,23 @@
 //
-//  DrinkFilters.swift
-//  imbibe
+//  DrinksList+Filters.swift
+//  cocktail-craft
 //
-//  Created by Nikolaj Johannes Skole Jensen on 17/01/2023.
+//  Created by Nikolaj Johannes Skole Jensen on 25/02/2023.
 //
 
 import SwiftUI
 
-
 struct DrinkFilters: View {
     @Environment(\.dismiss) var dismiss
     
-    @ObservedObject var vm: DrinksViewModel
+    @ObservedObject var vm: DrinksListViewModel
     
     var body: some View {
         VStack {
             List {
                 Section {
                     Picker("Sort by", selection: $vm.sort) {
-                        ForEach(DrinksViewModel.Sort.allCases, id: \.self) { sort in
+                        ForEach(DrinksListViewModel.Sort.allCases, id: \.self) { sort in
                             Text(sort.rawValue).tag(sort)
                         }
                     }
@@ -27,7 +26,7 @@ struct DrinkFilters: View {
                 }
                 
                 Section {
-                    ForEach(DrinksViewModel.Strength.allCases, id: \.self) { strength in
+                    ForEach(DrinksListViewModel.Strength.allCases, id: \.self) { strength in
                         FilterOption(
                             label: strength.rawValue.description,
                             selected: vm.strengths.contains(strength),
@@ -51,7 +50,7 @@ struct DrinkFilters: View {
                 }
                 
                 Section {
-                    ForEach(DrinksViewModel.Era.allCases, id: \.self) { era in
+                    ForEach(DrinksListViewModel.Era.allCases, id: \.self) { era in
                         FilterOption(
                             label: era.label,
                             selected: vm.eras.contains(era),
@@ -100,6 +99,6 @@ struct DrinkFilters: View {
 
 struct DrinkFilters_Previews: PreviewProvider {
     static var previews: some View {
-        DrinkFilters(vm: DrinksViewModel())
+        DrinkFilters(vm: DrinksListViewModel(drinks: Drinks.instance.all))
     }
 }

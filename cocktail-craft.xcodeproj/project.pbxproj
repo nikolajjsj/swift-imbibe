@@ -17,17 +17,17 @@
 		D1174465297D440C009CAFC7 /* Array+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1174464297D440C009CAFC7 /* Array+Extensions.swift */; };
 		D1194A672971A4A900E4C1E7 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1194A662971A4A900E4C1E7 /* SettingsView.swift */; };
 		D1308BAC2976D090002BF99C /* Bundle+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1308BAB2976D090002BF99C /* Bundle+Extensions.swift */; };
-		D16D80942976985600D163B3 /* DrinkFilters.swift in Sources */ = {isa = PBXBuildFile; fileRef = D16D80932976985600D163B3 /* DrinkFilters.swift */; };
-		D174C2D72976E86A00E93262 /* DrinksList.swift in Sources */ = {isa = PBXBuildFile; fileRef = D174C2D62976E86A00E93262 /* DrinksList.swift */; };
 		D17BB61D29732160004F08F7 /* CardStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = D17BB61C29732160004F08F7 /* CardStyle.swift */; };
 		D17BB61F297345BA004F08F7 /* LocalStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = D17BB61E297345BA004F08F7 /* LocalStorage.swift */; };
 		D181F09F299E57FC00EB8A6F /* UnitVolume+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D181F09E299E57FC00EB8A6F /* UnitVolume+Extensions.swift */; };
 		D1830351299CA96900FD9EA8 /* DrinksData.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1830350299CA96900FD9EA8 /* DrinksData.swift */; };
-		D18CE3812976BDE700B997CD /* DrinksView-ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D18CE3802976BDE700B997CD /* DrinksView-ViewModel.swift */; };
 		D1BB5B2929741F8000CF52EE /* IngredientDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1BB5B2829741F8000CF52EE /* IngredientDetails.swift */; };
 		D1BB5B2B29741FE600CF52EE /* IngredientDrinksList.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1BB5B2A29741FE600CF52EE /* IngredientDrinksList.swift */; };
 		D1C50CD52985317C00410EB3 /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1C50CD42985317C00410EB3 /* OnboardingView.swift */; };
 		D1C50CD72985432C00410EB3 /* AppIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1C50CD62985432C00410EB3 /* AppIcon.swift */; };
+		D1DB6B3129AA3E5D005B3BB6 /* DrinksListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1DB6B3029AA3E5D005B3BB6 /* DrinksListView.swift */; };
+		D1DB6B3429AA417D005B3BB6 /* DrinksList+ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1DB6B3329AA417D005B3BB6 /* DrinksList+ViewModel.swift */; };
+		D1DB6B3629AA41C2005B3BB6 /* DrinksList+Filters.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1DB6B3529AA41C2005B3BB6 /* DrinksList+Filters.swift */; };
 		D1DD34B729740335006EE244 /* DrinkStepInstructions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1DD34B629740335006EE244 /* DrinkStepInstructions.swift */; };
 		D1DD34B929740377006EE244 /* DrinkDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1DD34B829740377006EE244 /* DrinkDetails.swift */; };
 		D1DD34BE297412AF006EE244 /* EquipmentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1DD34BD297412AF006EE244 /* EquipmentView.swift */; };
@@ -72,17 +72,17 @@
 		D1194A662971A4A900E4C1E7 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		D1308BAB2976D090002BF99C /* Bundle+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bundle+Extensions.swift"; sourceTree = "<group>"; };
 		D1520ED02978326A006C1519 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
-		D16D80932976985600D163B3 /* DrinkFilters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrinkFilters.swift; sourceTree = "<group>"; };
-		D174C2D62976E86A00E93262 /* DrinksList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrinksList.swift; sourceTree = "<group>"; };
 		D17BB61C29732160004F08F7 /* CardStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardStyle.swift; sourceTree = "<group>"; };
 		D17BB61E297345BA004F08F7 /* LocalStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalStorage.swift; sourceTree = "<group>"; };
 		D181F09E299E57FC00EB8A6F /* UnitVolume+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UnitVolume+Extensions.swift"; sourceTree = "<group>"; };
 		D1830350299CA96900FD9EA8 /* DrinksData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrinksData.swift; sourceTree = "<group>"; };
-		D18CE3802976BDE700B997CD /* DrinksView-ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DrinksView-ViewModel.swift"; sourceTree = "<group>"; };
 		D1BB5B2829741F8000CF52EE /* IngredientDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IngredientDetails.swift; sourceTree = "<group>"; };
 		D1BB5B2A29741FE600CF52EE /* IngredientDrinksList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IngredientDrinksList.swift; sourceTree = "<group>"; };
 		D1C50CD42985317C00410EB3 /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
 		D1C50CD62985432C00410EB3 /* AppIcon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppIcon.swift; sourceTree = "<group>"; };
+		D1DB6B3029AA3E5D005B3BB6 /* DrinksListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrinksListView.swift; sourceTree = "<group>"; };
+		D1DB6B3329AA417D005B3BB6 /* DrinksList+ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DrinksList+ViewModel.swift"; sourceTree = "<group>"; };
+		D1DB6B3529AA41C2005B3BB6 /* DrinksList+Filters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DrinksList+Filters.swift"; sourceTree = "<group>"; };
 		D1DD34B629740335006EE244 /* DrinkStepInstructions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrinkStepInstructions.swift; sourceTree = "<group>"; };
 		D1DD34B829740377006EE244 /* DrinkDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrinkDetails.swift; sourceTree = "<group>"; };
 		D1DD34BD297412AF006EE244 /* EquipmentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EquipmentView.swift; sourceTree = "<group>"; };
@@ -164,6 +164,16 @@
 			path = Onboarding;
 			sourceTree = "<group>";
 		};
+		D1DB6B3229AA4168005B3BB6 /* DrinksList */ = {
+			isa = PBXGroup;
+			children = (
+				D1DB6B3029AA3E5D005B3BB6 /* DrinksListView.swift */,
+				D1DB6B3329AA417D005B3BB6 /* DrinksList+ViewModel.swift */,
+				D1DB6B3529AA41C2005B3BB6 /* DrinksList+Filters.swift */,
+			);
+			path = DrinksList;
+			sourceTree = "<group>";
+		};
 		D1DD34BA297403B7006EE244 /* Drink */ = {
 			isa = PBXGroup;
 			children = (
@@ -172,7 +182,6 @@
 				D1DD34B829740377006EE244 /* DrinkDetails.swift */,
 				D1F7902B296D841F00F3CB30 /* DrinkView.swift */,
 				D1F79046296E90C800F3CB30 /* DrinkCard.swift */,
-				D174C2D62976E86A00E93262 /* DrinksList.swift */,
 			);
 			path = Drink;
 			sourceTree = "<group>";
@@ -236,6 +245,7 @@
 		D1E7480B297D6CD8002B48CE /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				D1DB6B3229AA4168005B3BB6 /* DrinksList */,
 				D117445B297D23CF009CAFC7 /* ErrorMessageView.swift */,
 				D1E5BBCA29705D2500BA60F9 /* WrappingHStack.swift */,
 			);
@@ -313,8 +323,6 @@
 			isa = PBXGroup;
 			children = (
 				D1F79013296D75EE00F3CB30 /* DrinksView.swift */,
-				D16D80932976985600D163B3 /* DrinkFilters.swift */,
-				D18CE3802976BDE700B997CD /* DrinksView-ViewModel.swift */,
 			);
 			path = Drinks;
 			sourceTree = "<group>";
@@ -431,15 +439,16 @@
 				D1EAB05D299B68E700E7D07D /* cocktail-craft.xcdatamodeld in Sources */,
 				D1FDAE42297AA18700D69804 /* Colors.swift in Sources */,
 				D1F79042296E834400F3CB30 /* IngredientView.swift in Sources */,
+				D1DB6B3129AA3E5D005B3BB6 /* DrinksListView.swift in Sources */,
 				D1F7900D296D75EE00F3CB30 /* imbibeApp.swift in Sources */,
 				D1E5B3AB2972C998001DF274 /* IngredientBox.swift in Sources */,
 				D1F00881296EC065007E09B7 /* DrinkStep.swift in Sources */,
 				D1F79045296E8DB200F3CB30 /* DiscoverView.swift in Sources */,
 				D1DD34BE297412AF006EE244 /* EquipmentView.swift in Sources */,
-				D16D80942976985600D163B3 /* DrinkFilters.swift in Sources */,
 				D1174452297C2D80009CAFC7 /* Icons.swift in Sources */,
 				D1E74813297D727E002B48CE /* BarDrinksView.swift in Sources */,
 				D1E5B3B52972D1C8001DF274 /* IngredientsInspector.swift in Sources */,
+				D1DB6B3629AA41C2005B3BB6 /* DrinksList+Filters.swift in Sources */,
 				D1E74810297D6F6F002B48CE /* Global.swift in Sources */,
 				D1F79014296D75EE00F3CB30 /* DrinksView.swift in Sources */,
 				D1BB5B2929741F8000CF52EE /* IngredientDetails.swift in Sources */,
@@ -454,7 +463,6 @@
 				D1DD34B929740377006EE244 /* DrinkDetails.swift in Sources */,
 				D1174465297D440C009CAFC7 /* Array+Extensions.swift in Sources */,
 				D1F00883296EC078007E09B7 /* Ingredient.swift in Sources */,
-				D174C2D72976E86A00E93262 /* DrinksList.swift in Sources */,
 				D1F79025296D76D400F3CB30 /* Drink.swift in Sources */,
 				D1F7903A296E803E00F3CB30 /* AppView.swift in Sources */,
 				D1F79047296E90C800F3CB30 /* DrinkCard.swift in Sources */,
@@ -466,9 +474,9 @@
 				D10A3757299AAB8900C68443 /* NSManagedObject+Extensions.swift in Sources */,
 				D1F79049296E916C00F3CB30 /* IngredientCard.swift in Sources */,
 				D1830351299CA96900FD9EA8 /* DrinksData.swift in Sources */,
-				D18CE3812976BDE700B997CD /* DrinksView-ViewModel.swift in Sources */,
 				D1F7900F296D75EE00F3CB30 /* Persistence.swift in Sources */,
 				D1C50CD52985317C00410EB3 /* OnboardingView.swift in Sources */,
+				D1DB6B3429AA417D005B3BB6 /* DrinksList+ViewModel.swift in Sources */,
 				D1F00887296EC0B8007E09B7 /* Origin.swift in Sources */,
 				D1E5BBCB29705D2500BA60F9 /* WrappingHStack.swift in Sources */,
 			);
