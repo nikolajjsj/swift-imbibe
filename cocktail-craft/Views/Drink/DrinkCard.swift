@@ -44,7 +44,7 @@ struct DrinkCard: View {
         .padding(.horizontal)
         .padding(.vertical, 8)
         .background(background)
-        .clipShape(RoundedRectangle(cornerRadius: 10))
+        .clipShape(RoundedRectangle(cornerRadius: 10, style: .continuous))
         .onTapGesture { presented.toggle() }
         .sheet(isPresented: $presented) { DrinkView(drink: drink) }
     }
