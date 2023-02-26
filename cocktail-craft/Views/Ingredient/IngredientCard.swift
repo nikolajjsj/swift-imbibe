@@ -15,34 +15,37 @@ struct IngredientCard: View {
     var body: some View {
         let background = ingredient.color
         
-        HStack {
-            if let image = UIImage.init(named: ingredient.image) {
-                Image(uiImage: image)
-                    .interpolation(.none)
-                    .resizable()
-                    .scaledToFit()
-                    .frame(width: 40, height: 80)
-            }
-            
-            VStack(alignment: .leading) {
-                Text(ingredient.name)
-                    .font(.headline)
-                    .lineLimit(2)
-                    .multilineTextAlignment(.leading)
+        Button {
+            presented.toggle()
+        } label: {
+            HStack {
+                if let image = UIImage.init(named: ingredient.image) {
+                    Image(uiImage: image)
+                        .interpolation(.none)
+                        .resizable()
+                        .scaledToFit()
+                        .frame(width: 40, height: 80)
+                }
                 
-                Text("\(ingredient.strength)%")
-                    .lineLimit(1)
-                    .opacity(0.9)
+                VStack(alignment: .leading) {
+                    Text(ingredient.name)
+                        .font(.headline)
+                        .lineLimit(1)
+                        .multilineTextAlignment(.leading)
+                    
+                    Text("\(ingredient.strength)%")
+                        .lineLimit(1)
+                        .opacity(0.9)
+                }
+                
+                Spacer()
             }
+            .padding(12)
+            .background(background)
             .foregroundColor(background.contrastColor)
-            
-            Spacer()
+            .clipShape(RoundedRectangle(cornerRadius: 10))
         }
-        .padding(.horizontal)
-        .padding(.vertical, 8)
-        .background(background)
-        .clipShape(RoundedRectangle(cornerRadius: 10))
-        .onTapGesture { presented.toggle() }
+        .buttonStyle(ScaledButtonStyle())
         .sheet(isPresented: $presented) { IngredientView(ingredient: ingredient) }
     }
 }

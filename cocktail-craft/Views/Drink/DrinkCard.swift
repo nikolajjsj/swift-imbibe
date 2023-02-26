@@ -15,37 +15,39 @@ struct DrinkCard: View {
     var body: some View {
         let background = drink.color
         
-        HStack {
-            if let image = UIImage.init(named: drink.image) {
-                Image(uiImage: image)
-                    .interpolation(.none)
-                    .resizable()
-                    .scaledToFit()
-                    .frame(width: 40, height: 80)
-            }
-            
-            VStack(alignment: .leading) {
-                Text(drink.name)
-                    .font(.headline)
-                    .multilineTextAlignment(.leading)
-                    .lineLimit(2)
-                
-                VStack {
-                    Text("\(drink.ingredients.count) ingredients").lineLimit(1)
-                    Text("\(drink.strength)% strength").lineLimit(1)
+        Button {
+            presented.toggle()
+        } label: {
+            HStack {
+                if let image = UIImage.init(named: drink.image) {
+                    Image(uiImage: image)
+                        .resizable()
+                        .scaledToFit()
+                        .frame(width: 45, height: 80)
                 }
-                .font(.footnote)
-                .opacity(0.9)
+                
+                VStack(alignment: .leading) {
+                    Text(drink.name)
+                        .font(.headline)
+                        .multilineTextAlignment(.leading)
+                        .lineLimit(1)
+                    
+                    VStack {
+                        Text("\(drink.ingredients.count) ingredients").lineLimit(1)
+                        Text("\(drink.strength)% strength").lineLimit(1)
+                    }
+                    .font(.footnote)
+                    .opacity(0.9)
+                }
+                
+                Spacer()
             }
+            .padding(12)
+            .background(background)
             .foregroundColor(background.contrastColor)
-            
-            Spacer()
+            .clipShape(RoundedRectangle(cornerRadius: 10, style: .continuous))
         }
-        .padding(.horizontal)
-        .padding(.vertical, 8)
-        .background(background)
-        .clipShape(RoundedRectangle(cornerRadius: 10, style: .continuous))
-        .onTapGesture { presented.toggle() }
+        .buttonStyle(ScaledButtonStyle())
         .sheet(isPresented: $presented) { DrinkView(drink: drink) }
     }
 }

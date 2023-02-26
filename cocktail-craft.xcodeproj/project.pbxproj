@@ -17,6 +17,7 @@
 		D1174465297D440C009CAFC7 /* Array+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1174464297D440C009CAFC7 /* Array+Extensions.swift */; };
 		D1194A672971A4A900E4C1E7 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1194A662971A4A900E4C1E7 /* SettingsView.swift */; };
 		D1308BAC2976D090002BF99C /* Bundle+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1308BAB2976D090002BF99C /* Bundle+Extensions.swift */; };
+		D170FE7D29ABB08D00CA36A1 /* Button+Style.swift in Sources */ = {isa = PBXBuildFile; fileRef = D170FE7C29ABB08D00CA36A1 /* Button+Style.swift */; };
 		D17BB61D29732160004F08F7 /* CardStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = D17BB61C29732160004F08F7 /* CardStyle.swift */; };
 		D17BB61F297345BA004F08F7 /* LocalStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = D17BB61E297345BA004F08F7 /* LocalStorage.swift */; };
 		D181F09F299E57FC00EB8A6F /* UnitVolume+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D181F09E299E57FC00EB8A6F /* UnitVolume+Extensions.swift */; };
@@ -73,6 +74,7 @@
 		D1194A662971A4A900E4C1E7 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		D1308BAB2976D090002BF99C /* Bundle+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bundle+Extensions.swift"; sourceTree = "<group>"; };
 		D1520ED02978326A006C1519 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		D170FE7C29ABB08D00CA36A1 /* Button+Style.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Button+Style.swift"; sourceTree = "<group>"; };
 		D17BB61C29732160004F08F7 /* CardStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardStyle.swift; sourceTree = "<group>"; };
 		D17BB61E297345BA004F08F7 /* LocalStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalStorage.swift; sourceTree = "<group>"; };
 		D181F09E299E57FC00EB8A6F /* UnitVolume+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UnitVolume+Extensions.swift"; sourceTree = "<group>"; };
@@ -267,6 +269,7 @@
 			isa = PBXGroup;
 			children = (
 				D17BB61C29732160004F08F7 /* CardStyle.swift */,
+				D170FE7C29ABB08D00CA36A1 /* Button+Style.swift */,
 			);
 			path = Styles;
 			sourceTree = "<group>";
@@ -441,6 +444,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D1BB5B2B29741FE600CF52EE /* IngredientDrinksList.swift in Sources */,
+				D170FE7D29ABB08D00CA36A1 /* Button+Style.swift in Sources */,
 				D1308BAC2976D090002BF99C /* Bundle+Extensions.swift in Sources */,
 				D1C50CD72985432C00410EB3 /* AppIcon.swift in Sources */,
 				D1DD34B729740335006EE244 /* DrinkStepInstructions.swift in Sources */,
