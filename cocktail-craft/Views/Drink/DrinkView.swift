@@ -17,44 +17,47 @@ struct DrinkView: View {
         let isFavorited = favorites.contains(where: { $0.name == drink.name })
         
         ScrollView {
-            ZStack(alignment: .topTrailing) {
-                VStack {
-                    if let image = UIImage.init(named: drink.image) {
-                        Image(uiImage: image)
-                            .resizable()
-                            .scaledToFit()
-                            .frame(maxHeight: min(image.size.height, 300))
-                            .padding(.vertical)
-                    }
-                    
-                    DrinkDetails(drink)
-                    
-                    IngredientsInspector(drink: drink)
-                    
-                    DrinkStepInstructions(drink)
+            VStack {
+                if let image = UIImage.init(named: drink.image) {
+                    Image(uiImage: image)
+                        .resizable()
+                        .scaledToFit()
+                        .frame(maxHeight: min(image.size.height, 300))
+                        .padding(.vertical)
                 }
                 
-                Button {
-                    if let favorite = favorites.first(where: { $0.name == drink.name }) {
-                        moc.delete(favorite)
-                        moc.quickSave()
-                    } else {
-                        let newFavorite = Favorite(context: moc)
-                        newFavorite.name = drink.name
-                        moc.quickSave()
-                    }
-                } label: {
-                    Image(systemName: isFavorited ? "star.fill" : "star")
-                        .resizable()
-                        .frame(width: 25, height: 25)
-                        .foregroundColor(.black)
-                        .padding(4)
-                        .background(Circle().fill(.white.opacity(0.2)))
-                }
+                DrinkDetails(drink)
+                
+                IngredientsInspector(drink: drink)
+                
+                DrinkStepInstructions(drink)
             }
             .padding()
         }
         .background(drink.color.gradient)
+        .overlay(alignment: .topTrailing) {
+            Button {
+                toggleFavorite()
+            } label: {
+                Image(systemName: isFavorited ? "star.fill" : "star")
+                    .imageScale(.large)
+                    .foregroundColor(.black)
+                    .padding(6)
+                    .background(Circle().fill(drink.color.contrastColor.opacity(0.2)))
+            }
+            .padding()
+        }
+    }
+    
+    func toggleFavorite() {
+        if let favorite = favorites.first(where: { $0.name == drink.name }) {
+            moc.delete(favorite)
+            moc.quickSave()
+        } else {
+            let newFavorite = Favorite(context: moc)
+            newFavorite.name = drink.name
+            moc.quickSave()
+        }
     }
 }
 
