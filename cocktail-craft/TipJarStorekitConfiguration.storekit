@@ -4,12 +4,56 @@
 
   ],
   "products" : [
-
+    {
+      "displayPrice" : "0.99",
+      "familyShareable" : false,
+      "internalID" : "6445883456",
+      "localizations" : [
+        {
+          "description" : "Tip me a nice cup of coffee",
+          "displayName" : "Coffee-Sized Tip",
+          "locale" : "en_US"
+        }
+      ],
+      "productID" : "coffeetip",
+      "referenceName" : "coffeetip",
+      "type" : "Consumable"
+    },
+    {
+      "displayPrice" : "4.99",
+      "familyShareable" : false,
+      "internalID" : "6445883508",
+      "localizations" : [
+        {
+          "description" : "Tip me a sandwich for lunch",
+          "displayName" : "Lunch-Sized Tip",
+          "locale" : "en_US"
+        }
+      ],
+      "productID" : "lunchtip",
+      "referenceName" : "lunchtip",
+      "type" : "Consumable"
+    },
+    {
+      "displayPrice" : "9.99",
+      "familyShareable" : false,
+      "internalID" : "6445883599",
+      "localizations" : [
+        {
+          "description" : "Tip me the best of the best: a pizza",
+          "displayName" : "Pizza-Sized Tip",
+          "locale" : "en_US"
+        }
+      ],
+      "productID" : "pizzatip",
+      "referenceName" : "pizzatip",
+      "type" : "Consumable"
+    }
   ],
   "settings" : {
     "_applicationInternalID" : "1664128517",
     "_developerTeamID" : "YRQMPX5YW2",
-    "_lastSynchronizedDate" : 699171565.83143401
+    "_lastSynchronizedDate" : 699172715.11892104
   },
   "subscriptionGroups" : [
 
