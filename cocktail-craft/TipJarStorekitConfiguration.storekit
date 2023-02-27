@@ -1,0 +1,21 @@
+{
+  "identifier" : "622CAF82",
+  "nonRenewingSubscriptions" : [
+
+  ],
+  "products" : [
+
+  ],
+  "settings" : {
+    "_applicationInternalID" : "1664128517",
+    "_developerTeamID" : "YRQMPX5YW2",
+    "_lastSynchronizedDate" : 699171565.83143401
+  },
+  "subscriptionGroups" : [
+
+  ],
+  "version" : {
+    "major" : 2,
+    "minor" : 0
+  }
+}

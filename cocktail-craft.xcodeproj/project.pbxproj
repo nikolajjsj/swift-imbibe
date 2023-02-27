@@ -26,6 +26,8 @@
 		D1BB5B2B29741FE600CF52EE /* IngredientDrinksList.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1BB5B2A29741FE600CF52EE /* IngredientDrinksList.swift */; };
 		D1C50CD52985317C00410EB3 /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1C50CD42985317C00410EB3 /* OnboardingView.swift */; };
 		D1C50CD72985432C00410EB3 /* AppIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1C50CD62985432C00410EB3 /* AppIcon.swift */; };
+		D1D439B829AC811600CAC924 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D1D439B729AC811600CAC924 /* StoreKit.framework */; };
+		D1D439BA29AC81B900CAC924 /* TipJarStorekitConfiguration.storekit in Resources */ = {isa = PBXBuildFile; fileRef = D1D439B929AC81B900CAC924 /* TipJarStorekitConfiguration.storekit */; };
 		D1DB6B3129AA3E5D005B3BB6 /* DrinksListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1DB6B3029AA3E5D005B3BB6 /* DrinksListView.swift */; };
 		D1DB6B3429AA417D005B3BB6 /* DrinksList+ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1DB6B3329AA417D005B3BB6 /* DrinksList+ViewModel.swift */; };
 		D1DB6B3629AA41C2005B3BB6 /* DrinksList+Filters.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1DB6B3529AA41C2005B3BB6 /* DrinksList+Filters.swift */; };
@@ -83,6 +85,8 @@
 		D1BB5B2A29741FE600CF52EE /* IngredientDrinksList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IngredientDrinksList.swift; sourceTree = "<group>"; };
 		D1C50CD42985317C00410EB3 /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
 		D1C50CD62985432C00410EB3 /* AppIcon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppIcon.swift; sourceTree = "<group>"; };
+		D1D439B729AC811600CAC924 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
+		D1D439B929AC81B900CAC924 /* TipJarStorekitConfiguration.storekit */ = {isa = PBXFileReference; lastKnownFileType = text; path = TipJarStorekitConfiguration.storekit; sourceTree = "<group>"; };
 		D1DB6B3029AA3E5D005B3BB6 /* DrinksListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrinksListView.swift; sourceTree = "<group>"; };
 		D1DB6B3329AA417D005B3BB6 /* DrinksList+ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DrinksList+ViewModel.swift"; sourceTree = "<group>"; };
 		D1DB6B3529AA41C2005B3BB6 /* DrinksList+Filters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DrinksList+Filters.swift"; sourceTree = "<group>"; };
@@ -126,6 +130,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D1D439B829AC811600CAC924 /* StoreKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -167,6 +172,14 @@
 				D1C50CD42985317C00410EB3 /* OnboardingView.swift */,
 			);
 			path = Onboarding;
+			sourceTree = "<group>";
+		};
+		D1D439B629AC811600CAC924 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D1D439B729AC811600CAC924 /* StoreKit.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		D1DB6B3229AA4168005B3BB6 /* DrinksList */ = {
@@ -289,6 +302,7 @@
 			children = (
 				D1F7900B296D75EE00F3CB30 /* cocktail-craft */,
 				D1F7900A296D75EE00F3CB30 /* Products */,
+				D1D439B629AC811600CAC924 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -316,6 +330,7 @@
 				D1F79017296D75EF00F3CB30 /* cocktail-craft.entitlements */,
 				D1EAB05B299B68E700E7D07D /* cocktail-craft.xcdatamodeld */,
 				D1520ED02978326A006C1519 /* Info.plist */,
+				D1D439B929AC81B900CAC924 /* TipJarStorekitConfiguration.storekit */,
 			);
 			path = "cocktail-craft";
 			sourceTree = "<group>";
@@ -432,6 +447,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D1D439BA29AC81B900CAC924 /* TipJarStorekitConfiguration.storekit in Resources */,
 				D1F79016296D75EF00F3CB30 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
