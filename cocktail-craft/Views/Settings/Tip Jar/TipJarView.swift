@@ -31,34 +31,41 @@ struct TipJarView: View {
             Text("Enjoying the app so far? 👀")
                 .font(.system(.title2, design: .rounded).bold())
                 .multilineTextAlignment(.center)
+                .padding(.top, 16)
             
-            VStack(spacing: 32) {
+            Text("Help out the development of Cocktail Craft by giving me a tip")
+                .font(.system(.body, design: .rounded))
+                .multilineTextAlignment(.center)
+                .padding(.bottom, 16)
+            
+            VStack {
                 ForEach(store.products) { tip in
                     TipRow(tip)
                 }
             }
-            .padding()
         }
         .padding()
-        .background(Color.background, in: RoundedRectangle(cornerRadius: 10, style: .continuous))
-        .padding(8)
+        .background(RoundedRectangle(cornerRadius: 10, style: .continuous).fill(Color.secondaryBackground))
+        .padding(12)
+        .frame(maxWidth: 500)
         .overlay(alignment: .top) {
-            Image(systemName: "lanyardcard.fill")
+            Image(uiImage: UIImage(named: getAppIcon()!)!)
                 .resizable()
-                .frame(width: 50, height: 50)
-                .padding(6)
-                .background(Color.accentColor, in: RoundedRectangle(cornerRadius: 10, style: .continuous))
+                .scaledToFit()
+                .cornerRadius(10)
+                .frame(width: 70, height: 70)
                 .offset(y: -25)
         }
     }
     
     @ViewBuilder
     func TipRow(_ tip: Product) -> some View {
-        HStack(alignment: .center, spacing: 12) {
+        HStack(alignment: .center) {
             Image(tip.id)
                 .resizable()
-                .frame(width: 40, height: 40)
+                .frame(width: 50, height: 50)
                 .scaledToFit()
+                .padding(.trailing, 5)
             
             VStack(alignment: .leading) {
                 Text(tip.displayName)
@@ -74,8 +81,10 @@ struct TipJarView: View {
             } label: {
                 Text(tip.displayPrice)
             }
-            .buttonStyle(.borderedProminent)
-        }
+            .tint(.blue)
+            .buttonStyle(.bordered)        }
+        .padding(12)
+        .background(RoundedRectangle(cornerRadius: 10, style: .continuous).fill(Color.background))
     }
 }
 

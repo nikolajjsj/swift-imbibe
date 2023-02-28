@@ -9,10 +9,10 @@ import SwiftUI
 
 struct SettingsView: View {
     @EnvironmentObject var global: Global
+    @EnvironmentObject var store: TipStore
     
     @AppStorage(LocalStorageKeys.unit.rawValue) var unit = UnitVolume.milliliters.symbol
     
-    @StateObject private var store = TipStore()
     @State private var tipJar: Bool = false
     @State private var showThanks: Bool = false
     
@@ -49,14 +49,10 @@ struct SettingsView: View {
                 Color.black.opacity(0.8)
                     .ignoresSafeArea()
                     .transition(.opacity)
-                    .onTapGesture {
-                        tipJar.toggle()
-                    }
-                TipJarView {
-                    tipJar = false
-                }
+                    .onTapGesture { tipJar.toggle() }
+                TipJarView { tipJar = false }
                 .environmentObject(store)
-                .transition(.move(edge: .bottom).combined(with: .opacity))
+                .transition(.opacity.combined(with: .offset(x: 0, y: 10)))
             }
         }
         .overlay(alignment: .bottom) {
@@ -74,8 +70,12 @@ struct SettingsView: View {
                 tipJar = false
                 DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
                     showThanks = true
+                    store.reset()
                 }
             }
+        }
+        .alert(isPresented: $store.hasError, error: store.error) {
+            
         }
     }
     
@@ -115,5 +115,7 @@ struct SettingsView: View {
 struct SettingsView_Previews: PreviewProvider {
     static var previews: some View {
         SettingsView()
+            .environmentObject(Global())
+            .environmentObject(TipStore())
     }
 }

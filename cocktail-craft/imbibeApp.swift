@@ -9,7 +9,8 @@ import SwiftUI
 
 @main
 struct imbibeApp: App {
-    let global = Global()
+    @StateObject private var global = Global()
+    @StateObject private var store = TipStore()
     
     let persistenceController = PersistenceController.shared
     
@@ -22,6 +23,7 @@ struct imbibeApp: App {
         WindowGroup {
             AppView()
                 .environmentObject(global)
+                .environmentObject(store)
                 .environment(\.managedObjectContext, persistenceController.container.viewContext)
         }
     }
