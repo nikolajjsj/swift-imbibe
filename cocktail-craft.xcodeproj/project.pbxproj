@@ -22,6 +22,8 @@
 		D17BB61F297345BA004F08F7 /* LocalStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = D17BB61E297345BA004F08F7 /* LocalStorage.swift */; };
 		D181F09F299E57FC00EB8A6F /* UnitVolume+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D181F09E299E57FC00EB8A6F /* UnitVolume+Extensions.swift */; };
 		D1830351299CA96900FD9EA8 /* DrinksData.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1830350299CA96900FD9EA8 /* DrinksData.swift */; };
+		D18BC8C329AE893000CB67ED /* AboutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D18BC8C229AE893000CB67ED /* AboutView.swift */; };
+		D18BC8C629AE897D00CB67ED /* UnitsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D18BC8C529AE897D00CB67ED /* UnitsView.swift */; };
 		D1BB5B2929741F8000CF52EE /* IngredientDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1BB5B2829741F8000CF52EE /* IngredientDetails.swift */; };
 		D1BB5B2B29741FE600CF52EE /* IngredientDrinksList.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1BB5B2A29741FE600CF52EE /* IngredientDrinksList.swift */; };
 		D1C50CD52985317C00410EB3 /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1C50CD42985317C00410EB3 /* OnboardingView.swift */; };
@@ -84,6 +86,8 @@
 		D17BB61E297345BA004F08F7 /* LocalStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalStorage.swift; sourceTree = "<group>"; };
 		D181F09E299E57FC00EB8A6F /* UnitVolume+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UnitVolume+Extensions.swift"; sourceTree = "<group>"; };
 		D1830350299CA96900FD9EA8 /* DrinksData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrinksData.swift; sourceTree = "<group>"; };
+		D18BC8C229AE893000CB67ED /* AboutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutView.swift; sourceTree = "<group>"; };
+		D18BC8C529AE897D00CB67ED /* UnitsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnitsView.swift; sourceTree = "<group>"; };
 		D1BB5B2829741F8000CF52EE /* IngredientDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IngredientDetails.swift; sourceTree = "<group>"; };
 		D1BB5B2A29741FE600CF52EE /* IngredientDrinksList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IngredientDrinksList.swift; sourceTree = "<group>"; };
 		D1C50CD42985317C00410EB3 /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
@@ -159,6 +163,8 @@
 		D1194A652971A4A100E4C1E7 /* Settings */ = {
 			isa = PBXGroup;
 			children = (
+				D18BC8C429AE897500CB67ED /* Units */,
+				D18BC8C129AE892700CB67ED /* About */,
 				D1D439BB29AC85E600CAC924 /* Tip Jar */,
 				D1194A662971A4A900E4C1E7 /* SettingsView.swift */,
 			);
@@ -171,6 +177,22 @@
 				D1830350299CA96900FD9EA8 /* DrinksData.swift */,
 			);
 			path = Data;
+			sourceTree = "<group>";
+		};
+		D18BC8C129AE892700CB67ED /* About */ = {
+			isa = PBXGroup;
+			children = (
+				D18BC8C229AE893000CB67ED /* AboutView.swift */,
+			);
+			path = About;
+			sourceTree = "<group>";
+		};
+		D18BC8C429AE897500CB67ED /* Units */ = {
+			isa = PBXGroup;
+			children = (
+				D18BC8C529AE897D00CB67ED /* UnitsView.swift */,
+			);
+			path = Units;
 			sourceTree = "<group>";
 		};
 		D1C50CD1298530F600410EB3 /* Onboarding */ = {
@@ -484,6 +506,7 @@
 				D1F7903D296E813F00F3CB30 /* IngredientsView.swift in Sources */,
 				D117445E297D2A21009CAFC7 /* BooksView.swift in Sources */,
 				D1E7480E297D6F44002B48CE /* ViewModel.swift in Sources */,
+				D18BC8C329AE893000CB67ED /* AboutView.swift in Sources */,
 				D1EAB05D299B68E700E7D07D /* cocktail-craft.xcdatamodeld in Sources */,
 				D1FDAE42297AA18700D69804 /* Colors.swift in Sources */,
 				D1F79042296E834400F3CB30 /* IngredientView.swift in Sources */,
@@ -504,6 +527,7 @@
 				D1BB5B2929741F8000CF52EE /* IngredientDetails.swift in Sources */,
 				D1174455297C2F67009CAFC7 /* BarView.swift in Sources */,
 				D1E5B3B32972D052001DF274 /* Number+Extensions.swift in Sources */,
+				D18BC8C629AE897D00CB67ED /* UnitsView.swift in Sources */,
 				D17BB61F297345BA004F08F7 /* LocalStorage.swift in Sources */,
 				D1F79030296D879600F3CB30 /* Color+Extensions.swift in Sources */,
 				D1D439BF29AC89A700CAC924 /* TipStore.swift in Sources */,

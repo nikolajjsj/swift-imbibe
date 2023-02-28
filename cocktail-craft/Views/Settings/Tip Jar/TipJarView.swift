@@ -12,50 +12,54 @@ import StoreKit
 struct TipJarView: View {
     @EnvironmentObject var store: TipStore
     
-    var didTapClose: () -> ()
+    @State private var tipJar: Bool = false
+    @State private var showThanks: Bool = false
     
     var body: some View {
-        VStack(spacing: 8) {
-            
-            HStack {
-                Spacer()
-                Button(action: didTapClose) {
-                    Image(systemName: "xmark")
-                        .symbolVariant(.circle.fill)
-                        .font(.system(.largeTitle, design: .rounded).bold())
-                        .symbolRenderingMode(.palette)
-                        .foregroundStyle(.gray, .gray.opacity(0.2))
-                }
-            }
-            
-            Text("Enjoying the app so far? 👀")
-                .font(.system(.title2, design: .rounded).bold())
-                .multilineTextAlignment(.center)
-                .padding(.top, 16)
-            
-            Text("Help out the development of Cocktail Craft by giving me a tip")
-                .font(.system(.body, design: .rounded))
-                .multilineTextAlignment(.center)
-                .padding(.bottom, 16)
-            
-            VStack {
-                ForEach(store.products) { tip in
-                    TipRow(tip)
+        List {
+            VStack(spacing: 8) {
+                Image(uiImage: UIImage(named: getAppIcon()!)!)
+                    .resizable()
+                    .scaledToFit()
+                    .cornerRadius(10)
+                    .frame(width: 70, height: 70)
+                
+                Text("Enjoying the app so far? 👀")
+                    .font(.system(.title2, design: .rounded).bold())
+                    .multilineTextAlignment(.center)
+                    .padding(.top, 16)
+                
+                Text("Help out the development of Cocktail Craft by giving me a tip")
+                    .font(.system(.body, design: .rounded))
+                    .multilineTextAlignment(.center)
+                    .padding(.bottom, 16)
+                
+                VStack {
+                    ForEach(store.products) { tip in
+                        TipRow(tip)
+                    }
                 }
             }
         }
-        .padding()
-        .background(RoundedRectangle(cornerRadius: 10, style: .continuous).fill(Color.secondaryBackground))
-        .padding(12)
-        .frame(maxWidth: 500)
-        .overlay(alignment: .top) {
-            Image(uiImage: UIImage(named: getAppIcon()!)!)
-                .resizable()
-                .scaledToFit()
-                .cornerRadius(10)
-                .frame(width: 70, height: 70)
-                .offset(y: -25)
+        .navigationTitle("Tip Jar")
+        .navigationBarTitleDisplayMode(.inline)
+        .overlay(alignment: .bottom) {
+            if showThanks {
+                ThanksView { showThanks = false }
+                .transition(.move(edge: .bottom).combined(with: .opacity))
+            }
         }
+        .animation(.default, value: showThanks)
+        .onChange(of: store.action) { action in
+            if action == .succesful {
+                tipJar = false
+                DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+                    showThanks = true
+                    store.reset()
+                }
+            }
+        }
+        .alert(isPresented: $store.hasError, error: store.error) {}
     }
     
     @ViewBuilder
@@ -75,23 +79,21 @@ struct TipJarView: View {
             Spacer()
             
             Button {
-                Task {
-                    await store.purchase(tip)
-                }
+                Task { await store.purchase(tip) }
             } label: {
                 Text(tip.displayPrice)
             }
             .tint(.blue)
             .buttonStyle(.bordered)        }
         .padding(12)
-        .background(RoundedRectangle(cornerRadius: 10, style: .continuous).fill(Color.background))
+        .background(RoundedRectangle(cornerRadius: 10).fill(Color.secondaryBackground))
     }
 }
 
 struct TipJarView_Previews: PreviewProvider {
     static var previews: some View {
-        TipJarView {
-            
+        NavigationView {
+            TipJarView()
         }
         .environmentObject(TipStore())
     }
