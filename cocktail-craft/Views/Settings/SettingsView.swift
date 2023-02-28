@@ -41,6 +41,18 @@ struct SettingsView: View {
                     }
                     
                     NavigationLink {
+                        FAQView()
+                    } label: {
+                        Label {
+                            Text("FAQ")
+                        } icon: {
+                            Image(systemName: "questionmark.square.fill")
+                                .font(.title)
+                                .foregroundColor(.blue)
+                        }
+                    }
+                    
+                    NavigationLink {
                         AboutView()
                     } label: {
                         Label {
