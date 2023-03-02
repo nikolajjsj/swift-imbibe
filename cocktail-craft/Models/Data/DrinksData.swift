@@ -2498,6 +2498,32 @@ let tommysMargarita: Drink =
         ]
     )
 
+let tuxedo: Drink =
+    .init(
+        name: "Tuxedo",
+        description: "",
+        image: "Tuxedo",
+        color: Colors.white,
+        year: 1880,
+        base: .gin,
+        origin: Origins.instance.unitedStates,
+        equipments: [ Equipments.instance.cocktailGlass, Equipments.instance.mixingGlass, Equipments.instance.barspoon, Equipments.instance.strainer ],
+        ingredients: [
+            .init(ingredient: Ingredients.instance.oldTomGin, amount: 30, unit: .milliliters),
+            .init(ingredient: Ingredients.instance.dryVermouth, amount: 30, unit: .milliliters),
+            .init(ingredient: Ingredients.instance.maraschinoLiqueur, amount: 2, unit: .dash),
+            .init(ingredient: Ingredients.instance.absinthe, amount: 1, unit: .dash),
+            .init(ingredient: Ingredients.instance.angosturaOrangeBitters, amount: 3, unit: .dash),
+            .init(ingredient: Ingredients.instance.ice),
+        ],
+        steps: [
+            .init(string: "In a Mixing Glass add Old Tom Gin, Dry Vermouth, Maraschino Liqueur, Absinthe, & Angostura Orange Biters"),
+            .init(string: "Add Ice and stir for 30-45 seconds"),
+            .init(string: "Strain into a Cocktail Glass"),
+            .init(string: "Garnish with Lemon Twist"),
+        ]
+    )
+
 let southside: Drink =
     .init(
         name: "Southside",
@@ -2522,6 +2548,29 @@ let southside: Drink =
             .init(string: "Add Ice and shake for 10-15 seconds"),
             .init(string: "Strain into a Cocktail Glass"),
             .init(string: "Garnish with some Mint"),
+        ]
+    )
+
+let stinger: Drink =
+    .init(
+        name: "Stinger",
+        description: "",
+        image: "Stinger",
+        color: Colors.yellow,
+        year: 1890,
+        base: .brandy,
+        origin: Origins.instance.unitedStates,
+        equipments: [ Equipments.instance.cocktailGlass, Equipments.instance.mixingGlass, Equipments.instance.barspoon, Equipments.instance.strainer ],
+        ingredients: [
+            .init(ingredient: Ingredients.instance.cognac, amount: 50, unit: .milliliters),
+            .init(ingredient: Ingredients.instance.cremeDeMenthe, amount: 20, unit: .milliliters),
+            .init(ingredient: Ingredients.instance.ice),
+        ],
+        steps: [
+            .init(string: "In a Mixing Glass add Cognac & Creme de Menthe"),
+            .init(string: "Add Ice and stir for 30-45 seconds"),
+            .init(string: "Strain into a Cocktail Glass"),
+            .init(string: "Garnish with Mint"),
         ]
     )
 
@@ -2597,6 +2646,32 @@ let vesper: Drink =
         ]
     )
 
+let vieuxCarre: Drink =
+    .init(
+        name: "Vieux Carrè",
+        description: "",
+        image: "Vieux Carrè",
+        color: Colors.red,
+        year: 1937,
+        base: .whisky,
+        origin: Origins.instance.unitedStates,
+        equipments: [ Equipments.instance.cocktailGlass, Equipments.instance.mixingGlass, Equipments.instance.barspoon, Equipments.instance.strainer ],
+        ingredients: [
+            .init(ingredient: Ingredients.instance.ryeWhisky, amount: 30, unit: .milliliters),
+            .init(ingredient: Ingredients.instance.cognac, amount: 30, unit: .milliliters),
+            .init(ingredient: Ingredients.instance.sweetVermouth, amount: 30, unit: .milliliters),
+            .init(ingredient: Ingredients.instance.benedictine, amount: 2, unit: .dash),
+            .init(ingredient: Ingredients.instance.peychaudBitters, amount: 2, unit: .dash),
+            .init(ingredient: Ingredients.instance.ice),
+        ],
+        steps: [
+            .init(string: "In a Mixing Glass add Rye Whisky, Cognac, Sweet Vermouth, Benedictine, & Peychaud Bitters"),
+            .init(string: "Add Ice and stir for 30-45 seconds"),
+            .init(string: "Strain into a Cocktail Glass"),
+            .init(string: "Garnish with a Orange Twist"),
+        ]
+    )
+
 let whiskySour: Drink =
     .init(
         name: "Whisky Sour",
@@ -2623,6 +2698,30 @@ let whiskySour: Drink =
             .init(string: "Shake again"),
             .init(string: "Strain into the Old Fashioned Glas"),
             .init(string: "Garnish with a few drops of Angostura Bitters on top"),
+        ]
+    )
+
+let whiteLady: Drink =
+    .init(
+        name: "White Lady",
+        description: "",
+        image: "White Lady",
+        color: Colors.white,
+        year: 1919,
+        base: .gin,
+        origin: Origins.instance.unitedKingdom,
+        equipments: [ Equipments.instance.cocktailGlass, Equipments.instance.shaker, Equipments.instance.strainer ],
+        ingredients: [
+            .init(ingredient: Ingredients.instance.gin, amount: 40, unit: .milliliters),
+            .init(ingredient: Ingredients.instance.curacao, amount: 30, unit: .milliliters),
+            .init(ingredient: Ingredients.instance.lemonJuice, amount: 20, unit: .milliliters),
+            .init(ingredient: Ingredients.instance.ice),
+        ],
+        steps: [
+            .init(string: "In a Shaker add Gin, Curacao, & Lemon Juice"),
+            .init(string: "Add Ice and shake for 10-15 seconds"),
+            .init(string: "Strain into a Cocktail Glass"),
+            .init(string: "Garnish with a Orange Twist"),
         ]
     )
 
