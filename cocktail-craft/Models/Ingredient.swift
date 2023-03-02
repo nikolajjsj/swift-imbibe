@@ -679,14 +679,6 @@ A often times more peaty version of a Scotch Whisky, originating from the Island
         description: "",
         tags: [.base]
     )
-    let lemonTwist: Ingredient = Ingredient(
-        name: "Lemon Twist",
-        image: "Lemon Twist",
-        color: Colors.yellow,
-        strength: 0,
-        origin: nil,
-        description: ""
-    )
     let lilletBlanc: Ingredient = Ingredient(
         name: "Lillet Blanc",
         image: "Lillet Blanc",
@@ -1110,7 +1102,6 @@ Whisky is made from fermented mash containing various grains, including: barley,
             kinaLaeroDor,
             lemon,
             lemonJuice,
-            lemonTwist,
             lilletBlanc,
             lightRum,
             lime,
