@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D105093E29B12D72008870E7 /* GeneralView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D105093D29B12D72008870E7 /* GeneralView.swift */; };
 		D10A3757299AAB8900C68443 /* NSManagedObject+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D10A3756299AAB8900C68443 /* NSManagedObject+Extensions.swift */; };
 		D1174452297C2D80009CAFC7 /* Icons.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1174451297C2D80009CAFC7 /* Icons.swift */; };
 		D1174455297C2F67009CAFC7 /* BarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1174454297C2F67009CAFC7 /* BarView.swift */; };
@@ -71,6 +72,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		D105093D29B12D72008870E7 /* GeneralView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralView.swift; sourceTree = "<group>"; };
 		D10A3756299AAB8900C68443 /* NSManagedObject+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSManagedObject+Extensions.swift"; sourceTree = "<group>"; };
 		D1174451297C2D80009CAFC7 /* Icons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Icons.swift; sourceTree = "<group>"; };
 		D1174454297C2F67009CAFC7 /* BarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarView.swift; sourceTree = "<group>"; };
@@ -149,6 +151,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D105093C29B12D62008870E7 /* General */ = {
+			isa = PBXGroup;
+			children = (
+				D105093D29B12D72008870E7 /* GeneralView.swift */,
+			);
+			path = General;
+			sourceTree = "<group>";
+		};
 		D1174453297C2EF0009CAFC7 /* Bar */ = {
 			isa = PBXGroup;
 			children = (
@@ -165,6 +175,7 @@
 		D1194A652971A4A100E4C1E7 /* Settings */ = {
 			isa = PBXGroup;
 			children = (
+				D105093C29B12D62008870E7 /* General */,
 				D18BC8CB29AE91F600CB67ED /* Faq */,
 				D18BC8C429AE897500CB67ED /* Units */,
 				D18BC8C129AE892700CB67ED /* About */,
@@ -543,6 +554,7 @@
 				D1F79030296D879600F3CB30 /* Color+Extensions.swift in Sources */,
 				D1D439BF29AC89A700CAC924 /* TipStore.swift in Sources */,
 				D1174458297D2030009CAFC7 /* BarIngredientsView.swift in Sources */,
+				D105093E29B12D72008870E7 /* GeneralView.swift in Sources */,
 				D181F09F299E57FC00EB8A6F /* UnitVolume+Extensions.swift in Sources */,
 				D1E5B3AD2972C9D3001DF274 /* EquipmentBox.swift in Sources */,
 				D117445C297D23CF009CAFC7 /* ErrorMessageView.swift in Sources */,

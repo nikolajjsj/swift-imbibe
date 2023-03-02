@@ -9,6 +9,9 @@ import Foundation
 
 enum LocalStorageKeys: String {
     case unit = "default_volumetric_unit"
+    case discoverMissingIngredientTip = "discover_page_missing_ingredient_tip"
+    case discoverCountriesList = "discover_page_countries_list"
+    case discoverStylesList = "discover_page_styles_list"
     
     case onboarded = "user_has_been_onboarded"
 }

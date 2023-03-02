@@ -15,6 +15,19 @@ struct SettingsView: View {
             List {
                 Section {
                     NavigationLink {
+                        GeneralView()
+                    } label: {
+                        Label {
+                            Text("general")
+                        } icon: {
+                            Image(systemName: "gear")
+                                .padding(2)
+                                .background(RoundedRectangle(cornerRadius: 5).fill(.gray))
+                                .font(.headline)
+                                .foregroundColor(.white)
+                        }
+                    }
+                    NavigationLink {
                         UnitsView()
                     } label: {
                         Label {
