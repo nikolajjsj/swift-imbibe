@@ -8,9 +8,14 @@
 import SwiftUI
 
 struct IngredientView: View {
+    @Environment(\.managedObjectContext) private var moc
+    @FetchRequest(sortDescriptors: [], animation: .default) var selections: FetchedResults<SelectedIngredient>
+    
     let ingredient: Ingredient
     
     var body: some View {
+        let isSelected = selections.contains(where: { $0.name == ingredient.name })
+        
         ScrollView {
             VStack {
                 if let image = UIImage.init(named: ingredient.image) {
@@ -28,6 +33,27 @@ struct IngredientView: View {
             .padding(.horizontal)
         }
         .background(ingredient.color.gradient)
+        .overlay(alignment: .topTrailing) {
+            Button {
+                toggleIngredientSelection()
+            } label: {
+                Image(systemName: isSelected ? "plus.circle" : "checkmark.circle.fill")
+                    .font(.title)
+                    .foregroundColor(.primary)
+            }
+            .padding()
+        }
+    }
+    
+    func toggleIngredientSelection() {
+        if let selection = selections.first(where: { $0.name == ingredient.name }) {
+            moc.delete(selection)
+            moc.quickSave()
+        } else {
+            let newSelection = SelectedIngredient(context: moc)
+            newSelection.name = ingredient.name
+            moc.quickSave()
+        }
     }
 }
 
@@ -36,5 +62,6 @@ struct IngredientView_Previews: PreviewProvider {
         NavigationView {
             IngredientView(ingredient: Ingredients.instance.aperol)
         }
+        .environment(\.managedObjectContext, PersistenceController.preview.container.viewContext)
     }
 }

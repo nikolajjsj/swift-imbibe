@@ -40,10 +40,8 @@ struct DrinkView: View {
                 toggleFavorite()
             } label: {
                 Image(systemName: isFavorited ? "star.fill" : "star")
-                    .imageScale(.large)
-                    .foregroundColor(.black)
-                    .padding(6)
-                    .background(Circle().fill(drink.color.contrastColor.opacity(0.2)))
+                    .font(.title)
+                    .foregroundColor(.primary)
             }
             .padding()
         }
