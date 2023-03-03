@@ -668,6 +668,7 @@ A often times more peaty version of a Scotch Whisky, originating from the Island
         strength: 0,
         origin: nil,
         description: "",
+        namedAlternatives: ["Lemon Juice"],
         tags: [.base]
     )
     let lemonJuice: Ingredient = Ingredient(
@@ -677,6 +678,7 @@ A often times more peaty version of a Scotch Whisky, originating from the Island
         strength: 0,
         origin: nil,
         description: "",
+        namedAlternatives: ["Lemon"],
         tags: [.base]
     )
     let lilletBlanc: Ingredient = Ingredient(
@@ -704,6 +706,7 @@ A often times more peaty version of a Scotch Whisky, originating from the Island
         strength: 0,
         origin: nil,
         description: "",
+        namedAlternatives: ["Lime Juice"],
         tags: [.base]
     )
     let limeJuice: Ingredient = Ingredient(
@@ -713,6 +716,7 @@ A often times more peaty version of a Scotch Whisky, originating from the Island
         strength: 0,
         origin: nil,
         description: "",
+        namedAlternatives: ["Lime"],
         tags: [.base]
     )
     let maraschinoLiqueur: Ingredient = Ingredient(
