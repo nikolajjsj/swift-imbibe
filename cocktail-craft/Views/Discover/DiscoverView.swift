@@ -58,7 +58,8 @@ struct DiscoverView: View {
                                     }
                                     .padding(.vertical, 5)
                                     .frame(maxWidth: .infinity)
-                                }.buttonStyle(.bordered)
+                                }
+                                .buttonStyle(.bordered)
                             }
                         }
                     }
@@ -77,11 +78,12 @@ struct DiscoverView: View {
                                     Image(image)
                                         .resizable()
                                         .scaledToFit()
-                                        .frame(maxHeight: 50)
+                                        .frame(maxHeight: 75)
                                         .padding(.vertical, 5)
                                 }
                                 FillLabel(base.rawValue)
-                            }.buttonStyle(.bordered)
+                            }
+                            .buttonStyle(.bordered)
                         }
                     }
                 }
@@ -98,7 +100,8 @@ struct DiscoverView: View {
                                     Spacer()
                                     Text(origin.flag).font(.title)
                                     FillLabel(origin.name)
-                                }.buttonStyle(.bordered)
+                                }
+                                .buttonStyle(.bordered)
                             }
                         }
                     }
