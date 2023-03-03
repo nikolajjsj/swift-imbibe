@@ -18,6 +18,9 @@
 		D1174465297D440C009CAFC7 /* Array+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1174464297D440C009CAFC7 /* Array+Extensions.swift */; };
 		D1194A672971A4A900E4C1E7 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1194A662971A4A900E4C1E7 /* SettingsView.swift */; };
 		D1308BAC2976D090002BF99C /* Bundle+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1308BAB2976D090002BF99C /* Bundle+Extensions.swift */; };
+		D133710B29B272140090A991 /* IngredientsListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D133710A29B272140090A991 /* IngredientsListView.swift */; };
+		D133710D29B2723B0090A991 /* IngredientsList+ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D133710C29B2723B0090A991 /* IngredientsList+ViewModel.swift */; };
+		D133710F29B2736F0090A991 /* IngredientsList+Filters.swift in Sources */ = {isa = PBXBuildFile; fileRef = D133710E29B2736F0090A991 /* IngredientsList+Filters.swift */; };
 		D170FE7D29ABB08D00CA36A1 /* Button+Style.swift in Sources */ = {isa = PBXBuildFile; fileRef = D170FE7C29ABB08D00CA36A1 /* Button+Style.swift */; };
 		D17BB61D29732160004F08F7 /* CardStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = D17BB61C29732160004F08F7 /* CardStyle.swift */; };
 		D17BB61F297345BA004F08F7 /* LocalStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = D17BB61E297345BA004F08F7 /* LocalStorage.swift */; };
@@ -83,6 +86,9 @@
 		D1174464297D440C009CAFC7 /* Array+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+Extensions.swift"; sourceTree = "<group>"; };
 		D1194A662971A4A900E4C1E7 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		D1308BAB2976D090002BF99C /* Bundle+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bundle+Extensions.swift"; sourceTree = "<group>"; };
+		D133710A29B272140090A991 /* IngredientsListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IngredientsListView.swift; sourceTree = "<group>"; };
+		D133710C29B2723B0090A991 /* IngredientsList+ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "IngredientsList+ViewModel.swift"; sourceTree = "<group>"; };
+		D133710E29B2736F0090A991 /* IngredientsList+Filters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "IngredientsList+Filters.swift"; sourceTree = "<group>"; };
 		D1520ED02978326A006C1519 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		D170FE7C29ABB08D00CA36A1 /* Button+Style.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Button+Style.swift"; sourceTree = "<group>"; };
 		D17BB61C29732160004F08F7 /* CardStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardStyle.swift; sourceTree = "<group>"; };
@@ -183,6 +189,16 @@
 				D1194A662971A4A900E4C1E7 /* SettingsView.swift */,
 			);
 			path = Settings;
+			sourceTree = "<group>";
+		};
+		D133710929B272000090A991 /* IngredientsList */ = {
+			isa = PBXGroup;
+			children = (
+				D133710A29B272140090A991 /* IngredientsListView.swift */,
+				D133710C29B2723B0090A991 /* IngredientsList+ViewModel.swift */,
+				D133710E29B2736F0090A991 /* IngredientsList+Filters.swift */,
+			);
+			path = IngredientsList;
 			sourceTree = "<group>";
 		};
 		D183034F299CA95C00FD9EA8 /* Data */ = {
@@ -332,6 +348,7 @@
 		D1E7480B297D6CD8002B48CE /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				D133710929B272000090A991 /* IngredientsList */,
 				D1DB6B3229AA4168005B3BB6 /* DrinksList */,
 				D117445B297D23CF009CAFC7 /* ErrorMessageView.swift */,
 				D1E5BBCA29705D2500BA60F9 /* WrappingHStack.swift */,
@@ -522,6 +539,7 @@
 			files = (
 				D1BB5B2B29741FE600CF52EE /* IngredientDrinksList.swift in Sources */,
 				D170FE7D29ABB08D00CA36A1 /* Button+Style.swift in Sources */,
+				D133710F29B2736F0090A991 /* IngredientsList+Filters.swift in Sources */,
 				D1308BAC2976D090002BF99C /* Bundle+Extensions.swift in Sources */,
 				D1C50CD72985432C00410EB3 /* AppIcon.swift in Sources */,
 				D1DD34B729740335006EE244 /* DrinkStepInstructions.swift in Sources */,
@@ -567,10 +585,12 @@
 				D1D439BD29AC85EF00CAC924 /* TipJarView.swift in Sources */,
 				D1F79047296E90C800F3CB30 /* DrinkCard.swift in Sources */,
 				D1F7902C296D841F00F3CB30 /* DrinkView.swift in Sources */,
+				D133710D29B2723B0090A991 /* IngredientsList+ViewModel.swift in Sources */,
 				D117445A297D203B009CAFC7 /* FavoritesView.swift in Sources */,
 				D1F00885296EC0A8007E09B7 /* Equipment.swift in Sources */,
 				D1194A672971A4A900E4C1E7 /* SettingsView.swift in Sources */,
 				D17BB61D29732160004F08F7 /* CardStyle.swift in Sources */,
+				D133710B29B272140090A991 /* IngredientsListView.swift in Sources */,
 				D10A3757299AAB8900C68443 /* NSManagedObject+Extensions.swift in Sources */,
 				D1F79049296E916C00F3CB30 /* IngredientCard.swift in Sources */,
 				D1830351299CA96900FD9EA8 /* DrinksData.swift in Sources */,

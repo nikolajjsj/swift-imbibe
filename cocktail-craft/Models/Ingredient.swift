@@ -55,7 +55,7 @@ final class Ingredient: Identifiable, Equatable, Hashable {
             .compactMap({ $0 })
     }
     
-    enum Tag: String {
+    enum Tag: String, CaseIterable {
         case base = "Base"
         case spirit = "Spirit"
     }
