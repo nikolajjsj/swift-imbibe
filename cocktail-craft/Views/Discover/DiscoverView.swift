@@ -32,7 +32,7 @@ struct DiscoverView: View {
                 
                 if discoverMissingIngredientTip, let bestIngredient {
                     VStack(alignment: .leading) {
-                        SectionLabel("Tip")
+                        SectionLabel("Tips")
                         TipBox("Adding \(bestIngredient.key[0].name) to your bar will add \(bestIngredient.value.count) cocktail\(bestIngredient.value.count == 1 ? "" : "s")")
                     }
                 }
