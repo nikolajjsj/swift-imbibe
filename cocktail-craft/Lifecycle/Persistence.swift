@@ -19,6 +19,15 @@ fileprivate let selectedIngredients: [String] = [
     Ingredients.instance.vodka.name,
     Ingredients.instance.kahlua.name,
     Ingredients.instance.simpleSyrup.name,
+    Ingredients.instance.whisky.name,
+    Ingredients.instance.demeraraSyrup.name,
+    Ingredients.instance.limeJuice.name,
+    Ingredients.instance.angosturaBitters.name,
+    Ingredients.instance.rum.name,
+    Ingredients.instance.gin.name,
+    Ingredients.instance.curacao.name,
+    Ingredients.instance.eggWhite.name,
+    
     Ingredients.instance.ice.name,
 ]
 
